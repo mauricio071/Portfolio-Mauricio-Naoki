@@ -1,0 +1,143 @@
+<template>
+    <section id="experiencias">
+        <div class="container mx-auto">
+            <div class="px-4">
+                <h2 class="section-title">
+                    Experiências
+                </h2>
+                <div>
+                    <v-timeline :side="timelineSide" align="start" line-color="primary" line-thickness="4" fill-dot
+                        class="-ml-12 xl:ml-[unset]">
+                        <v-timeline-item v-for="(empresa, i) in empresas" :key="i" dot-color="primary"
+                            icon="mdi-briefcase" size="3rem">
+                            <template v-slot:opposite v-if="timelineSide === ''">
+                                <span class="block font-semibold text-[#8a8a8a] mt-6">
+                                    {{ empresa.data }}
+                                </span>
+                            </template>
+                            <div
+                                class="timeline-card shadow-xl px-5 py-8 rounded-lg border-b-[6px] border-b-primary mb-4">
+                                <h1 class="text-2xl font-bold mb-2">{{ empresa.nome }}</h1>
+                                <h2 class="text-lg font-semibold text-[#8a8a8a]">{{ empresa.cargo }}</h2>
+                                <p class="my-4 lg:text-lg">{{ empresa.descricao }}</p>
+                                <h3 class="text-xl font-semibold mb-3 text-[#0097a7]">Tecnologias:</h3>
+                                <div class="tecnologias flex items-center gap-2">
+                                    <component v-for="(logo, index) in empresa.tecnologias" :is="logo" :key="index"
+                                        class="max-w-[2rem]" />
+                                </div>
+                                <span class="block text-sm font-semibold text-[#b0b0b0] mt-4 xl:hidden">
+                                    {{ empresa.data }}
+                                </span>
+                            </div>
+                        </v-timeline-item>
+                    </v-timeline>
+                </div>
+            </div>
+        </div>
+    </section>
+</template>
+
+<script setup>
+import IconSkillsLogoHtml from '@/components/icon/skills-logo/Html.vue';
+import IconSkillsLogoCss from '@/components/icon/skills-logo/Css.vue';
+import IconSkillsLogoJavascript from '@/components/icon/skills-logo/Javascript.vue';
+import IconSkillsLogoVue from '@/components/icon/skills-logo/Vue.vue';
+import IconSkillsLogoNuxt from '@/components/icon/skills-logo/Nuxt.vue';
+import IconSkillsLogoTailwind from '@/components/icon/skills-logo/Tailwind.vue';
+import IconSkillsLogoGit from '@/components/icon/skills-logo/Git.vue';
+import IconSkillsLogoBootsTrap from '@/components/icon/skills-logo/BootsTrap.vue';
+import IconSkillsLogoLaravel from '@/components/icon/skills-logo/Laravel.vue';
+import IconSkillsLogoVuetify from '@/components/icon/skills-logo/Vuetify.vue';
+
+const empresas = ref([
+    {
+        nome: "Sixchains Digital House",
+        cargo: "Desenvolvedor Front-end",
+        descricao: "Na Sixchains, fui responsável pelo desenvolvimento Front-End, focando na criação e manutenção de aplicações utilizando Vue.js, Nuxt.js, Vuetify, JavaScript e Tailwind. Desenvolvi sites e sistemas, e trabalhei junto com a equipe de back-end para integrar nossas aplicações com APIs. Além disso, contribuí para o desenvolvimento de projetos do grupo Euro 17, incluindo sites e sistemas voltados para imóveis e securitizadora.",
+        data: "Jul 2022 - Mai 2024",
+        tecnologias: [
+            IconSkillsLogoHtml,
+            IconSkillsLogoCss,
+            IconSkillsLogoJavascript,
+            IconSkillsLogoVue,
+            IconSkillsLogoNuxt,
+            IconSkillsLogoVuetify,
+            IconSkillsLogoTailwind,
+            IconSkillsLogoGit,
+        ]
+    },
+    {
+        nome: "Upwards",
+        cargo: "Desenvolvedor Full-stack",
+        descricao: "Na Upwards, atuei como desenvolvedor Full-Stack, focado no sistema interno da empresa. Utilizei Vue.js para o desenvolvimento do front-end e Laravel para o back-end. Além disso, implementei testes automatizados para garantir a qualidade e a estabilidade do sistema.",
+        data: "Nov 2021 - Jun 2022",
+        tecnologias: [
+            IconSkillsLogoHtml,
+            IconSkillsLogoCss,
+            IconSkillsLogoJavascript,
+            IconSkillsLogoVue,
+            IconSkillsLogoBootsTrap,
+            IconSkillsLogoLaravel,
+            IconSkillsLogoGit,
+        ]
+    },
+    {
+        nome: "Garnon",
+        cargo: "Desenvolvedor Full-stack",
+        descricao: "Na Garnon, trabalhei na manutenção de um sistema da Angola, usando Vue.js para desenvolver a interface do usuário e Laravel para gerenciar a lógica de back-end.",
+        data: "Jun 2021 - Out 2021",
+        tecnologias: [
+            IconSkillsLogoHtml,
+            IconSkillsLogoCss,
+            IconSkillsLogoJavascript,
+            IconSkillsLogoVue,
+            IconSkillsLogoBootsTrap,
+            IconSkillsLogoLaravel,
+            IconSkillsLogoGit,
+        ]
+    },
+]);
+
+const windowWidth = ref(0);
+
+const handleResize = () => {
+    windowWidth.value = window.innerWidth;
+};
+
+onMounted(() => {
+    if (process.client) {
+        windowWidth.value = window.innerWidth;
+        window.addEventListener('resize', handleResize);
+    }
+});
+
+onUnmounted(() => {
+    if (process.client) {
+        window.removeEventListener('resize', handleResize);
+    }
+});
+
+const timelineSide = computed(() => {
+    return windowWidth.value >= 1200 ? '' : 'end';
+});
+</script>
+
+<style scoped>
+:deep(.v-timeline) .v-timeline-item i {
+    font-size: 1.5rem !important;
+}
+
+@media (min-width: 1024px) {
+    :deep(.v-timeline) .v-timeline-item .v-timeline-divider__dot {
+        width: 4rem !important;
+        height: 4rem !important;
+    }
+}
+
+@media (min-width: 1400px) {
+    .timeline-card {
+        @apply !px-7;
+    }
+
+}
+</style>

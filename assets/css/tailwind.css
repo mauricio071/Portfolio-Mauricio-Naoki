@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: .7rem;
+    background: #f0fdfa;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: .3rem;
+    background: #00bfa6;
+}
+
+section:not(section:first-of-type) {
+    @apply py-24;
+}
+
+h1,
+h2,
+h3,
+p,
+strong {
+    @apply text-secondary;
+}
+
+.icon-card {
+    @apply bg-white flex flex-col justify-center items-center gap-4 rounded-[25px] shadow-lg w-[10rem] h-36 mx-auto duration-300 hover:scale-110 cursor-pointer;
+}
+
+.section-title {
+    @apply flex flex-col items-center gap-4 text-2xl font-bold text-[1.8rem] leading-4 mb-12 text-secondary sm:text-4xl;
+}
+
+h2.section-title::after {
+    content: '';
+    width: 100px;
+    height: 5px;
+    background: #00bfa6;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 5px;
+}
+
+@screen md {
+    .icon-card {}
+}
