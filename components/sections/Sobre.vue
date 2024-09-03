@@ -7,29 +7,12 @@
                     <div class="foto-perfil w-full shadow-2xl rounded-[50%] lg:rounded-md">
                         <img src="/assets/img/foto-perfil.jpeg" alt="foto-perfil" class="rounded-[50%] lg:rounded-md">
                     </div>
-                    <!-- <div>
-                            <strong>Nome:</strong>
-                            <p>Maurício Naoki Nakamura</p>
-                        </div>
-                        <div>
-                            <strong>Cargo:</strong>
-                            <p>Desenvolvedor Front-end</p>
-                        </div> -->
-                    <!-- <div>
-                            <strong>Formação:</strong>
-                            <div>
-                                <p>Bacharel em Ciência da Computação</p>
-                                <p class="text-gray-700">Universidade Cidade de São Paulo</p>
-                                <p class="text-gray-700">(2019 - 2022)</p>
-                            </div>
-                        </div> -->
                 </div>
                 <div class="conteudo space-y-10 max-w-[650px] text-secondary">
                     <div class="space-y-4">
                         <h2 class="sobre-title text-2xl font-bold text-[1.8rem] leading-4 mb-6 sm:text-4xl">
                             Sobre mim
                         </h2>
-                        <!-- 2 paragrafos -->
                         <p class="lg:text-lg">
                             Sou um desenvolvedor front-end focado em criar experiências digitais envolventes e
                             funcionais, com formação em Ciência da Computação pela Universidade Cidade de São Paulo,

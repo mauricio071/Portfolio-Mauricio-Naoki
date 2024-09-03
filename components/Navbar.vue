@@ -14,13 +14,33 @@
             <ul :class="{ 'hidden': !isOpen, 'flex': isOpen }"
                 class="flex-col items-center gap-4 w-full py-4 lg:flex lg:flex-row lg:justify-between lg:gap-6 lg:w-[unset] lg:my-[unset] xl:gap-8">
                 <!-- Colocar sobra em vez de underlane no hover -->
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#experiencias">Experiências</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#depoimentos">Depoimentos</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <li v-motion :initial="{ opacity: 0, y: -100 }" :enter="{ opacity: 1, y: 0, scale: 1 }" :duration="500">
+                    <a href="#inicio">Início</a>
+                </li>
+                <li v-motion :initial="{ opacity: 0, y: -100 }" :enter="{ opacity: 1, y: 0, scale: 1 }" :duration="500"
+                    :delay="200">
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li v-motion :initial="{ opacity: 0, y: -100 }" :enter="{ opacity: 1, y: 0, scale: 1 }" :duration="500"
+                    :delay="300">
+                    <a href="#habilidades">Habilidades</a>
+                </li>
+                <li v-motion :initial="{ opacity: 0, y: -100 }" :enter="{ opacity: 1, y: 0, scale: 1 }" :duration="500"
+                    :delay="400">
+                    <a href="#experiencias">Experiências</a>
+                </li>
+                <li v-motion :initial="{ opacity: 0, y: -100 }" :enter="{ opacity: 1, y: 0, scale: 1 }" :duration="500"
+                    :delay="500">
+                    <a href="#projetos">Projetos</a>
+                </li>
+                <li v-motion :initial="{ opacity: 0, y: -100 }" :enter="{ opacity: 1, y: 0, scale: 1 }" :duration="500"
+                    :delay="600">
+                    <a href="#depoimentos">Depoimentos</a>
+                </li>
+                <li v-motion :initial="{ opacity: 0, y: -100 }" :enter="{ opacity: 1, y: 0, scale: 1 }" :duration="500"
+                    :delay="700">
+                    <a href="#contato">Contato</a>
+                </li>
             </ul>
         </nav>
     </header>

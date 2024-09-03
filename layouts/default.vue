@@ -2,7 +2,7 @@
     <div>
         <Navbar />
         <slot />
-        <button v-show="visible" @click="scrollToTop" class="topo-btn">
+        <button v-motion-pop-visible v-show="visible" @click="scrollToTop" class="topo-btn">
             <MdiIcon icon="mdiArrowUp" />
         </button>
         <Footer />

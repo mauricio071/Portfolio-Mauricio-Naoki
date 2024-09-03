@@ -7,7 +7,7 @@
                 <transition name="modal-inner">
                     <div class="modal-content">
                         <slot></slot>
-                        <!-- <v-icon @click="fecharModal" icon="mdi-close" class="close cursor-pointer" /> -->
+                        <MdiIcon @click="fecharModal" icon="mdiClose" class="close" />
                     </div>
                 </transition>
             </div>
@@ -52,7 +52,7 @@ const fecharModal = () => {
 }
 
 .modal-content .close {
-    @apply absolute top-[10px] right-[20px] duration-300;
+    @apply absolute top-[10px] right-[20px] duration-300 cursor-pointer;
 }
 
 .modal-content .close:hover {
