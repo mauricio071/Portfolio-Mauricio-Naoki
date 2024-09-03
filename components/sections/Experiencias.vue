@@ -5,32 +5,85 @@
                 <h2 class="section-title">
                     Experiências
                 </h2>
-                <div>
-                    <v-timeline :side="timelineSide" align="start" line-color="primary" line-thickness="4" fill-dot
-                        class="-ml-12 xl:ml-[unset]">
-                        <v-timeline-item v-for="(empresa, i) in empresas" :key="i" dot-color="primary"
-                            icon="mdi-briefcase" size="3rem">
-                            <template v-slot:opposite v-if="timelineSide === ''">
-                                <span class="block font-semibold text-[#8a8a8a] mt-6">
-                                    {{ empresa.data }}
-                                </span>
-                            </template>
-                            <div
-                                class="timeline-card shadow-xl px-5 py-8 rounded-lg border-b-[6px] border-b-primary mb-4">
-                                <h1 class="text-2xl font-bold mb-2">{{ empresa.nome }}</h1>
-                                <h2 class="text-lg font-semibold text-[#8a8a8a]">{{ empresa.cargo }}</h2>
-                                <p class="my-4 lg:text-lg">{{ empresa.descricao }}</p>
-                                <h3 class="text-xl font-semibold mb-3 text-[#0097a7]">Tecnologias:</h3>
-                                <div class="tecnologias flex items-center gap-2">
-                                    <component v-for="(logo, index) in empresa.tecnologias" :is="logo" :key="index"
-                                        class="max-w-[2rem]" />
-                                </div>
-                                <span class="block text-sm font-semibold text-[#b0b0b0] mt-4 xl:hidden">
-                                    {{ empresa.data }}
-                                </span>
+                <div class="timeline">
+                    <div v-for="(empresa, i) in empresas" :key="i" class="content">
+                        <MdiIcon icon="mdiBriefcase" class="timeline-icon" />
+                        <div class="timeline-card">
+                            <h1 class="text-2xl font-bold mb-2">{{ empresa.nome }}</h1>
+                            <h2 class="text-lg font-semibold text-[#8a8a8a]">{{ empresa.cargo }}</h2>
+                            <p class="my-4 lg:text-lg">{{ empresa.descricao }}</p>
+                            <h3 class="text-xl font-semibold mb-3 text-[#0097a7]">Tecnologias:</h3>
+                            <div class="tecnologias flex items-center gap-2">
+                                <component v-for="(logo, index) in empresa.tecnologias" :is="logo" :key="index"
+                                    class="max-w-[2rem]" />
                             </div>
-                        </v-timeline-item>
-                    </v-timeline>
+                            <span class="block text-sm font-semibold text-[#b0b0b0] mt-4 xl:hidden">
+                                {{ empresa.data }}
+                            </span>
+                            <span class="content-arrow"></span>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <!-- <div class="content left-content">
+                        <MdiIcon icon="mdiBriefcase" />
+                        <div class="timeline-card shadow-xl px-5 py-8 rounded-lg border-b-[6px] border-b-primary mb-4">
+                            <h1 class="text-2xl font-bold mb-2">teste</h1>
+                            <h2 class="text-lg font-semibold text-[#8a8a8a]">teste</h2>
+                            <p class="my-4 lg:text-lg">teste</p>
+                            <h3 class="text-xl font-semibold mb-3 text-[#0097a7]">Tecnologias:</h3>
+                            <div class="tecnologias flex items-center gap-2">
+                                <component v-for="(logo, index) in empresa.tecnologias" :is="logo" :key="index"
+                                    class="max-w-[2rem]" />
+                            </div>
+                            <span class="block text-sm font-semibold text-[#b0b0b0] mt-4 xl:hidden">
+                                teste
+                            </span>
+                        </div>
+                        <div class="text-box">
+                            <h2>teste</h2>
+                            <small>2024 - 2019</small>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, placeat dolore
+                                deserunt
+                                dolorum incidunt illum hic, exercitationem praesentium porro, labore rem enim quidem
+                                illo suscipit vero dolores dolor asperiores. Eius.
+                            </p>
+                            <span class="left-content-arrow"></span>
+                        </div>
+                    </div>
+                    <div class="content right-content">
+                        <MdiIcon icon="mdiBriefcase" />
+                        <div class="text-box">
+                            <h2>teste</h2>
+                            <small>2024 - 2019</small>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, placeat dolore
+                                deserunt
+                                dolorum incidunt illum hic, exercitationem praesentium porro, labore rem enim quidem
+                                illo suscipit vero dolores dolor asperiores. Eius.
+                            </p>
+                            <span class="right-content-arrow"></span>
+                        </div>
+                    </div>
+                    <div class="content left-content">
+                        <MdiIcon icon="mdiBriefcase" />
+                        <div class="text-box">
+                            <h2>teste</h2>
+                            <small>2024 - 2019</small>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, placeat dolore
+                                deserunt
+                                dolorum incidunt illum hic, exercitationem praesentium porro, labore rem enim quidem
+                                illo suscipit vero dolores dolor asperiores. Eius.
+                            </p>
+                            <span class="left-content-arrow"></span>
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -51,58 +104,29 @@ import IconSkillsLogoVuetify from '@/components/icon/skills-logo/Vuetify.vue';
 
 const empresas = ref([
     {
-        nome: "Sixchains Digital House",
-        cargo: "Desenvolvedor Front-end",
-        descricao: "Na Sixchains, fui responsável pelo desenvolvimento Front-End, focando na criação e manutenção de aplicações utilizando Vue.js, Nuxt.js, Vuetify, JavaScript e Tailwind. Desenvolvi sites e sistemas, e trabalhei junto com a equipe de back-end para integrar nossas aplicações com APIs. Além disso, contribuí para o desenvolvimento de projetos do grupo Euro 17, incluindo sites e sistemas voltados para imóveis e securitizadora.",
-        data: "Jul 2022 - Mai 2024",
-        tecnologias: [
-            IconSkillsLogoHtml,
-            IconSkillsLogoCss,
-            IconSkillsLogoJavascript,
-            IconSkillsLogoVue,
-            IconSkillsLogoNuxt,
-            IconSkillsLogoVuetify,
-            IconSkillsLogoTailwind,
-            IconSkillsLogoGit,
-        ]
-    },
-    {
+        nome: " Sixchains Digital House", cargo: "Desenvolvedor Front-end",
+        descricao: "Na Sixchains, fui responsável pelo desenvolvimento Front-End, focando na criação e manutenção de aplicações utilizando Vue.js, Nuxt.js, Vuetify, JavaScript e Tailwind. Desenvolvi sites e sistemas, e trabalhei junto com a equipe de back-end para integrar nossas aplicações com APIs. Além disso, contribuí para o desenvolvimento de projetos do grupo Euro 17, incluindo sites e sistemas voltados para imóveis e securitizadora."
+        , data: "Jul 2022 - Mai 2024", tecnologias: [IconSkillsLogoHtml, IconSkillsLogoCss,
+            IconSkillsLogoJavascript, IconSkillsLogoVue, IconSkillsLogoNuxt, IconSkillsLogoVuetify,
+            IconSkillsLogoTailwind, IconSkillsLogoGit,]
+    }, {
         nome: "Upwards",
         cargo: "Desenvolvedor Full-stack",
-        descricao: "Na Upwards, atuei como desenvolvedor Full-Stack, focado no sistema interno da empresa. Utilizei Vue.js para o desenvolvimento do front-end e Laravel para o back-end. Além disso, implementei testes automatizados para garantir a qualidade e a estabilidade do sistema.",
-        data: "Nov 2021 - Jun 2022",
-        tecnologias: [
-            IconSkillsLogoHtml,
-            IconSkillsLogoCss,
-            IconSkillsLogoJavascript,
-            IconSkillsLogoVue,
-            IconSkillsLogoBootsTrap,
-            IconSkillsLogoLaravel,
-            IconSkillsLogoGit,
-        ]
-    },
-    {
+        descricao: "Na Upwards, atuei como desenvolvedor Full-Stack, focado no sistema interno da empresa. Utilizei Vue.js para o desenvolvimento do front-end e Laravel para o back-end. Além disso, implementei testes automatizados para garantir a qualidade e a estabilidade do sistema."
+        , data: "Nov 2021 - Jun 2022", tecnologias: [IconSkillsLogoHtml, IconSkillsLogoCss,
+            IconSkillsLogoJavascript, IconSkillsLogoVue, IconSkillsLogoBootsTrap,
+            IconSkillsLogoLaravel, IconSkillsLogoGit,]
+    }, {
         nome: "Garnon",
         cargo: "Desenvolvedor Full-stack",
-        descricao: "Na Garnon, trabalhei na manutenção de um sistema da Angola, usando Vue.js para desenvolver a interface do usuário e Laravel para gerenciar a lógica de back-end.",
-        data: "Jun 2021 - Out 2021",
-        tecnologias: [
-            IconSkillsLogoHtml,
-            IconSkillsLogoCss,
-            IconSkillsLogoJavascript,
-            IconSkillsLogoVue,
-            IconSkillsLogoBootsTrap,
-            IconSkillsLogoLaravel,
-            IconSkillsLogoGit,
-        ]
-    },
-]);
-
-const windowWidth = ref(0);
-
-const handleResize = () => {
-    windowWidth.value = window.innerWidth;
-};
+        descricao: "Na Garnon, trabalhei na manutenção de um sistema da Angola, usando Vue.js para desenvolver a interface do usuário e Laravel para gerenciar a lógica de back-end."
+        , data: "Jun 2021 - Out 2021", tecnologias: [IconSkillsLogoHtml, IconSkillsLogoCss,
+            IconSkillsLogoJavascript, IconSkillsLogoVue, IconSkillsLogoBootsTrap,
+            IconSkillsLogoLaravel, IconSkillsLogoGit,]
+    },]); const windowWidth = ref(0); const
+        handleResize = () => {
+            windowWidth.value = window.innerWidth;
+        };
 
 onMounted(() => {
     if (process.client) {
@@ -134,10 +158,145 @@ const timelineSide = computed(() => {
     }
 }
 
+/* 
 @media (min-width: 1400px) {
     .timeline-card {
         @apply !px-7;
     }
 
+} */
+
+.timeline-card {
+    @apply shadow-xl px-5 py-8 rounded-lg border-b-[6px] border-b-primary bg-white relative;
+
+    /* min-width: 1400px */
+    @screen 2xl {
+        @apply !px-7;
+    }
+}
+
+.timeline {
+    @apply relative;
+}
+
+.timeline::after {
+    @apply absolute w-[4px] h-full bg-primary top-0 left-[50%] ml-[-3px] z-[1];
+    content: ''
+}
+
+.content {
+    @apply py-[10px] relative w-[50%];
+}
+
+.content:nth-of-type(odd) {
+    @apply left-0 pl-0 pr-[55px];
+}
+
+.content:nth-of-type(even) {
+    @apply left-[50%] pr-0 pl-[55px];
+}
+
+.content:nth-of-type(even) .timeline-icon {
+    @apply left-[-33px];
+}
+
+.content:nth-of-type(odd) .content-arrow {
+    @apply h-0 w-0 absolute top-[28px] z-[1];
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fff;
+    right: -15px;
+}
+
+.content:nth-of-type(even) .content-arrow {
+    @apply h-0 w-0 absolute top-[28px] z-[1];
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #fff;
+    left: -15px;
+}
+
+.content .timeline-icon {
+    @apply absolute w-[40px] right-[-31px] top-[32px] z-[10] text-white bg-primary rounded-[50%] p-5;
+
+    @screen lg {
+        @apply w-16 h-16;
+    }
+}
+
+/* .text-box {
+    @apply py-[20px] px-[30px] bg-white relative rounded-[6px] text-[15px] shadow-lg;
+} */
+/* .left-content {
+    @apply left-0;
+} */
+
+/* .right-content {
+    @apply left-[50%];
+} */
+
+/* .right-content .timeline-icon {
+    @apply left-[-20px];
+} */
+
+/* .left-content-arrow {
+    @apply h-0 w-0 absolute top-[28px] z-[1];
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #fff;
+    right: -15px;
+} */
+
+/* .right-content-arrow {
+    @apply h-0 w-0 absolute top-[28px] z-[1];
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid #fff;
+    left: -15px;
+} */
+
+@media (max-width: 1280px) {
+    /* .timeline {
+        @apply mx-auto;
+    } */
+
+    .timeline::after {
+        @apply left-[31px];
+    }
+
+    .content {
+        @apply w-full pl-[80px] pr-[25px]
+    }
+
+    /* .right-content {
+        @apply left-0
+    } */
+
+    .content:nth-of-type(even) .timeline-icon,
+    .content:nth-of-type(odd) .timeline-icon {
+        @apply left-[12px];
+    }
+
+
+
+    /* .left-content .timeline-icon,
+    .right-content .timeline-icon {
+        @apply left-[12px];
+    } */
+
+
+    .content:nth-of-type(even) .content-arrow,
+    .content:nth-of-type(odd) .content-arrow {
+        border-right: 15px solid #fff;
+        border-left: 0;
+        left: -15px;
+    }
+
+    /* .left-content-arrow,
+    .right-content-arrow {
+        border-right: 15px solid #fff;
+        border-left: 0;
+        left: -15px;
+    } */
 }
 </style>

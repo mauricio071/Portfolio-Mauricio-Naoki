@@ -3,7 +3,7 @@
         <Navbar />
         <slot />
         <button v-show="visible" @click="scrollToTop" class="topo-btn">
-            <!-- <v-icon icon="mdi-arrow-up"></v-icon> -->
+            <MdiIcon icon="mdiArrowUp" />
         </button>
         <Footer />
     </div>

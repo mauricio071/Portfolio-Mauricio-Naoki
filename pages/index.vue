@@ -3,7 +3,7 @@
         <Inicio />
         <Sobre />
         <Habilidades />
-        <Experiencias v-if="false" />
+        <Experiencias />
         <Projetos />
         <Depoimentos />
     </main>
