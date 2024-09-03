@@ -12,18 +12,19 @@
                             <slide v-for="(depoimento, i) in depoimentos" :key="i">
                                 <div class="depoimento-container">
                                     <div class="depoimento-pessoa">
-                                        <v-avatar>
-                                            <img :src="`/depoimentos/${depoimento.foto}.jpeg`" :alt="depoimento.nome" />
-                                        </v-avatar>
+                                        <img :src="`/depoimentos/${depoimento.foto}.jpeg`" :alt="depoimento.nome" />
                                         <div class="depoimento-info">
                                             <h2 class="text-lg font-bold">{{ depoimento.nome }}</h2>
                                             <h3 class="text-gray-500 font-semibold text-sm">{{ depoimento.empresa }}
                                             </h3>
                                         </div>
                                     </div>
-                                    <p class="text-sm lg:text-start lg:pl-[0.45rem] lg:text-base">{{
-                                        depoimento.descricao }}</p>
-                                    <v-rating v-model="rating" active-color="#ffc107" readonly density="compact" />
+                                    <p class="text-sm lg:text-start lg:pl-[0.45rem] lg:text-base">
+                                        {{ depoimento.descricao }}
+                                    </p>
+                                    <div class="ratings">
+                                        <MdiIcon v-for="i in 5" :key="i" icon="mdiStar" class="text-[#ffc107]" />
+                                    </div>
                                 </div>
                             </slide>
 
@@ -39,8 +40,6 @@
 </template>
 
 <script setup>
-const rating = 5;
-
 const breakpoints = {
     1024: {
         itemsToShow: 2,
@@ -101,8 +100,8 @@ const depoimentos = [
     }
 }
 
-.depoimento-pessoa .v-avatar {
-    @apply w-[120px] h-[120px];
+.depoimento-pessoa img {
+    @apply w-[120px] h-[120px] rounded-[50%];
 
     @screen lg {
         @apply w-[60px] h-[60px];
@@ -113,6 +112,14 @@ const depoimentos = [
     @screen lg {
         @apply flex flex-col items-start;
     }
+}
+
+.depoimento-container .ratings {
+    @apply flex gap-1;
+}
+
+.ratings svg {
+    @apply w-[24px] h-[24px];
 }
 
 :deep(.carousel) .carousel__pagination {

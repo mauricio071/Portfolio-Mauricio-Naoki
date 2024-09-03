@@ -1,7 +1,7 @@
 <template>
-    <section id="experiencias">
+    <section id="experiencias" class="bg-[#fafafa]">
         <div class="container mx-auto">
-            <div class="px-4">
+            <div>
                 <h2 class="section-title">
                     Experiências
                 </h2>
@@ -11,7 +11,7 @@
                         <div class="timeline-card">
                             <h1 class="text-2xl font-bold mb-2">{{ empresa.nome }}</h1>
                             <h2 class="text-lg font-semibold text-[#8a8a8a]">{{ empresa.cargo }}</h2>
-                            <p class="my-4 lg:text-lg">{{ empresa.descricao }}</p>
+                            <p class="text-sm my-4 lg:text-lg">{{ empresa.descricao }}</p>
                             <h3 class="text-xl font-semibold mb-3 text-[#0097a7]">Tecnologias:</h3>
                             <div class="tecnologias flex items-center gap-2">
                                 <component v-for="(logo, index) in empresa.tecnologias" :is="logo" :key="index"
@@ -185,20 +185,44 @@ const timelineSide = computed(() => {
 }
 
 .content {
-    @apply py-[10px] relative w-[50%];
+    @apply py-8 relative w-[50%];
+
+
 }
 
 .content:nth-of-type(odd) {
     @apply left-0 pl-0 pr-[55px];
+
+    @screen 2xl {
+        @apply pr-[73px]
+    }
+}
+
+.content:nth-of-type(odd) .timeline-icon {
+    @screen lg {
+        @apply !top-[45px];
+    }
+
+    @screen xl {
+        @apply !left-[unset];
+    }
+}
+
+.content:nth-of-type(even) .timeline-icon {
+    @screen lg {
+        @apply !top-[45px] !left-[-33px];
+    }
 }
 
 .content:nth-of-type(even) {
     @apply left-[50%] pr-0 pl-[55px];
+
+    @screen 2xl {
+        @apply pl-[73px]
+    }
 }
 
-.content:nth-of-type(even) .timeline-icon {
-    @apply left-[-33px];
-}
+
 
 .content:nth-of-type(odd) .content-arrow {
     @apply h-0 w-0 absolute top-[28px] z-[1];
@@ -217,10 +241,10 @@ const timelineSide = computed(() => {
 }
 
 .content .timeline-icon {
-    @apply absolute w-[40px] right-[-31px] top-[32px] z-[10] text-white bg-primary rounded-[50%] p-5;
+    @apply absolute w-10 h-10 right-[-31px] top-[32px] z-[10] text-white bg-primary rounded-[50%] p-1.5;
 
     @screen lg {
-        @apply w-16 h-16;
+        @apply w-16 h-16 p-5 !left-[-26px];
     }
 }
 
@@ -261,20 +285,28 @@ const timelineSide = computed(() => {
     } */
 
     .timeline::after {
-        @apply left-[31px];
+        @apply left-[8px];
     }
 
     .content {
-        @apply w-full pl-[80px] pr-[25px]
+        @apply w-full
     }
 
     /* .right-content {
         @apply left-0
     } */
 
+    .content:nth-of-type(even) {
+        @apply left-0;
+    }
+
+    .content:nth-of-type(odd) {
+        @apply pr-0 pl-[55px];
+    }
+
     .content:nth-of-type(even) .timeline-icon,
     .content:nth-of-type(odd) .timeline-icon {
-        @apply left-[12px];
+        @apply left-[-13px] top-[55px];
     }
 
 
