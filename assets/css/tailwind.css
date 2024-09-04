@@ -38,7 +38,7 @@ strong {
 }
 
 .section-title {
-    @apply flex flex-col items-center gap-4 text-2xl font-bold text-[1.8rem] leading-4 mb-12 text-secondary sm:text-4xl;
+    @apply relative flex flex-col items-center gap-4 text-2xl font-bold text-[1.8rem] leading-4 mb-12 text-secondary z-[2] sm:text-4xl;
 }
 
 h2.section-title::after {

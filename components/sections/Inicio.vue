@@ -2,8 +2,7 @@
     <section id="inicio" class="home">
         <div class="container mx-auto relative mb-18 sm:mt-18 md:flex md:justify-between md:items-center">
             <IconTecnologia class="header-vector" />
-            <div v-motion-slide-visible-once-bottom :duration="1200"
-                class="flex flex-col items-center gap-4 md:items-start md:gap-3 ">
+            <div class="flex flex-col items-center gap-4 md:items-start md:gap-3 ">
                 <p class="text-white font-semibold sm:text-lg lg:text-2xl">👋🏻 Olá, o meu nome é</p>
                 <h1 class="text-secondary font-bold text-[1.8rem] leading-4 sm:text-4xl lg:text-5xl">Maurício Naoki
                 </h1>
@@ -31,7 +30,7 @@
                     </a>
                 </div>
             </div>
-            <div v-motion-slide-visible-once-bottom :duration="1200" class="relative mt-4 text-end">
+            <div class="relative mt-4 text-end">
                 <div class="hidden max-w-[25rem] md:block lg:max-w-[30rem] xl:max-w-[40rem]">
                     <img src="/assets/img/programacao.png" alt="desenvolvedor"
                         class="w-full duration-700 hover:-translate-y-3" />
@@ -45,25 +44,9 @@
 </script>
 
 <style scoped>
-.content {
-    display: inline-block
-}
-
-/* .text {
-    font-size: 5em;
-    letter-spacing: 10px;
-    font-family: monospace;
-    border-right: 5px solid;
-    width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 2s steps(23),
-        cursor .4s step-end infinite alternate;
-} */
-
 .text-animation {
     @apply w-full whitespace-nowrap overflow-hidden border-r-2 border-secondary;
-    animation: typing 5s steps(60),
+    animation: typing 4s steps(43),
         cursor .8s step-end infinite alternate;
     animation-delay: 2s;
 }

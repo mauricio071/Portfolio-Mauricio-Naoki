@@ -1,14 +1,14 @@
 <template>
-    <section id="habilidades" class="bg-[#00bfa621]">
+    <section id="habilidades" class="background-diagonal">
         <div class="container mx-auto content ">
             <div class="px-4">
-                <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title ">
+                <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
                     Habilidades
                 </h2>
                 <div
                     class="habilidades flex flex-wrap items-center justify-center gap-6 max-w-[60rem] mx-auto md:grid md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
                     <div v-for="(tecnologia, index) in tecnologias" :key="index" v-motion-slide-visible-once-bottom
-                        :delay="index * 100" :duration="600">
+                        :delay="index * 100" :duration="600" class="z-[2]">
                         <div class="icon-card">
                             <component :is="tecnologia.logo" class="max-w-[3rem] z-[2]" />
                             <strong class="z-[2]">{{ tecnologia.nome }}</strong>
@@ -94,6 +94,18 @@ const tecnologias = [
 </script>
 
 <style scoped>
+.background-diagonal {
+    @apply relative;
+}
+
+.background-diagonal:after {
+    @apply absolute w-full h-full bg-[#e0f7f2] top-[-2.5rem] right-0 bottom-0 left-0;
+    content: "";
+    transform-origin: top left;
+    transform: skewY(4deg)
+}
+
+
 .icon-card {
     @apply bg-white relative flex flex-col justify-center items-center gap-4 rounded-[25px] shadow-lg w-[10rem] h-36 mx-auto duration-300 overflow-hidden cursor-pointer;
 }

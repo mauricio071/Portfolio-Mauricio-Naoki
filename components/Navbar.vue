@@ -32,9 +32,9 @@
                 <li v-motion-fade-visible-once :delay="500">
                     <a href="#depoimentos">Depoimentos</a>
                 </li>
-                <li v-motion-fade-visible-once :delay="600">
+                <!-- <li v-motion-fade-visible-once :delay="600">
                     <a href="#contato">Contato</a>
-                </li>
+                </li> -->
             </ul>
         </nav>
     </header>

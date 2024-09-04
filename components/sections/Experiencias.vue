@@ -1,5 +1,5 @@
 <template>
-    <section id="experiencias" class="bg-[#fafafa]">
+    <section id="experiencias">
         <div class="container mx-auto">
             <div>
                 <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
@@ -68,29 +68,9 @@ const empresas = [
 </script>
 
 <style scoped>
-:deep(.v-timeline) .v-timeline-item i {
-    font-size: 1.5rem !important;
-}
-
-@media (min-width: 1024px) {
-    :deep(.v-timeline) .v-timeline-item .v-timeline-divider__dot {
-        width: 4rem !important;
-        height: 4rem !important;
-    }
-}
-
-/* 
-@media (min-width: 1400px) {
-    .timeline-card {
-        @apply !px-7;
-    }
-
-} */
-
 .timeline-card {
-    @apply shadow-xl px-5 py-8 rounded-lg border-b-[6px] border-b-primary bg-white relative;
+    @apply shadow-2xl px-5 py-8 rounded-lg border-b-[6px] border-b-primary bg-white relative;
 
-    /* min-width: 1400px */
     @screen 2xl {
         @apply !px-7;
     }

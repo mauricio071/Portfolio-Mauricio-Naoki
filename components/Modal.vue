@@ -2,7 +2,7 @@
     <Teleport to="#teleports">
         <transition name="modal-outer">
             <div v-if="isVisible" class="modal p-6">
-                <div class="fixed inset-0 bg-black opacity-50" @click="fecharModal"></div>
+                <div class="fixed inset-0 bg-black opacity-80" @click="fecharModal"></div>
 
                 <transition name="modal-inner">
                     <div class="modal-content">

@@ -1,5 +1,5 @@
 <template>
-    <section id="projetos" class="bg-[#00bfa621]">
+    <section id="projetos" class="background-diagonal">
         <div class="container mx-auto">
             <div class="px-4">
                 <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
@@ -7,7 +7,7 @@
                 </h2>
                 <div class="projetos">
                     <div @click="abrirModal(projeto)" v-for="(projeto, i) in projetos" :key="i"
-                        v-motion-slide-visible-once-bottom :delay="i * 100" :duration="500" class="project-card">
+                        v-motion-slide-visible-once-bottom :delay="i * 100" :duration="500" class="project-card z-[2]">
                         <div class="project-img">
                             <img :src="`/projetos/${projeto.imgNome}.png`" :alt="projeto.nome"
                                 class="w-full rounded-lg">
@@ -298,6 +298,17 @@ const limparModalInfo = () => {
 </script>
 
 <style scoped>
+.background-diagonal {
+    @apply relative;
+}
+
+.background-diagonal:after {
+    @apply absolute w-full h-full bg-[#e0f7f2] top-[-2.5rem] right-0 bottom-0 left-0;
+    content: "";
+    transform-origin: top left;
+    transform: skewY(4deg)
+}
+
 .projetos {
     @apply grid items-center justify-center gap-6 md:grid-cols-2 lg:grid-cols-3;
 }
