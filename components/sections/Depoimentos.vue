@@ -3,10 +3,10 @@
         <section id="projetos">
             <div class="container mx-auto">
                 <div class="px-4">
-                    <h2 class="section-title">
+                    <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
                         Depoimentos
                     </h2>
-                    <div class="depoimentos">
+                    <div v-motion-fade-visible-once :duration="700" :delay="500" class="depoimentos">
                         <carousel :items-to-show="1" :breakpoints="breakpoints" wrapAround pauseAutoplayOnHover
                             :autoplay="5000">
                             <slide v-for="(depoimento, i) in depoimentos" :key="i">

@@ -2,13 +2,14 @@
     <section id="sobre">
         <div class="container mx-auto">
             <div class="content flex flex-col gap-6 px-4 text-secondary lg:grid lg:grid-cols-2 lg:items-center lg:px-0">
-                <div
+                <div v-motion-fade-visible-once
                     class="foto space-y-4 relative max-w-44 mx-auto sm:max-w-[15rem] lg:max-w-[18rem] xl:max-w-[23rem]">
                     <div class="foto-perfil w-full shadow-2xl rounded-[50%] lg:rounded-md">
                         <img src="/assets/img/foto-perfil.jpeg" alt="foto-perfil" class="rounded-[50%] lg:rounded-md">
                     </div>
                 </div>
-                <div class="conteudo space-y-10 max-w-[650px] text-secondary">
+                <div v-motion-slide-visible-once-bottom :duration="700"
+                    class="conteudo space-y-10 max-w-[650px] text-secondary">
                     <div class="space-y-4">
                         <h2 class="sobre-title text-2xl font-bold text-[1.8rem] leading-4 mb-6 sm:text-4xl">
                             Sobre mim
@@ -26,7 +27,8 @@
                             permitam crescer profissionalmente, explorar novas tecnologias e contribuir para inovações.
                         </p>
                     </div>
-                    <div class="onde-encontrar space-y-8">
+                    <div v-motion-slide-visible-once-bottom :duration="700" :delay="300"
+                        class="onde-encontrar space-y-8">
                         <h3 class="text-xl font-bold">Onde me encontrar</h3>
                         <div class="flex gap-4">
                             <a href="https://github.com/mauricio071" target="_blank" rel="noreferrer"
@@ -150,7 +152,7 @@ a.profile-about-icon:hover {
     background: white;
 }
 
-.profile-about-icon:hover svg {
+.profile-about-icon:hover span {
     color: #333333;
 }
 </style>

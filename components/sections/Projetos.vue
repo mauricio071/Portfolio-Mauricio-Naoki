@@ -2,11 +2,12 @@
     <section id="projetos" class="bg-[#00bfa621]">
         <div class="container mx-auto">
             <div class="px-4">
-                <h2 class="section-title">
+                <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
                     Projetos
                 </h2>
                 <div class="projetos">
-                    <div @click="abrirModal(projeto)" v-for="(projeto, i) in projetos" :key="i" class="project-card">
+                    <div @click="abrirModal(projeto)" v-for="(projeto, i) in projetos" :key="i"
+                        v-motion-slide-visible-once-bottom :delay="i * 100" :duration="500" class="project-card">
                         <div class="project-img">
                             <img :src="`/projetos/${projeto.imgNome}.png`" :alt="projeto.nome"
                                 class="w-full rounded-lg">
@@ -46,12 +47,12 @@
                                 <div class="detalhes-links">
                                     <a v-if="modal.urlProjeto" :href="modal.urlProjeto" target="_blank"
                                         rel="noreferrer">
-                                        <!-- <v-icon icon="mdi-web" /> -->
+                                        <Icon name="mdi:web" class="text-[2rem] text-secondary" />
                                         Projeto Online
                                     </a>
                                     <a v-if="modal.repositorioProjeto" :href="modal.repositorioProjeto" target="_blank"
                                         rel="noreferrer">
-                                        <!-- <v-icon icon="mdi-github" /> -->
+                                        <Icon name="mdi:github" class="text-[2rem] text-secondary" />
                                         Repositório
                                     </a>
                                 </div>
@@ -441,7 +442,7 @@ const limparModalInfo = () => {
     @apply border-white text-white bg-secondary;
 }
 
-.detalhes-links a:hover .v-icon {
+.detalhes-links a:hover span {
     @apply text-white;
 }
 

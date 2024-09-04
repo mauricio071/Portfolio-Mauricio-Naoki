@@ -2,15 +2,15 @@
     <section id="experiencias" class="bg-[#fafafa]">
         <div class="container mx-auto">
             <div>
-                <h2 class="section-title">
+                <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
                     Experiências
                 </h2>
                 <div class="timeline">
                     <div v-for="(empresa, i) in empresas" :key="i" class="content">
-                        <div class="timeline-icon">
+                        <div v-motion-pop-visible-once class="timeline-icon">
                             <Icon name="mdi:briefcase" />
                         </div>
-                        <div class="timeline-card">
+                        <div v-motion-pop-visible-once :duration="700" class="timeline-card">
                             <h1 class="text-2xl font-bold mb-2">{{ empresa.nome }}</h1>
                             <h2 class="text-lg font-semibold text-[#8a8a8a]">{{ empresa.cargo }}</h2>
                             <p class="text-sm my-4 lg:text-lg">{{ empresa.descricao }}</p>
@@ -19,7 +19,7 @@
                                 <component v-for="(logo, index) in empresa.tecnologias" :is="logo" :key="index"
                                     class="max-w-[2rem]" />
                             </div>
-                            <span class="block text-sm font-semibold text-[#b0b0b0] mt-4 xl:hidden">
+                            <span class="block text-sm font-semibold text-[#b0b0b0] mt-4">
                                 {{ empresa.data }}
                             </span>
                             <span class="content-arrow"></span>

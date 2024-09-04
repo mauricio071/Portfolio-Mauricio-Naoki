@@ -14,25 +14,25 @@
             <ul :class="{ 'hidden': !isOpen, 'flex': isOpen }"
                 class="flex-col items-center gap-4 w-full py-4 lg:flex lg:flex-row lg:justify-between lg:gap-6 lg:w-[unset] lg:my-[unset] xl:gap-8">
                 <!-- Colocar sobra em vez de underlane no hover -->
-                <li>
+                <li v-motion-fade-visible-once :delay="0">
                     <a href="#inicio">Início</a>
                 </li>
-                <li>
+                <li v-motion-fade-visible-once :delay="100">
                     <a href="#sobre">Sobre</a>
                 </li>
-                <li>
+                <li v-motion-fade-visible-once :delay="200">
                     <a href="#habilidades">Habilidades</a>
                 </li>
-                <li>
+                <li v-motion-fade-visible-once :delay="300">
                     <a href="#experiencias">Experiências</a>
                 </li>
-                <li>
+                <li v-motion-fade-visible-once :delay="400">
                     <a href="#projetos">Projetos</a>
                 </li>
-                <li>
+                <li v-motion-fade-visible-once :delay="500">
                     <a href="#depoimentos">Depoimentos</a>
                 </li>
-                <li>
+                <li v-motion-fade-visible-once :delay="600">
                     <a href="#contato">Contato</a>
                 </li>
             </ul>
