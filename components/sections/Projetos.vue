@@ -303,7 +303,7 @@ const limparModalInfo = () => {
 }
 
 .background-diagonal:after {
-    @apply absolute w-full h-full bg-[#e0f7f2] top-[-2.5rem] right-0 bottom-0 left-0;
+    @apply absolute w-full h-full bg-[#e0f7f2] top-[-3rem] right-0 bottom-0 left-0;
     content: "";
     transform-origin: top left;
     transform: skewY(4deg)
