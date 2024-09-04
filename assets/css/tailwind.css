@@ -17,8 +17,16 @@ html {
     background: #00bfa6;
 }
 
-section:not(section:first-of-type) {
+section:not(.carousel) {
     @apply py-24;
+}
+
+section:nth-child(2) {
+    @apply pt-0;
+
+    @screen lg {
+        @apply pt-24;
+    }
 }
 
 h1,
@@ -45,8 +53,4 @@ h2.section-title::after {
     display: inline-flex;
     align-items: center;
     border-radius: 5px;
-}
-
-@screen md {
-    .icon-card {}
 }

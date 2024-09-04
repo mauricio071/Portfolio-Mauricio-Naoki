@@ -1,41 +1,39 @@
 <template>
     <section id="depoimentos">
-        <section id="projetos">
-            <div class="container mx-auto">
-                <div class="px-4">
-                    <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
-                        Depoimentos
-                    </h2>
-                    <div v-motion-fade-visible-once :duration="700" :delay="500" class="depoimentos">
-                        <carousel :items-to-show="1" :breakpoints="breakpoints" wrapAround pauseAutoplayOnHover
-                            :autoplay="5000">
-                            <slide v-for="(depoimento, i) in depoimentos" :key="i">
-                                <div class="depoimento-container">
-                                    <div class="depoimento-pessoa">
-                                        <img :src="`/depoimentos/${depoimento.foto}.jpeg`" :alt="depoimento.nome" />
-                                        <div class="depoimento-info">
-                                            <h2 class="text-lg font-bold">{{ depoimento.nome }}</h2>
-                                            <h3 class="text-gray-500 font-semibold text-sm">{{ depoimento.empresa }}
-                                            </h3>
-                                        </div>
-                                    </div>
-                                    <p class="text-sm lg:text-start lg:pl-[0.45rem] lg:text-base">
-                                        {{ depoimento.descricao }}
-                                    </p>
-                                    <div class="ratings">
-                                        <Icon v-for="i in 5" :key="i" name="mdi:star" class="text-[#ffc107]" />
+        <div class="container mx-auto">
+            <div class="px-4">
+                <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
+                    Depoimentos
+                </h2>
+                <div v-motion-fade-visible-once :duration="700" :delay="500" class="depoimentos">
+                    <carousel :items-to-show="1" :breakpoints="breakpoints" wrapAround pauseAutoplayOnHover
+                        :autoplay="7000">
+                        <slide v-for="(depoimento, i) in depoimentos" :key="i">
+                            <div class="depoimento-container">
+                                <div class="depoimento-pessoa">
+                                    <img :src="`/depoimentos/${depoimento.foto}.jpeg`" :alt="depoimento.nome" />
+                                    <div class="depoimento-info">
+                                        <h2 class="text-lg font-bold">{{ depoimento.nome }}</h2>
+                                        <h3 class="text-gray-500 font-semibold text-sm">{{ depoimento.empresa }}
+                                        </h3>
                                     </div>
                                 </div>
-                            </slide>
+                                <p class="text-sm lg:text-start lg:pl-[0.45rem] lg:text-base">
+                                    {{ depoimento.descricao }}
+                                </p>
+                                <div class="ratings">
+                                    <Icon v-for="i in 5" :key="i" name="mdi:star" class="text-[#ffc107]" />
+                                </div>
+                            </div>
+                        </slide>
 
-                            <template #addons>
-                                <pagination class="mt-8" />
-                            </template>
-                        </carousel>
-                    </div>
+                        <template #addons>
+                            <pagination class="mt-8" />
+                        </template>
+                    </carousel>
                 </div>
             </div>
-        </section>
+        </div>
     </section>
 </template>
 
