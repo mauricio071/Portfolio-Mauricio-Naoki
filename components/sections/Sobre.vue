@@ -149,10 +149,8 @@
 }
 
 a.profile-about-icon:hover {
-    background: white;
-}
-
-.profile-about-icon:hover span {
-    color: #333333;
+    box-shadow: 0 0 10px #00bfa6,
+        0 0 20px #00bfa6,
+        0 0 40px #00bfa6
 }
 </style>

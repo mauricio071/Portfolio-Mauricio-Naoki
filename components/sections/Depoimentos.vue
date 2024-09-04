@@ -18,7 +18,7 @@
                                         </h3>
                                     </div>
                                 </div>
-                                <p class="text-sm lg:text-start lg:pl-[0.45rem] lg:text-base">
+                                <p class="text-sm lg:flex-grow lg:text-start lg:pl-[0.45rem] lg:text-base">
                                     {{ depoimento.descricao }}
                                 </p>
                                 <div class="ratings">
@@ -75,19 +75,42 @@ const depoimentos = [
 
 <style scoped>
 .depoimento-container {
-    @apply flex flex-col items-center space-y-4 border border-gray-500 rounded-lg p-4;
+    @apply flex flex-col items-center space-y-4 p-4 relative pb-4;
 
     @screen lg {
-        @apply items-start max-w-[25rem];
+        @apply items-start max-w-[25rem] my-8 min-h-[22.5rem];
+        box-shadow: 0 3px 11px rgba(0, 0, 0, 0.2);
     }
 
     @screen xl {
-        @apply max-w-[30rem];
+        @apply max-w-[30rem] min-h-[unset];
     }
 
     @screen 2xl {
         @apply max-w-[35rem];
     }
+}
+
+.depoimento-container::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 90px;
+    height: 90px;
+    border-top: 5px solid #00bfa6;
+    border-left: 5px solid #00bfa6;
+}
+
+.depoimento-container::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 90px;
+    height: 90px;
+    border-bottom: 5px solid #00bfa6;
+    border-right: 5px solid #00bfa6;
 }
 
 .depoimento-pessoa {

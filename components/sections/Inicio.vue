@@ -13,8 +13,7 @@
                         Desenvolvedor Front-end
                     </span>
                 </h2>
-                <a href="/cv_mauricio_naoki.pdf" download="Currículo Maurício Naoki"
-                    class="bg-white px-4 py-2 rounded-md text-secondary font-semibold my-2 duration-300 md:my-5 md:px-8 md:py-3 hover:bg-secondary hover:text-white">
+                <a href="/cv_mauricio_naoki.pdf" download="Currículo Maurício Naoki" class="curriculo-btn">
                     Download CV
                 </a>
                 <div class="flex gap-4">
@@ -66,6 +65,7 @@
     @apply w-full whitespace-nowrap overflow-hidden border-r-2 border-secondary;
     animation: typing 5s steps(60),
         cursor .8s step-end infinite alternate;
+    animation-delay: 2s;
 }
 
 @keyframes cursor {
@@ -82,20 +82,9 @@
 
 .header-vector {
     animation: circle 40s linear infinite;
-    -webkit-animation: circle 40s linear infinite;
 }
 
 @keyframes circle {
-    0% {
-        transform: rotate(0deg)
-    }
-
-    100% {
-        transform: rotate(-360deg)
-    }
-}
-
-@-webkit-keyframes circle {
     0% {
         transform: rotate(0deg)
     }
@@ -120,5 +109,16 @@
     .home {
         min-height: 100vh;
     }
+}
+
+.curriculo-btn {
+    @apply bg-white px-4 py-2 rounded-md text-secondary font-semibold my-2 duration-300 md:my-5 md:px-8 md:py-3;
+}
+
+.curriculo-btn:hover {
+    @apply hover:bg-secondary hover:text-white;
+    box-shadow: 0 0 10px #00bfa6,
+        0 0 40px #00bfa6,
+        0 0 80px #00bfa6
 }
 </style>

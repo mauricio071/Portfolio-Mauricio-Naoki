@@ -379,8 +379,6 @@ const limparModalInfo = () => {
 }
 
 .modal-content-description .modal-img {
-    /* @apply max-w-[40rem]; */
-
     @screen lg {
         @apply w-[55%]
     }

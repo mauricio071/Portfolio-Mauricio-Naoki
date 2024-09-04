@@ -37,10 +37,6 @@ strong {
     @apply text-secondary;
 }
 
-.icon-card {
-    @apply bg-white flex flex-col justify-center items-center gap-4 rounded-[25px] shadow-lg w-[10rem] h-36 mx-auto duration-300 hover:scale-110 cursor-pointer;
-}
-
 .section-title {
     @apply flex flex-col items-center gap-4 text-2xl font-bold text-[1.8rem] leading-4 mb-12 text-secondary sm:text-4xl;
 }

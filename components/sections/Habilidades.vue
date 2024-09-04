@@ -10,8 +10,8 @@
                     <div v-for="(tecnologia, index) in tecnologias" :key="index" v-motion-slide-visible-once-bottom
                         :delay="index * 100" :duration="600">
                         <div class="icon-card">
-                            <component :is="tecnologia.logo" class="max-w-[3rem]" />
-                            <strong>{{ tecnologia.nome }}</strong>
+                            <component :is="tecnologia.logo" class="max-w-[3rem] z-[2]" />
+                            <strong class="z-[2]">{{ tecnologia.nome }}</strong>
                         </div>
 
                     </div>
@@ -93,4 +93,33 @@ const tecnologias = [
 
 </script>
 
-<style scoped></style>
+<style scoped>
+.icon-card {
+    @apply bg-white relative flex flex-col justify-center items-center gap-4 rounded-[25px] shadow-lg w-[10rem] h-36 mx-auto duration-300 overflow-hidden cursor-pointer;
+}
+
+.icon-card:hover {
+    @apply scale-110;
+}
+
+.icon-card::before {
+    @apply absolute w-[5rem] h-[16rem] top-[-40%] rounded-[10px] rotate-[-48deg] bg-[#00a8b8];
+    content: '';
+    animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.icon-card::after {
+    @apply absolute inset-[5px] rounded-[25px] bg-[white];
+    content: ''
+}
+</style>
