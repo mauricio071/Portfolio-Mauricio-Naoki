@@ -31,19 +31,19 @@
                         <div class="flex gap-4">
                             <a href="https://github.com/mauricio071" target="_blank" rel="noreferrer"
                                 class="profile-about-icon">
-                                <MdiIcon icon="mdiGithub" class="text-white duration-300" />
+                                <Icon name="mdi:github" class="text-[2rem] block text-white duration-300" />
                             </a>
                             <a href="https://www.linkedin.com/in/mauricionaoki" target="_blank" rel="noreferrer"
                                 class="profile-about-icon">
-                                <MdiIcon icon="mdiLinkedin" class="text-white duration-300" />
+                                <Icon name="mdi:linkedin" class="text-[2rem] block text-white duration-300" />
                             </a>
                             <a href="https://wa.me/5511942816814" target="_blank" rel="noreferrer"
                                 class="profile-about-icon">
-                                <MdiIcon icon="mdiWhatsapp" class="text-white duration-300" />
+                                <Icon name="mdi:whatsapp" class="text-[2rem] block text-white duration-300" />
                             </a>
                             <a href="mailto:naokimau@gmail.com" target="_blank" rel="noreferrer"
                                 class="profile-about-icon">
-                                <MdiIcon icon="mdiGmail" class="text-white duration-300" />
+                                <Icon name="mdi:gmail" class="text-[2rem] block text-white duration-300" />
                             </a>
                         </div>
                     </div>

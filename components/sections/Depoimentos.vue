@@ -8,7 +8,7 @@
                     </h2>
                     <div class="depoimentos">
                         <carousel :items-to-show="1" :breakpoints="breakpoints" wrapAround pauseAutoplayOnHover
-                            autoplay="5000">
+                            :autoplay="5000">
                             <slide v-for="(depoimento, i) in depoimentos" :key="i">
                                 <div class="depoimento-container">
                                     <div class="depoimento-pessoa">
@@ -23,7 +23,7 @@
                                         {{ depoimento.descricao }}
                                     </p>
                                     <div class="ratings">
-                                        <MdiIcon v-for="i in 5" :key="i" icon="mdiStar" class="text-[#ffc107]" />
+                                        <Icon v-for="i in 5" :key="i" name="mdi:star" class="text-[#ffc107]" />
                                     </div>
                                 </div>
                             </slide>
@@ -118,7 +118,7 @@ const depoimentos = [
     @apply flex gap-1;
 }
 
-.ratings svg {
+.ratings span {
     @apply w-[24px] h-[24px];
 }
 

@@ -7,7 +7,7 @@
                 <transition name="modal-inner">
                     <div class="modal-content">
                         <slot></slot>
-                        <MdiIcon @click="fecharModal" icon="mdiClose" class="close" />
+                        <Icon @click="fecharModal" name="mdi:close" class="text-[2rem] close" />
                     </div>
                 </transition>
             </div>

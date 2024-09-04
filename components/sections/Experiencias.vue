@@ -7,7 +7,9 @@
                 </h2>
                 <div class="timeline">
                     <div v-for="(empresa, i) in empresas" :key="i" class="content">
-                        <MdiIcon icon="mdiBriefcase" class="timeline-icon" />
+                        <div class="timeline-icon">
+                            <Icon name="mdi:briefcase" />
+                        </div>
                         <div class="timeline-card">
                             <h1 class="text-2xl font-bold mb-2">{{ empresa.nome }}</h1>
                             <h2 class="text-lg font-semibold text-[#8a8a8a]">{{ empresa.cargo }}</h2>
@@ -23,67 +25,6 @@
                             <span class="content-arrow"></span>
                         </div>
                     </div>
-
-
-
-
-
-
-                    <!-- <div class="content left-content">
-                        <MdiIcon icon="mdiBriefcase" />
-                        <div class="timeline-card shadow-xl px-5 py-8 rounded-lg border-b-[6px] border-b-primary mb-4">
-                            <h1 class="text-2xl font-bold mb-2">teste</h1>
-                            <h2 class="text-lg font-semibold text-[#8a8a8a]">teste</h2>
-                            <p class="my-4 lg:text-lg">teste</p>
-                            <h3 class="text-xl font-semibold mb-3 text-[#0097a7]">Tecnologias:</h3>
-                            <div class="tecnologias flex items-center gap-2">
-                                <component v-for="(logo, index) in empresa.tecnologias" :is="logo" :key="index"
-                                    class="max-w-[2rem]" />
-                            </div>
-                            <span class="block text-sm font-semibold text-[#b0b0b0] mt-4 xl:hidden">
-                                teste
-                            </span>
-                        </div>
-                        <div class="text-box">
-                            <h2>teste</h2>
-                            <small>2024 - 2019</small>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, placeat dolore
-                                deserunt
-                                dolorum incidunt illum hic, exercitationem praesentium porro, labore rem enim quidem
-                                illo suscipit vero dolores dolor asperiores. Eius.
-                            </p>
-                            <span class="left-content-arrow"></span>
-                        </div>
-                    </div>
-                    <div class="content right-content">
-                        <MdiIcon icon="mdiBriefcase" />
-                        <div class="text-box">
-                            <h2>teste</h2>
-                            <small>2024 - 2019</small>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, placeat dolore
-                                deserunt
-                                dolorum incidunt illum hic, exercitationem praesentium porro, labore rem enim quidem
-                                illo suscipit vero dolores dolor asperiores. Eius.
-                            </p>
-                            <span class="right-content-arrow"></span>
-                        </div>
-                    </div>
-                    <div class="content left-content">
-                        <MdiIcon icon="mdiBriefcase" />
-                        <div class="text-box">
-                            <h2>teste</h2>
-                            <small>2024 - 2019</small>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, placeat dolore
-                                deserunt
-                                dolorum incidunt illum hic, exercitationem praesentium porro, labore rem enim quidem
-                                illo suscipit vero dolores dolor asperiores. Eius.
-                            </p>
-                            <span class="left-content-arrow"></span>
-                        </div>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -102,7 +43,7 @@ import IconSkillsLogoBootsTrap from '@/components/icon/skills-logo/BootsTrap.vue
 import IconSkillsLogoLaravel from '@/components/icon/skills-logo/Laravel.vue';
 import IconSkillsLogoVuetify from '@/components/icon/skills-logo/Vuetify.vue';
 
-const empresas = ref([
+const empresas = [
     {
         nome: " Sixchains Digital House", cargo: "Desenvolvedor Front-end",
         descricao: "Na Sixchains, fui responsável pelo desenvolvimento Front-End, focando na criação e manutenção de aplicações utilizando Vue.js, Nuxt.js, Vuetify, JavaScript e Tailwind. Desenvolvi sites e sistemas, e trabalhei junto com a equipe de back-end para integrar nossas aplicações com APIs. Além disso, contribuí para o desenvolvimento de projetos do grupo Euro 17, incluindo sites e sistemas voltados para imóveis e securitizadora."
@@ -123,27 +64,7 @@ const empresas = ref([
         , data: "Jun 2021 - Out 2021", tecnologias: [IconSkillsLogoHtml, IconSkillsLogoCss,
             IconSkillsLogoJavascript, IconSkillsLogoVue, IconSkillsLogoBootsTrap,
             IconSkillsLogoLaravel, IconSkillsLogoGit,]
-    },]); const windowWidth = ref(0); const
-        handleResize = () => {
-            windowWidth.value = window.innerWidth;
-        };
-
-onMounted(() => {
-    if (process.client) {
-        windowWidth.value = window.innerWidth;
-        window.addEventListener('resize', handleResize);
-    }
-});
-
-onUnmounted(() => {
-    if (process.client) {
-        window.removeEventListener('resize', handleResize);
-    }
-});
-
-const timelineSide = computed(() => {
-    return windowWidth.value >= 1200 ? '' : 'end';
-});
+    },];
 </script>
 
 <style scoped>
@@ -184,10 +105,12 @@ const timelineSide = computed(() => {
     content: ''
 }
 
+.timeline-icon {
+    @apply flex justify-center items-center;
+}
+
 .content {
     @apply py-8 relative w-[50%];
-
-
 }
 
 .content:nth-of-type(odd) {
@@ -222,8 +145,6 @@ const timelineSide = computed(() => {
     }
 }
 
-
-
 .content:nth-of-type(odd) .content-arrow {
     @apply h-0 w-0 absolute top-[28px] z-[1];
     border-top: 15px solid transparent;
@@ -241,10 +162,10 @@ const timelineSide = computed(() => {
 }
 
 .content .timeline-icon {
-    @apply absolute w-10 h-10 right-[-31px] top-[32px] z-[10] text-white bg-primary rounded-[50%] p-1.5;
+    @apply absolute w-10 h-10 right-[-31px] top-[32px] z-[10] text-white bg-primary rounded-[50%] text-lg;
 
     @screen lg {
-        @apply w-16 h-16 p-5 !left-[-26px];
+        @apply w-16 h-16 !left-[-26px] text-2xl;
     }
 }
 

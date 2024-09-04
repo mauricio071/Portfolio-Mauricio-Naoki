@@ -10,11 +10,14 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/icon": "^1.5.1",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@vueuse/motion": "^2.2.3",
     "nuxt": "^3.13.0",
-    "nuxt-mdi": "^2.1.1",
     "vue": "latest",
     "vue3-carousel-nuxt": "^1.1.2"
+  },
+  "devDependencies": {
+    "@iconify-json/mdi": "^1.2.0"
   }
 }
