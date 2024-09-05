@@ -45,13 +45,13 @@
                                     {{ modal.tagsProjeto.join(', ') }}
                                 </p>
                                 <div class="detalhes-links">
-                                    <a v-if="modal.urlProjeto" :href="modal.urlProjeto" target="_blank"
-                                        rel="noreferrer">
+                                    <a v-if="modal.urlProjeto" :href="modal.urlProjeto" target="_blank" rel="noreferrer"
+                                        title="Projeto Online">
                                         <Icon name="mdi:web" class="text-[2rem] text-secondary" />
                                         Projeto Online
                                     </a>
                                     <a v-if="modal.repositorioProjeto" :href="modal.repositorioProjeto" target="_blank"
-                                        rel="noreferrer">
+                                        rel="noreferrer" title="Repositório">
                                         <Icon name="mdi:github" class="text-[2rem] text-secondary" />
                                         Repositório
                                     </a>

@@ -16,15 +16,16 @@
                     Download CV
                 </a>
                 <div class="flex gap-4">
-                    <a href="https://github.com/mauricio071" target="_blank" rel="noreferrer">
+                    <a href="https://github.com/mauricio071" target="_blank" rel="noreferrer" title="Github">
                         <Icon name="mdi:github"
                             class="text-[2rem] block text-secondary duration-300 hover:text-white" />
                     </a>
-                    <a href="https://www.linkedin.com/in/mauricionaoki" target="_blank" rel="noreferrer">
+                    <a href="https://www.linkedin.com/in/mauricionaoki" target="_blank" rel="noreferrer"
+                        title="LinkedIn">
                         <Icon name="mdi:linkedin"
                             class="text-[2rem] block text-secondary duration-300 hover:text-[#258dbf]" />
                     </a>
-                    <a href="https://wa.me/5511942816814" target="_blank" rel="noreferrer">
+                    <a href="https://wa.me/5511942816814" target="_blank" rel="noreferrer" title="WhatsApp">
                         <Icon name="mdi:whatsapp"
                             class="text-[2rem] block text-secondary duration-300 hover:text-[#25d366]" />
                     </a>

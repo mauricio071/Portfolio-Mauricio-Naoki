@@ -19,7 +19,7 @@
                                 <component v-for="(logo, index) in empresa.tecnologias" :is="logo" :key="index"
                                     class="max-w-[2rem]" />
                             </div>
-                            <span class="block text-sm font-semibold text-[#b0b0b0] mt-4">
+                            <span class="block text-sm font-semibold text-[#b0b0b0] mt-4 lg:text-base">
                                 {{ empresa.data }}
                             </span>
                             <span class="content-arrow"></span>

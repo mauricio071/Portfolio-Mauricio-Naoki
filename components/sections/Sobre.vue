@@ -31,19 +31,19 @@
                         class="onde-encontrar space-y-8">
                         <h3 class="text-xl font-bold">Onde me encontrar</h3>
                         <div class="flex gap-4 justify-center lg:justify-start">
-                            <a href="https://github.com/mauricio071" target="_blank" rel="noreferrer"
+                            <a href="https://github.com/mauricio071" target="_blank" rel="noreferrer" title="Github"
                                 class="profile-about-icon">
                                 <Icon name="mdi:github" class="text-[2rem] block text-white duration-300" />
                             </a>
                             <a href="https://www.linkedin.com/in/mauricionaoki" target="_blank" rel="noreferrer"
-                                class="profile-about-icon">
+                                title="LinkedIn" class="profile-about-icon">
                                 <Icon name="mdi:linkedin" class="text-[2rem] block text-white duration-300" />
                             </a>
-                            <a href="https://wa.me/5511942816814" target="_blank" rel="noreferrer"
+                            <a href="https://wa.me/5511942816814" target="_blank" rel="noreferrer" title="WhatsApp"
                                 class="profile-about-icon">
                                 <Icon name="mdi:whatsapp" class="text-[2rem] block text-white duration-300" />
                             </a>
-                            <a href="mailto:naokimau@gmail.com" target="_blank" rel="noreferrer"
+                            <a href="mailto:naokimau@gmail.com" target="_blank" rel="noreferrer" title="Gmail"
                                 class="profile-about-icon">
                                 <Icon name="mdi:gmail" class="text-[2rem] block text-white duration-300" />
                             </a>

@@ -107,7 +107,7 @@ const tecnologias = [
 
 .icon-card {
     @apply bg-white relative flex flex-col justify-center items-center gap-4 rounded-[25px] shadow-lg w-[10rem] h-36 mx-auto duration-300 overflow-hidden cursor-pointer;
-    box-shadow: inset 20px 20px 20px #0000008c;
+
 }
 
 .icon-card:hover {
@@ -132,6 +132,7 @@ const tecnologias = [
 
 .icon-card::after {
     @apply absolute inset-[5px] rounded-[25px] bg-[white];
-    content: ''
+    content: '';
+    box-shadow: inset 0px 2px 7px 0px #0000008c;
 }
 </style>
