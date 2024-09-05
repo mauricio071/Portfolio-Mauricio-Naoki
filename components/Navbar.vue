@@ -13,7 +13,6 @@
             <Icon @click="isOpen = !isOpen" name="mdi:menu" class="text-[2rem] lg:hidden w-10 h-10 cursor-pointer" />
             <ul :class="{ 'hidden': !isOpen, 'flex': isOpen }"
                 class="flex-col items-center gap-4 w-full py-4 lg:flex lg:flex-row lg:justify-between lg:w-[unset] lg:my-[unset] xl:gap-6">
-                <!-- Colocar sobra em vez de underlane no hover -->
                 <li v-motion-fade-visible-once :delay="0">
                     <a href="#inicio">Início</a>
                 </li>
@@ -67,8 +66,4 @@ li a:after {
 li a:hover:after {
     @apply w-full;
 }
-
-/* ul li a:hover {
-    @apply underline underline-offset-[6px] decoration-2;
-} */
 </style>

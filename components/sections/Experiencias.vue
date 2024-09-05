@@ -39,7 +39,7 @@ import IconSkillsLogoVue from '@/components/icon/skills-logo/Vue.vue';
 import IconSkillsLogoNuxt from '@/components/icon/skills-logo/Nuxt.vue';
 import IconSkillsLogoTailwind from '@/components/icon/skills-logo/Tailwind.vue';
 import IconSkillsLogoGit from '@/components/icon/skills-logo/Git.vue';
-import IconSkillsLogoBootstrap from '~/components/icon/skills-logo/Bootstrap.vue';
+import IconSkillsLogoBootstrap from '@/components/icon/skills-logo/Bootstrap.vue';
 import IconSkillsLogoLaravel from '@/components/icon/skills-logo/Laravel.vue';
 import IconSkillsLogoVuetify from '@/components/icon/skills-logo/Vuetify.vue';
 

@@ -18,7 +18,4 @@ import Projetos from '~/components/sections/Projetos.vue';
 import Depoimentos from '~/components/sections/Depoimentos.vue';
 
 components: { Inicio, Sobre, Habilidades, Experiencias, Projetos, Depoimentos }
-
 </script>
-
-<style scoped></style>

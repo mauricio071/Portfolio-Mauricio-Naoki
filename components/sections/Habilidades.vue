@@ -29,7 +29,7 @@ import IconSkillsLogoTypeScript from '@/components/icon/skills-logo/TypeScript.v
 import IconSkillsLogoVue from '@/components/icon/skills-logo/Vue.vue';
 import IconSkillsLogoNuxt from '@/components/icon/skills-logo/Nuxt.vue';
 import IconSkillsLogoReact from '@/components/icon/skills-logo/React.vue';
-import IconSkillsLogoBootstrap from '~/components/icon/skills-logo/Bootstrap.vue';
+import IconSkillsLogoBootstrap from '@/components/icon/skills-logo/Bootstrap.vue';
 import IconSkillsLogoTailwind from '@/components/icon/skills-logo/Tailwind.vue';
 import IconSkillsLogoSass from '@/components/icon/skills-logo/Sass.vue';
 import IconSkillsLogoNode from '@/components/icon/skills-logo/Node.vue';
