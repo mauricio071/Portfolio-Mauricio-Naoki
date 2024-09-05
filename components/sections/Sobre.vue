@@ -2,7 +2,7 @@
     <section id="sobre">
         <div class="container mx-auto">
             <div class="content flex flex-col gap-6 px-4 text-secondary lg:grid lg:grid-cols-2 lg:items-center lg:px-0">
-                <div v-motion-fade-visible-once
+                <div v-motion-fade-visible-once :delay="0"
                     class="foto space-y-4 relative max-w-44 mx-auto sm:max-w-[15rem] lg:max-w-[18rem] xl:max-w-[23rem]">
                     <div class="foto-perfil w-full shadow-2xl rounded-[50%] lg:rounded-md">
                         <img src="/assets/img/foto-perfil.jpeg" alt="foto-perfil" class="rounded-[50%] lg:rounded-md">

@@ -105,9 +105,9 @@ const tecnologias = [
     transform: skewY(4deg)
 }
 
-
 .icon-card {
     @apply bg-white relative flex flex-col justify-center items-center gap-4 rounded-[25px] shadow-lg w-[10rem] h-36 mx-auto duration-300 overflow-hidden cursor-pointer;
+    box-shadow: inset 20px 20px 20px #0000008c;
 }
 
 .icon-card:hover {
