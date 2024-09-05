@@ -11,7 +11,7 @@
                         <slide v-for="(depoimento, i) in depoimentos" :key="i">
                             <div class="depoimento-container">
                                 <div class="depoimento-pessoa">
-                                    <img :src="`/depoimentos/${depoimento.foto}.jpeg`" :alt="depoimento.nome" />
+                                    <img :src="`/depoimentos/${depoimento.foto}.webp`" :alt="depoimento.nome" />
                                     <div class="depoimento-info">
                                         <h2 class="text-lg font-bold">{{ depoimento.nome }}</h2>
                                         <h3 class="text-gray-500 font-semibold text-sm">{{ depoimento.empresa }}

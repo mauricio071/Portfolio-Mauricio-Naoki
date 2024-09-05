@@ -9,7 +9,7 @@
                     <div @click="abrirModal(projeto)" v-for="(projeto, i) in projetos" :key="i"
                         v-motion-slide-visible-once-bottom :delay="i * 100" :duration="500" class="project-card z-[2]">
                         <div class="project-img">
-                            <img :src="`/projetos/${projeto.imgNome}.png`" :alt="projeto.nome"
+                            <img :src="`/projetos/${projeto.imgNome}.webp`" :alt="projeto.nome"
                                 class="w-full rounded-lg">
                         </div>
                         <div class="project-description">
@@ -30,7 +30,7 @@
                 <h3 class="text-gray-500 mb-4 text-center font-semibold">{{ modal.tipoProjeto }}</h3>
                 <div class="modal-content-description">
                     <div class="modal-img">
-                        <img :src="`/projetos/${modal.imgProjeto}.png`" :alt="modal.nomeProjeto" class="w-full">
+                        <img :src="`/projetos/${modal.imgProjeto}.webp`" :alt="modal.nomeProjeto" class="w-full">
                     </div>
                     <div class="info">
                         <div>
@@ -418,7 +418,7 @@ const limparModalInfo = () => {
 .info p {
     @apply text-sm;
 
-    @screen md {
+    @screen lg {
         @apply text-base;
     }
 }

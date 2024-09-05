@@ -32,7 +32,7 @@
             </div>
             <div class="relative mt-4 text-end">
                 <div class="hidden max-w-[25rem] md:block lg:max-w-[30rem] xl:max-w-[40rem]">
-                    <img src="/assets/img/programacao.png" alt="desenvolvedor"
+                    <img src="/assets/img/programacao.webp" alt="desenvolvedor"
                         class="w-full duration-700 hover:-translate-y-3" />
                 </div>
             </div>
