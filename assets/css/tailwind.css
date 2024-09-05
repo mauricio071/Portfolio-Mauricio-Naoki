@@ -3,18 +3,16 @@
 @tailwind utilities;
 
 html {
-    scroll-behavior: smooth;
+    @apply scroll-smooth;
     font-family: "Poppins", sans-serif;
 }
 
 ::-webkit-scrollbar {
-    width: .7rem;
-    background: #f0fdfa;
+    @apply bg-[#f0fdfa] w-[.7rem];
 }
 
 ::-webkit-scrollbar-thumb {
-    border-radius: .3rem;
-    background: #00bfa6;
+    @apply bg-primary rounded-[.3rem];
 }
 
 section:not(.carousel) {
@@ -22,11 +20,7 @@ section:not(.carousel) {
 }
 
 section:nth-child(2) {
-    @apply pt-0;
-
-    @screen lg {
-        @apply pt-24;
-    }
+    @apply pt-0 lg:pt-24;
 }
 
 h1,
@@ -42,11 +36,5 @@ strong {
 }
 
 h2.section-title::after {
-    content: '';
-    width: 100px;
-    height: 5px;
-    background: #00bfa6;
-    display: inline-flex;
-    align-items: center;
-    border-radius: 5px;
+    @apply content-[''] w-[100px] h-[5px] bg-primary inline-flex items-center rounded-[5px];
 }

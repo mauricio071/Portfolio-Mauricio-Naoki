@@ -1,13 +1,12 @@
 <template>
-    <header class="fixed top-0 w-full p-4 transition-all duration-300 lg:py-2 z-[100] bg-primary"
+    <header class="fixed top-0 w-full p-4 transition-all duration-300 lg:py-2 z-[100]"
         :class="{ '!bg-primary shadow-xl': hasScrolled || isOpen, 'bg-transparent': !hasScrolled }">
         <nav class="container mx-auto flex justify-between items-center flex-wrap text-white">
             <h1 class="text-xl font-semibold text-white">
-                <a href="#">
-                    <span>
-                        < </span>
-                            Maurício Naoki
-                            <span> /> </span>
+                <a href="#" class="relative font-bold px-1">
+                    <span>&lt; </span>
+                    Maurício Naoki
+                    <span> /&gt;</span>
                 </a>
             </h1>
             <Icon @click="isOpen = !isOpen" name="mdi:menu" class="text-[2rem] lg:hidden w-10 h-10 cursor-pointer" />
@@ -59,8 +58,7 @@ li a {
 }
 
 li a:after {
-    @apply absolute bg-white h-[2px] w-0 left-0 bottom-[-7px] rounded-2xl duration-300;
-    content: ""
+    @apply content-[''] absolute bg-white h-[2px] w-0 left-0 bottom-[-7px] rounded-2xl duration-300;
 }
 
 li a:hover:after {

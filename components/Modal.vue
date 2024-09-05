@@ -1,13 +1,13 @@
 <template>
     <Teleport to="#teleports">
         <transition name="modal-outer">
-            <div v-if="isVisible" class="modal p-6">
+            <div v-if="isVisible" class="modal">
                 <div class="fixed inset-0 bg-black opacity-80" @click="fecharModal"></div>
 
                 <transition name="modal-inner">
-                    <div class="modal-content">
+                    <div class="modal-content" role="dialog" aria-modal="true">
                         <slot></slot>
-                        <Icon @click="fecharModal" name="mdi:close" class="text-[2rem] close" />
+                        <Icon @click="fecharModal" name="mdi:close" class="close" />
                     </div>
                 </transition>
             </div>
@@ -32,58 +32,50 @@ const fecharModal = () => {
 
 <style scoped>
 .modal {
-    @apply fixed inset-0 z-[999] flex items-center justify-center;
-
-    @screen sm {
-        @apply max-w-[40rem] mx-auto;
-    }
-
-    @screen lg {
-        @apply max-w-[1300px]
-    }
+    @apply fixed inset-0 z-[999] flex items-center justify-center p-6;
 }
 
 .modal-content {
-    @apply bg-[#f7f7f7] p-8 rounded-lg relative border-t-8 border-t-primary;
+    @apply bg-[#f7f7f7] p-8 rounded-lg relative border-t-8 border-t-primary mx-auto;
+
+    @screen sm {
+        @apply max-w-[40rem];
+    }
 
     @screen lg {
-        @apply pb-16;
+        @apply max-w-[1300px] pb-16;
     }
 }
 
-.modal-content .close {
-    @apply absolute top-[10px] right-[20px] duration-300 cursor-pointer;
+.close {
+    @apply absolute top-[10px] right-[20px] text-[2rem] duration-300 cursor-pointer;
 }
 
-.modal-content .close:hover {
+.close:hover {
     @apply text-primary;
 }
 
-
 .modal-outer-enter-active,
 .modal-outer-leave-active {
-    transition: opacity 0.3s cubic-bezier(0.52, 0.02, 0.19, 1.02);
+    transition: opacity 0.3s ease;
 }
+
 
 .modal-outer-enter-from,
 .modal-outer-leave-to {
-    opacity: 0;
+    @apply opacity-0
 }
 
-.modal-inner-enter-active {
-    transition: all 0.3s cubic-bezier(0.52, 0.02, 0.19, 1.02) 0.15s;
-}
-
+.modal-inner-enter-active,
 .modal-inner-leave-active {
-    transition: all 0.3s cubic-bezier(0.52, 0.02, 0.19, 1.02);
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .modal-inner-enter-from {
-    opacity: 0;
-    transform: scale(0.8);
+    @apply opacity-0 scale-[0.8];
 }
 
 .modal-inner-leave-to {
-    transform: scale(0.8);
+    @apply scale-[0.8];
 }
 </style>

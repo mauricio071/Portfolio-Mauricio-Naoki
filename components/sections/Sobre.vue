@@ -3,13 +3,12 @@
         <div class="container mx-auto">
             <div class="content flex flex-col gap-8 px-4 text-secondary lg:grid lg:grid-cols-2 lg:items-center lg:px-0">
                 <div v-motion-fade-visible-once :delay="0"
-                    class="foto space-y-4 relative max-w-44 mx-auto sm:max-w-[15rem] lg:max-w-[18rem] xl:max-w-[23rem]">
-                    <div class="foto-perfil w-full shadow-2xl rounded-[50%] lg:rounded-md">
+                    class="space-y-4 relative max-w-44 mx-auto sm:max-w-[15rem] lg:max-w-[18rem] xl:max-w-[23rem]">
+                    <div class="foto-perfil">
                         <img src="/assets/img/foto-perfil.jpeg" alt="foto-perfil" class="rounded-[50%] lg:rounded-md">
                     </div>
                 </div>
-                <div v-motion-slide-visible-once-bottom :duration="700"
-                    class="conteudo space-y-10 max-w-[650px] text-secondary">
+                <div v-motion-slide-visible-once-bottom :duration="700" class="space-y-10 max-w-[650px]">
                     <div>
                         <h2 class="section-title lg:!items-start">
                             Sobre mim
@@ -29,21 +28,23 @@
                     </div>
                     <div v-motion-slide-visible-once-bottom :duration="700" :delay="300"
                         class="onde-encontrar space-y-8">
-                        <h3 class="text-xl font-bold">Onde me encontrar</h3>
+                        <h3 class="flex flex-col-reverse items-center text-xl font-bold gap-[0.7rem] lg:items-start">
+                            Onde me encontrar
+                        </h3>
                         <div class="flex gap-4 justify-center lg:justify-start">
-                            <a href="https://github.com/mauricio071" target="_blank" rel="noreferrer" title="Github"
-                                class="profile-about-icon">
+                            <a href="https://github.com/mauricio071" target="_blank" rel="noreferrer"
+                                aria-label="Github" class="profile-about-icon">
                                 <Icon name="mdi:github" class="text-[2rem] block text-white duration-300" />
                             </a>
                             <a href="https://www.linkedin.com/in/mauricionaoki" target="_blank" rel="noreferrer"
-                                title="LinkedIn" class="profile-about-icon">
+                                aria-label="LinkedIn" class="profile-about-icon">
                                 <Icon name="mdi:linkedin" class="text-[2rem] block text-white duration-300" />
                             </a>
-                            <a href="https://wa.me/5511942816814" target="_blank" rel="noreferrer" title="WhatsApp"
+                            <a href="https://wa.me/5511942816814" target="_blank" rel="noreferrer" aria-label="WhatsApp"
                                 class="profile-about-icon">
                                 <Icon name="mdi:whatsapp" class="text-[2rem] block text-white duration-300" />
                             </a>
-                            <a href="mailto:naokimau@gmail.com" target="_blank" rel="noreferrer" title="Gmail"
+                            <a href="mailto:naokimau@gmail.com" target="_blank" rel="noreferrer" aria-label="Gmail"
                                 class="profile-about-icon">
                                 <Icon name="mdi:gmail" class="text-[2rem] block text-white duration-300" />
                             </a>
@@ -51,105 +52,42 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
 </template>
 
-<script setup>
-
-</script>
-
 <style scoped>
-@media (min-width: 640px) {
-    .foto-perfil::before {
-        width: 130px !important;
-        height: 130px !important;
-        border-top: 7px solid #00bfa6 !important;
-        border-left: 7px solid #00bfa6 !important;
-    }
-
-    .foto-perfil::after {
-        width: 130px !important;
-        height: 130px !important;
-        border-bottom: 7px solid #00bfa6 !important;
-        border-right: 7px solid #00bfa6 !important;
-    }
+.foto-perfil {
+    @apply w-full shadow-2xl rounded-[50%] lg:rounded-md;
 }
 
-@media (min-width: 1024px) {
-    .foto-perfil::before {
-        display: block !important;
-        left: -3rem !important;
-        top: -3rem !important;
-        width: 150px !important;
-        height: 150px !important;
-    }
+.foto-perfil::before,
+.foto-perfil::after {
+    @apply hidden absolute w-[150px] h-[150px] border-[#00bfa6];
+    content: '';
 
-    .foto-perfil::after {
-        display: block !important;
-        right: -2.5rem !important;
-        bottom: -2.5rem !important;
-        width: 150px !important;
-        height: 150px !important;
+    @screen lg {
+        @apply block;
     }
-}
-
-.profile-about-icon {
-    padding: .5rem;
-    background: #333333;
-    border-radius: 10px;
-    transition-duration: 300ms;
 }
 
 .foto-perfil::before {
-    content: '';
-    display: none;
-    position: absolute;
-    left: -2rem;
-    top: -2rem;
-    width: 90px;
-    height: 90px;
-    border-top: 5px solid #00bfa6;
-    border-left: 5px solid #00bfa6;
+    @apply left-[-3rem] top-[-3rem] border-t-[7px] border-l-[7px];
 }
 
 .foto-perfil::after {
-    content: '';
-    display: none;
-    position: absolute;
-    right: -2rem;
-    bottom: -2rem;
-    width: 90px;
-    height: 90px;
-    border-bottom: 5px solid #00bfa6;
-    border-right: 5px solid #00bfa6;
+    @apply right-[-2.5rem] bottom-[-2.5rem] border-b-[7px] border-r-[7px];
 }
 
-#sobre .content h3 {
-    @apply flex flex-col-reverse items-center gap-4;
-
-    @screen lg {
-        @apply items-start;
-    }
-
+h3::before {
+    @apply content-[''] w-[100px] h-[5px] bg-primary inline-flex items-center rounded-[5px];
 }
 
-.content .onde-encontrar h3 {
-    gap: 0.7rem;
+.profile-about-icon {
+    @apply p-2 bg-[#333] rounded-lg transition duration-300;
 }
 
-#sobre .content h3::before {
-    content: '';
-    width: 100px;
-    height: 5px;
-    background: #00bfa6;
-    display: inline-flex;
-    align-items: center;
-    border-radius: 5px;
-}
-
-a.profile-about-icon:hover {
+.profile-about-icon:hover {
     box-shadow: 0 0 10px #00bfa6,
         0 0 20px #00bfa6,
         0 0 40px #00bfa6

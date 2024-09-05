@@ -16,16 +16,16 @@
                     Download CV
                 </a>
                 <div class="flex gap-4">
-                    <a href="https://github.com/mauricio071" target="_blank" rel="noreferrer" title="Github">
+                    <a href="https://github.com/mauricio071" target="_blank" rel="noreferrer" aria-label="Github">
                         <Icon name="mdi:github"
                             class="text-[2rem] block text-secondary duration-300 hover:text-white" />
                     </a>
                     <a href="https://www.linkedin.com/in/mauricionaoki" target="_blank" rel="noreferrer"
-                        title="LinkedIn">
+                        aria-label="LinkedIn">
                         <Icon name="mdi:linkedin"
                             class="text-[2rem] block text-secondary duration-300 hover:text-[#258dbf]" />
                     </a>
-                    <a href="https://wa.me/5511942816814" target="_blank" rel="noreferrer" title="WhatsApp">
+                    <a href="https://wa.me/5511942816814" target="_blank" rel="noreferrer" aria-label="WhatsApp">
                         <Icon name="mdi:whatsapp"
                             class="text-[2rem] block text-secondary duration-300 hover:text-[#25d366]" />
                     </a>
@@ -45,6 +45,26 @@
 </script>
 
 <style scoped>
+.home {
+    @apply min-h-[550px] flex justify-center items-center p-4 overflow-hidden;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(0, 191, 165, 0.7) 100%);
+
+    @screen lg {
+        @apply min-h-screen;
+    }
+}
+
+.curriculo-btn {
+    @apply bg-white px-4 py-2 rounded-md text-secondary font-semibold my-2 duration-300 md:my-5 md:px-8 md:py-3;
+}
+
+.curriculo-btn:hover {
+    @apply hover:bg-secondary hover:text-white;
+    box-shadow: 0 0 10px #00bfa6,
+        0 0 40px #00bfa6,
+        0 0 80px #00bfa6
+}
+
 .text-animation {
     @apply w-full whitespace-nowrap overflow-hidden border-r-2 border-secondary;
     animation: typing 4s steps(43),
@@ -76,33 +96,5 @@
     100% {
         transform: rotate(-360deg)
     }
-}
-
-.home {
-    min-height: 550px;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(0, 191, 165, 0.6979166666666667) 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    overflow: hidden;
-}
-
-@media (min-width: 1024px) {
-    .home {
-        min-height: 100vh;
-    }
-}
-
-.curriculo-btn {
-    @apply bg-white px-4 py-2 rounded-md text-secondary font-semibold my-2 duration-300 md:my-5 md:px-8 md:py-3;
-}
-
-.curriculo-btn:hover {
-    @apply hover:bg-secondary hover:text-white;
-    box-shadow: 0 0 10px #00bfa6,
-        0 0 40px #00bfa6,
-        0 0 80px #00bfa6
 }
 </style>
