@@ -330,7 +330,7 @@ const limparModalInfo = () => {
 }
 
 .project-description {
-    @apply duration-300 rounded-lg bg-[#000000B3] opacity-0 !text-white absolute w-full h-full top-0 p-8 flex flex-col justify-center items-center gap-3 border-[3px] border-primary;
+    @apply duration-300 rounded-lg bg-[#000000B3] opacity-0 !text-white absolute w-full h-full top-0 p-8 flex flex-col justify-center items-center gap-3 border-2 border-primary;
 
     @screen sm {
         @apply gap-5;
