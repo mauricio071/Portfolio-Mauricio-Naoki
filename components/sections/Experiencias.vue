@@ -39,7 +39,7 @@ import IconSkillsLogoVue from '@/components/icon/skills-logo/Vue.vue';
 import IconSkillsLogoNuxt from '@/components/icon/skills-logo/Nuxt.vue';
 import IconSkillsLogoTailwind from '@/components/icon/skills-logo/Tailwind.vue';
 import IconSkillsLogoGit from '@/components/icon/skills-logo/Git.vue';
-import IconSkillsLogoBootstrap from '@components/icon/skills-lgo/BootsTrap.vue';
+// import IconSkillsLogoBootstrap from '@components/icon/skills-lgo/BootsTrap.vue';
 import IconSkillsLogoLaravel from '@/components/icon/skills-logo/Laravel.vue';
 import IconSkillsLogoVuetify from '@/components/icon/skills-logo/Vuetify.vue';
 
@@ -55,14 +55,14 @@ const empresas = [
         cargo: "Desenvolvedor Full-stack",
         descricao: "Na Upwards, atuei como desenvolvedor Full-Stack, focado no sistema interno da empresa. Utilizei Vue.js para o desenvolvimento do front-end e Laravel para o back-end. Além disso, implementei testes automatizados para garantir a qualidade e a estabilidade do sistema."
         , data: "Nov 2021 - Jun 2022", tecnologias: [IconSkillsLogoHtml, IconSkillsLogoCss,
-            IconSkillsLogoJavascript, IconSkillsLogoVue, IconSkillsLogoBootstrap,
+            IconSkillsLogoJavascript, IconSkillsLogoVue, IconSkillsLogoVue,
             IconSkillsLogoLaravel, IconSkillsLogoGit,]
     }, {
         nome: "Garnon",
         cargo: "Desenvolvedor Full-stack",
         descricao: "Na Garnon, trabalhei na manutenção de um sistema da Angola, usando Vue.js para desenvolver a interface do usuário e Laravel para gerenciar a lógica de back-end."
         , data: "Jun 2021 - Out 2021", tecnologias: [IconSkillsLogoHtml, IconSkillsLogoCss,
-            IconSkillsLogoJavascript, IconSkillsLogoVue, IconSkillsLogoBootstrap,
+            IconSkillsLogoJavascript, IconSkillsLogoVue, IconSkillsLogoVue,
             IconSkillsLogoLaravel, IconSkillsLogoGit,]
     },];
 </script>
