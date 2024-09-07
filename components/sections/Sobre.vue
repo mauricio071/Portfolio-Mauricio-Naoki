@@ -1,6 +1,6 @@
 <template>
     <section id="sobre">
-        <div class="container mx-auto">
+        <div class="wrapper">
             <div class="content flex flex-col gap-8 px-4 text-secondary lg:grid lg:grid-cols-2 lg:items-center lg:px-0">
                 <div v-motion-fade-visible-once :delay="0"
                     class="space-y-4 relative max-w-44 mx-auto sm:max-w-[15rem] lg:max-w-[18rem] xl:max-w-[23rem]">

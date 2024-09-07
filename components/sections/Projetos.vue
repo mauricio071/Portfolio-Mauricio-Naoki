@@ -1,6 +1,6 @@
 <template>
     <section id="projetos" class="background-diagonal">
-        <div class="container mx-auto">
+        <div class="wrapper">
             <div class="px-4">
                 <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
                     Projetos

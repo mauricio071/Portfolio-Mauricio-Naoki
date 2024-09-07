@@ -1,6 +1,6 @@
 <template>
     <section id="inicio" class="home">
-        <div class="container mx-auto relative mb-18 sm:mt-18 md:flex md:justify-between md:items-center">
+        <div class="wrapper relative mb-18 sm:mt-18 md:flex md:justify-between md:items-center">
             <IconTecnologia class="header-vector" />
             <div class="flex flex-col items-center gap-4 md:items-start md:gap-3 ">
                 <p class="text-white font-semibold sm:text-lg lg:text-2xl">👋🏻 Olá, o meu nome é</p>

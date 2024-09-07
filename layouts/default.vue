@@ -2,22 +2,15 @@
     <div>
         <Navbar />
         <slot />
-        <button v-motion-pop-visible v-show="visible" @click="scrollToTop" class="topo-btn">
+        <a v-motion-pop-visible v-show="visible" href="#" class="topo-btn">
             <Icon name="mdi:arrow-up" class="text-[1.75rem] block" />
-        </button>
+        </a>
         <Footer />
     </div>
 </template>
 
 <script setup>
 const visible = ref(false);
-
-const scrollToTop = () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-};
 
 const handleScroll = () => {
     visible.value = window.scrollY > 800;

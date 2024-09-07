@@ -1,6 +1,6 @@
 <template>
     <section id="habilidades" class="background-diagonal">
-        <div class="container mx-auto">
+        <div class="wrapper">
             <div class="px-4">
                 <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
                     Habilidades
@@ -10,7 +10,7 @@
                     <div v-for="(tecnologia, index) in tecnologias" :key="index" v-motion-slide-visible-once-bottom
                         :delay="index * 100" :duration="600" class="z-[2]">
                         <div class="icon-card">
-                            <component :is="tecnologia.logo" class="max-w-[3rem] z-[2]" />
+                            <component :is="tecnologia.logo" class="max-w-[3rem] max-h-[3rem] z-[2]" />
                             <strong class="z-[2]">{{ tecnologia.nome }}</strong>
                         </div>
                     </div>

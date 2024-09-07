@@ -1,6 +1,6 @@
 <template>
     <section id="experiencias">
-        <div class="container mx-auto">
+        <div class="wrapper">
             <div>
                 <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
                     Experiências

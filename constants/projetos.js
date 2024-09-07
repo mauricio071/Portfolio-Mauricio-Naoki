@@ -10,6 +10,7 @@ import IconSkillsLogoKotlin from '@/components/icon/skills-logo/Kotlin.vue';
 import IconSkillsLogoSql from '@/components/icon/skills-logo/Sql.vue';
 import IconSkillsLogoSqlite from '@/components/icon/skills-logo/Sqlite.vue';
 import IconSkillsLogoVuetify from '@/components/icon/skills-logo/Vuetify.vue';
+import IconSkillsLogoTypeScript from '@/components/icon/skills-logo/TypeScript.vue';
 
 export const projetos = [
     {
@@ -65,6 +66,32 @@ export const projetos = [
         repositorio: ''
     },
     {
+        nome: "CleanTube",
+        tipo: "Sistema",
+        imgNome: "clean-tube",
+        descricao: "Neste projeto, foi desenvolvido um sistema para o gerenciamento de vídeos do YouTube. O sistema permite adicionar vídeos, fornecendo opções para inserir links e nomes. Além disso, os usuários podem visualizar todos os vídeos adicionados, favoritar e manter essa seleção mesmo após recarregar a página, com a utilização do plugin Pinia para persistência de dados.",
+        tagsIcon: [
+            IconSkillsLogoHtml,
+            IconSkillsLogoCss,
+            IconSkillsLogoJavascript,
+            IconSkillsLogoTypeScript,
+            IconSkillsLogoVue,
+            IconSkillsLogoNuxt,
+            IconSkillsLogoTailwind
+        ],
+        tags: [
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'TypeScript',
+            'Vue.js',
+            'Nuxt.js',
+            'Tailwind'
+        ],
+        url: 'https://cleantube.vercel.app',
+        repositorio: 'https://github.com/mauricio071/CleanTube'
+    },
+    {
         nome: "Loja de produtos",
         tipo: "Website",
         imgNome: "loja-produtos",
@@ -109,30 +136,6 @@ export const projetos = [
         ],
         url: 'https://make-your-burguer.netlify.app',
         repositorio: 'https://github.com/mauricio071/Make-Your-Burguer'
-    },
-    {
-        nome: "Youtube Vídeos",
-        tipo: "Website",
-        imgNome: "youtube-videos",
-        descricao: "Neste projeto, foi desenvolvido um sistema para o gerenciamento de vídeos do YouTube. O sistema permite adicionar vídeos, fornecendo opções para inserir links e nomes. Além disso, os usuários podem visualizar todos os vídeos adicionados, favoritar e manter essa seleção mesmo após recarregar a página, com a utilização do plugin Pinia para persistência de dados.",
-        tagsIcon: [
-            IconSkillsLogoHtml,
-            IconSkillsLogoCss,
-            IconSkillsLogoJavascript,
-            IconSkillsLogoVue,
-            IconSkillsLogoNuxt,
-            IconSkillsLogoTailwind
-        ],
-        tags: [
-            'HTML',
-            'CSS',
-            'JavaScript',
-            'Vue.js',
-            'Nuxt.js',
-            'Tailwind'
-        ],
-        url: 'https://nuxt3-youtube-videos.vercel.app/login',
-        repositorio: 'https://github.com/mauricio071/Nuxt3-Youtube-Videos'
     },
     {
         nome: "Aplicativo de chamada de alunos",
