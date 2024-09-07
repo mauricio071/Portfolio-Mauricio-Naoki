@@ -9,7 +9,7 @@
                     class="flex flex-wrap items-center justify-center gap-6 max-w-[60rem] mx-auto md:grid md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
                     <div v-for="(tecnologia, index) in tecnologias" :key="index" v-motion-slide-visible-once-bottom
                         :delay="index * 100" :duration="600" class="z-[2]">
-                        <div class="icon-card">
+                        <div class="icon-card" :style="{ '--card-color': tecnologia.cor }">
                             <component :is="tecnologia.logo" class="max-w-[3rem] max-h-[3rem] z-[2]" />
                             <strong class="z-[2]">{{ tecnologia.nome }}</strong>
                         </div>
@@ -38,7 +38,8 @@ import { tecnologias } from '@/constants/tecnologias'
 }
 
 .icon-card::before {
-    @apply content-[''] absolute w-[5rem] h-[16rem] top-[-40%] rounded-[10px] rotate-[-48deg] bg-[#00a8b8];
+    @apply content-[''] absolute w-[5rem] h-[16rem] top-[-40%] rounded-[10px] rotate-[-48deg];
+    background-color: var(--card-color);
     animation: rotate 8s linear infinite;
 }
 
