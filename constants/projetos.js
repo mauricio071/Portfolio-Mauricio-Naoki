@@ -138,7 +138,7 @@ export const projetos = [
         repositorio: 'https://github.com/mauricio071/Make-Your-Burguer'
     },
     {
-        nome: "Aplicativo de chamada de alunos",
+        nome: "App de chamada de alunos",
         tipo: "Aplicativo",
         imgNome: "app-chamada",
         descricao: "É uma aplicação mobile para controle de presença em aulas. Após o login com RA e senha, a aplicação mostra os dados do aluno, como nome, RA e localização atual. Com base nesses dados, verifica se há aula e, se estiver dentro do horário e localização corretos, permite registrar a presença.",
