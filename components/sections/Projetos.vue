@@ -116,7 +116,7 @@ const limparModalInfo = () => {
 }
 
 .background-diagonal:after {
-    @apply content-[''] absolute w-full h-full bg-[#e0f7f2] top-[-3rem] right-0 bottom-0 left-0 origin-top-left skew-y-[4deg];
+    @apply content-[''] absolute w-full h-full bg-[#e0f7f2] top-[-1rem] right-0 bottom-0 left-0 origin-top-left skew-y-[4deg] 2xl:top-[-3rem];
 }
 
 .projetos {

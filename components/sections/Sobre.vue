@@ -13,14 +13,14 @@
                         <h2 class="section-title lg:!items-start">
                             Sobre mim
                         </h2>
-                        <p class="mb-4 xl:text-lg">
+                        <p class="mb-4 text-justify lg:text-start xl:text-lg">
                             Sou um desenvolvedor front-end focado em criar experiências digitais envolventes e
                             funcionais, com formação em Ciência da Computação pela Universidade Cidade de São Paulo,
                             concluída em dezembro de 2022. Nos últimos dois anos, trabalhei em uma digital house,
                             desenvolvendo sistemas e sites personalizados para diversos clientes. Cada novo projeto
                             despertava minha curiosidade e motivação, levando a constantes pesquisas e aprendizados.
                         </p>
-                        <p class="xl:text-lg">
+                        <p class="text-justify lg:text-start xl:text-lg">
                             Tenho maior aptidão para a área de front-end, com principais habilidades em Vue.js, Nuxt.js,
                             React.js, JavaScript e TypeScript. Estou sempre em busca de projetos desafiadores que me
                             permitam crescer profissionalmente, explorar novas tecnologias e contribuir para inovações.
