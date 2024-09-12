@@ -11,7 +11,6 @@ import IconSkillsLogoSass from '@/components/icon/skills-logo/Sass.vue';
 import IconSkillsLogoNode from '@/components/icon/skills-logo/Node.vue';
 import IconSkillsLogoVuetify from '@/components/icon/skills-logo/Vuetify.vue';
 import IconSkillsLogoGit from '@/components/icon/skills-logo/Git.vue';
-import IconSkillsLogoJava from '@/components/icon/skills-logo/Java.vue';
 
 export const tecnologias = [
     { logo: IconSkillsLogoHtml, nome: "HTML5", cor: '#e34f26' },
@@ -27,5 +26,4 @@ export const tecnologias = [
     { logo: IconSkillsLogoSass, nome: "SASS", cor: '#cc6699' },
     { logo: IconSkillsLogoGit, nome: "Git", cor: '#f05032' },
     { logo: IconSkillsLogoNode, nome: "Node.js", cor: '#68a063' },
-    { logo: IconSkillsLogoJava, nome: "Java", cor: '#007396' },
 ];

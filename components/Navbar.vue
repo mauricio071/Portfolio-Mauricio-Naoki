@@ -1,5 +1,5 @@
 <template>
-    <header class="fixed top-0 w-full p-4 transition-all duration-300 lg:py-2 z-[100]"
+    <header class="fixed top-0 w-full p-4 transition-all duration-300 lg:py-3 z-[100]"
         :class="{ '!bg-primary shadow-xl': hasScrolled || isOpen, 'bg-transparent': !hasScrolled }">
         <nav class="container mx-auto flex justify-between items-center flex-wrap text-white">
             <h1 class="text-xl font-semibold text-white">

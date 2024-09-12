@@ -47,12 +47,12 @@
                                 <div class="detalhes-links">
                                     <a v-if="modal.urlProjeto" :href="modal.urlProjeto" target="_blank" rel="noreferrer"
                                         aria-label="Projeto Online">
-                                        <Icon name="mdi:web" class="text-[2rem] text-secondary" />
+                                        <Icon name="mdi:web" class="text-[1.5rem] text-secondary lg:text-[2rem]" />
                                         Projeto Online
                                     </a>
                                     <a v-if="modal.repositorioProjeto" :href="modal.repositorioProjeto" target="_blank"
                                         rel="noreferrer" aria-label="Repositório">
-                                        <Icon name="mdi:github" class="text-[2rem] text-secondary" />
+                                        <Icon name="mdi:github" class="text-[1.5rem] text-secondary lg:text-[2rem]" />
                                         Repositório
                                     </a>
                                 </div>
@@ -168,7 +168,7 @@ const limparModalInfo = () => {
 }
 
 .modal-content-description {
-    @apply flex flex-col gap-4 lg:flex-row lg:gap-8;
+    @apply flex flex-col items-center gap-4 lg:flex-row lg:gap-8;
 }
 
 .modal-img {
@@ -204,10 +204,14 @@ const limparModalInfo = () => {
 }
 
 .detalhes-links a {
-    @apply flex items-center gap-2 border-2 border-secondary rounded-xl px-2 py-1 text-secondary duration-200;
+    @apply flex items-center gap-2 text-sm border-2 border-secondary rounded-xl px-2 py-1 text-secondary duration-200;
 
     @screen md {
         @apply px-4 py-2 font-semibold;
+    }
+
+    @screen lg {
+        @apply text-base;
     }
 }
 

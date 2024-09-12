@@ -45,8 +45,8 @@ import { tecnologias } from '@/constants/tecnologias'
 /* Animação dos cards opção 2 */
 .icon-card::before {
     @apply content-[''] absolute w-[150%] h-[150%];
-    background-image: repeating-conic-gradient(var(--card-color) 0%, var(--card-color) 10%, transparent 10%, transparent 40%, var(--card-color) 50%);
-    animation: rotate 8s linear infinite;
+    background-image: repeating-conic-gradient(var(--card-color) 0%, var(--card-color) 25%, transparent 35%, transparent 40%, var(--card-color) 50%);
+    animation: rotate 6s linear infinite;
 }
 
 @keyframes rotate {
@@ -61,6 +61,6 @@ import { tecnologias } from '@/constants/tecnologias'
 
 .icon-card::after {
     @apply content-[''] absolute inset-[5px] rounded-[25px] bg-[white];
-    box-shadow: inset 0px 2px 7px 0px #0000008c;
+    box-shadow: inset 0px 2px 10px 0px #0000008c;
 }
 </style>

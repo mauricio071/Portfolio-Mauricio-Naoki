@@ -11,13 +11,15 @@ import IconSkillsLogoSql from '@/components/icon/skills-logo/Sql.vue';
 import IconSkillsLogoSqlite from '@/components/icon/skills-logo/Sqlite.vue';
 import IconSkillsLogoVuetify from '@/components/icon/skills-logo/Vuetify.vue';
 import IconSkillsLogoTypeScript from '@/components/icon/skills-logo/TypeScript.vue';
+import IconSkillsLogoReact from '@/components/icon/skills-logo/React.vue';
+import IconSkillsLogoNode from '@/components/icon/skills-logo/Node.vue';
 
 export const projetos = [
     {
         nome: "Sixchains Digital House",
         tipo: "Website",
         imgNome: "six-chains-thumb",
-        descricao: "Este site foi desenvolvido para a empresa Sixchains Digital House, onde fui responsável pelo desenvolvimento front-end. O projeto foi otimizado com técnicas de SEO para garantir um melhor posicionamento nos resultados de busca do Google, aumentando a visibilidade online da empresa.",
+        descricao: "O site foi desenvolvido para a Sixchains Digital House, onde fui responsável pelo desenvolvimento front-end. O foco principal foi garantir uma implementação eficiente e funcional, além de aplicar técnicas de SEO para melhorar o desempenho nas buscas do Google. O site inclui descrições dos principais serviços oferecidos pela empresa e uma seção destacando projetos realizados, reforçando a confiabilidade e qualidade dos serviços. O design foi baseado em pesquisas feitas pela equipe, garantindo que a experiência do usuário fosse intuitiva e compatível com diferentes dispositivos.",
         tagsIcon: [
             IconSkillsLogoHtml,
             IconSkillsLogoCss,
@@ -43,7 +45,7 @@ export const projetos = [
         nome: "MOS Consultoria",
         tipo: "Website e Sistema",
         imgNome: "mos",
-        descricao: "Este site e sistema foram desenvolvidos para a MOS Consultoria, com a integração de funcionalidades essenciais, como agenda, plataforma de comentários entre sindicatos e notificações em tempo real via WebSocket.",
+        descricao: "Este site e sistema foram desenvolvidos para a MOS Consultoria, integrando funcionalidades essenciais, como uma agenda para gerenciamento de compromissos e uma plataforma de comentários entre sindicatos. Além disso, foram implementadas notificações em tempo real via WebSocket, garantindo que os usuários recebam atualizações imediatas.",
         tagsIcon: [
             IconSkillsLogoHtml,
             IconSkillsLogoCss,
@@ -69,7 +71,7 @@ export const projetos = [
         nome: "CleanTube",
         tipo: "Sistema",
         imgNome: "clean-tube",
-        descricao: "Neste projeto, foi desenvolvido um sistema para o gerenciamento de vídeos do YouTube. O sistema permite adicionar vídeos, fornecendo opções para inserir links e nomes. Além disso, os usuários podem visualizar todos os vídeos adicionados, favoritar e manter essa seleção mesmo após recarregar a página, com a utilização do plugin Pinia para persistência de dados.",
+        descricao: "Neste projeto, a autenticação via Google OAuth foi configurada pelo Google Cloud, permitindo que apenas usuários autorizados adicionem, editem ou excluam vídeos do YouTube. Os layouts foram criados com o Nuxt UI, que oferece templates prontos para agilizar o desenvolvimento. No backend, foi usado o Nitro integrado ao Nuxt 3, facilitando a configuração de rotas e funções server-side. O projeto também permite favoritar vídeos, que são armazenados localmente no navegador do usuário e também exibem os vídeos sem anúncios.",
         tagsIcon: [
             IconSkillsLogoHtml,
             IconSkillsLogoCss,
@@ -92,10 +94,10 @@ export const projetos = [
         repositorio: 'https://github.com/mauricio071/CleanTube'
     },
     {
-        nome: "Loja de produtos",
+        nome: "Products Store",
         tipo: "Website",
-        imgNome: "loja-produtos",
-        descricao: "Nesta aplicação de vendas, foi desenvolvido um site utilizando Nuxt.js, com integração do plugin Pinia para garantir a persistência dos dados. Mesmo ao recarregar a página, as informações do carrinho de compras são mantidas.",
+        imgNome: "products-store",
+        descricao: "Nesta aplicação de vendas de produtos, desenvolvida com Nuxt.js, foi feita a integração com uma API fictícia para listar e exibir os produtos. Foi implementado o plugin Pinia para garantir a persistência dos dados, assim, o carrinho de compras funciona de forma semelhante ao do AliExpress, mantendo os itens salvos no navegador mesmo após o usuário fechar a página ou atualizar.",
         tagsIcon: [
             IconSkillsLogoHtml,
             IconSkillsLogoCss,
@@ -116,16 +118,58 @@ export const projetos = [
         repositorio: 'https://github.com/mauricio071/Mauricio-Products-Store'
     },
     {
-        nome: "Make Your Burguer",
+        nome: "MoviesLib",
         tipo: "Website",
-        imgNome: "make-your-burguer",
-        descricao: "Esta aplicação, desenvolvida com Vue.js, permite aos usuários montar seus hambúrgueres personalizados e gerenciar todos os pedidos, incluindo funcionalidades de edição e exclusão.",
+        imgNome: "movies-lib",
+        descricao: "Este projeto foi desenvolvido utilizando React.js e consome a API do themoviedb.org para listar os filmes com as melhores avaliações da história do cinema. Além disso, tem como pesquisar filmes atuais e acessar informações detalhadas, como sinopses, orçamento e duração.",
+        tagsIcon: [
+            IconSkillsLogoHtml,
+            IconSkillsLogoCss,
+            IconSkillsLogoJavascript,
+            IconSkillsLogoReact,
+        ],
+        tags: [
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'React.js'
+        ],
+        url: 'https://movies-lib-react.netlify.app',
+        repositorio: 'https://github.com/mauricio071/MoviesLib'
+    },
+    {
+        nome: "Project Costs",
+        tipo: "Sistema",
+        imgNome: "project-costs",
+        descricao: "Este projeto, desenvolvido com o framework React.js, é um sistema para gerenciar o orçamento de projetos. Após cadastrar um projeto, o usuário pode adicionar múltiplos serviços dentro do projeto, cada um com informações detalhadas sobre seu custo. O sistema avisa o usuário com uma notificação se o valor total dos serviços ultrapassar o orçamento estabelecido. Além disso, o sistema permite a edição e exclusão de projetos e serviços conforme necessidade.",
+        tagsIcon: [
+            IconSkillsLogoHtml,
+            IconSkillsLogoCss,
+            IconSkillsLogoJavascript,
+            IconSkillsLogoReact,
+            IconSkillsLogoNode,
+        ],
+        tags: [
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'React.js',
+            'Node.js'
+        ],
+        url: 'https://project-costs.netlify.app',
+        repositorio: 'https://github.com/mauricio071/project-costs'
+    },
+    {
+        nome: "Tarefas Pinia",
+        tipo: "Website",
+        imgNome: "tarefas-pinia",
+        descricao: "Este projeto, desenvolvido com Vue 3, é uma aplicação de lista de tarefas que melhora a organização dos afazeres. Permite classificar cada tarefa como 'a fazer', 'marcado' ou 'completado'. O Pinia foi utilizado para gerenciar o estado da aplicação, mesmo depois de atualizar a página ou o fechar o navegador, os dados do usuário vão persistir no navegador.",
         tagsIcon: [
             IconSkillsLogoHtml,
             IconSkillsLogoCss,
             IconSkillsLogoJavascript,
             IconSkillsLogoVue,
-            IconSkillsLogoTailwind
+            IconSkillsLogoTailwind,
         ],
         tags: [
             'HTML',
@@ -134,8 +178,52 @@ export const projetos = [
             'Vue.js',
             'Tailwind'
         ],
+        url: 'https://tarefas-pinia.netlify.app',
+        repositorio: 'https://github.com/mauricio071/Pinia-todo-list'
+    },
+    {
+        nome: "Make Your Burguer",
+        tipo: "Sistema",
+        imgNome: "make-your-burguer",
+        descricao: "Esta aplicação, desenvolvida com Vue.js no front-end e Node.js no back-end, os usuários podem montar seus hambúrgueres personalizados e gerenciar os pedidos, incluindo a edição do status e a exclusão de pedidos.",
+        tagsIcon: [
+            IconSkillsLogoHtml,
+            IconSkillsLogoCss,
+            IconSkillsLogoJavascript,
+            IconSkillsLogoVue,
+            IconSkillsLogoTailwind,
+            IconSkillsLogoNode
+        ],
+        tags: [
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'Vue.js',
+            'Tailwind',
+            'Node.js'
+        ],
         url: 'https://make-your-burguer.netlify.app',
         repositorio: 'https://github.com/mauricio071/Make-Your-Burguer'
+    },
+    {
+        nome: "Jogo da Forca",
+        tipo: "Website",
+        imgNome: "jogo-da-forca",
+        descricao: "Neste projeto, foi desenvolvido um jogo da forca usando o Vue.js, com uma interface moderna e responsiva para poder jogar diretamente no navegador.",
+        tagsIcon: [
+            IconSkillsLogoHtml,
+            IconSkillsLogoCss,
+            IconSkillsLogoJavascript,
+            IconSkillsLogoVue,
+        ],
+        tags: [
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'Vue.js'
+        ],
+        url: 'https://jogo-da-forca-vue.netlify.app',
+        repositorio: 'https://github.com/mauricio071/jogo-da-forca'
     },
     {
         nome: "App de chamada de alunos",
@@ -170,16 +258,6 @@ export const projetos = [
         ],
         url: '',
         repositorio: 'https://github.com/mauricio071/cadastroLeitor_aluno_professor_e_adminitrativa'
-    },
-    {
-        nome: "Em breve!",
-        tipo: "",
-        imgNome: "em-breve",
-        descricao: "",
-        tagsIcon: [],
-        tags: [],
-        url: '',
-        repositorio: ''
     },
     {
         nome: "Em breve!",
