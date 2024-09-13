@@ -6,8 +6,8 @@
                     Depoimentos
                 </h2>
                 <div v-motion-fade-visible-once :duration="700" :delay="500" class="depoimentos">
-                    <carousel :items-to-show="1" :breakpoints="breakpoints" wrapAround pauseAutoplayOnHover>
-                        <!-- :autoplay="7000" -->
+                    <carousel :items-to-show="1" :breakpoints="breakpoints" wrapAround pauseAutoplayOnHover
+                        :autoplay="7000">
                         <slide v-for="(depoimento, i) in depoimentos" :key="i">
                             <div class="depoimento-container">
                                 <div class="depoimento-pessoa">

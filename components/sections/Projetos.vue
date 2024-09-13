@@ -1,34 +1,31 @@
 <template>
     <section id="projetos" class="background-diagonal">
         <div class="wrapper">
-            <div class="px-4">
-                <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
-                    Projetos
-                </h2>
-                <div class="projetos">
-                    <div @click="abrirModal(projeto)" v-for="(projeto, i) in projetosVisiveis" :key="i"
-                        v-motion-slide-visible-once-bottom :delay="i * 100" :duration="600" class="project-card">
-                        <div class="project-img">
-                            <NuxtImg :src="`/projetos/${projeto.imgNome}.webp`" :alt="projeto.nome" densities="x1"
-                                width="600" class="rounded-lg" />
-                        </div>
-                        <div class="project-description">
-                            <h2 class="project-name">{{ projeto.nome }}</h2>
-                            <h3 class="project-type">{{ projeto.tipo }}</h3>
-                            <div class="flex items-center gap-3">
-                                <component v-for="(logo, index) in projeto.tagsIcon" :is="logo" :key="index"
-                                    class="logo" />
-                            </div>
+            <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
+                Projetos
+            </h2>
+            <div class="projetos">
+                <div @click="abrirModal(projeto)" v-for="(projeto, i) in projetosVisiveis" :key="i"
+                    v-motion-slide-visible-once-bottom :delay="i * 100" :duration="600" class="project-card">
+                    <div class="project-img">
+                        <NuxtImg :src="`/projetos/${projeto.imgNome}.webp`" :alt="projeto.nome" densities="x1"
+                            width="1000" class="rounded-lg" />
+                    </div>
+                    <div class="project-description">
+                        <h2 class="project-name">{{ projeto.nome }}</h2>
+                        <h3 class="project-type">{{ projeto.tipo }}</h3>
+                        <div class="flex items-center gap-3">
+                            <component v-for="(logo, index) in projeto.tagsIcon" :is="logo" :key="index" class="logo" />
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-center mt-12">
-                    <button v-motion-slide-visible-once-bottom :duration="500"
-                        v-if="projetosVisiveis.length < projetos.length" @click="carregarMaisProjetos"
-                        class="btn-carregar-mais">
-                        Mais projetos
-                    </button>
-                </div>
+            </div>
+            <div class="flex justify-center mt-12">
+                <button v-motion-slide-visible-once-bottom :duration="500"
+                    v-if="projetosVisiveis.length < projetos.length" @click="carregarMaisProjetos"
+                    class="btn-carregar-mais">
+                    Mais projetos
+                </button>
             </div>
         </div>
         <Modal :isVisible="modal.isOpen" @close="fecharModal">
@@ -37,8 +34,7 @@
                 <h3 class="text-gray-500 mb-4 text-center font-semibold">{{ modal.tipoProjeto }}</h3>
                 <div class="modal-content-description">
                     <div class="modal-img">
-                        <NuxtImg :src="`/projetos/${modal.imgProjeto}.webp`" :alt="modal.nomeProjeto" densities="x1"
-                            width="1000" class="w-full" />
+                        <img :src="`/projetos/${modal.imgProjeto}.webp`" :alt="modal.nomeProjeto" class="w-full" />
                     </div>
                     <div class="info">
                         <div>
@@ -139,15 +135,15 @@ const limparModalInfo = () => {
 }
 
 .projetos {
-    @apply grid items-center justify-center gap-6 md:grid-cols-2 lg:grid-cols-3;
+    @apply grid items-center justify-center gap-6 md:grid-cols-2 xl:grid-cols-3;
 }
 
 .project-card {
-    @apply relative rounded-lg cursor-pointer overflow-hidden shadow-2xl bg-white sm:max-w-[25rem] z-[2];
+    @apply relative rounded-lg cursor-pointer overflow-hidden shadow-2xl bg-white max-w-[22rem] sm:max-w-[unset] z-[2];
 }
 
 .project-card .project-img {
-    @apply w-full h-[10rem] xl:h-[14rem];
+    @apply w-full h-[12rem] lg:h-[15rem];
 }
 
 .project-description {

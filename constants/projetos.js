@@ -70,7 +70,7 @@ export const projetos = [
     {
         nome: "CleanTube",
         tipo: "Sistema",
-        imgNome: "clean-tube",
+        imgNome: "cleantube",
         descricao: "Neste projeto, a autenticação via Google OAuth foi configurada pelo Google Cloud, permitindo que apenas usuários autorizados adicionem, editem ou excluam vídeos do YouTube. Os layouts foram criados com o Nuxt UI, que oferece templates prontos para agilizar o desenvolvimento. No backend, foi usado o Nitro integrado ao Nuxt 3, facilitando a configuração de rotas e funções server-side. O projeto também permite favoritar vídeos, que são armazenados localmente no navegador do usuário e também exibem os vídeos sem anúncios.",
         tagsIcon: [
             IconSkillsLogoHtml,

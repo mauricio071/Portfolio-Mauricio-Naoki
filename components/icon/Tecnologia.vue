@@ -47,7 +47,7 @@ svg {
     svg {
         max-width: 35rem;
         top: -20%;
-        right: -8%;
+        right: -6%;
     }
 }
 </style>
