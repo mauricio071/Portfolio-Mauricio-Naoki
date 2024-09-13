@@ -28,7 +28,8 @@
                     </div>
                     <div v-motion-slide-visible-once-bottom :duration="700" :delay="300"
                         class="onde-encontrar space-y-8">
-                        <h3 class="flex flex-col-reverse items-center text-xl font-bold gap-[0.7rem] lg:items-start">
+                        <h3
+                            class="flex flex-col-reverse items-center text-xl font-extrabold gap-[0.7rem] lg:items-start">
                             Onde me encontrar
                         </h3>
                         <div class="flex gap-4 justify-center lg:justify-start">
