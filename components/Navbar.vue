@@ -12,27 +12,9 @@
             <Icon @click="isOpen = !isOpen" name="mdi:menu" class="text-[2rem] lg:hidden w-10 h-10 cursor-pointer" />
             <ul :class="{ 'hidden': !isOpen, 'flex': isOpen }"
                 class="flex-col items-center gap-4 w-full py-4 lg:flex lg:flex-row lg:justify-between lg:w-[unset] lg:my-[unset] xl:gap-6">
-                <li v-motion-fade-visible-once :delay="0">
-                    <a href="#inicio">Início</a>
+                <li v-for="(item, i) in items" :key="i">
+                    <a :href="`#${item}`" v-motion-fade-visible-once :delay="i * 100" class="capitalize">{{ item }}</a>
                 </li>
-                <li v-motion-fade-visible-once :delay="100">
-                    <a href="#sobre">Sobre</a>
-                </li>
-                <li v-motion-fade-visible-once :delay="200">
-                    <a href="#habilidades">Habilidades</a>
-                </li>
-                <li v-motion-fade-visible-once :delay="300">
-                    <a href="#experiencias">Experiências</a>
-                </li>
-                <li v-motion-fade-visible-once :delay="400">
-                    <a href="#projetos">Projetos</a>
-                </li>
-                <li v-motion-fade-visible-once :delay="500">
-                    <a href="#depoimentos">Depoimentos</a>
-                </li>
-                <!-- <li v-motion-fade-visible-once :delay="600">
-                    <a href="#contato">Contato</a>
-                </li> -->
             </ul>
         </nav>
     </header>
@@ -41,6 +23,15 @@
 <script setup>
 const isOpen = ref(false)
 const hasScrolled = ref(false)
+
+const items = [
+    'início',
+    'sobre',
+    'habilidades',
+    'experiencias',
+    'projetos',
+    'depoimentos'
+]
 
 const handleScroll = () => {
     hasScrolled.value = window.scrollY > 0

@@ -6,11 +6,11 @@
                     Projetos
                 </h2>
                 <div class="projetos">
-                    <div @click="abrirModal(projeto)" v-for="(projeto, i) in projetos" :key="i"
-                        v-motion-slide-visible-once-bottom :delay="i * 100" :duration="500" class="project-card">
+                    <div @click="abrirModal(projeto)" v-for="(projeto, i) in projetosVisiveis" :key="i"
+                        v-motion-slide-visible-once-bottom :delay="i * 100" :duration="600" class="project-card">
                         <div class="project-img">
-                            <img :src="`/projetos/${projeto.imgNome}.webp`" :alt="projeto.nome"
-                                class="w-full rounded-lg">
+                            <NuxtImg :src="`/projetos/${projeto.imgNome}.webp`" :alt="projeto.nome" densities="x1"
+                                width="600" class="rounded-lg" />
                         </div>
                         <div class="project-description">
                             <h2 class="project-name">{{ projeto.nome }}</h2>
@@ -22,6 +22,13 @@
                         </div>
                     </div>
                 </div>
+                <div class="flex justify-center mt-12">
+                    <button v-motion-slide-visible-once-bottom :duration="500"
+                        v-if="projetosVisiveis.length < projetos.length" @click="carregarMaisProjetos"
+                        class="btn-carregar-mais">
+                        Mais projetos
+                    </button>
+                </div>
             </div>
         </div>
         <Modal :isVisible="modal.isOpen" @close="fecharModal">
@@ -30,7 +37,8 @@
                 <h3 class="text-gray-500 mb-4 text-center font-semibold">{{ modal.tipoProjeto }}</h3>
                 <div class="modal-content-description">
                     <div class="modal-img">
-                        <img :src="`/projetos/${modal.imgProjeto}.webp`" :alt="modal.nomeProjeto" class="w-full">
+                        <NuxtImg :src="`/projetos/${modal.imgProjeto}.webp`" :alt="modal.nomeProjeto" densities="x1"
+                            width="1000" class="w-full" />
                     </div>
                     <div class="info">
                         <div>
@@ -67,6 +75,17 @@
 
 <script setup>
 import { projetos } from '@/constants/projetos'
+
+const projetosVisiveis = shallowRef([])
+const limiteProjetos = ref(9)
+
+const carregarMaisProjetos = () => {
+    limiteProjetos.value += 3
+}
+
+watchEffect(() => {
+    projetosVisiveis.value = projetos.slice(0, limiteProjetos.value)
+})
 
 const modal = ref({
     isOpen: false,
@@ -124,7 +143,7 @@ const limparModalInfo = () => {
 }
 
 .project-card {
-    @apply relative rounded-lg cursor-pointer overflow-hidden shadow-xl bg-white sm:max-w-[25rem] z-[2];
+    @apply relative rounded-lg cursor-pointer overflow-hidden shadow-2xl bg-white sm:max-w-[25rem] z-[2];
 }
 
 .project-card .project-img {
@@ -221,5 +240,15 @@ const limparModalInfo = () => {
 
 .detalhes-links a:hover span {
     @apply text-white;
+}
+
+.btn-carregar-mais {
+    @apply relative bg-primary text-white text-xl px-6 py-2 rounded-3xl shadow-2xl font-semibold duration-300 z-[2] lg:px-12 lg:py-3;
+}
+
+.btn-carregar-mais:hover {
+    box-shadow: 0 0 10px #00bfa6,
+        0 0 10px #00bfa6,
+        0 0 40px #00bfa6
 }
 </style>

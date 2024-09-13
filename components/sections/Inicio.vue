@@ -1,12 +1,12 @@
 <template>
-    <section id="inicio" class="home">
+    <section id="início" class="home">
         <div class="wrapper relative mb-18 sm:mt-18 md:flex md:justify-between md:items-center">
             <IconTecnologia class="header-vector" />
             <div class="flex flex-col items-center gap-4 md:items-start md:gap-3 ">
-                <p class="text-white font-semibold sm:text-lg lg:text-2xl">👋🏻 Olá, o meu nome é</p>
-                <h1 class="text-secondary font-bold text-[1.8rem] leading-4 sm:text-4xl lg:text-5xl">Maurício Naoki
+                <p class="text-white font-semibold text-lg lg:text-2xl">👋🏻 Olá, o meu nome é</p>
+                <h1 class="text-secondary font-bold text-3xl leading-4 sm:text-4xl lg:text-5xl">Maurício Naoki
                 </h1>
-                <h2 class="flex items-center text-secondary text-lg font-bold sm:text-xl lg:text-2xl">
+                <h2 class="flex items-center text-secondary text-xl font-bold sm:text-xl lg:text-2xl">
                     <IconCode />
                     <span class="text-animation">
                         Desenvolvedor Front-end
@@ -42,6 +42,7 @@
 </template>
 
 <script setup>
+
 </script>
 
 <style scoped>
