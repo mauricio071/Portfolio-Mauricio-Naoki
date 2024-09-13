@@ -30,7 +30,8 @@ const items = [
     'habilidades',
     'experiencias',
     'projetos',
-    'depoimentos'
+    'depoimentos',
+    // 'contato'
 ]
 
 const handleScroll = () => {

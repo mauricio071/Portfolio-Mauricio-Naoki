@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', 'vue3-carousel-nuxt', '@vueuse/motion/nuxt', '@nuxt/image'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', 'vue3-carousel-nuxt', '@vueuse/motion/nuxt', '@nuxt/image', '@nuxt/fonts'],
   app: {
     head: {
       title: 'Mauricio Naoki - Portfolio',
