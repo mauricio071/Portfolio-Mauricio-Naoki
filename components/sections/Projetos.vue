@@ -8,8 +8,8 @@
                 <div @click="abrirModal(projeto)" v-for="(projeto, i) in projetosVisiveis" :key="i"
                     v-motion-slide-visible-once-bottom :delay="i * 100" :duration="600" class="project-card">
                     <div class="project-img">
-                        <NuxtImg :src="`/projetos/${projeto.imgNome}.webp`" :alt="projeto.nome" densities="x1"
-                            width="1000" class="rounded-lg" />
+                        <NuxtImg :src="`/projetos/${projeto.imgNome}`" :alt="projeto.nome" densities="x1"
+                            :width="modal.widthProjeto" class="rounded-lg" />
                     </div>
                     <div class="project-description">
                         <h2 class="project-name">{{ projeto.nome }}</h2>
@@ -34,7 +34,8 @@
                 <h3 class="text-gray-500 mb-4 text-center font-semibold">{{ modal.tipoProjeto }}</h3>
                 <div class="modal-content-description">
                     <div class="modal-img">
-                        <img :src="`/projetos/${modal.imgProjeto}.webp`" :alt="modal.nomeProjeto" class="w-full" />
+                        <NuxtImg :src="`/projetos/${modal.imgProjeto}`" :alt="modal.nomeProjeto" densities="x1"
+                            :width="modal.widthProjeto" class="w-full" />
                     </div>
                     <div class="info">
                         <div>
@@ -101,6 +102,7 @@ const abrirModal = (projeto) => {
         nomeProjeto: projeto.nome,
         tipoProjeto: projeto.tipo,
         imgProjeto: projeto.imgNome,
+        widthProjeto: projeto.width,
         descricaoProjeto: projeto.descricao,
         tagsProjeto: projeto.tags,
         urlProjeto: projeto.url,
@@ -143,7 +145,7 @@ const limparModalInfo = () => {
 }
 
 .project-card .project-img {
-    @apply w-full h-[12rem] lg:h-[15rem];
+    @apply w-full h-[12rem] lg:h-[14rem] 2xl:h-[15rem];
 }
 
 .project-description {

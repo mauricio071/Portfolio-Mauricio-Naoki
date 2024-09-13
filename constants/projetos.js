@@ -18,7 +18,8 @@ export const projetos = [
     {
         nome: "Sixchains Digital House",
         tipo: "Website",
-        imgNome: "six-chains-thumb",
+        imgNome: "six-chains-thumb.webp",
+        width: "800",
         descricao: "O site foi desenvolvido para a Sixchains Digital House, onde fui responsável pelo desenvolvimento front-end. O foco principal foi garantir uma implementação eficiente e funcional, além de aplicar técnicas de SEO para melhorar o desempenho nas buscas do Google. O site inclui descrições dos principais serviços oferecidos pela empresa e uma seção destacando projetos realizados, reforçando a confiabilidade e qualidade dos serviços. O design foi baseado em pesquisas feitas pela equipe, garantindo que a experiência do usuário fosse intuitiva e compatível com diferentes dispositivos.",
         tagsIcon: [
             IconSkillsLogoHtml,
@@ -44,7 +45,8 @@ export const projetos = [
     {
         nome: "MOS Consultoria",
         tipo: "Website e Sistema",
-        imgNome: "mos",
+        imgNome: "mos.png",
+        width: "1400",
         descricao: "Este site e sistema foram desenvolvidos para a MOS Consultoria, integrando funcionalidades essenciais, como uma agenda para gerenciamento de compromissos e uma plataforma de comentários entre sindicatos. Além disso, foram implementadas notificações em tempo real via WebSocket, garantindo que os usuários recebam atualizações imediatas.",
         tagsIcon: [
             IconSkillsLogoHtml,
@@ -70,7 +72,8 @@ export const projetos = [
     {
         nome: "CleanTube",
         tipo: "Sistema",
-        imgNome: "cleantube",
+        imgNome: "cleantube.webp",
+        width: "1000",
         descricao: "Neste projeto, a autenticação via Google OAuth foi configurada pelo Google Cloud, permitindo que apenas usuários autorizados adicionem, editem ou excluam vídeos do YouTube. Os layouts foram criados com o Nuxt UI, que oferece templates prontos para agilizar o desenvolvimento. No backend, foi usado o Nitro integrado ao Nuxt 3, facilitando a configuração de rotas e funções server-side. O projeto também permite favoritar vídeos, que são armazenados localmente no navegador do usuário e também exibem os vídeos sem anúncios.",
         tagsIcon: [
             IconSkillsLogoHtml,
@@ -96,7 +99,8 @@ export const projetos = [
     {
         nome: "Products Store",
         tipo: "Website",
-        imgNome: "products-store",
+        imgNome: "products-store.webp",
+        width: "1000",
         descricao: "Nesta aplicação de vendas de produtos, desenvolvida com Nuxt.js, foi feita a integração com uma API fictícia para listar e exibir os produtos. Foi implementado o plugin Pinia para garantir a persistência dos dados, assim, o carrinho de compras funciona de forma semelhante ao do AliExpress, mantendo os itens salvos no navegador mesmo após o usuário fechar a página ou atualizar.",
         tagsIcon: [
             IconSkillsLogoHtml,
@@ -120,7 +124,8 @@ export const projetos = [
     {
         nome: "MoviesLib",
         tipo: "Website",
-        imgNome: "movies-lib",
+        imgNome: "movies-lib.webp",
+        width: "1000",
         descricao: "Este projeto foi desenvolvido utilizando React.js e consome a API do themoviedb.org para listar os filmes com as melhores avaliações da história do cinema. Além disso, tem como pesquisar filmes atuais e acessar informações detalhadas, como sinopses, orçamento e duração.",
         tagsIcon: [
             IconSkillsLogoHtml,
@@ -140,7 +145,8 @@ export const projetos = [
     {
         nome: "Project Costs",
         tipo: "Sistema",
-        imgNome: "project-costs",
+        imgNome: "project-costs.webp",
+        width: "1000",
         descricao: "Este projeto, desenvolvido com o framework React.js, é um sistema para gerenciar o orçamento de projetos. Após cadastrar um projeto, o usuário pode adicionar múltiplos serviços dentro do projeto, cada um com informações detalhadas sobre seu custo. O sistema avisa o usuário com uma notificação se o valor total dos serviços ultrapassar o orçamento estabelecido. Além disso, o sistema permite a edição e exclusão de projetos e serviços conforme necessidade.",
         tagsIcon: [
             IconSkillsLogoHtml,
@@ -162,7 +168,8 @@ export const projetos = [
     {
         nome: "Tarefas Pinia",
         tipo: "Website",
-        imgNome: "tarefas-pinia",
+        imgNome: "tarefas-pinia.webp",
+        width: "1000",
         descricao: "Este projeto, desenvolvido com Vue 3, é uma aplicação de lista de tarefas que melhora a organização dos afazeres. Permite classificar cada tarefa como 'a fazer', 'marcado' ou 'completado'. O Pinia foi utilizado para gerenciar o estado da aplicação, mesmo depois de atualizar a página ou o fechar o navegador, os dados do usuário vão persistir no navegador.",
         tagsIcon: [
             IconSkillsLogoHtml,
@@ -184,7 +191,8 @@ export const projetos = [
     {
         nome: "Make Your Burguer",
         tipo: "Sistema",
-        imgNome: "make-your-burguer",
+        imgNome: "make-your-burguer.webp",
+        width: "1000",
         descricao: "Esta aplicação, desenvolvida com Vue.js no front-end e Node.js no back-end, os usuários podem montar seus hambúrgueres personalizados e gerenciar os pedidos, incluindo a edição do status e a exclusão de pedidos.",
         tagsIcon: [
             IconSkillsLogoHtml,
@@ -208,7 +216,8 @@ export const projetos = [
     {
         nome: "Jogo da Forca",
         tipo: "Website",
-        imgNome: "jogo-da-forca",
+        imgNome: "jogo-da-forca.png",
+        width: "1000",
         descricao: "Neste projeto, foi desenvolvido um jogo da forca usando o Vue.js, com uma interface moderna e responsiva para poder jogar diretamente no navegador.",
         tagsIcon: [
             IconSkillsLogoHtml,
@@ -228,7 +237,8 @@ export const projetos = [
     {
         nome: "App de chamada de alunos",
         tipo: "Aplicativo",
-        imgNome: "app-chamada",
+        imgNome: "app-chamada.webp",
+        width: "1000",
         descricao: "É uma aplicação mobile para controle de presença em aulas. Após o login com RA e senha, a aplicação mostra os dados do aluno, como nome, RA e localização atual. Com base nesses dados, verifica se há aula e, se estiver dentro do horário e localização corretos, permite registrar a presença.",
         tagsIcon: [
             IconSkillsLogoAndroid,
@@ -246,7 +256,8 @@ export const projetos = [
     {
         nome: "Sistema de leitor",
         tipo: "Sistema",
-        imgNome: "sistema-leitor",
+        imgNome: "sistema-leitor.webp",
+        width: "1000",
         descricao: "Desenvolvida em Java, esta aplicação oferece funcionalidades básicas de gerenciamento de usuários, incluindo adição, edição, exclusão e listagem. As informações dos usuários são armazenadas em um banco de dados SQL.",
         tagsIcon: [
             IconSkillsLogoJava,
@@ -262,7 +273,8 @@ export const projetos = [
     {
         nome: "Em breve!",
         tipo: "",
-        imgNome: "em-breve",
+        imgNome: "em-breve.webp",
+        width: "1000",
         descricao: "",
         tagsIcon: [],
         tags: [],

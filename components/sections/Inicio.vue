@@ -67,34 +67,13 @@
         0 0 0px #00bfa6
 }
 
-/* #96e6dc; */
-/* 97e6dc */
-/* #95e6dc */
-
 .text-animation {
     @apply w-full whitespace-nowrap overflow-hidden relative;
-    /* animation: typing 4s steps(43),
-        cursor .8s step-end infinite alternate;
-    animation-delay: 2s; */
 }
-
-/* 
-@keyframes cursor {
-    50% {
-        border-color: transparent
-    }
-}
-
-@keyframes typing {
-    from {
-        width: 0
-    }
-} */
 
 .text-animation:after {
     @apply content-[''] absolute left-0 h-full w-full border-l-2 border-secondary bg-[#9be6dd] sm:bg-[#9fe7dd] md:bg-[#99e7dd] lg:bg-[#a2e8de] 2xl:bg-[#a0e8df];
     animation: typing 6s steps(22) infinite;
-
 }
 
 @keyframes typing {
