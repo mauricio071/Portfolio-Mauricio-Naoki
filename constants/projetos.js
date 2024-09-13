@@ -244,9 +244,9 @@ export const projetos = [
         repositorio: 'https://github.com/mauricio071/Sistema-de-chamada'
     },
     {
-        nome: "Cadastro de leitor",
+        nome: "Sistema de leitor",
         tipo: "Sistema",
-        imgNome: "cadastro-aluno",
+        imgNome: "sistema-leitor",
         descricao: "Desenvolvida em Java, esta aplicação oferece funcionalidades básicas de gerenciamento de usuários, incluindo adição, edição, exclusão e listagem. As informações dos usuários são armazenadas em um banco de dados SQL.",
         tagsIcon: [
             IconSkillsLogoJava,
