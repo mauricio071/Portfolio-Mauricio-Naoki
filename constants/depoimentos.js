@@ -21,6 +21,6 @@ export const depoimentos = [
         foto: 'fernando',
         nome: 'Fernando de Souza',
         empresa: 'Sixchains Digital House',
-        descricao: 'É com grande satisfação que recomendo Maurício como desenvolvedor front-end. Como gerente do Maurício na Sixchains Digital House, tive o privilégio de supervisionar seu trabalho e ver seu crescimento profissional em primeira mão. Além de suas habilidades técnicas, Maurício é uma pessoa incrivelmente colaborativa e comunicativa. Estou confiante de que ele será valioso para qualquer empresa'
+        descricao: 'É com grande satisfação que recomendo Maurício como desenvolvedor front-end. Como gerente do Maurício na Sixchains Digital House, tive o privilégio de supervisionar seu trabalho e ver seu crescimento profissional em primeira mão. Além de suas habilidades técnicas, Maurício é uma pessoa incrivelmente colaborativa e comunicativa.'
     }
 ]
