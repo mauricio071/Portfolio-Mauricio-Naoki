@@ -1,7 +1,7 @@
 <template>
     <section id="sobre">
         <div class="wrapper">
-            <div class="content flex flex-col gap-8 px-4 text-secondary lg:grid lg:grid-cols-2 lg:items-center lg:px-0">
+            <div class="content flex flex-col gap-8 text-secondary lg:grid lg:grid-cols-2 lg:items-center">
                 <div v-motion-fade-visible-once :delay="0"
                     class="space-y-4 relative max-w-44 mx-auto sm:max-w-[15rem] lg:max-w-[18rem] xl:max-w-[23rem]">
                     <div class="foto-perfil">
@@ -10,7 +10,7 @@
                 </div>
                 <div v-motion-slide-visible-once-bottom :duration="700" class="space-y-10 max-w-[650px]">
                     <div>
-                        <h2 class="section-title lg:!items-start">
+                        <h2 class="section-title !mb-8 lg:!items-start">
                             Sobre mim
                         </h2>
                         <p class="mb-4 text-justify lg:text-start xl:text-lg">
@@ -64,12 +64,7 @@
 
 .foto-perfil::before,
 .foto-perfil::after {
-    @apply hidden absolute w-[150px] h-[150px] border-[#00bfa6];
-    content: '';
-
-    @screen lg {
-        @apply block;
-    }
+    @apply content-[''] hidden absolute w-[150px] h-[150px] border-[#00bfa6] lg:block;
 }
 
 .foto-perfil::before {
@@ -91,6 +86,6 @@ h3::before {
 .profile-about-icon:hover {
     box-shadow: 0 0 10px #00bfa6,
         0 0 20px #00bfa6,
-        0 0 40px #00bfa6
+        0 0 40px #00bfa6;
 }
 </style>

@@ -6,7 +6,7 @@
         <Experiencias />
         <Projetos />
         <Depoimentos />
-        <!-- <Contato /> -->
+        <Contato />
     </main>
 </template>
 

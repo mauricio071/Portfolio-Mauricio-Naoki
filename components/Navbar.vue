@@ -11,7 +11,7 @@
             </h1>
             <Icon @click="isOpen = !isOpen" name="mdi:menu" class="text-[2rem] lg:hidden w-10 h-10 cursor-pointer" />
             <ul :class="{ 'hidden': !isOpen, 'flex': isOpen }"
-                class="flex-col items-center gap-4 w-full py-4 lg:flex lg:flex-row lg:justify-between lg:w-[unset] lg:my-[unset] xl:gap-6">
+                class="flex-col items-center gap-4 w-full py-4 lg:flex lg:flex-row lg:justify-between lg:w-[unset] lg:my-[unset] xl:gap-5">
                 <li v-for="(item, i) in items" :key="i">
                     <a :href="`#${item}`" v-motion-fade-visible-once :delay="i * 100" class="capitalize">{{ item }}</a>
                 </li>
@@ -31,7 +31,7 @@ const items = [
     'experiencias',
     'projetos',
     'depoimentos',
-    // 'contato'
+    'contato'
 ]
 
 const handleScroll = () => {

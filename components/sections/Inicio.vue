@@ -1,6 +1,6 @@
 <template>
     <section id="início" class="home">
-        <div class="wrapper relative mb-18 sm:mt-18 md:flex md:justify-between md:items-center">
+        <div class="wrapper relative my-16 md:flex md:justify-between md:items-center">
             <IconTecnologia class="header-vector" />
             <div class="flex flex-col items-center gap-4 md:items-start md:gap-3 ">
                 <p class="text-white font-semibold text-lg lg:text-2xl">👋🏻 Olá, o meu nome é</p>
@@ -32,8 +32,8 @@
                     </a>
                 </div>
             </div>
-            <div class="relative mt-4 text-end">
-                <div class="hidden max-w-[25rem] md:block lg:max-w-[30rem] xl:max-w-[41rem]">
+            <div class="relative text-end">
+                <div class="hidden max-w-[25rem] md:block lg:max-w-[30rem] xl:max-w-[36rem] 2xl:max-w-[41rem]">
                     <img src="/assets/img/programacao.webp" alt="desenvolvedor"
                         class="w-full duration-700 hover:-translate-y-3" />
                 </div>
@@ -61,10 +61,9 @@
 }
 
 .curriculo-btn:hover {
-    @apply hover:bg-secondary hover:text-white;
+    @apply bg-secondary text-white;
     box-shadow: 0 0 10px #00bfa6,
-        0 0 40px #00bfa6,
-        0 0 0px #00bfa6
+        0 0 40px #00bfa6;
 }
 
 .text-animation {
