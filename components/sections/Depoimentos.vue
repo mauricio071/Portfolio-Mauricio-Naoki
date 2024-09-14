@@ -1,6 +1,6 @@
 <template>
     <section id="depoimentos">
-        <div class="wrapper">
+        <div class="wrapper pb-0">
             <div class="px-4">
                 <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
                     Depoimentos

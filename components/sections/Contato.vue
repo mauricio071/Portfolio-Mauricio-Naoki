@@ -51,7 +51,7 @@
 
 <style scoped>
 #contato {
-    @apply flex justify-center items-center pt-0;
+    @apply flex justify-center items-center;
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(90, 187, 172, 0.473) 100%);
 }
 
