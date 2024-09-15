@@ -37,7 +37,7 @@ svg {
     }
 
     @screen 2xl {
-        @apply max-w-[35rem] top-[-22%] right-[-4.5%];
+        @apply max-w-[34rem] top-[-22%] right-[-3.75%];
     }
 }
 </style>

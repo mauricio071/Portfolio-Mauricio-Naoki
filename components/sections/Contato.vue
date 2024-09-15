@@ -83,7 +83,7 @@ form {
 
 input,
 textarea {
-    @apply w-full rounded-lg p-4;
+    @apply w-full rounded-lg py-4 px-3.5;
 }
 
 input:focus,

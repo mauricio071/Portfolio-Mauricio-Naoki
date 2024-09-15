@@ -11,19 +11,20 @@
                             <Icon name="mdi:briefcase" />
                         </div>
                         <div v-motion-pop-visible-once :duration="700" class="timeline-card">
-                            <h1 class="text-2xl font-bold mb-2">{{ empresa.nome }}</h1>
-                            <h2 class="text-lg font-semibold text-[#8a8a8a]">{{ empresa.cargo }}</h2>
+                            <h1 class="text-xl font-extrabold mb-2 sm:text-2xl">{{ empresa.nome }}</h1>
+                            <h2 class="font-bold text-[#8a8a8a] sm:text-lg">{{ empresa.cargo }}</h2>
                             <p class="text-sm my-4 lg:text-lg">{{ empresa.descricao }}</p>
-                            <h3 class="text-xl font-semibold mb-3 text-[#0097a7]">Tecnologias:</h3>
+                            <h3 class="text-lg font-extrabold mb-3 text-[#0097a7] sm:text-xl">Tecnologias:</h3>
                             <div class="tecnologias flex items-center gap-2">
                                 <component v-for="(logo, index) in empresa.tecnologias" :is="logo" :key="index"
                                     class="max-w-[2rem]" />
                             </div>
-                            <span class="block text-sm font-semibold text-[#b0b0b0] mt-4 lg:text-base">
+                            <span class="block font-bold text-[#b0b0b0] mt-4 xl:hidden">
                                 {{ empresa.data }}
                             </span>
                             <span class="content-arrow"></span>
                         </div>
+                        <span v-motion-pop-visible-once class="company-date">{{ empresa.data }}</span>
                     </div>
                 </div>
             </div>
@@ -58,6 +59,10 @@ import { empresas } from '@/constants/empresas'
 
 .content:nth-of-type(even) {
     @apply left-0 pr-0 pl-[55px] xl:left-[50%] 2xl:pl-[73px];
+}
+
+.company-date {
+    @apply absolute hidden text-lg font-bold text-[#b0b0b0] xl:block;
 }
 
 .timeline-icon {
@@ -95,5 +100,13 @@ import { empresas } from '@/constants/empresas'
     @screen xl {
         @apply border-r-0 border-l-[15px] border-l-white right-[-15px] left-[unset];
     }
+}
+
+.content:nth-of-type(odd) .company-date {
+    @apply top-[4rem] right-[-14.5rem];
+}
+
+.content:nth-of-type(even) .company-date {
+    @apply top-[4rem] left-[-14.75rem];
 }
 </style>
