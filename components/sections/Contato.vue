@@ -5,7 +5,7 @@
                 Contato
             </h2>
             <div v-motion-fade-visible-once :duration="1000" :delay="500" class="content">
-                <p class="mb-4 text-justify max-w-[37rem] mx-auto sm:text-start xl:text-lg">
+                <p class="mb-4 text-center max-w-lg mx-auto xl:text-lg">
                     Tem uma ideia ou precisa de ajuda com seu projeto? Estou sempre aberto a novas oportunidades e
                     colaborações. Preencha o formulário e vamos conversar!
                 </p>

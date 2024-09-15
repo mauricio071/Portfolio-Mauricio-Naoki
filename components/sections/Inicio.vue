@@ -1,8 +1,8 @@
 <template>
     <section id="início" class="home">
-        <div class="wrapper relative my-16 md:flex md:justify-between md:items-center">
+        <div class="wrapper relative my-16 lg:flex lg:justify-between lg:items-center">
             <IconTecnologia class="header-vector" />
-            <div class="flex flex-col items-center gap-4 md:items-start md:gap-3 ">
+            <div class="flex flex-col items-center gap-4 lg:items-start lg:gap-3 ">
                 <p class="text-white font-semibold text-lg lg:text-2xl">👋🏻 Olá, o meu nome é</p>
                 <h1 class="text-secondary font-bold text-3xl leading-4 sm:text-4xl lg:text-5xl  2xl:text-[3.5rem]">
                     Maurício Naoki
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="relative text-end">
-                <div class="hidden max-w-[25rem] md:block lg:max-w-[30rem] xl:max-w-[36rem] 2xl:max-w-[41rem]">
+                <div class="hidden max-w-[25rem] lg:block lg:max-w-[30rem] xl:max-w-[36rem] 2xl:max-w-[41rem]">
                     <img src="/assets/img/programacao.webp" alt="desenvolvedor"
                         class="w-full duration-700 hover:-translate-y-3" />
                 </div>
@@ -57,7 +57,7 @@
 }
 
 .curriculo-btn {
-    @apply bg-white px-4 py-2 rounded-md text-secondary font-semibold my-2 duration-300 md:my-5 md:px-8 md:py-3;
+    @apply bg-white px-4 py-[.675rem] rounded-md text-secondary font-semibold my-2 duration-300 md:my-5 md:px-8 md:py-3;
 }
 
 .curriculo-btn:hover {
@@ -71,7 +71,7 @@
 }
 
 .text-animation:after {
-    @apply content-[''] absolute left-0 h-full w-full border-l-2 border-secondary bg-[#9be6dd] sm:bg-[#9fe7dd] md:bg-[#99e7dd] lg:bg-[#a2e8de] 2xl:bg-[#a0e8df];
+    @apply content-[''] absolute left-0 h-full w-full border-l-2 border-secondary bg-[#9de6dd] sm:bg-[#9fe7dd] md:bg-[#99e7dd] lg:bg-[#a2e8de] 2xl:bg-[#a0e8df];
     animation: typing 6s steps(22) infinite;
 }
 

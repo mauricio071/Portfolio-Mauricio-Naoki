@@ -6,32 +6,34 @@
                     Depoimentos
                 </h2>
                 <div v-motion-fade-visible-once :duration="700" :delay="500" class="depoimentos">
-                    <carousel :items-to-show="1" :breakpoints="breakpoints" wrapAround pauseAutoplayOnHover
-                        :autoplay="7000">
-                        <slide v-for="(depoimento, i) in depoimentos" :key="i">
-                            <div class="depoimento-container">
-                                <div class="depoimento-pessoa">
-                                    <NuxtImg :src="`/depoimentos/${depoimento.foto}.webp`" :alt="depoimento.nome"
-                                        densities="x1" sizes="120 lg:70" />
-                                    <div class="depoimento-info">
-                                        <h2 class="text-lg font-bold">{{ depoimento.nome }}</h2>
-                                        <h3 class="text-gray-500 font-semibold text-sm">{{ depoimento.empresa }}
-                                        </h3>
+                    <client-only>
+                        <carousel :items-to-show="1" :breakpoints="breakpoints" wrapAround pauseAutoplayOnHover
+                            :autoplay="7000">
+                            <slide v-for="(depoimento, i) in depoimentos" :key="i">
+                                <div class="depoimento-container">
+                                    <div class="depoimento-pessoa">
+                                        <NuxtImg :src="`/depoimentos/${depoimento.foto}.webp`" :alt="depoimento.nome"
+                                            densities="x1" sizes="120 lg:70" />
+                                        <div class="depoimento-info">
+                                            <h2 class="text-lg font-bold">{{ depoimento.nome }}</h2>
+                                            <h3 class="text-gray-500 font-semibold text-sm">{{ depoimento.empresa }}
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <p class="text-sm lg:flex-grow lg:text-start lg:pl-[0.45rem] lg:text-base">
+                                        {{ depoimento.descricao }}
+                                    </p>
+                                    <div class="ratings">
+                                        <Icon v-for="i in 5" :key="i" name="mdi:star" class="text-[#ffc107]" />
                                     </div>
                                 </div>
-                                <p class="text-sm lg:flex-grow lg:text-start lg:pl-[0.45rem] lg:text-base">
-                                    {{ depoimento.descricao }}
-                                </p>
-                                <div class="ratings">
-                                    <Icon v-for="i in 5" :key="i" name="mdi:star" class="text-[#ffc107]" />
-                                </div>
-                            </div>
-                        </slide>
+                            </slide>
 
-                        <template #addons>
-                            <pagination class="mt-8" />
-                        </template>
-                    </carousel>
+                            <template #addons>
+                                <pagination class="mt-8" />
+                            </template>
+                        </carousel>
+                    </client-only>
                 </div>
             </div>
         </div>

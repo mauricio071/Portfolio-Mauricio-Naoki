@@ -22,32 +22,22 @@
 
 <style scoped>
 svg {
-    position: absolute;
-    max-width: 11rem;
-    top: 45%;
-    right: -6rem;
-}
+    @apply absolute max-w-[11rem] top-[45%] right-[-6rem];
 
-@media (min-width: 768px) {
-    svg {
-        max-width: 20rem;
-        top: -20%;
-        right: -2%;
+    @screen sm {
+        @apply max-w-[15rem] top-[10%];
     }
-}
 
-@media (min-width: 1280px) {
-    svg {
-        max-width: 30rem;
-        top: -18%;
+    @screen lg {
+        @apply max-w-[20rem] top-[-20%] right-[-2%];
     }
-}
 
-@media (min-width: 1700px) {
-    svg {
-        max-width: 35rem;
-        top: -20%;
-        right: -6%;
+    @screen xl {
+        @apply max-w-[30rem] top-[-18%] right-[-3%];
+    }
+
+    @screen 2xl {
+        @apply max-w-[35rem] top-[-22%] right-[-4.5%];
     }
 }
 </style>
