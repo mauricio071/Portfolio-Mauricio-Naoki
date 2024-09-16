@@ -71,7 +71,7 @@
 }
 
 .text-animation:after {
-    @apply content-[''] absolute left-0 h-full w-full border-l-2 border-secondary bg-[#9de6dd] sm:bg-[#9fe7dd] md:bg-[#99e7dd] lg:bg-[#a2e8de] 2xl:bg-[#a0e8df];
+    @apply content-[''] absolute left-0 h-full w-full border-l-2 border-secondary bg-[#a3e6de] sm:bg-[#a4e8df] md:bg-[#9de8de] lg:bg-[#a2e8de] 2xl:bg-[#a2e8e0];
     animation: typing 6s steps(22) infinite;
 }
 
