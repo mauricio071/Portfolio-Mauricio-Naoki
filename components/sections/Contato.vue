@@ -5,30 +5,35 @@
                 Contato
             </h2>
             <div v-motion-fade-visible-once :duration="1000" :delay="500" class="content">
-                <p class="mb-4 text-center max-w-lg mx-auto xl:text-lg">
-                    Tem uma ideia ou precisa de ajuda com seu projeto? Estou sempre aberto a novas oportunidades e
-                    colaborações. Preencha o formulário e vamos conversar!
-                </p>
-                <div
-                    class="flex flex-wrap gap-4 my-14 max-w-[17rem] mx-auto sm:flex-row sm:flex-nowrap sm:max-w-[unset] sm:px-12">
-                    <a href="https://wa.me/5511942816814" target="_blank" rel="noreferrer" aria-label="WhatsApp"
-                        class="contact-card">
-                        <div class="contact-info">
-                            <Icon name="mdi:whatsapp" class="text-[#25d366] w-7 h-7 block" />
-                            <h3>WhatsApp</h3>
-                        </div>
-                        <span>+55 11 94281-6814</span>
-                    </a>
+                <div class="xl:max-w-[34rem]">
+                    <h1 class="text-center font-extrabold mb-8 text-3xl xl:text-4xl xl:text-start">
+                        Vamos conversar!
+                    </h1>
+                    <p class="mb-4 text-center max-w-lg mx-auto xl:max-w-[unset] xl:text-start xl:text-lg">
+                        Tem uma ideia ou precisa de ajuda com seu projeto? Estou sempre aberto a novas oportunidades e
+                        colaborações. Preencha o formulário ou clique nos links abaixo e vamos conversar!
+                    </p>
+                    <div class="card-container">
+                        <a href="https://wa.me/5511942816814" target="_blank" rel="noreferrer" aria-label="WhatsApp"
+                            class="contact-card">
+                            <div class="contact-info">
+                                <Icon name="mdi:whatsapp" class="text-[#25d366] w-7 h-7 block" />
+                                <h3>WhatsApp</h3>
+                            </div>
+                            <span>+55 11 94281-6814</span>
+                        </a>
 
-                    <a href="mailto:naokimau@gmail.com" target="_blank" rel="noreferrer" aria-label="Gmail"
-                        class="contact-card">
-                        <div class="contact-info">
-                            <IconGmail />
-                            <h3>E-mail</h3>
-                        </div>
-                        <span>naokimau@gmail.com</span>
-                    </a>
+                        <a href="mailto:naokimau@gmail.com" target="_blank" rel="noreferrer" aria-label="Gmail"
+                            class="contact-card">
+                            <div class="contact-info">
+                                <IconGmail />
+                                <h3>E-mail</h3>
+                            </div>
+                            <span>naokimau@gmail.com</span>
+                        </a>
+                    </div>
                 </div>
+
                 <form action="https://formsubmit.co/naokimau@gmail.com" method="POST">
                     <input type="text" name="name" placeholder="Nome" required>
                     <input type="email" name="email" placeholder="E-mail" required>
@@ -56,11 +61,15 @@
 }
 
 .content {
-    @apply max-w-2xl mx-auto;
+    @apply max-w-2xl mx-auto flex flex-col xl:grid xl:grid-cols-2 xl:gap-12 xl:max-w-[unset];
+}
+
+.card-container {
+    @apply flex flex-wrap gap-4 my-14 max-w-[17rem] mx-auto sm:flex-row sm:flex-nowrap sm:max-w-[unset] sm:px-12 xl:px-0 xl:my-10;
 }
 
 .contact-card {
-    @apply bg-white px-6 py-5 w-full rounded-lg duration-300;
+    @apply bg-white px-6 py-5 w-full rounded-lg duration-300 xl:w-[45%];
 }
 
 .contact-card:hover {
@@ -78,7 +87,7 @@ h3 {
 }
 
 form {
-    @apply space-y-6 my-4;
+    @apply space-y-6 my-4 xl:my-0;
 }
 
 input,
@@ -93,7 +102,7 @@ textarea:focus {
 }
 
 .submit-btn {
-    @apply bg-white text-secondary px-20 py-3 rounded-lg mx-auto block duration-300 font-semibold;
+    @apply bg-white text-secondary px-20 py-3 rounded-lg mx-auto block duration-300 font-semibold xl:mx-0;
 }
 
 .submit-btn:hover {

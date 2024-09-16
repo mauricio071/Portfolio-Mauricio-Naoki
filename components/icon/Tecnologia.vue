@@ -19,11 +19,11 @@ svg {
     }
 
     @screen lg {
-        @apply max-w-[20rem] top-[-20%] right-[-2%];
+        @apply max-w-[23rem] top-[-20%] right-[-2%];
     }
 
     @screen xl {
-        @apply max-w-[30rem] top-[-18%] right-[-3%];
+        @apply max-w-[27rem] top-[-18%] right-[-3%];
     }
 
     @screen 2xl {

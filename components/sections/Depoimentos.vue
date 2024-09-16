@@ -2,7 +2,7 @@
     <section id="depoimentos">
         <div class="wrapper pb-0">
             <div class="px-4">
-                <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
+                <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title !mb-14">
                     Depoimentos
                 </h2>
                 <div v-motion-fade-visible-once :duration="700" :delay="500" class="depoimentos">
@@ -13,7 +13,7 @@
                                 <div class="depoimento-container">
                                     <div class="depoimento-pessoa">
                                         <NuxtImg :src="`/depoimentos/${depoimento.foto}.webp`" :alt="depoimento.nome"
-                                            densities="x1" sizes="120 lg:70" />
+                                            densities="x1" sizes="120 lg:70" class="lg:w-[70px]" />
                                         <div class="depoimento-info">
                                             <h2 class="text-lg font-bold">{{ depoimento.nome }}</h2>
                                             <h3 class="text-gray-500 font-semibold text-sm">{{ depoimento.empresa }}
@@ -56,7 +56,7 @@ const breakpoints = {
     @apply flex flex-col items-center space-y-4 p-4 relative pb-4;
 
     @screen lg {
-        @apply items-start max-w-[25rem] my-8 min-h-[22.5rem];
+        @apply items-start max-w-[25rem] my-8 min-h-[22.75rem];
         box-shadow: 0 3px 11px rgba(0, 0, 0, 0.2);
     }
 
