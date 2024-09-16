@@ -12,10 +12,10 @@
 
 <style scoped>
 svg {
-    @apply absolute max-w-[11rem] top-[60%] right-[-6rem];
+    @apply absolute max-w-[14rem] top-[55%] right-[-15%];
 
-    @screen sm {
-        @apply max-w-[15rem] top-[40%];
+    @screen md {
+        @apply right-0;
     }
 
     @screen lg {

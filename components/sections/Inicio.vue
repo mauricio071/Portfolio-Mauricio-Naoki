@@ -48,7 +48,7 @@
 
 <style scoped>
 .home {
-    @apply min-h-[650px] flex justify-center items-center p-4 overflow-hidden;
+    @apply min-h-[700px] flex justify-center items-center p-4 pb-0 overflow-hidden;
     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(0, 191, 165, 0.7) 100%);
 
     @screen lg {
@@ -57,7 +57,7 @@
 }
 
 .curriculo-btn {
-    @apply bg-white px-4 py-[.675rem] rounded-md text-secondary font-semibold my-2 duration-300 md:my-5 md:px-8 md:py-3;
+    @apply bg-white px-4 py-[.675rem] rounded-md text-secondary font-semibold my-2 duration-300 z-[2] md:my-5 md:px-8 md:py-3;
 }
 
 .curriculo-btn:hover {
