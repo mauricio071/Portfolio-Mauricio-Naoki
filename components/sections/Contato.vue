@@ -65,7 +65,7 @@
 }
 
 .card-container {
-    @apply flex flex-wrap gap-4 my-14 max-w-[17rem] mx-auto sm:flex-row sm:flex-nowrap sm:max-w-[unset] sm:px-12 xl:px-0 xl:my-10;
+    @apply flex flex-wrap gap-4 my-10 max-w-[17rem] mx-auto sm:flex-row sm:flex-nowrap sm:max-w-[unset] sm:px-12 xl:px-0;
 }
 
 .contact-card {
