@@ -34,24 +34,79 @@
                     </div>
                 </div>
 
-                <form action="https://formsubmit.co/naokimau@gmail.com" method="POST">
-                    <input type="text" name="name" placeholder="Nome" required>
-                    <input type="email" name="email" placeholder="E-mail" required>
-                    <textarea name="subject" placeholder="Mensagem" rows="7" cols="50" required />
-                    <button type="submit" class="submit-btn">
-                        Enviar
+                <form @submit.prevent="submitForm">
+                    <input v-model="form.name" type="text" name="name" placeholder="Nome" required />
+                    <input v-model="form.email" type="email" name="email" placeholder="E-mail" required />
+                    <textarea v-model="form.message" name="message" placeholder="Mensagem" rows="7" cols="50"
+                        required />
+                    <button type="submit" :disabled="loading" class="submit-btn">
+                        <span v-if="loading" class="loader"></span>
+                        <span v-else>Enviar</span>
                     </button>
-
-                    <input type="hidden" name="_subject" value="Contato pelo portfolio">
-                    <!-- <input type="hidden" name="_captcha" value="false"> -->
                 </form>
             </div>
+            <Modal :isVisible="modal" @close="fecharModal">
+                <div class="modal-container flex flex-col gap-8 items-center justify-between lg:-mb-4">
+                    <Icon :name="result.status === 'sucesso' ? 'mdi:check-circle-outline' : 'mdi:alert-circle-outline'"
+                        :class="result.status === 'sucesso' ? 'text-[#155724]' : 'text-[#721c24]'"
+                        class="text-[8rem]" />
+                    <h3 class="text-2xl font-bold text-center">{{ result.message }}</h3>
+                    <p class="text-center max-w-lg">{{ result.description }}</p>
+                    <button @click="fecharModal" class="btn-voltar">Voltar</button>
+                </div>
+            </Modal>
         </div>
     </section>
 </template>
 
 <script setup>
 
+const modal = ref(false)
+
+const fecharModal = () => {
+    modal.value = false
+}
+
+const form = ref({
+    name: "",
+    email: "",
+    message: "",
+});
+
+const result = ref({});
+const loading = ref(false);
+
+const submitForm = async () => {
+    try {
+        loading.value = true;
+        const response = await $fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: form.value
+        });
+
+        result.value = response;
+        modal.value = true;
+        if (response.status === 'sucesso') {
+            result.value.status = "sucesso";
+        } else {
+            result.value.status = "erro";
+        }
+    } catch (error) {
+        result.value.status = "erro";
+        result.value.message = "Algo deu errado!";
+        modal.value = true;
+    } finally {
+        loading.value = false;
+
+        setTimeout(() => {
+            modal.value = false;
+            form.value.name = "";
+            form.value.email = "";
+            form.value.message = "";
+        }, 5000)
+    }
+};
 </script>
 
 <style scoped>
@@ -73,16 +128,14 @@
 }
 
 .contact-card:hover {
-    box-shadow: 0 0 10px #00bfa6,
-        0 0 5px #00bfa6,
-        0 0 10px #00bfa6;
+    box-shadow: 0 0 10px #00bfa6, 0 0 5px #00bfa6, 0 0 10px #00bfa6;
 }
 
 .contact-info {
     @apply flex items-center gap-2 mb-2;
 }
 
-h3 {
+.contact-info h3 {
     @apply text-xl font-bold;
 }
 
@@ -107,8 +160,35 @@ textarea:focus {
 
 .submit-btn:hover {
     @apply text-primary;
-    box-shadow: 0 0 10px #00bfa6,
-        0 0 100px #00bfa6,
-        0 0 40px #00bfa6;
+    box-shadow: 0 0 10px #00bfa6, 0 0 100px #00bfa6, 0 0 40px #00bfa6;
+}
+
+.submit-btn:disabled {
+    @apply bg-gray-300 cursor-not-allowed;
+}
+
+.loader {
+    @apply flex justify-center items-center rounded-[50%] w-[24px] h-[24px];
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid white;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.btn-voltar {
+    @apply text-white bg-primary px-8 py-2 rounded-lg duration-300;
+}
+
+.btn-voltar:hover {
+    box-shadow: 0 0 10px #00bfa6;
 }
 </style>
