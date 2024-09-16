@@ -93,7 +93,7 @@ textarea:focus {
 }
 
 .submit-btn {
-    @apply bg-white px-20 py-3 rounded-lg mx-auto block duration-300 font-semibold;
+    @apply bg-white text-secondary px-20 py-3 rounded-lg mx-auto block duration-300 font-semibold;
 }
 
 .submit-btn:hover {

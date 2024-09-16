@@ -1,5 +1,5 @@
 <template>
-    <section id="habilidades" class="background-diagonal">
+    <section id="habilidades" class="background-diagonal relative">
         <div class="wrapper">
             <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
                 Habilidades
@@ -24,12 +24,12 @@ import { tecnologias } from '@/constants/tecnologias'
 
 <style scoped>
 .background-diagonal {
-    @apply relative;
+    @apply relative bg-[#e0f7f2];
 }
 
-.background-diagonal:after {
+/* .background-diagonal:after {
     @apply content-[""] absolute w-full h-full bg-[#e0f7f2] top-[-1rem] right-0 bottom-0 left-0 origin-top-left skew-y-[4deg] 2xl:top-[-3rem];
-}
+} */
 
 .icon-card {
     @apply bg-white relative flex flex-col justify-center items-center gap-4 rounded-[25px] shadow-lg w-[10rem] h-36 mx-auto duration-300 overflow-hidden cursor-pointer hover:scale-110;

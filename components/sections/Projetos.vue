@@ -129,12 +129,12 @@ const limparModalInfo = () => {
 
 <style scoped>
 .background-diagonal {
-    @apply relative;
+    @apply relative bg-[#e0f7f2];
 }
 
-.background-diagonal:after {
+/* .background-diagonal:after {
     @apply content-[''] absolute w-full h-full bg-[#e0f7f2] top-[-1rem] right-0 bottom-0 left-0 origin-top-left skew-y-[4deg] 2xl:top-[-3rem];
-}
+} */
 
 .projetos {
     @apply grid items-center justify-center gap-6 md:grid-cols-2 xl:grid-cols-3;
@@ -149,7 +149,7 @@ const limparModalInfo = () => {
 }
 
 .project-description {
-    @apply duration-300 rounded-lg bg-[#000000B3] opacity-0 !text-white absolute w-full h-full top-0 p-8 flex flex-col justify-center items-center gap-3 border-2 border-primary;
+    @apply duration-300 rounded-lg bg-[#000000B3] opacity-0 !text-white absolute w-full h-full top-0 p-8 flex flex-col justify-center items-center gap-3 border-[3px] border-primary;
 
     @screen sm {
         @apply gap-5;

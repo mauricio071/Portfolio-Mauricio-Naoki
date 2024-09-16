@@ -12,7 +12,7 @@ import IconSkillsLogoVuetify from '@/components/icon/skills-logo/Vuetify.vue';
 export const empresas = [
     {
         nome: " Sixchains Digital House", cargo: "Desenvolvedor Front-end",
-        descricao: "Na Sixchains, fui responsável pelo desenvolvimento Front-End, focando na criação e manutenção de aplicações utilizando Vue.js, Nuxt.js, Vuetify, JavaScript e Tailwind. Desenvolvi sites e sistemas, e trabalhei junto com a equipe de back-end para integrar nossas aplicações com APIs. Além disso, contribuí para o desenvolvimento de projetos do grupo Euro 17, incluindo sites e sistemas voltados para imóveis e securitizadora."
+        descricao: "Na Sixchains, fui responsável pelo desenvolvimento Front-End, atuando no desenvolvimento e na manutenção de sites e sistemas, colaborando com a equipe de back-end para integrar as aplicações às APIs. Além disso, participei de diversos projetos do grupo Euro 17, incluindo sites e sistemas voltados para a venda de imóveis e plataformas de securitização."
         , data: "Jul 2022 - Mai 2024", tecnologias: [IconSkillsLogoHtml, IconSkillsLogoCss,
             IconSkillsLogoJavascript, IconSkillsLogoVue, IconSkillsLogoNuxt, IconSkillsLogoVuetify,
             IconSkillsLogoTailwind, IconSkillsLogoGit,]

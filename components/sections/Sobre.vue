@@ -8,7 +8,7 @@
                         <img src="/assets/img/foto-perfil.jpeg" alt="foto-perfil" class="rounded-[50%] lg:rounded-md">
                     </div>
                 </div>
-                <div v-motion-slide-visible-once-bottom :duration="700" class="space-y-10 max-w-[650px]">
+                <div v-motion-slide-visible-once-bottom :duration="700" class="space-y-10">
                     <div>
                         <h2 class="section-title !mb-8 lg:!items-start">
                             Sobre mim
