@@ -61,11 +61,6 @@ import { tecnologias } from '@/constants/tecnologias'
 
 .icon-card::after {
     @apply content-[''] absolute inset-[5px] rounded-[25px] bg-[white];
-    box-shadow: inset 0px 2px 10px 0px #0000008c;
-}
-
-h2 {
-    /* text-shadow: 0 13.36px 8.896px #0000008c, 0 -2px 1px #fff; */
-    /* text-shadow: 3px 4px 5px lightgray; */
+    box-shadow: inset 0px 2px 11px 0px #0000008c;
 }
 </style>
