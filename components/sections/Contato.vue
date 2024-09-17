@@ -98,12 +98,8 @@ const submitForm = async () => {
         modal.value = true;
     } finally {
         loading.value = false;
-
         setTimeout(() => {
             modal.value = false;
-            form.value.name = "";
-            form.value.email = "";
-            form.value.message = "";
         }, 5000)
     }
 };

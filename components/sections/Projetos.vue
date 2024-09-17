@@ -9,7 +9,7 @@
                     v-motion-slide-visible-once-bottom :delay="i * 100" :duration="600" class="project-card">
                     <div class="project-img">
                         <NuxtImg :src="`/projetos/${projeto.imgNome}`" :alt="projeto.nome" densities="x1"
-                            :width="modal.widthProjeto" class="rounded-lg" />
+                            :width="projeto.width" class="rounded-lg" />
                     </div>
                     <div class="project-description">
                         <h2 class="project-name">{{ projeto.nome }}</h2>
