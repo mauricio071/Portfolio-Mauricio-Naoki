@@ -15,6 +15,7 @@
     "@nuxt/image": "^1.8.0",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@vueuse/motion": "^2.2.3",
+    "nodemailer": "^6.9.15",
     "nuxt": "^3.13.0",
     "vue": "latest",
     "vue3-carousel-nuxt": "^1.1.2"
