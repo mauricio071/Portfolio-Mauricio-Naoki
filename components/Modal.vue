@@ -47,7 +47,11 @@ const fecharModal = () => {
     }
 
     @screen lg {
-        @apply max-w-[1300px] pb-16;
+        @apply max-w-[1200px] pb-16;
+    }
+
+    @screen 2xl {
+        @apply max-w-[1300px];
     }
 }
 
