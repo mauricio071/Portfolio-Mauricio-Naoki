@@ -4,7 +4,6 @@
             <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
                 Projetos
             </h2>
-
             <div class="projetos">
                 <div @click="abrirModal(projeto)" v-for="(projeto, i) in projetosVisiveis" :key="i"
                     v-motion-slide-visible-once-bottom :delay="i * 100" :duration="600" class="project-card">
@@ -41,7 +40,7 @@
                     <div class="info">
                         <div>
                             <h3>Sobre o projeto:</h3>
-                            <p>{{ modal.descricaoProjeto }}</p>
+                            <p class="max-h-[15rem] overflow-auto">{{ modal.descricaoProjeto }}</p>
                         </div>
                         <div>
                             <h3>Detalhes do projeto:</h3>
@@ -134,6 +133,16 @@ const limparModalInfo = () => {
 </script>
 
 <style scoped>
+::-webkit-scrollbar {
+    @apply bg-[#f0fdfa] w-[.4rem];
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-[.3rem];
+}
+
+
+
 .background-diagonal {
     /* @apply relative bg-[#e0f7f2]; */
     @apply relative;
