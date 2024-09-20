@@ -4,6 +4,7 @@
             <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
                 Projetos
             </h2>
+            <p>Clique nos projetos para mais detalhes!</p>
             <div class="projetos">
                 <div @click="abrirModal(projeto)" v-for="(projeto, i) in projetosVisiveis" :key="i"
                     v-motion-slide-visible-once-bottom :delay="i * 100" :duration="600" class="project-card">
@@ -154,7 +155,7 @@ const limparModalInfo = () => {
 }
 
 .project-card .project-img {
-    @apply w-full h-[13rem] lg:h-[15rem] xl:h-[13.5rem] 2xl:h-[15rem];
+    @apply w-full h-[12.5rem] lg:h-[15rem] xl:h-[13.5rem] 2xl:h-[15rem];
 }
 
 .project-description {
