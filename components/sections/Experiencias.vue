@@ -66,10 +66,10 @@ import { empresas } from '@/constants/empresas'
 }
 
 .timeline-icon {
-    @apply absolute flex justify-center items-center w-12 h-12 right-[-31px] top-[32px] z-[10] text-white bg-primary rounded-[50%] text-lg;
+    @apply absolute flex justify-center items-center w-12 h-12 right-[-31px] top-[32px] z-[10] text-white bg-primary rounded-[50%] text-2xl;
 
     @screen lg {
-        @apply w-16 h-16 !left-[-26px] text-2xl;
+        @apply w-16 h-16 !left-[-26px];
     }
 }
 

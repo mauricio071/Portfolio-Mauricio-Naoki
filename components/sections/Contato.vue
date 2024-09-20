@@ -9,7 +9,7 @@
                     <h1 class="text-center font-extrabold mb-8 text-3xl xl:text-4xl xl:text-start">
                         Vamos conversar!
                     </h1>
-                    <p class="mb-4 text-center max-w-lg mx-auto xl:max-w-[unset] xl:text-start xl:text-lg">
+                    <p class="px-2 mb-4 text-center max-w-lg mx-auto xl:max-w-[unset] xl:text-start xl:text-lg">
                         Tem uma ideia ou precisa de ajuda com seu projeto? Estou sempre aberto a novas oportunidades e
                         colaborações. Preencha o formulário ou clique nos links abaixo e vamos conversar!
                     </p>
@@ -41,7 +41,10 @@
                         required />
                     <button type="submit" :disabled="loading" class="submit-btn">
                         <span v-if="loading" class="loader"></span>
-                        <span v-else>Enviar</span>
+                        <span v-else class="flex items-center gap-2">
+                            Enviar
+                            <IconSend />
+                        </span>
                     </button>
                 </form>
             </div>
@@ -151,7 +154,7 @@ textarea:focus {
 }
 
 .submit-btn {
-    @apply bg-white text-secondary px-20 py-3 rounded-lg mx-auto block duration-300 font-semibold xl:mx-0;
+    @apply bg-white text-secondary px-16 py-3 rounded-lg mx-auto block duration-300 font-semibold xl:mx-0;
 }
 
 .submit-btn:hover {

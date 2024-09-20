@@ -52,12 +52,17 @@
                                 <div class="detalhes-links">
                                     <a v-if="modal.urlProjeto" :href="modal.urlProjeto" target="_blank" rel="noreferrer"
                                         aria-label="Projeto Online">
-                                        <Icon name="mdi:web" class="text-[1.5rem] text-secondary lg:text-[2rem]" />
+                                        <Icon name="mdi:web" class="text-secondary w-6 h-6 lg:w-8 lg:h-8" />
+                                        <!-- <svg class="w-[1.5rem] lg:w-[2rem]" xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+                                        </svg> -->
                                         Projeto Online
                                     </a>
                                     <a v-if="modal.repositorioProjeto" :href="modal.repositorioProjeto" target="_blank"
                                         rel="noreferrer" aria-label="Repositório">
-                                        <Icon name="mdi:github" class="text-[1.5rem] text-secondary lg:text-[2rem]" />
+                                        <Icon name="mdi:github" class="text-secondary w-6 h-6 lg:w-8 lg:h-8" />
                                         Repositório
                                     </a>
                                 </div>
@@ -129,7 +134,11 @@ const limparModalInfo = () => {
 
 <style scoped>
 .background-diagonal {
-    @apply relative bg-[#e0f7f2];
+    /* @apply relative bg-[#e0f7f2]; */
+    @apply relative;
+
+    background: rgb(0, 191, 165);
+    background: radial-gradient(circle, rgba(0, 191, 165, 0.04) 0%, rgba(0, 191, 165, 0.22) 100%);
 }
 
 /* .background-diagonal:after {
@@ -145,7 +154,7 @@ const limparModalInfo = () => {
 }
 
 .project-card .project-img {
-    @apply w-full h-[12rem] lg:h-[13.5rem] 2xl:h-[15rem];
+    @apply w-full h-[12.5rem] lg:h-[15rem] xl:h-[13.5rem] 2xl:h-[15rem];
 }
 
 .project-description {
@@ -157,7 +166,7 @@ const limparModalInfo = () => {
 }
 
 .project-name {
-    @apply text-white font-bold text-center lg:text-2xl;
+    @apply text-white font-bold text-center text-xl lg:text-2xl;
 }
 
 .project-type {

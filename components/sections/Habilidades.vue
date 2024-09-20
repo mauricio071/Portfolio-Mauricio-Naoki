@@ -24,7 +24,12 @@ import { tecnologias } from '@/constants/tecnologias'
 
 <style scoped>
 .background-diagonal {
-    @apply relative bg-[#e0f7f2];
+    /* @apply relative bg-[#e0f7f2]; */
+    @apply relative;
+    background: rgb(0, 191, 165);
+    background: radial-gradient(circle, rgba(0, 191, 165, 0.04) 0%, rgba(0, 191, 165, 0.22) 100%);
+
+
 }
 
 /* .background-diagonal:after {
@@ -32,7 +37,13 @@ import { tecnologias } from '@/constants/tecnologias'
 } */
 
 .icon-card {
-    @apply bg-white relative flex flex-col justify-center items-center gap-4 rounded-[25px] shadow-lg w-[10rem] h-36 mx-auto duration-300 overflow-hidden cursor-pointer hover:scale-110;
+    @apply bg-white relative flex flex-col justify-center items-center gap-4 rounded-[25px] shadow-lg w-[10rem] h-36 mx-auto duration-300 overflow-hidden cursor-pointer;
+    /* */
+}
+
+.icon-card:hover {
+    @apply scale-110;
+    box-shadow: 0 0 0px #00bfa6, 0 0 10px #00bfa6, 0 0 40px #00bfa6;
 }
 
 /* Animação dos cards opção 1 */

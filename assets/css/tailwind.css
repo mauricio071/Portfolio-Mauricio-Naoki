@@ -16,11 +16,11 @@ html {
 }
 
 section:not(.carousel) {
-    @apply py-20;
+    @apply py-[5.5rem];
 }
 
 section:nth-child(2) {
-    @apply pt-0 lg:pt-20;
+    @apply pt-0 lg:pt-[5.5rem];
 }
 
 h1,

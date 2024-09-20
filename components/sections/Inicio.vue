@@ -19,16 +19,16 @@
                 <div class="flex gap-4">
                     <a href="https://github.com/mauricio071" target="_blank" rel="noreferrer" aria-label="Github">
                         <Icon name="mdi:github"
-                            class="text-[2rem] block text-secondary duration-300 hover:text-white" />
+                            class="text-[2.25rem] block text-secondary duration-300 hover:text-white 2xl:text-[2.5rem]" />
                     </a>
                     <a href="https://www.linkedin.com/in/mauricionaoki" target="_blank" rel="noreferrer"
                         aria-label="LinkedIn">
                         <Icon name="mdi:linkedin"
-                            class="text-[2rem] block text-secondary duration-300 hover:text-[#258dbf]" />
+                            class="text-[2.25rem] block text-secondary duration-300 hover:text-[#258dbf] 2xl:text-[2.5rem]" />
                     </a>
                     <a href="https://wa.me/5511942816814" target="_blank" rel="noreferrer" aria-label="WhatsApp">
                         <Icon name="mdi:whatsapp"
-                            class="text-[2rem] block text-secondary duration-300 hover:text-[#25d366]" />
+                            class="text-[2.25rem] block text-secondary duration-300 hover:text-[#25d366] 2xl:text-[2.5rem]" />
                     </a>
                 </div>
             </div>
@@ -62,7 +62,7 @@
 
 .curriculo-btn:hover {
     @apply bg-secondary text-white;
-    box-shadow: 0 0 10px #00bfa6,
+    box-shadow: 0 0 30px #00bfa6,
         0 0 40px #00bfa6;
 }
 
@@ -71,7 +71,7 @@
 }
 
 .text-animation:after {
-    @apply content-[''] absolute left-0 h-full w-full border-l-2 border-secondary bg-[#a3e6de] sm:bg-[#a4e8df] md:bg-[#9de8de] lg:bg-[#a2e8de] 2xl:bg-[#a2e8e0];
+    @apply content-[''] absolute left-0 h-full w-full border-l-2 border-secondary bg-[#a3e7de] sm:bg-[#a4e8df] md:bg-[#9de8de] lg:bg-[#a2e8de] 2xl:bg-[#a2e8e0];
     animation: typing 6s steps(22) infinite;
 }
 

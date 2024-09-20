@@ -7,7 +7,11 @@
                 <transition name="modal-inner">
                     <div class="modal-content" role="dialog" aria-modal="true">
                         <slot></slot>
-                        <Icon @click="fecharModal" name="mdi:close" class="close" />
+                        <Icon @click="fecharModal" name="mdi:close" class="close w-8 h-8" />
+                        <!-- <svg @click="fecharModal" class="close max-w-[2.25rem]" xmlns="http://www.w3.org/2000/svg"
+                            fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                        </svg> -->
                     </div>
                 </transition>
             </div>
@@ -48,7 +52,7 @@ const fecharModal = () => {
 }
 
 .close {
-    @apply absolute top-[10px] right-[20px] text-[2rem] duration-300 cursor-pointer;
+    @apply absolute top-[10px] right-[20px] duration-300 cursor-pointer;
 }
 
 .close:hover {

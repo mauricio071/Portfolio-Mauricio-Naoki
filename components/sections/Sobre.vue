@@ -13,17 +13,20 @@
                         <h2 class="section-title !mb-8 lg:!items-start">
                             Sobre mim
                         </h2>
-                        <p class="mb-4 text-justify lg:text-start xl:text-lg">
-                            Sou um desenvolvedor front-end focado em criar experiências digitais envolventes e
-                            funcionais, com formação em Ciência da Computação pela Universidade Cidade de São Paulo,
-                            concluída em dezembro de 2022. Nos últimos dois anos, trabalhei em uma digital house,
-                            desenvolvendo sistemas e sites personalizados para diversos clientes. Cada novo projeto
-                            despertava minha curiosidade e motivação, levando a constantes pesquisas e aprendizados.
+                        <p class="px-2 mb-4 text-justify lg:text-start lg:px-0 xl:text-lg">
+                            Sou um desenvolvedor <strong>front-end</strong> focado em criar experiências digitais
+                            envolventes e funcionais, com formação em <strong>Ciência da Computação</strong> pela
+                            <strong>Universidade Cidade de São Paulo</strong>, concluída em dezembro de 2022.
+                            Nos últimos dois anos, trabalhei em uma <strong>digital house</strong>, desenvolvendo
+                            sistemas e sites personalizados para diversos clientes. Cada novo projeto despertava
+                            minha curiosidade e motivação, levando a constantes pesquisas e aprendizados.
                         </p>
-                        <p class="text-justify lg:text-start xl:text-lg">
-                            Tenho maior aptidão para a área de front-end, com principais habilidades em Vue.js, Nuxt.js,
-                            React.js, JavaScript e TypeScript. Estou sempre em busca de projetos desafiadores que me
-                            permitam crescer profissionalmente, explorar novas tecnologias e contribuir para inovações.
+                        <p class="px-2 text-justify lg:text-start lg:px-0 xl:text-lg">
+                            Tenho maior aptidão para a área de <strong>front-end</strong>, com principais habilidades em
+                            <strong>Vue.js</strong>, <strong>Nuxt.js</strong>, <strong>React.js</strong>,
+                            <strong>JavaScript</strong> e <strong>TypeScript</strong>. Estou sempre em busca de projetos
+                            desafiadores que me permitam crescer profissionalmente, explorar novas tecnologias e
+                            contribuir para inovações.
                         </p>
                     </div>
                     <div v-motion-slide-visible-once-bottom :duration="700" :delay="300"

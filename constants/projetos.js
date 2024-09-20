@@ -20,7 +20,7 @@ export const projetos = [
         tipo: "Website",
         imgNome: "six-chains-thumb.webp",
         width: "800",
-        descricao: "O site foi desenvolvido para a Sixchains Digital House, onde fui responsável pelo desenvolvimento front-end. O foco principal foi garantir uma implementação eficiente e funcional, além de aplicar técnicas de SEO para melhorar o desempenho nas buscas do Google. O site inclui descrições dos principais serviços oferecidos pela empresa e uma seção destacando projetos realizados, reforçando a confiabilidade e qualidade dos serviços. O design foi baseado em pesquisas feitas pela equipe, garantindo que a experiência do usuário fosse intuitiva e compatível com diferentes dispositivos.",
+        descricao: "O site foi desenvolvido para a Sixchains Digital House, onde fui responsável pelo desenvolvimento front-end. O foco principal foi garantir uma implementação eficiente e funcional, além de aplicar técnicas de SEO para melhorar o desempenho nas buscas do Google. O site inclui descrições dos principais serviços oferecidos pela empresa e uma seção destacando projetos realizados, reforçando a confiabilidade e qualidade. O design foi baseado em pesquisas feitas pela equipe, garantindo uma experiência intuitiva e compatível com diferentes dispositivos.",
         tagsIcon: [
             IconSkillsLogoHtml,
             IconSkillsLogoCss,
