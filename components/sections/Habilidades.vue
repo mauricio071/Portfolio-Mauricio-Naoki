@@ -56,7 +56,7 @@ import { tecnologias } from '@/constants/tecnologias'
 /* Animação dos cards opção 2 */
 .icon-card::before {
     @apply content-[''] absolute w-[150%] h-[150%];
-    background-image: repeating-conic-gradient(var(--card-color) 0%, var(--card-color) 25%, transparent 35%, transparent 40%, var(--card-color) 50%);
+    background-image: repeating-conic-gradient(var(--card-color) 0%, var(--card-color) 30%, transparent 35%, transparent 40%, var(--card-color) 50%);
     animation: rotate 6s linear infinite;
 }
 

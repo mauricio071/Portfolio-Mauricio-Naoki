@@ -154,7 +154,7 @@ const limparModalInfo = () => {
 }
 
 .project-card .project-img {
-    @apply w-full h-[12.5rem] lg:h-[15rem] xl:h-[13.5rem] 2xl:h-[15rem];
+    @apply w-full h-[13rem] lg:h-[15rem] xl:h-[13.5rem] 2xl:h-[15rem];
 }
 
 .project-description {
