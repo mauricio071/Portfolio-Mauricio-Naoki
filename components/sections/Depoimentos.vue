@@ -12,8 +12,6 @@
                             <slide v-for="(depoimento, i) in depoimentos" :key="i">
                                 <div class="depoimento-container">
                                     <div class="depoimento-pessoa">
-                                        <!-- <img :src="`/depoimentos/${depoimento.foto}.webp`" :alt="depoimento.nome"
-                                            class="w-[120px] lg:w-[70px]" /> -->
                                         <NuxtImg :src="`/depoimentos/${depoimento.foto}.webp`" :alt="depoimento.nome"
                                             densities="x1" sizes="250 lg:70" class="max-w-[120px] lg:w-[70px]" />
                                         <div class="depoimento-info">

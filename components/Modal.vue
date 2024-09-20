@@ -7,11 +7,11 @@
                 <transition name="modal-inner">
                     <div class="modal-content" role="dialog" aria-modal="true">
                         <slot></slot>
-                        <Icon @click="fecharModal" name="mdi:close" class="close w-8 h-8" />
-                        <!-- <svg @click="fecharModal" class="close max-w-[2.25rem]" xmlns="http://www.w3.org/2000/svg"
+                        <!-- <Icon @click="fecharModal" name="mdi:close" class="close w-8 h-8" /> -->
+                        <svg @click="fecharModal" class="close max-w-[2.25rem]" xmlns="http://www.w3.org/2000/svg"
                             fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                        </svg> -->
+                        </svg>
                     </div>
                 </transition>
             </div>
