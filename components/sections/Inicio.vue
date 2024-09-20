@@ -2,7 +2,7 @@
     <section id="início" class="home">
         <div class="wrapper relative my-16 lg:flex lg:justify-between lg:items-center">
             <IconTecnologia class="header-vector" />
-            <div class="flex flex-col items-center gap-4 lg:items-start lg:gap-3 ">
+            <div class="flex flex-col items-center gap-6 lg:items-start lg:gap-4 ">
                 <p class="text-white font-semibold text-lg lg:text-2xl">👋🏻 Olá, o meu nome é</p>
                 <h1 class="text-secondary font-bold text-3xl leading-4 sm:text-4xl lg:text-5xl  2xl:text-[3.5rem]">
                     Maurício Naoki
