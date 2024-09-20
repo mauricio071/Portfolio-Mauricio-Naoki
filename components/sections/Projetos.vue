@@ -4,7 +4,7 @@
             <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
                 Projetos
             </h2>
-            <p>Clique nos projetos para mais detalhes!</p>
+
             <div class="projetos">
                 <div @click="abrirModal(projeto)" v-for="(projeto, i) in projetosVisiveis" :key="i"
                     v-motion-slide-visible-once-bottom :delay="i * 100" :duration="600" class="project-card">
