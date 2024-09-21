@@ -34,7 +34,11 @@
                 <h3 class="text-gray-500 mb-4 text-center font-semibold">{{ modal.tipoProjeto }}</h3>
                 <div class="modal-content-description">
                     <div class="modal-img">
-                        <NuxtImg :src="`/projetos/${modal.imgProjeto}`" :alt="modal.nomeProjeto" densities="x1"
+                        <iframe v-if="modal.videoProjeto" width="560" height="315" :src="modal.videoProjeto"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full"></iframe>
+                        <NuxtImg v-else :src="`/projetos/${modal.imgProjeto}`" :alt="modal.nomeProjeto" densities="x1"
                             :width="modal.widthProjeto" class="w-full" />
                     </div>
                     <div class="info">
@@ -98,6 +102,9 @@ const modal = ref({
     isOpen: false,
     nomeProjeto: '',
     tipoProjeto: '',
+    imgProjeto: '',
+    videoProjeto: '',
+    widthProjeto: '',
     descricaoProjeto: '',
     tagsProjeto: [],
     urlProjeto: '',
@@ -112,6 +119,7 @@ const abrirModal = (projeto) => {
         nomeProjeto: projeto.nome,
         tipoProjeto: projeto.tipo,
         imgProjeto: projeto.imgNome,
+        videoProjeto: projeto.projetoVideo,
         widthProjeto: projeto.width,
         descricaoProjeto: projeto.descricao,
         tagsProjeto: projeto.tags,
@@ -129,6 +137,9 @@ const limparModalInfo = () => {
         isOpen: false,
         nomeProjeto: '',
         tipoProjeto: '',
+        imgProjeto: '',
+        videoProjeto: '',
+        widthProjeto: '',
         descricaoProjeto: '',
         tagsProjeto: [],
         urlProjeto: '',
@@ -215,7 +226,7 @@ const limparModalInfo = () => {
 }
 
 .modal-img img {
-    @apply rounded-lg lg:h-[22rem];
+    @apply rounded-lg min-h-[11rem] lg:h-[22rem];
 }
 
 .info {

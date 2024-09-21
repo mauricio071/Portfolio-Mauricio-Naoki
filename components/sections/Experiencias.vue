@@ -13,7 +13,7 @@
                         <div v-motion-pop-visible-once :duration="700" class="timeline-card">
                             <h1 class="text-xl font-extrabold mb-2 sm:text-2xl">{{ empresa.nome }}</h1>
                             <h2 class="font-bold text-[#8a8a8a] sm:text-lg">{{ empresa.cargo }}</h2>
-                            <p class="text-sm my-4 lg:text-lg">{{ empresa.descricao }}</p>
+                            <p class="my-4 lg:text-lg">{{ empresa.descricao }}</p>
                             <h3 class="text-lg font-extrabold mb-3 text-[#0097a7] sm:text-xl">Tecnologias:</h3>
                             <div class="tecnologias flex items-center gap-2">
                                 <component v-for="(logo, index) in empresa.tecnologias" :is="logo" :key="index"
@@ -38,7 +38,7 @@ import { empresas } from '@/constants/empresas'
 
 <style scoped>
 .timeline-card {
-    @apply shadow-2xl px-5 py-8 rounded-lg border-b-[6px] border-b-primary bg-white relative 2xl:px-7;
+    @apply shadow-2xl px-5 py-7 rounded-lg border-b-[6px] border-b-primary bg-white relative md:py-8 2xl:px-7;
 }
 
 .timeline {
