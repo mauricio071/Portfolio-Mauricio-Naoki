@@ -225,7 +225,7 @@ export const projetos = [
         nome: "Jogo da Forca",
         tipo: "Website",
         imgNome: "jogo-da-forca.png",
-        projetoVideo: "https://www.youtube.com/embed/5H7dXEEDzhU?si=3jHSuOD1KcwSqHig",
+        projetoVideo: "",
         width: "900",
         descricao: "Neste projeto, foi desenvolvido um jogo da forca usando o Vue.js, com uma interface moderna e responsiva para poder jogar diretamente no navegador.",
         tagsIcon: [

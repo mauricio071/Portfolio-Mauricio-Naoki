@@ -226,7 +226,7 @@ const limparModalInfo = () => {
 }
 
 .modal-img img {
-    @apply rounded-lg min-h-[11rem] lg:h-[22rem];
+    @apply rounded-lg min-h-[10rem] lg:h-[22rem];
 }
 
 .info {
