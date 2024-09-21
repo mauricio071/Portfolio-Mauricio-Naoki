@@ -78,7 +78,7 @@
 
 @keyframes typing {
 
-    40%,
+    30%,
     75% {
         left: calc(100% - 2px);
     }
