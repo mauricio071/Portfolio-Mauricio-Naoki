@@ -40,7 +40,7 @@ const fecharModal = () => {
 }
 
 .modal-content {
-    @apply bg-[#f7f7f7] p-6 rounded-lg relative border-t-8 border-t-primary mx-auto;
+    @apply bg-[#f7f7f7] p-5 rounded-lg relative border-t-8 border-t-primary mx-auto;
 
     @screen sm {
         @apply max-w-[40rem] p-8;
