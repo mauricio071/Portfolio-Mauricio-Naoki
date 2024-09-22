@@ -31,15 +31,14 @@
         <Modal :isVisible="modal.isOpen" @close="fecharModal">
             <div class="card-modal">
                 <h2 class="modal-title">{{ modal.nomeProjeto }}</h2>
-                <h3 class="text-gray-500 mb-4 text-center font-semibold">{{ modal.tipoProjeto }}</h3>
+                <h3 class="text-gray-500 mb-8 text-center font-semibold">{{ modal.tipoProjeto }}</h3>
                 <div class="modal-content-description">
                     <div class="modal-img">
-                        <iframe v-if="modal.videoProjeto" width="560" height="315" :src="modal.videoProjeto"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full"></iframe>
+                        <iframe v-if="modal.videoProjeto" :src="modal.videoProjeto" title="YouTube video player"
+                            frameborder="0" rel="0" allowfullscreen
+                            class="w-full rounded-lg iframe-responsive"></iframe>
                         <NuxtImg v-else :src="`/projetos/${modal.imgProjeto}`" :alt="modal.nomeProjeto" densities="x1"
-                            :width="modal.widthProjeto" class="w-full" />
+                            :width="modal.widthProjeto" class="w-full rounded-lg" />
                     </div>
                     <div class="info">
                         <div>
@@ -218,19 +217,38 @@ const limparModalInfo = () => {
 }
 
 .modal-content-description {
-    @apply flex flex-col items-center gap-4 lg:flex-row lg:gap-8;
+    @apply grid items-center gap-4 lg:grid-cols-2 lg:gap-8;
 }
 
 .modal-img {
-    @apply lg:w-[55%];
+    @apply w-full;
 }
 
 .modal-img img {
     @apply rounded-lg min-h-[10rem] lg:h-[22rem];
 }
 
+.iframe-responsive {
+    @apply h-[12rem];
+
+    @screen lg {
+        @apply !h-[19rem];
+    }
+
+    @screen xl {
+        @apply !h-[21.25rem];
+    }
+}
+
+@media (min-width: 530px) {
+    .iframe-responsive {
+        @apply h-[18rem];
+    }
+}
+
+
 .info {
-    @apply space-y-4 lg:w-[45%];
+    @apply space-y-4;
 }
 
 .info h3 {

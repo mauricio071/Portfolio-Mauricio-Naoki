@@ -67,24 +67,23 @@
 }
 
 .text-animation {
-    @apply w-full whitespace-nowrap overflow-hidden relative pr-1;
-}
-
-.text-animation:after {
-    @apply content-[''] absolute left-0 h-full w-full border-l-2 border-secondary bg-[#a2e7de] sm:bg-[#a4e8df] md:bg-[#9fe7de] lg:bg-[#a2e8de] 2xl:bg-[#a2e8e0];
-    animation: typing 6s steps(20) infinite,
-        blinking .85s infinite;
+    @apply w-full whitespace-nowrap overflow-hidden border-r-2 border-secondary pr-1;
+    animation: typing 5.57s steps(20) infinite,
+        blinking .85s infinite alternate;
 }
 
 @keyframes typing {
+    0% {
+        width: 0;
+    }
 
     30%,
     75% {
-        left: calc(100% - 2px);
+        width: 100%;
     }
 
     100% {
-        left: 0;
+        width: 0;
     }
 }
 
