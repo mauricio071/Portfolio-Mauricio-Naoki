@@ -229,7 +229,7 @@ const limparModalInfo = () => {
 }
 
 .iframe-responsive {
-    @apply h-[12rem];
+    @apply h-[13rem];
 
     @screen lg {
         @apply !h-[19rem];
