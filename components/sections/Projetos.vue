@@ -43,7 +43,7 @@
                     <div class="info">
                         <div>
                             <h3>Sobre o projeto:</h3>
-                            <p class="max-h-[13rem] overflow-auto">{{ modal.descricaoProjeto }}</p>
+                            <p class="max-h-[12rem] overflow-auto">{{ modal.descricaoProjeto }}</p>
                         </div>
                         <div>
                             <h3>Detalhes do projeto:</h3>
