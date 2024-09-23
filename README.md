@@ -62,13 +62,13 @@ Siga os passos abaixo para instalar e executar o projeto em seu ambiente local:
 ### 1. Clone o repositório:
 
 ```bash
-$ git clone https://github.com/mauricio071/Potfolio-Mauricio-Naoki
+$ git clone https://github.com/mauricio071/Portfolio-Mauricio-Naoki
 ```
 
 ### 2. Acesse o diretório do projeto:
 
 ```bash
-$ cd Potfolio-Mauricio-Naoki
+$ cd Portfolio-Mauricio-Naoki
 ```
 
 ### 3. Instale as dependências necessárias:
