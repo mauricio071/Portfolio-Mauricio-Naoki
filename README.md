@@ -28,7 +28,11 @@ Este projeto tem como objetivo de apresentar minhas habilidades, experiências p
 
 ## 🤔 Por que optei por usar um backend no meu projeto frontend?
 
-Durante o desenvolvimento do formulário de contato, percebi que, ao utilizar uma solução somente em frontend (como o Web3Forms), a chave de API ficava exposta, gerando riscos de segurança. Para resolver isso, utilizei o Nitro, um framework que já vem integrado ao Nuxt 3. Com ele, pude processar as informações no backend, garantindo maior privacidade e controle sobre os dados, sem depender de terceiros. Isso me permitiu criar uma solução mais segura e customizada.
+Durante o desenvolvimento do formulário de contato, notei que, ao utilizar uma solução somente em frontend (como o Web3Forms), a chave de API ficava exposta, gerando riscos de segurança. 
+
+Para resolver esse problema, optei por utilizar o Nitro, um framework que já vem integrado ao Nuxt 3. Com ele, pude processar as informações no backend, garantindo maior privacidade e controle sobre os dados, sem depender de terceiros. 
+
+Essa abordagem me permitiu desenvolver uma solução mais segura e customizada.
 
 ## 📸 Screenshots
 
