@@ -13,6 +13,7 @@ import IconSkillsLogoVuetify from '@/components/icon/skills-logo/Vuetify.vue';
 import IconSkillsLogoTypeScript from '@/components/icon/skills-logo/TypeScript.vue';
 import IconSkillsLogoReact from '@/components/icon/skills-logo/React.vue';
 import IconSkillsLogoNode from '@/components/icon/skills-logo/Node.vue';
+import IconSkillsLogoPostgreSQL from '@/components/icon/skills-logo/PostgreSQL.vue';
 
 export const projetos = [
     {
@@ -77,7 +78,7 @@ export const projetos = [
         imgNome: "cleantube.webp",
         projetoVideo: "https://www.youtube.com/embed/P_vSeQTrbEk?si=iz7de8l1ff3a2sxK",
         width: "1000",
-        descricao: "Neste projeto, a autenticação via Google OAuth foi configurada pelo Google Cloud, permitindo que apenas usuários autorizados adicionem, editem ou excluam vídeos do YouTube. Os layouts foram criados com o Nuxt UI, que oferece templates prontos para agilizar o desenvolvimento. No backend, foi usado o Nitro integrado ao Nuxt 3, facilitando a configuração de rotas e funções server-side. O projeto também permite favoritar vídeos, que são armazenados localmente no navegador do usuário e também exibem os vídeos sem anúncios.",
+        descricao: "CleanTube é uma aplicação para gerenciar vídeos do YouTube, com autenticação via Google OAuth configurada pelo Google Cloud, garantindo que apenas usuários autorizados possam adicionar, editar ou excluir vídeos. O middleware do Nuxt.js protege as páginas contra acessos não autorizados. Os layouts foram criados com Nuxt UI para agilizar o desenvolvimento, e o backend utiliza Nitro, integrado ao Nuxt 3, para rotas e funções server-side. O banco de dados é gerenciado com PostgreSQL, e os vídeos favoritos são armazenados localmente no navegador. A aplicação exibe vídeos sem anúncios e oferece suporte a i18n, permitindo que o idioma dos títulos das seções seja alterado conforme a preferência do usuário.",
         tagsIcon: [
             IconSkillsLogoHtml,
             IconSkillsLogoCss,
@@ -85,7 +86,8 @@ export const projetos = [
             IconSkillsLogoTypeScript,
             IconSkillsLogoVue,
             IconSkillsLogoNuxt,
-            IconSkillsLogoTailwind
+            IconSkillsLogoTailwind,
+            IconSkillsLogoPostgreSQL
         ],
         tags: [
             'HTML',
@@ -94,6 +96,11 @@ export const projetos = [
             'TypeScript',
             'Vue.js',
             'Nuxt.js',
+            'Nuxt UI',
+            'Pinia',
+            'i18n',
+            'Nitro',
+            'PostgreSQL',
             'Tailwind'
         ],
         url: 'https://cleantube.vercel.app',
@@ -105,7 +112,7 @@ export const projetos = [
         imgNome: "products-store.webp",
         projetoVideo: "https://www.youtube.com/embed/zd63nYRRXAg?si=08-oycrwX9s6GoBs",
         width: "900",
-        descricao: "Nesta aplicação de vendas de produtos, desenvolvida com Nuxt.js, foi feita a integração com uma API fictícia para listar e exibir os produtos. Foi implementado o plugin Pinia para garantir a persistência dos dados, assim, o carrinho de compras funciona de forma semelhante ao do AliExpress, mantendo os itens salvos no navegador mesmo após o usuário fechar a página ou atualizar.",
+        descricao: "Esta aplicação de vendas foi construída utilizando o framework Nuxt.js, com integração a uma API fictícia para listar e exibir os produtos disponíveis. O Pinia foi implementado para gerenciar o estado do carrinho de compras, garantindo que os itens permaneçam salvos no navegador, mesmo após atualizar ou fechar a página, trazendo uma experiência semelhante ao AliExpress.",
         tagsIcon: [
             IconSkillsLogoHtml,
             IconSkillsLogoCss,
@@ -123,7 +130,7 @@ export const projetos = [
             'Tailwind'
         ],
         url: 'https://mauricio-products-store.netlify.app',
-        repositorio: 'https://github.com/mauricio071/Mauricio-Products-Store'
+        repositorio: 'https://github.com/mauricio071/Products-Store'
     },
     {
         nome: "MoviesLib",
@@ -131,7 +138,7 @@ export const projetos = [
         imgNome: "movies-lib.webp",
         projetoVideo: "https://www.youtube.com/embed/qZFV3wbgdQo?si=0j_QbDwU1CdZ6PjA",
         width: "800",
-        descricao: "Este projeto foi desenvolvido utilizando React.js e consome a API do themoviedb.org para listar os filmes com as melhores avaliações da história do cinema. Além disso, tem como pesquisar filmes atuais e acessar informações detalhadas, como sinopses, orçamento e duração.",
+        descricao: "O MoviesLib foi desenvolvido com React.js e utiliza a API do TheMovieDB para exibir uma lista dos filmes mais bem avaliados da história do cinema. Além de poder buscar filmes atuais, a aplicação permite visualizar detalhes como sinopse, orçamento e duração.",
         tagsIcon: [
             IconSkillsLogoHtml,
             IconSkillsLogoCss,
@@ -153,7 +160,7 @@ export const projetos = [
         imgNome: "project-costs.webp",
         projetoVideo: "https://www.youtube.com/embed/bS2nScs_zp4?si=8P-NRN8t1REkZ02G",
         width: "900",
-        descricao: "Este projeto, desenvolvido com o framework React.js, é um sistema para gerenciar o orçamento de projetos. Após cadastrar um projeto, o usuário pode adicionar múltiplos serviços dentro do projeto, cada um com informações detalhadas sobre seu custo. O sistema avisa o usuário com uma notificação se o valor total dos serviços ultrapassar o orçamento estabelecido. Além disso, o sistema permite a edição e exclusão de projetos e serviços conforme necessidade.",
+        descricao: "O Project Costs é um sistema desenvolvido com React.js para ajudar na gestão de orçamentos de projetos. O usuário pode criar projetos e adicionar múltiplos serviços, cada um com detalhes sobre custos específicos. Se o custo total dos serviços ultrapassar o orçamento estabelecido, o sistema alerta o usuário. Além disso, é possível editar e excluir tanto os projetos quanto os serviços conforme necessário.",
         tagsIcon: [
             IconSkillsLogoHtml,
             IconSkillsLogoCss,
@@ -177,7 +184,7 @@ export const projetos = [
         imgNome: "tarefas-pinia.webp",
         projetoVideo: "https://www.youtube.com/embed/2UXGRnyeMpM?si=e1R3DPcBGheFCuxt",
         width: "900",
-        descricao: "Este projeto, desenvolvido com Vue 3, é uma aplicação de lista de tarefas que melhora a organização dos afazeres. Permite classificar cada tarefa como 'a fazer', 'marcado' ou 'completado'. O Pinia foi utilizado para gerenciar o estado da aplicação, mesmo depois de atualizar a página ou o fechar o navegador, os dados do usuário vão persistir no navegador.",
+        descricao: "Este projeto, desenvolvido com Vue 3, é uma aplicação de lista de tarefas que facilita a organização dos afazeres diários. Os usuários podem classificar cada tarefa como 'a fazer', 'em progresso' ou 'completada'. O estado da aplicação é gerenciado pelo Pinia, garantindo que as informações persistam no navegador, mesmo após a atualização da página ou fechamento.",
         tagsIcon: [
             IconSkillsLogoHtml,
             IconSkillsLogoCss,
@@ -190,10 +197,11 @@ export const projetos = [
             'CSS',
             'JavaScript',
             'Vue.js',
+            'Pinia',
             'Tailwind'
         ],
         url: 'https://tarefas-pinia.netlify.app',
-        repositorio: 'https://github.com/mauricio071/Pinia-todo-list'
+        repositorio: 'https://github.com/mauricio071/Tarefas-pinia'
     },
     {
         nome: "Make Your Burguer",
@@ -201,7 +209,7 @@ export const projetos = [
         imgNome: "make-your-burguer.webp",
         projetoVideo: "https://www.youtube.com/embed/_hOEV3CYhdA?si=cM3Q5Rvm-ncFeGHx",
         width: "900",
-        descricao: "Esta aplicação, desenvolvida com Vue.js no front-end e Node.js no back-end, os usuários podem montar seus hambúrgueres personalizados e gerenciar os pedidos, incluindo a edição do status e a exclusão de pedidos.",
+        descricao: "Esta aplicação, desenvolvida com Vue.js no front-end e Node.js no back-end, permite que os usuários montem hambúrgueres personalizados e gerenciem seus pedidos. Utilizando a biblioteca Vuex para gerenciamento de estado, os usuários podem editar o status e excluir os pedidos.",
         tagsIcon: [
             IconSkillsLogoHtml,
             IconSkillsLogoCss,
@@ -215,6 +223,7 @@ export const projetos = [
             'CSS',
             'JavaScript',
             'Vue.js',
+            'Vuex',
             'Tailwind',
             'Node.js'
         ],
@@ -249,7 +258,7 @@ export const projetos = [
         imgNome: "app-chamada.webp",
         projetoVideo: "",
         width: "900",
-        descricao: "É uma aplicação mobile para controle de presença em aulas. Após o login com RA e senha, a aplicação mostra os dados do aluno, como nome, RA e localização atual. Com base nesses dados, verifica se há aula e, se estiver dentro do horário e localização corretos, permite registrar a presença.",
+        descricao: "Esta é uma aplicação mobile desenvolvida para controle de presença em aulas. Após o login com RA e senha, o aplicativo exibe informações do aluno, como nome, RA e localização atual. A partir desses dados, a aplicação verifica se há uma aula no horário e local corretos e, caso estiver, permite o registro da presença.",
         tagsIcon: [
             IconSkillsLogoAndroid,
             IconSkillsLogoKotlin,
@@ -269,7 +278,7 @@ export const projetos = [
         imgNome: "sistema-leitor.webp",
         projetoVideo: "",
         width: "900",
-        descricao: "Desenvolvida em Java, esta aplicação oferece funcionalidades básicas de gerenciamento de usuários, incluindo adição, edição, exclusão e listagem. As informações dos usuários são armazenadas em um banco de dados SQL.",
+        descricao: "Esta aplicação, desenvolvida em Java, oferece funcionalidades para o gerenciamento de usuários, como adição, edição, exclusão e listagem. As informações são armazenadas em um banco de dados SQL para a persistência dos dados.",
         tagsIcon: [
             IconSkillsLogoJava,
             IconSkillsLogoSql,
@@ -279,7 +288,7 @@ export const projetos = [
             'SQL',
         ],
         url: '',
-        repositorio: 'https://github.com/mauricio071/cadastroLeitor_aluno_professor_e_adminitrativa'
+        repositorio: 'https://github.com/mauricio071/Sistema-de-leitor'
     },
     {
         nome: "Em breve!",
