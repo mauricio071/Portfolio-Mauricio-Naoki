@@ -231,6 +231,26 @@ export const projetos = [
         repositorio: 'https://github.com/mauricio071/Make-Your-Burguer'
     },
     {
+        nome: "App de chamada de alunos",
+        tipo: "Aplicativo",
+        imgNome: "app-chamada.webp",
+        projetoVideo: "",
+        width: "900",
+        descricao: "Esta é uma aplicação mobile desenvolvida para controle de presença em aulas. Após o login com RA e senha, o aplicativo exibe informações do aluno, como nome, RA e localização atual. A partir desses dados, a aplicação verifica se há uma aula no horário e local corretos e, caso estiver, permite o registro da presença.",
+        tagsIcon: [
+            IconSkillsLogoAndroid,
+            IconSkillsLogoKotlin,
+            IconSkillsLogoSqlite
+        ],
+        tags: [
+            'Android',
+            'Kotlin',
+            'Sqlite'
+        ],
+        url: '',
+        repositorio: 'https://github.com/mauricio071/Sistema-de-chamada'
+    },
+    {
         nome: "Jogo da Forca",
         tipo: "Website",
         imgNome: "jogo-da-forca.png",
@@ -251,26 +271,6 @@ export const projetos = [
         ],
         url: 'https://jogo-da-forca-vue.netlify.app',
         repositorio: 'https://github.com/mauricio071/jogo-da-forca'
-    },
-    {
-        nome: "App de chamada de alunos",
-        tipo: "Aplicativo",
-        imgNome: "app-chamada.webp",
-        projetoVideo: "",
-        width: "900",
-        descricao: "Esta é uma aplicação mobile desenvolvida para controle de presença em aulas. Após o login com RA e senha, o aplicativo exibe informações do aluno, como nome, RA e localização atual. A partir desses dados, a aplicação verifica se há uma aula no horário e local corretos e, caso estiver, permite o registro da presença.",
-        tagsIcon: [
-            IconSkillsLogoAndroid,
-            IconSkillsLogoKotlin,
-            IconSkillsLogoSqlite
-        ],
-        tags: [
-            'Android',
-            'Kotlin',
-            'Sqlite'
-        ],
-        url: '',
-        repositorio: 'https://github.com/mauricio071/Sistema-de-chamada'
     },
     {
         nome: "Sistema de leitor",
