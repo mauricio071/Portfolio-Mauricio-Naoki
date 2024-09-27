@@ -13,7 +13,10 @@
             <ul :class="{ 'hidden': !isOpen, 'flex': isOpen }"
                 class="flex-col items-center gap-5 w-full py-4 lg:gap-4 lg:flex lg:flex-row lg:justify-between lg:w-[unset] lg:my-[unset] xl:gap-5">
                 <li v-for="(item, i) in items" :key="i">
-                    <a :href="`#${item}`" v-motion-fade-visible :delay="i * 100" class="capitalize">{{ item }}</a>
+                    <a @click="isOpen = false" :href="`#${item}`" v-motion-fade-visible :delay="i * 100"
+                        class="capitalize">
+                        {{ item }}
+                    </a>
                 </li>
             </ul>
         </nav>
