@@ -13,7 +13,8 @@
                         Desenvolvedor Front-end
                     </span>
                 </h2>
-                <a href="/cv_mauricio_naoki.pdf" download="Currículo Maurício Naoki" class="curriculo-btn">
+                <a href="/cv_mauricio_naoki.pdf" target="_blank" rel="noreferrer" aria-label="Currículo"
+                    class="curriculo-btn">
                     Download CV
                 </a>
                 <div class="flex gap-4">
