@@ -14,6 +14,8 @@ import IconSkillsLogoTypeScript from '@/components/icon/skills-logo/TypeScript.v
 import IconSkillsLogoReact from '@/components/icon/skills-logo/React.vue';
 import IconSkillsLogoNode from '@/components/icon/skills-logo/Node.vue';
 import IconSkillsLogoPostgreSQL from '@/components/icon/skills-logo/PostgreSQL.vue';
+import IconSkillsLogoCSharp from '@/components/icon/skills-logo/CSharp.vue';
+import IconSkillsLogoDotNet from '@/components/icon/skills-logo/DotNet.vue';
 
 export const projetos = [
     {
@@ -204,6 +206,46 @@ export const projetos = [
         repositorio: 'https://github.com/mauricio071/Tarefas-pinia'
     },
     {
+        nome: "Sistema de Academia",
+        tipo: "Sistema",
+        imgNome: "sistema-academia.webp",
+        projetoVideo: "https://www.youtube.com/embed/gkE8k4jYrQ8?si=jkJ-VgOnqXKMecXP",
+        width: "900",
+        descricao: "Esta aplicação em C# e .NET Framework, utilizando SQLite, gerencia dados de uma academia de forma eficiente. Com ela, é possível cadastrar, editar e excluir alunos, além de imprimir carteirinhas. Também oferece gestão de usuários com controle de acesso e permissões para administradores. A aplicação permite visualizar horários de atividades e gerar versões em PDF, consultar e gerenciar informações dos professores, além de administrar as turmas, adicionando ou removendo membros e verificando vagas disponíveis.",
+        tagsIcon: [
+            IconSkillsLogoCSharp,
+            IconSkillsLogoDotNet,
+            IconSkillsLogoSqlite
+        ],
+        tags: [
+            'C#',
+            '.NET Framework',
+            'SQLite'
+        ],
+        url: 'https://github.com/mauricio071/Sistema-de-Academia/blob/master/instalador/Instalador_Academia/Instalador_sistema_academia.rar',
+        repositorio: 'https://github.com/mauricio071/Sistema-de-Academia'
+    },
+    {
+        nome: "App de chamada de alunos",
+        tipo: "Aplicativo",
+        imgNome: "app-chamada.webp",
+        projetoVideo: "",
+        width: "900",
+        descricao: "Esta é uma aplicação mobile desenvolvida para controle de presença em aulas. Após o login com RA e senha, o aplicativo exibe informações do aluno, como nome, RA e localização atual. A partir desses dados, a aplicação verifica se há uma aula no horário e local corretos e, caso estiver, permite o registro da presença.",
+        tagsIcon: [
+            IconSkillsLogoAndroid,
+            IconSkillsLogoKotlin,
+            IconSkillsLogoSqlite
+        ],
+        tags: [
+            'Android',
+            'Kotlin',
+            'SQLite'
+        ],
+        url: '',
+        repositorio: 'https://github.com/mauricio071/Sistema-de-chamada'
+    },
+    {
         nome: "Make Your Burguer",
         tipo: "Sistema",
         imgNome: "make-your-burguer.webp",
@@ -231,26 +273,6 @@ export const projetos = [
         repositorio: 'https://github.com/mauricio071/Make-Your-Burguer'
     },
     {
-        nome: "App de chamada de alunos",
-        tipo: "Aplicativo",
-        imgNome: "app-chamada.webp",
-        projetoVideo: "",
-        width: "900",
-        descricao: "Esta é uma aplicação mobile desenvolvida para controle de presença em aulas. Após o login com RA e senha, o aplicativo exibe informações do aluno, como nome, RA e localização atual. A partir desses dados, a aplicação verifica se há uma aula no horário e local corretos e, caso estiver, permite o registro da presença.",
-        tagsIcon: [
-            IconSkillsLogoAndroid,
-            IconSkillsLogoKotlin,
-            IconSkillsLogoSqlite
-        ],
-        tags: [
-            'Android',
-            'Kotlin',
-            'Sqlite'
-        ],
-        url: '',
-        repositorio: 'https://github.com/mauricio071/Sistema-de-chamada'
-    },
-    {
         nome: "Jogo da Forca",
         tipo: "Website",
         imgNome: "jogo-da-forca.png",
@@ -271,6 +293,24 @@ export const projetos = [
         ],
         url: 'https://jogo-da-forca-vue.netlify.app',
         repositorio: 'https://github.com/mauricio071/jogo-da-forca'
+    },
+    {
+        nome: "Editor de Texto",
+        tipo: "Sistema",
+        imgNome: "editor-texto.webp",
+        projetoVideo: "https://www.youtube.com/embed/_viLGq2citw?si=5uP1UQjwhB5XZECz",
+        width: "900",
+        descricao: "Esta aplicação, desenvolvida em C# e .NET Framework, permite criar, editar, salvar e imprimir documentos de texto de maneira prática. Com uma interface simples e intuitiva, é fácil criar novos arquivos, fazer edições rápidas e salvar no formato desejado, além de imprimir diretamente da aplicação.",
+        tagsIcon: [
+            IconSkillsLogoCSharp,
+            IconSkillsLogoDotNet,
+        ],
+        tags: [
+            'C#',
+            '.NET Framework',
+        ],
+        url: 'https://github.com/mauricio071/Editor-de-texto/raw/master/instalador/Instalador_editor_de_texto/Instalador_editor_de_texto.rar',
+        repositorio: 'https://github.com/mauricio071/Editor-de-texto'
     },
     {
         nome: "Sistema de leitor",

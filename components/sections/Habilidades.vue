@@ -24,10 +24,16 @@ import { tecnologias } from '@/constants/tecnologias'
 
 <style scoped>
 .background-diagonal {
+    /* op1 */
     /* @apply relative bg-[#e0f7f2]; */
     @apply relative;
+
+    /* op2 */
     background: rgb(0, 191, 165);
     background: radial-gradient(circle, rgba(0, 191, 165, 0.02) 0%, rgba(0, 191, 165, 0.22) 100%);
+
+    /* op3 */
+    /* background: linear-gradient(90deg, #d6f8f4 0%, #f0fdfb 100%); */
 }
 
 /* .background-diagonal:after {
