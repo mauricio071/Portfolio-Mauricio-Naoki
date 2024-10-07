@@ -20,6 +20,7 @@
                                             </h3>
                                         </div>
                                     </div>
+                                    <IconQuote class="absolute right-[2rem] !mt-0 hidden sm:block" />
                                     <p class="text-sm lg:flex-grow lg:text-start lg:pl-[0.45rem] lg:text-base">
                                         {{ depoimento.descricao }}
                                     </p>
@@ -56,16 +57,16 @@ const breakpoints = {
     @apply flex flex-col items-center space-y-4 p-4 relative pb-4;
 
     @screen lg {
-        @apply items-start max-w-[25rem] my-8 min-h-[22.75rem];
+        @apply items-start max-w-[27rem] my-8 min-h-[22.75rem] p-8;
         box-shadow: 0 3px 11px rgba(0, 0, 0, 0.2);
     }
 
     @screen xl {
-        @apply max-w-[30rem] min-h-[unset];
+        @apply max-w-[33rem] p-7 min-h-[20rem];
     }
 
     @screen 2xl {
-        @apply max-w-[35rem];
+        @apply max-w-[35rem] p-6;
     }
 }
 

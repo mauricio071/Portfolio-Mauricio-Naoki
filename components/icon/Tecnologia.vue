@@ -23,22 +23,22 @@
 
 <style scoped>
 svg {
-    @apply absolute max-w-[14rem] top-[55%] right-[-15%];
+    @apply absolute max-w-[14rem] my-[3.5rem] top-[55%] right-[-15%];
 
     @screen md {
         @apply right-0;
     }
 
     @screen lg {
-        @apply max-w-[23rem] top-[-20%] right-[-2%];
+        @apply max-w-[21rem] top-[-20%] right-[-4%];
     }
 
     @screen xl {
-        @apply max-w-[27rem] top-[-18%] right-[-3%];
+        @apply max-w-[23rem] top-[-18%] right-[-2%];
     }
 
     @screen 2xl {
-        @apply max-w-[30rem] top-[-10%];
+        @apply max-w-[30rem] top-[-23%];
     }
 }
 </style>

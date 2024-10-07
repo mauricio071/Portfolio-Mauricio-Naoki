@@ -112,7 +112,7 @@ export const projetos = [
         nome: "Products Store",
         tipo: "Website",
         imgNome: "products-store.webp",
-        projetoVideo: "https://www.youtube.com/embed/cJqzoFAFVkQ?si=HyaZfoUquRNmd8ws",
+        projetoVideo: "https://www.youtube.com/embed/HMrbrlNoPTI?si=whWQUZY48IgDtnaa",
         width: "900",
         descricao: "Esta aplicação de vendas foi construída utilizando o framework Nuxt.js, com integração a uma API fictícia para listar e exibir os produtos disponíveis. O Pinia foi implementado para gerenciar o estado do carrinho de compras, garantindo que os itens permaneçam salvos no navegador, mesmo após atualizar ou fechar a página, trazendo uma experiência semelhante ao AliExpress.",
         tagsIcon: [
