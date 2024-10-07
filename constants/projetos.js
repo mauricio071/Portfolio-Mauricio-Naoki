@@ -75,6 +75,32 @@ export const projetos = [
         repositorio: ''
     },
     {
+        nome: "Products Store",
+        tipo: "Website",
+        imgNome: "products-store.webp",
+        projetoVideo: "https://www.youtube.com/embed/HMrbrlNoPTI?si=whWQUZY48IgDtnaa",
+        width: "900",
+        descricao: "Esta aplicação de vendas foi construída utilizando o framework Nuxt.js, com integração a uma API fictícia para listar e exibir os produtos disponíveis. O Pinia foi implementado para gerenciar o estado do carrinho de compras, garantindo que os itens permaneçam salvos no navegador, mesmo após atualizar ou fechar a página, trazendo uma experiência semelhante ao AliExpress.",
+        tagsIcon: [
+            IconSkillsLogoHtml,
+            IconSkillsLogoCss,
+            IconSkillsLogoJavascript,
+            IconSkillsLogoVue,
+            IconSkillsLogoNuxt,
+            IconSkillsLogoTailwind
+        ],
+        tags: [
+            'HTML',
+            'CSS',
+            'JavaScript',
+            'Vue.js',
+            'Nuxt.js',
+            'Tailwind'
+        ],
+        url: 'https://mauricio-products-store.netlify.app',
+        repositorio: 'https://github.com/mauricio071/Products-Store'
+    },
+    {
         nome: "CleanTube",
         tipo: "Sistema",
         imgNome: "cleantube.webp",
@@ -108,32 +134,7 @@ export const projetos = [
         url: 'https://cleantube.vercel.app',
         repositorio: 'https://github.com/mauricio071/CleanTube'
     },
-    {
-        nome: "Products Store",
-        tipo: "Website",
-        imgNome: "products-store.webp",
-        projetoVideo: "https://www.youtube.com/embed/HMrbrlNoPTI?si=whWQUZY48IgDtnaa",
-        width: "900",
-        descricao: "Esta aplicação de vendas foi construída utilizando o framework Nuxt.js, com integração a uma API fictícia para listar e exibir os produtos disponíveis. O Pinia foi implementado para gerenciar o estado do carrinho de compras, garantindo que os itens permaneçam salvos no navegador, mesmo após atualizar ou fechar a página, trazendo uma experiência semelhante ao AliExpress.",
-        tagsIcon: [
-            IconSkillsLogoHtml,
-            IconSkillsLogoCss,
-            IconSkillsLogoJavascript,
-            IconSkillsLogoVue,
-            IconSkillsLogoNuxt,
-            IconSkillsLogoTailwind
-        ],
-        tags: [
-            'HTML',
-            'CSS',
-            'JavaScript',
-            'Vue.js',
-            'Nuxt.js',
-            'Tailwind'
-        ],
-        url: 'https://mauricio-products-store.netlify.app',
-        repositorio: 'https://github.com/mauricio071/Products-Store'
-    },
+
     {
         nome: "MoviesLib",
         tipo: "Website",
