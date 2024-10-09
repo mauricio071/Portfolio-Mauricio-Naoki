@@ -16,8 +16,8 @@
                                             densities="x1" sizes="250 lg:70" class="max-w-[120px] lg:w-[70px]" />
                                         <div class="depoimento-info">
                                             <h2 class="text-lg font-bold">{{ depoimento.nome }}</h2>
-                                            <h3 class="text-gray-500 font-semibold text-sm">{{ depoimento.empresa }}
-                                            </h3>
+                                            <h3 class="text-gray-700 font-bold text-sm">{{ depoimento.empresa }}</h3>
+                                            <p class="text-gray-500 font-semibold text-sm">{{ depoimento.cargo }}</p>
                                         </div>
                                     </div>
                                     <IconQuote class="absolute right-[2rem] !mt-0 hidden sm:block" />
@@ -97,7 +97,7 @@ const breakpoints = {
 }
 
 .depoimento-info {
-    @apply lg:flex lg:flex-col lg:items-start;
+    @apply flex flex-col gap-0.5 justify-center items-center lg:items-start;
 }
 
 .ratings {
