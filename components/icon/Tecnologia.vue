@@ -23,7 +23,7 @@
 
 <style scoped>
 svg {
-    @apply absolute max-w-[14rem] my-[3.5rem] top-[55%] right-[-15%];
+    @apply absolute max-w-[14rem] my-[3.5rem] top-[50%] right-[-15%];
 
     @screen md {
         @apply right-0;

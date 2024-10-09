@@ -35,8 +35,7 @@
                 <div class="modal-content-description">
                     <div class="modal-img">
                         <iframe v-if="modal.videoProjeto" :src="modal.videoProjeto" title="YouTube video player"
-                            frameborder="0" rel="0" allowfullscreen
-                            class="w-full rounded-lg iframe-responsive"></iframe>
+                            frameborder="0" rel="0" allowfullscreen class="iframe-responsive"></iframe>
                         <NuxtImg v-else :src="`/projetos/${modal.imgProjeto}`" :alt="modal.nomeProjeto" densities="x1"
                             :width="modal.widthProjeto" class="w-full rounded-lg" />
                     </div>
@@ -192,7 +191,7 @@ const limparModalInfo = () => {
 }
 
 .project-card .project-img {
-    @apply w-full h-[12.75rem] lg:h-[15rem] xl:h-[13.5rem] 2xl:h-[15rem];
+    @apply w-full aspect-video xl:h-[13.25rem] 2xl:h-[15rem];
 }
 
 .project-description {
@@ -244,23 +243,8 @@ const limparModalInfo = () => {
 }
 
 .iframe-responsive {
-    @apply h-[12.5rem];
-
-    @screen lg {
-        @apply !h-[19rem];
-    }
-
-    @screen xl {
-        @apply !h-[21.25rem];
-    }
+    @apply w-full rounded-lg aspect-video max-h-[17rem] lg:max-h-[25rem];
 }
-
-@media (min-width: 530px) {
-    .iframe-responsive {
-        @apply h-[18rem];
-    }
-}
-
 
 .info {
     @apply space-y-4;

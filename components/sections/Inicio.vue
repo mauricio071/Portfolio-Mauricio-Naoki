@@ -33,8 +33,8 @@
                     </a>
                 </div>
             </div>
-            <div class="relative text-end">
-                <div class="hidden max-w-[25rem] lg:block lg:max-w-[30rem] xl:max-w-[34rem] 2xl:max-w-[39rem]">
+            <div class="relative">
+                <div class="hidden max-w-[30rem] lg:block xl:max-w-[34rem] 2xl:max-w-[39rem]">
                     <img src="/assets/img/programacao.webp" alt="desenvolvedor"
                         class="w-full duration-700 hover:-translate-y-3" />
                 </div>

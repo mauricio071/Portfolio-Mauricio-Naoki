@@ -3,9 +3,10 @@
         <div class="wrapper">
             <div class="content flex flex-col gap-8 text-secondary lg:grid lg:grid-cols-2 lg:items-center">
                 <div v-motion-fade-visible-once :delay="0"
-                    class="space-y-4 relative max-w-44 mx-auto sm:max-w-[15rem] lg:max-w-[18rem] xl:max-w-[20rem] 2xl:max-w-[22rem]">
+                    class="relative mx-auto w-1/2 max-w-[15rem] lg:w-[65%] lg:max-w-[22rem]">
                     <div class="foto-perfil">
-                        <img src="/assets/img/foto-perfil.jpeg" alt="foto-perfil" class="rounded-[50%] lg:rounded-md">
+                        <img src="/assets/img/foto-perfil.jpeg" alt="foto-perfil"
+                            class="rounded-[50%] w-full lg:rounded-md">
                     </div>
                 </div>
                 <div v-motion-slide-visible-once-bottom :duration="700" class="space-y-10">
