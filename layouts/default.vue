@@ -2,7 +2,7 @@
     <div>
         <Navbar />
         <slot />
-        <a v-motion-pop-visible v-show="visible" href="#" class="topo-btn">
+        <a href="#" :class="['topo-btn', visible ? 'show' : 'hide']">
             <Icon name="mdi:arrow-up" class="text-[1.75rem] block" />
         </a>
         <Footer />
@@ -23,10 +23,18 @@ onMounted(() => {
 
 <style scoped>
 .topo-btn {
-    @apply fixed bottom-10 right-4 bg-[#007B8F] text-white p-2.5 rounded-full shadow-lg transition hover:bg-[#0092AC] z-[20];
+    @apply fixed bottom-10 right-4 bg-[#007B8F] text-white p-2.5 rounded-full shadow-lg duration-300 opacity-0 z-[20] hover:bg-[#0092AC];
 
     @screen md {
         @apply bottom-24 right-8 p-3;
     }
+}
+
+.show {
+    @apply opacity-100 pointer-events-auto;
+}
+
+.hide {
+    @apply opacity-0 pointer-events-none;
 }
 </style>
