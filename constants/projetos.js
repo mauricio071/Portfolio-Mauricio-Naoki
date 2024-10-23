@@ -16,6 +16,7 @@ import IconSkillsLogoNode from '@/components/icon/skills-logo/Node.vue';
 import IconSkillsLogoPostgreSQL from '@/components/icon/skills-logo/PostgreSQL.vue';
 import IconSkillsLogoCSharp from '@/components/icon/skills-logo/CSharp.vue';
 import IconSkillsLogoDotNet from '@/components/icon/skills-logo/DotNet.vue';
+import IconSkillsLogoSass from '@/components/icon/skills-logo/Sass.vue';
 
 export const projetos = [
     {
@@ -136,26 +137,32 @@ export const projetos = [
     },
 
     {
-        nome: "MoviesLib",
+        nome: "CineLib",
         tipo: "Website",
-        imgNome: "movies-lib.webp",
-        projetoVideo: "https://www.youtube.com/embed/qZFV3wbgdQo?si=0j_QbDwU1CdZ6PjA",
+        imgNome: "cinelib.webp",
+        projetoVideo: "https://www.youtube.com/embed/PIm6l5R7FF4?si=DmC3VPX2rZzk2Itg",
         width: "800",
-        descricao: "O MoviesLib foi desenvolvido com React.js e utiliza a API do TheMovieDB para exibir uma lista dos filmes mais bem avaliados da história do cinema. Além de poder buscar filmes atuais, a aplicação permite visualizar detalhes como sinopse, orçamento e duração.",
+        descricao: "O CineLib é uma aplicação que oferece uma plataforma completa para visualizar informações detalhadas sobre filmes, como sinopse, orçamento, elenco e outros detalhes. O projeto lista os filmes mais populares do momento e disponibiliza um sistema de busca por título ou categorias, permitindo acesso a um extenso catálogo de filmes. Os usuários também podem favoritar filmes, que são armazenados localmente, permitindo a criação de uma lista personalizada. Além disso, com o suporte da biblioteca i18n, o site pode ser traduzido para inglês e português, ampliando sua acessibilidade para diferentes públicos.",
         tagsIcon: [
             IconSkillsLogoHtml,
             IconSkillsLogoCss,
             IconSkillsLogoJavascript,
             IconSkillsLogoReact,
+            IconSkillsLogoSass,
+            IconSkillsLogoTailwind,
         ],
         tags: [
             'HTML',
             'CSS',
             'JavaScript',
-            'React.js'
+            'React.js',
+            'Vite',
+            'SASS',
+            'Tailwind',
+            'i18n'
         ],
-        url: 'https://movies-lib-react.netlify.app',
-        repositorio: 'https://github.com/mauricio071/MoviesLib'
+        url: 'https://cinelib-ma.netlify.app/',
+        repositorio: 'https://github.com/mauricio071/CineLib'
     },
     {
         nome: "Project Costs",
