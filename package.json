@@ -17,7 +17,6 @@
     "@vueuse/motion": "^2.2.3",
     "nodemailer": "^6.9.15",
     "nuxt": "^3.13.0",
-    "nuxt-app": "file:",
     "vue": "latest",
     "vue3-carousel-nuxt": "^1.1.2"
   },
