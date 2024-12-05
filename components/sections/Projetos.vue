@@ -34,8 +34,10 @@
                 <h3 class="text-gray-500 mb-8 text-center font-semibold">{{ modal.tipoProjeto }}</h3>
                 <div class="modal-content-description">
                     <div class="modal-img">
-                        <iframe v-if="modal.videoProjeto" :src="modal.videoProjeto" title="YouTube video player"
-                            frameborder="0" rel="0" allowfullscreen class="iframe-responsive"></iframe>
+                        <iframe v-if="modal.videoProjeto" :src="`${modal.videoProjeto}?autoplay=1&mute=1&rel=0`"
+                            title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media"
+                            allowfullscreen class="iframe-responsive">
+                        </iframe>
                         <NuxtImg v-else :src="`/projetos/${modal.imgProjeto}`" :alt="modal.nomeProjeto" densities="x1"
                             :width="modal.widthProjeto" class="w-full rounded-lg" />
                     </div>
