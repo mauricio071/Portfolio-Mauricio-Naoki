@@ -41,8 +41,8 @@ import { tecnologias } from '@/constants/tecnologias'
 } */
 
 .icon-card {
-    @apply bg-white relative flex flex-col justify-center items-center gap-4 rounded-[25px] shadow-lg w-[10rem] h-36 mx-auto duration-300 overflow-hidden cursor-pointer;
-    /* */
+    @apply bg-white relative flex flex-col justify-center items-center gap-4 text-center p-1 rounded-[25px] shadow-lg w-[10rem] h-36 mx-auto duration-300 overflow-hidden cursor-pointer;
+
 }
 
 .icon-card:hover {
@@ -77,5 +77,9 @@ import { tecnologias } from '@/constants/tecnologias'
 .icon-card::after {
     @apply content-[''] absolute inset-[5px] rounded-[25px] bg-[white];
     box-shadow: inset 0px 2px 11px 0px #0000008c;
+}
+
+strong {
+    @apply leading-[1.4];
 }
 </style>

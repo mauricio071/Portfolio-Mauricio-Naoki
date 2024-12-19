@@ -12,6 +12,8 @@ import IconSkillsLogoNode from "@/components/icon/skills-logo/Node.vue";
 import IconSkillsLogoVuetify from "@/components/icon/skills-logo/Vuetify.vue";
 import IconSkillsLogoGit from "@/components/icon/skills-logo/Git.vue";
 import IconSkillsLogoStyledComponents from "@/components/icon/skills-logo/StyledComponents.vue";
+import IconSkillsLogoMaterialUi from "@/components/icon/skills-logo/MaterialUi.vue";
+import IconSkillsLogoJest from "@/components/icon/skills-logo/Jest.vue";
 
 export const tecnologias = [
   { logo: IconSkillsLogoHtml, nome: "HTML5", cor: "#e34f26" },
@@ -22,14 +24,16 @@ export const tecnologias = [
   { logo: IconSkillsLogoNuxt, nome: "Nuxt.js", cor: "#00dc82" },
   { logo: IconSkillsLogoVuetify, nome: "Vuetify", cor: "#2196f3" },
   { logo: IconSkillsLogoReact, nome: "React.js", cor: "#61dafb" },
-  //   {
-  //     logo: IconSkillsLogoStyledComponents,
-  //     nome: "Styled Components",
-  //     cor: "#DB7093",
-  //   },
-  { logo: IconSkillsLogoBootstrap5, nome: "Bootstrap", cor: "#7952b3" },
+  { logo: IconSkillsLogoMaterialUi, nome: "Material UI", cor: "#007FFF" },
+  {
+    logo: IconSkillsLogoStyledComponents,
+    nome: "Styled Components",
+    cor: "#DB7093",
+  },
   { logo: IconSkillsLogoTailwind, nome: "Tailwind", cor: "#38b2ac" },
+  // { logo: IconSkillsLogoBootstrap5, nome: "Bootstrap", cor: "#7952b3" },
   { logo: IconSkillsLogoSass, nome: "SASS", cor: "#cc6699" },
-  { logo: IconSkillsLogoGit, nome: "Git", cor: "#f05032" },
+  { logo: IconSkillsLogoJest, nome: "Jest", cor: "#99425B" },
   { logo: IconSkillsLogoNode, nome: "Node.js", cor: "#68a063" },
+  { logo: IconSkillsLogoGit, nome: "Git", cor: "#f05032" },
 ];
