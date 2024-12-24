@@ -166,22 +166,6 @@ textarea:focus {
     @apply bg-gray-300 cursor-not-allowed;
 }
 
-.loader {
-    @apply flex justify-center items-center rounded-[50%] w-[24px] h-[24px];
-    border: 3px solid rgba(255, 255, 255, 0.3);
-    border-top: 3px solid white;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
 
 .btn-voltar {
     @apply text-white bg-primary px-8 py-2 rounded-lg duration-300;

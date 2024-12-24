@@ -26,6 +26,10 @@
                     class="btn-carregar-mais">
                     Mais projetos
                 </button>
+                <a v-else href="https://github.com/mauricio071?tab=repositories" v-motion-slide-visible-once-bottom
+                    :duration="500" target="_blank" rel="noreferrer" aria-label="Github" class="btn-carregar-mais">
+                    Confira mais no GitHub
+                </a>
             </div>
         </div>
         <Modal :isVisible="modal.isOpen" @close="fecharModal">
@@ -33,13 +37,16 @@
                 <h2 class="modal-title">{{ modal.nomeProjeto }}</h2>
                 <h3 class="text-gray-500 mb-8 text-center font-semibold">{{ modal.tipoProjeto }}</h3>
                 <div class="modal-content-description">
-                    <div class="modal-img">
-                        <iframe v-if="modal.videoProjeto" :src="`${modal.videoProjeto}?autoplay=1&mute=1&rel=0`"
+                    <div class="modal-img relative">
+                        <iframe v-if="modal.videoProjeto"
+                            :src="`${modal.videoProjeto}?controls=0&loop=1&autoplay=1&mute=1&rel=0`"
                             title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media"
-                            allowfullscreen class="iframe-responsive">
+                            @load="isIframeLoaded = true" allowfullscreen class="iframe-responsive relative z-[10]">
                         </iframe>
                         <NuxtImg v-else :src="`/projetos/${modal.imgProjeto}`" :alt="modal.nomeProjeto" densities="x1"
-                            :width="modal.widthProjeto" class="w-full rounded-lg" />
+                            :width="modal.widthProjeto" class="w-full rounded-lg" @load="isIframeLoaded = true" />
+
+                        <span v-if="!isIframeLoaded" class="loader-primary" />
                     </div>
                     <div class="info">
                         <div>
@@ -102,6 +109,8 @@
 <script setup>
 import { projetos } from '@/constants/projetos'
 
+const isIframeLoaded = ref(false);
+
 const projetosVisiveis = shallowRef([])
 const limiteProjetos = ref(9)
 
@@ -127,6 +136,8 @@ const modal = ref({
 })
 
 const abrirModal = (projeto) => {
+    isIframeLoaded.value = false;
+
     if (projeto.nome === 'Em breve!') { return }
     limparModalInfo()
     Object.assign(modal.value, {

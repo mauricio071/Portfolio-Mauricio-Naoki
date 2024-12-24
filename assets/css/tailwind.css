@@ -3,24 +3,24 @@
 @tailwind utilities;
 
 html {
-    @apply scroll-smooth;
-    font-family: "Inter", sans-serif
+  @apply scroll-smooth;
+  font-family: "Inter", sans-serif;
 }
 
 ::-webkit-scrollbar {
-    @apply bg-[#f0fdfa] w-[.7rem];
+  @apply bg-[#f0fdfa] w-[.7rem];
 }
 
 ::-webkit-scrollbar-thumb {
-    @apply bg-primary rounded-[.3rem];
+  @apply bg-primary rounded-[.3rem];
 }
 
 section:not(.carousel) {
-    @apply py-[5.5rem];
+  @apply py-[5.5rem];
 }
 
 section:nth-child(2) {
-    @apply pt-0 lg:pt-[5.5rem];
+  @apply pt-0 lg:pt-[5.5rem];
 }
 
 h1,
@@ -28,17 +28,30 @@ h2,
 h3,
 p,
 strong {
-    @apply text-secondary;
+  @apply text-secondary;
 }
 
 .wrapper {
-    @apply container mx-auto;
+  @apply container mx-auto;
 }
 
 .section-title {
-    @apply relative flex flex-col items-center gap-4 text-2xl font-extrabold text-[1.8rem] mb-16 text-secondary z-[2] sm:text-4xl;
+  @apply relative flex flex-col items-center gap-4 text-2xl font-extrabold text-[1.8rem] mb-16 text-secondary z-[2] sm:text-4xl;
 }
 
 h2.section-title::after {
-    @apply content-[''] w-[100px] h-[5px] bg-primary inline-flex items-center rounded-[5px];
+  @apply content-[''] w-[100px] h-[5px] bg-primary inline-flex items-center rounded-[5px];
+}
+
+.loader {
+  @apply flex justify-center items-center rounded-[50%] w-[24px] h-[24px];
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid white;
+  animation: spin 1s linear infinite;
+}
+
+.loader-primary {
+  @apply flex justify-center items-center rounded-[50%] w-[48px] h-[48px] absolute inset-0 m-auto animate-spin;
+  border: 4px solid #00bfa6;
+  border-top: 4px solid transparent;
 }
