@@ -1,5 +1,6 @@
 <template>
-    <section id="projetos" class="background-diagonal">
+    <section id="projetos" class="section-background">
+        <SvgWaveTop />
         <div class="wrapper">
             <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
                 Projetos
@@ -103,6 +104,7 @@
                 </div>
             </div>
         </Modal>
+        <SvgWaveBottom />
     </section>
 </template>
 
@@ -183,17 +185,11 @@ const limparModalInfo = () => {
     @apply bg-primary rounded-[.3rem];
 }
 
-.background-diagonal {
-    /* @apply relative bg-[#e0f7f2]; */
+.section-background {
     @apply relative;
-
     background: rgb(0, 191, 165);
     background: radial-gradient(circle, rgba(0, 191, 165, 0.02) 0%, rgba(0, 191, 165, 0.22) 100%);
 }
-
-/* .background-diagonal:after {
-    @apply content-[''] absolute w-full h-full bg-[#e0f7f2] top-[-1rem] right-0 bottom-0 left-0 origin-top-left skew-y-[4deg] 2xl:top-[-3rem];
-} */
 
 .projetos {
     @apply grid items-center justify-center gap-6 md:grid-cols-2 xl:grid-cols-3;
