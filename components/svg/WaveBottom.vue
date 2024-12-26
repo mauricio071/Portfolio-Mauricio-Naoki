@@ -17,26 +17,26 @@
 <style scoped>
 .wave-bottom {
     @apply absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-[1] rotate-180;
-}
 
-.wave-bottom svg {
-    @apply relative block h-[80px];
-    width: calc(180% + 1.3px);
+    svg {
+        @apply relative block h-[80px];
+        width: calc(180% + 1.3px);
 
-    @screen sm {
-        width: calc(105% + 1.3px);
+        @screen sm {
+            width: calc(105% + 1.3px);
+        }
+
+        @screen lg {
+            @apply h-[125px];
+        }
+
+        @screen xl {
+            @apply h-[150px];
+        }
     }
 
-    @screen lg {
-        @apply h-[125px];
+    .shape-fill {
+        @apply fill-white;
     }
-
-    @screen xl {
-        @apply h-[150px];
-    }
-}
-
-.wave-bottom .shape-fill {
-    @apply fill-white;
 }
 </style>

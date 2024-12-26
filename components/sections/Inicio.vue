@@ -14,7 +14,7 @@
                     </span>
                 </h2>
                 <a href="/cv_mauricio_naoki.pdf" target="_blank" rel="noreferrer" aria-label="Currículo"
-                    class="curriculo-btn">
+                    class="resume-btn">
                     Download CV
                 </a>
                 <div class="flex gap-4">
@@ -55,56 +55,56 @@
     @screen lg {
         @apply min-h-screen pt-12;
     }
-}
 
-.curriculo-btn {
-    @apply bg-white px-4 py-[.675rem] rounded-md text-secondary font-semibold my-2 duration-300 z-[2] md:my-5 md:px-8 md:py-3;
-}
-
-.curriculo-btn:hover {
-    @apply bg-secondary text-white;
-    box-shadow: 0 0 30px #00bfa6,
-        0 0 40px #00bfa6;
-}
-
-.text-animation {
-    @apply w-full whitespace-nowrap overflow-hidden border-r-2 border-secondary pr-1;
-    animation: typing 5.57s steps(20) infinite,
-        blinking .85s infinite alternate;
-}
-
-@keyframes typing {
-    0% {
-        width: 0;
+    .text-animation {
+        @apply w-full whitespace-nowrap overflow-hidden border-r-2 border-secondary pr-1;
+        animation: typing 5.57s steps(20) infinite,
+            blinking .85s infinite alternate;
     }
 
-    30%,
-    75% {
-        width: 100%;
+    @keyframes typing {
+        0% {
+            width: 0;
+        }
+
+        30%,
+        75% {
+            width: 100%;
+        }
+
+        100% {
+            width: 0;
+        }
     }
 
-    100% {
-        width: 0;
-    }
-}
-
-@keyframes blinking {
-    50% {
-        @apply border-transparent;
-    }
-}
-
-.header-vector {
-    animation: circle 40s linear infinite;
-}
-
-@keyframes circle {
-    0% {
-        transform: rotate(0deg)
+    @keyframes blinking {
+        50% {
+            @apply border-transparent;
+        }
     }
 
-    100% {
-        transform: rotate(-360deg)
+    .resume-btn {
+        @apply bg-white px-4 py-[.675rem] rounded-md text-secondary font-semibold my-2 duration-300 z-[2] md:my-5 md:px-8 md:py-3;
+
+        &:hover {
+            @apply bg-secondary text-white;
+            box-shadow: 0 0 30px #00bfa6,
+                0 0 40px #00bfa6;
+        }
+    }
+
+    .header-vector {
+        animation: circle 40s linear infinite;
+    }
+
+    @keyframes circle {
+        0% {
+            transform: rotate(0deg)
+        }
+
+        100% {
+            transform: rotate(-360deg)
+        }
     }
 }
 </style>

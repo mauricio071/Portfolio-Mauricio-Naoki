@@ -37,76 +37,76 @@ import { empresas } from '@/constants/empresas'
 </script>
 
 <style scoped>
-.timeline-card {
-    @apply shadow-2xl px-5 py-7 rounded-lg border-b-[6px] border-b-primary bg-white relative md:py-8 2xl:px-7;
-}
-
 .timeline {
     @apply relative;
-}
 
-.timeline::after {
-    @apply content-[''] absolute w-[4px] h-full bg-primary top-0 left-[12px] ml-[-3px] z-[1] lg:left-[8px] xl:left-[50%];
-}
-
-.content {
-    @apply w-full py-8 relative xl:w-[50%];
-}
-
-.content:nth-of-type(odd) {
-    @apply left-0 pl-[55px] pr-0 xl:pl-0 xl:pr-[55px] 2xl:pr-[73px];
-}
-
-.content:nth-of-type(even) {
-    @apply left-0 pr-0 pl-[55px] xl:left-[50%] 2xl:pl-[73px];
-}
-
-.company-date {
-    @apply absolute hidden text-lg font-bold text-[#b0b0b0] xl:block;
-}
-
-.timeline-icon {
-    @apply absolute flex justify-center items-center w-12 h-12 right-[-31px] top-[32px] z-[10] text-white bg-primary rounded-[50%] text-2xl;
-
-    @screen lg {
-        @apply w-16 h-16 !left-[-26px];
+    &::after {
+        @apply content-[''] absolute w-[4px] h-full bg-primary top-0 left-[12px] ml-[-3px] z-[1] lg:left-[8px] xl:left-[50%];
     }
-}
 
-.content:nth-of-type(odd) .timeline-icon,
-.content:nth-of-type(even) .timeline-icon {
-    @apply left-[-13px] top-[55px];
-}
+    .content {
+        @apply w-full py-8 relative xl:w-[50%];
 
-.content:nth-of-type(odd) .timeline-icon {
-    @apply lg:top-[45px] xl:left-[unset] !important;
-}
+        &:nth-of-type(odd) {
+            @apply left-0 pl-[55px] pr-0 xl:pl-0 xl:pr-[55px] 2xl:pr-[73px];
+        }
 
-.content:nth-of-type(even) .timeline-icon {
-    @apply lg:top-[45px] xl:left-[-33px] !important;
-}
+        &:nth-of-type(even) {
+            @apply left-0 pr-0 pl-[55px] xl:left-[50%] 2xl:pl-[73px];
+        }
 
-.content:nth-of-type(odd) .content-arrow,
-.content:nth-of-type(even) .content-arrow {
-    @apply h-0 w-0 absolute top-[28px] z-[1] border-y-[15px] border-y-transparent;
-}
+        .timeline-icon {
+            @apply absolute flex justify-center items-center w-12 h-12 right-[-31px] top-[32px] z-[10] text-white bg-primary rounded-[50%] text-2xl;
 
-.content:nth-of-type(even) .content-arrow,
-.content:nth-of-type(odd) .content-arrow {
-    @apply border-r-[15px] border-r-white border-l-0 left-[-15px];
-}
+            @screen lg {
+                @apply w-16 h-16 !left-[-26px];
+            }
+        }
 
-.content:nth-of-type(odd) .content-arrow {
-    @screen xl {
-        @apply border-r-0 border-l-[15px] border-l-white right-[-15px] left-[unset];
+        .timeline-card {
+            @apply shadow-2xl px-5 py-7 rounded-lg border-b-[6px] border-b-primary bg-white relative md:py-8 2xl:px-7;
+        }
+
+        .company-date {
+            @apply absolute hidden text-lg font-bold text-[#b0b0b0] xl:block;
+        }
+
+        &:nth-of-type(odd) .timeline-icon,
+        &:nth-of-type(even) .timeline-icon {
+            @apply left-[-13px] top-[55px];
+        }
+
+        &:nth-of-type(odd) .timeline-icon {
+            @apply lg:top-[45px] xl:left-[unset] !important;
+        }
+
+        &:nth-of-type(even) .timeline-icon {
+            @apply lg:top-[45px] xl:left-[-33px] !important;
+        }
+
+        &:nth-of-type(odd) .content-arrow,
+        &:nth-of-type(even) .content-arrow {
+            @apply h-0 w-0 absolute top-[28px] z-[1] border-y-[15px] border-y-transparent;
+        }
+
+        &:nth-of-type(even) .content-arrow,
+        &:nth-of-type(odd) .content-arrow {
+            @apply border-r-[15px] border-r-white border-l-0 left-[-15px];
+        }
+
+        &:nth-of-type(odd) .content-arrow {
+            @screen xl {
+                @apply border-r-0 border-l-[15px] border-l-white right-[-15px] left-[unset];
+            }
+        }
+
+        &:nth-of-type(odd) .company-date {
+            @apply top-[4rem] right-[-14.5rem];
+        }
+
+        &:nth-of-type(even) .company-date {
+            @apply top-[4rem] left-[-14.75rem];
+        }
     }
-}
-
-.content:nth-of-type(odd) .company-date {
-    @apply top-[4rem] right-[-14.5rem];
-}
-
-.content:nth-of-type(even) .company-date {
-    @apply top-[4rem] left-[-14.75rem];
 }
 </style>

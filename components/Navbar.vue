@@ -50,13 +50,13 @@ onMounted(() => {
 <style scoped>
 li a {
     @apply relative font-bold px-1;
-}
 
-li a:after {
-    @apply content-[''] absolute bg-white h-[2px] w-0 left-0 bottom-[-7px] rounded-2xl duration-300;
-}
+    &::after {
+        @apply content-[''] absolute bg-white h-[2px] w-0 left-0 bottom-[-7px] rounded-2xl duration-300;
+    }
 
-li a:hover:after {
-    @apply w-full;
+    &:hover::after {
+        @apply w-full;
+    }
 }
 </style>

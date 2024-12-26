@@ -4,7 +4,7 @@
             <div class="content flex flex-col gap-8 text-secondary lg:grid lg:grid-cols-2 lg:items-center">
                 <div v-motion-fade-visible-once :delay="0"
                     class="relative mx-auto w-1/2 max-w-[15rem] lg:w-[65%] lg:max-w-[22rem]">
-                    <div class="foto-perfil">
+                    <div class="photo-profile">
                         <img src="/assets/img/foto-perfil.jpeg" alt="foto-perfil"
                             class="rounded-[50%] w-full lg:rounded-md">
                     </div>
@@ -62,21 +62,21 @@
 </template>
 
 <style scoped>
-.foto-perfil {
+.photo-profile {
     @apply w-full shadow-2xl rounded-[50%] lg:rounded-md;
-}
 
-.foto-perfil::before,
-.foto-perfil::after {
-    @apply content-[''] hidden absolute w-[150px] h-[150px] border-[#00bfa6] lg:block;
-}
+    &::before,
+    &::after {
+        @apply content-[''] hidden absolute w-[150px] h-[150px] border-[#00bfa6] lg:block;
+    }
 
-.foto-perfil::before {
-    @apply left-[-3rem] top-[-3rem] border-t-[7px] border-l-[7px];
-}
+    &::before {
+        @apply left-[-3rem] top-[-3rem] border-t-[7px] border-l-[7px];
+    }
 
-.foto-perfil::after {
-    @apply right-[-2.5rem] bottom-[-2.5rem] border-b-[7px] border-r-[7px];
+    &::after {
+        @apply right-[-2.5rem] bottom-[-2.5rem] border-b-[7px] border-r-[7px];
+    }
 }
 
 h3::before {
@@ -85,11 +85,11 @@ h3::before {
 
 .profile-about-icon {
     @apply p-2 bg-[#333] rounded-lg transition duration-300;
-}
 
-.profile-about-icon:hover {
-    box-shadow: 0 0 10px #00bfa6,
-        0 0 20px #00bfa6,
-        0 0 40px #00bfa6;
+    &:hover {
+        box-shadow: 0 0 10px #00bfa6,
+            0 0 20px #00bfa6,
+            0 0 40px #00bfa6;
+    }
 }
 </style>

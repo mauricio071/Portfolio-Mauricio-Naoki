@@ -7,9 +7,8 @@
                 <transition name="modal-inner">
                     <div class="modal-content" role="dialog" aria-modal="true">
                         <slot></slot>
-                        <!-- <Icon @click="fecharModal" name="mdi:close" class="close w-8 h-8" /> -->
-                        <svg @click="fecharModal" class="close max-w-[2rem]" xmlns="http://www.w3.org/2000/svg"
-                            fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <svg @click="fecharModal" class="close" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                         </svg>
                     </div>
@@ -37,37 +36,36 @@ const fecharModal = () => {
 <style scoped>
 .modal {
     @apply fixed inset-0 z-[999] flex items-center justify-center p-4;
-}
 
-.modal-content {
-    @apply bg-[#f7f7f7] p-5 rounded-lg relative border-t-8 border-t-primary mx-auto;
+    .modal-content {
+        @apply bg-[#f7f7f7] p-5 rounded-lg relative border-t-8 border-t-primary mx-auto;
 
-    @screen sm {
-        @apply max-w-[40rem] p-8;
+        @screen sm {
+            @apply max-w-[40rem] p-8;
+        }
+
+        @screen lg {
+            @apply max-w-[1200px] pb-12;
+        }
+
+        @screen 2xl {
+            @apply max-w-[1300px];
+        }
+
+        .close {
+            @apply absolute top-[8px] right-[20px] max-w-[2rem] duration-300 cursor-pointer;
+
+            &:hover {
+                @apply text-primary;
+            }
+        }
     }
-
-    @screen lg {
-        @apply max-w-[1200px] pb-12;
-    }
-
-    @screen 2xl {
-        @apply max-w-[1300px];
-    }
-}
-
-.close {
-    @apply absolute top-[8px] right-[20px] duration-300 cursor-pointer;
-}
-
-.close:hover {
-    @apply text-primary;
 }
 
 .modal-outer-enter-active,
 .modal-outer-leave-active {
     transition: opacity 0.3s ease;
 }
-
 
 .modal-outer-enter-from,
 .modal-outer-leave-to {

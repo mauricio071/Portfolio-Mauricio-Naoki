@@ -48,14 +48,14 @@
                     </button>
                 </form>
             </div>
-            <Modal :isVisible="modal" @close="fecharModal">
-                <div class="modal-container flex flex-col gap-8 items-center justify-between lg:-mb-4">
+            <Modal :isVisible="modal" @close="closeModal">
+                <div class="flex flex-col gap-8 items-center justify-between lg:-mb-4">
                     <Icon :name="result.status === 'sucesso' ? 'mdi:check-circle-outline' : 'mdi:alert-circle-outline'"
                         :class="result.status === 'sucesso' ? 'text-[#155724]' : 'text-[#721c24]'"
                         class="text-[8rem]" />
                     <h3 class="text-2xl font-bold text-center">{{ result.message }}</h3>
                     <p class="text-center max-w-lg">{{ result.description }}</p>
-                    <button @click="fecharModal" class="btn-voltar">Voltar</button>
+                    <button @click="closeModal" class="btn-back">Voltar</button>
                 </div>
             </Modal>
         </div>
@@ -63,10 +63,9 @@
 </template>
 
 <script setup>
-
 const modal = ref(false)
 
-const fecharModal = () => {
+const closeModal = () => {
     modal.value = false
 }
 
@@ -112,66 +111,65 @@ const submitForm = async () => {
 #contato {
     @apply flex justify-center items-center;
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(90, 187, 172, 0.473) 100%);
+
+    .content {
+        @apply max-w-2xl mx-auto flex flex-col xl:grid xl:grid-cols-2 xl:gap-12 xl:max-w-[unset];
+
+        .card-container {
+            @apply flex flex-wrap gap-4 my-10 max-w-[17rem] mx-auto sm:flex-row sm:flex-nowrap sm:max-w-[unset] sm:px-12 xl:px-0;
+
+            .contact-card {
+                @apply bg-white px-6 py-5 w-full rounded-lg duration-300 xl:w-[45%];
+
+                &:hover {
+                    box-shadow: 0 0 10px #00bfa6, 0 0 5px #00bfa6, 0 0 10px #00bfa6;
+                }
+
+                .contact-info {
+                    @apply flex items-center gap-2 mb-2;
+
+                    h3 {
+                        @apply text-xl font-bold;
+                    }
+                }
+            }
+        }
+
+        form {
+            @apply space-y-6 my-4 xl:my-0;
+
+            input,
+            textarea {
+                @apply w-full rounded-lg py-4 px-3.5;
+            }
+
+            input:focus,
+            textarea:focus {
+                @apply outline-none ring-2 ring-primary;
+                box-shadow: 0 0 10px #00bfa6;
+            }
+
+            .submit-btn {
+                @apply bg-white text-secondary px-16 py-3 rounded-lg mx-auto block duration-300 font-semibold xl:mx-0;
+
+                &:hover {
+                    @apply text-primary;
+                    box-shadow: 0 0 10px #00bfa6, 0 0 100px #00bfa6, 0 0 40px #00bfa6;
+                }
+
+                &:disabled {
+                    @apply bg-gray-300 cursor-not-allowed;
+                }
+            }
+        }
+    }
 }
 
-.content {
-    @apply max-w-2xl mx-auto flex flex-col xl:grid xl:grid-cols-2 xl:gap-12 xl:max-w-[unset];
-}
-
-.card-container {
-    @apply flex flex-wrap gap-4 my-10 max-w-[17rem] mx-auto sm:flex-row sm:flex-nowrap sm:max-w-[unset] sm:px-12 xl:px-0;
-}
-
-.contact-card {
-    @apply bg-white px-6 py-5 w-full rounded-lg duration-300 xl:w-[45%];
-}
-
-.contact-card:hover {
-    box-shadow: 0 0 10px #00bfa6, 0 0 5px #00bfa6, 0 0 10px #00bfa6;
-}
-
-.contact-info {
-    @apply flex items-center gap-2 mb-2;
-}
-
-.contact-info h3 {
-    @apply text-xl font-bold;
-}
-
-form {
-    @apply space-y-6 my-4 xl:my-0;
-}
-
-input,
-textarea {
-    @apply w-full rounded-lg py-4 px-3.5;
-}
-
-input:focus,
-textarea:focus {
-    @apply outline-none ring-2 ring-primary;
-    box-shadow: 0 0 10px #00bfa6;
-}
-
-.submit-btn {
-    @apply bg-white text-secondary px-16 py-3 rounded-lg mx-auto block duration-300 font-semibold xl:mx-0;
-}
-
-.submit-btn:hover {
-    @apply text-primary;
-    box-shadow: 0 0 10px #00bfa6, 0 0 100px #00bfa6, 0 0 40px #00bfa6;
-}
-
-.submit-btn:disabled {
-    @apply bg-gray-300 cursor-not-allowed;
-}
-
-
-.btn-voltar {
+.btn-back {
     @apply text-white bg-primary px-8 py-2 rounded-lg duration-300;
-}
 
-.btn-voltar:hover {
-    box-shadow: 0 0 10px #00bfa6;
+    &:hover {
+        box-shadow: 0 0 10px #00bfa6;
+    }
 }
 </style>

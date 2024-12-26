@@ -17,27 +17,27 @@
 <style scoped>
 .wave-top {
     @apply absolute top-0 left-0 w-full overflow-hidden leading-[0] z-[1];
-}
 
-.wave-top svg {
-    @apply relative block h-[90px];
-    width: calc(180% + 1.3px);
-    transform: rotateY(180deg);
+    svg {
+        @apply relative block h-[90px];
+        width: calc(180% + 1.3px);
+        transform: rotateY(180deg);
 
-    @screen sm {
-        width: calc(105% + 1.3px);
+        @screen sm {
+            width: calc(105% + 1.3px);
+        }
+
+        @screen lg {
+            @apply h-[125px];
+        }
+
+        @screen xl {
+            @apply h-[150px];
+        }
     }
 
-    @screen lg {
-        @apply h-[125px];
+    .shape-fill {
+        @apply fill-white;
     }
-
-    @screen xl {
-        @apply h-[150px];
-    }
-}
-
-.wave-top .shape-fill {
-    @apply fill-white;
 }
 </style>

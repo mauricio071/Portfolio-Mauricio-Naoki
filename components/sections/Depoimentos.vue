@@ -36,7 +36,7 @@
                             </slide>
 
                             <template #addons>
-                                <pagination class="mt-8" />
+                                <pagination />
                             </template>
                         </carousel>
                     </client-only>
@@ -58,6 +58,31 @@ const breakpoints = {
 </script>
 
 <style scoped>
+:deep(.carousel) {
+    .carousel__pagination {
+        @apply flex items-center gap-4 mt-8;
+
+        .carousel__pagination-button {
+            &::after {
+                @apply content-[''] w-3 h-3 rounded-[50%];
+            }
+
+            &:hover::after {
+                @apply bg-primary duration-300;
+            }
+        }
+
+        .carousel__pagination-button--active {
+            @apply rounded-[50%];
+            border: 2px solid #00bfa6;
+
+            &::after {
+                @apply bg-primary;
+            }
+        }
+    }
+}
+
 .depoimento-container {
     @apply flex flex-col items-center space-y-4 p-4 relative pb-4;
 
@@ -73,59 +98,38 @@ const breakpoints = {
     @screen 2xl {
         @apply max-w-[35rem] p-6;
     }
-}
 
-.depoimento-container::before,
-.depoimento-container::after {
-    @apply content-[''] absolute w-[90px] h-[90px];
-}
+    &::before,
+    &::after {
+        @apply content-[''] absolute w-[90px] h-[90px];
+    }
 
-.depoimento-container::before {
-    @apply left-0 top-0 border-t-[5px] border-t-primary border-l-[5px] border-l-primary;
-}
+    &::before {
+        @apply left-0 top-0 border-t-[5px] border-t-primary border-l-[5px] border-l-primary;
+    }
 
-.depoimento-container::after {
-    @apply right-0 bottom-0 border-b-[5px] border-b-primary border-r-[5px] border-r-primary;
-}
+    &::after {
+        @apply right-0 bottom-0 border-b-[5px] border-b-primary border-r-[5px] border-r-primary;
+    }
 
-.depoimento-pessoa {
-    @apply flex flex-col items-center gap-4 lg:flex-row lg:pl-1;
-}
+    .depoimento-pessoa {
+        @apply flex flex-col items-center gap-4 lg:flex-row lg:pl-1;
 
-.depoimento-pessoa img {
-    @apply rounded-[50%];
-}
+        img {
+            @apply rounded-[50%];
+        }
 
-.depoimento-info {
-    @apply flex flex-col gap-0.5 justify-center items-center lg:items-start;
-}
+        .depoimento-info {
+            @apply flex flex-col gap-0.5 justify-center items-center lg:items-start;
+        }
+    }
 
-.ratings {
-    @apply flex gap-1 lg:pl-1;
-}
+    .ratings {
+        @apply flex gap-1 lg:pl-1;
 
-.ratings svg {
-    @apply w-[24px] h-[24px];
-}
-
-:deep(.carousel__pagination) {
-    @apply flex items-center gap-4;
-}
-
-:deep(.carousel__pagination-button::after) {
-    @apply content-[''] w-3 h-3 rounded-[50%];
-}
-
-:deep(.carousel__pagination-button--active::after) {
-    @apply bg-primary;
-}
-
-:deep(.carousel__pagination-button--active) {
-    @apply rounded-[50%];
-    border: 2px solid #00bfa6;
-}
-
-:deep(.carousel__pagination-button:hover::after) {
-    @apply bg-primary duration-300;
+        svg {
+            @apply w-[24px] h-[24px];
+        }
+    }
 }
 </style>

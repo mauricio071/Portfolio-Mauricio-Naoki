@@ -42,64 +42,61 @@ import { tecnologias } from '@/constants/tecnologias'
     @apply relative;
     background: rgb(0, 191, 165);
     background: radial-gradient(circle, rgba(0, 191, 165, 0.02) 0%, rgba(0, 191, 165, 0.22) 100%);
-}
 
-.icon-card {
-    @apply bg-white relative flex flex-col justify-center items-center gap-4 text-center p-1 rounded-[25px] shadow-lg w-[10rem] h-36 mx-auto duration-300 overflow-hidden cursor-pointer;
-}
+    .icon-card {
+        @apply bg-white relative flex flex-col justify-center items-center gap-4 text-center p-1 rounded-[25px] shadow-lg w-[10rem] h-36 mx-auto duration-300 overflow-hidden cursor-pointer;
 
-.icon-card:hover {
-    @apply scale-110;
-    box-shadow: 0 0 0px #00bfa6, 0 0 10px #00bfa6, 0 0 40px #00bfa6;
-}
+        &:hover {
+            @apply scale-110;
+            box-shadow: 0 0 0px #00bfa6, 0 0 10px #00bfa6, 0 0 40px #00bfa6;
+        }
 
-/* Animação dos cards opção 1 */
-/* .icon-card::before {
-    @apply content-[''] absolute w-[5rem] h-[16rem] top-[-40%] rounded-[10px] rotate-[-48deg];
-    background-color: var(--card-color);
-    animation: rotate 8s linear infinite;
-} */
+        &::before {
+            @apply content-[''] absolute w-[150%] h-[150%];
+            background-image: repeating-conic-gradient(var(--card-color) 0%, var(--card-color) 30%, transparent 35%, transparent 40%, var(--card-color) 50%);
+            animation: rotate 6s linear infinite;
 
-/* Animação dos cards opção 2 */
-.icon-card::before {
-    @apply content-[''] absolute w-[150%] h-[150%];
-    background-image: repeating-conic-gradient(var(--card-color) 0%, var(--card-color) 30%, transparent 35%, transparent 40%, var(--card-color) 50%);
-    animation: rotate 6s linear infinite;
-}
+            /* Opcao 2 */
+            /* @apply content-[''] absolute w-[5rem] h-[16rem] top-[-40%] rounded-[10px] rotate-[-48deg];
+                background-color: var(--card-color);
+                animation: rotate 8s linear infinite; */
+        }
 
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        &::after {
+            @apply content-[''] absolute inset-[5px] rounded-[25px] bg-[white];
+            box-shadow: inset 0px 2px 11px 0px #0000008c;
+        }
+
+        strong {
+            @apply leading-[1.4];
+        }
     }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-.icon-card::after {
-    @apply content-[''] absolute inset-[5px] rounded-[25px] bg-[white];
-    box-shadow: inset 0px 2px 11px 0px #0000008c;
-}
-
-strong {
-    @apply leading-[1.4];
 }
 
 .wave-bottom {
     @apply absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-[1] rotate-180;
-}
 
-.wave-bottom svg {
-    @apply relative block h-[80px];
-    width: calc(180% + 1.3px);
+    svg {
+        @apply relative block h-[80px];
+        width: calc(180% + 1.3px);
 
-    @screen sm {
-        width: calc(105% + 1.3px);
+        @screen sm {
+            width: calc(105% + 1.3px);
+        }
     }
-}
 
-.wave-bottom .shape-fill {
-    @apply fill-white;
+    .shape-fill {
+        @apply fill-white;
+    }
 }
 </style>
