@@ -33,7 +33,7 @@
             </div>
         </div>
         <Modal :isVisible="modal.isOpen" @close="closeModal">
-            <ModalProjects :modal="modal" :isIframeLoaded="isIframeLoaded" />
+            <ModalProjects :modal="modal" />
         </Modal>
         <SvgWaveBottom />
     </section>
@@ -45,8 +45,6 @@ import ModalProjects from '../ModalProjects.vue';
 
 const visibleProjects = shallowRef([]);
 const projectsLimit = ref(9);
-
-const isIframeLoaded = ref(false);
 
 const loadProjects = () => {
     projectsLimit.value += 3
@@ -70,8 +68,6 @@ const modal = ref({
 })
 
 const openModal = (project) => {
-    isIframeLoaded.value = false;
-
     if (project.nome === 'Em breve!') { return }
     clearModal();
     Object.assign(modal.value, {
@@ -129,7 +125,7 @@ const clearModal = () => {
             }
 
             .project-description {
-                @apply duration-300 rounded-lg bg-[#000000B3] opacity-0 !text-white absolute w-full h-full top-0 p-8 flex flex-col justify-center items-center gap-3 border-[3px] border-primary;
+                @apply duration-300 rounded-lg bg-[#000000B3] opacity-0 !text-white absolute w-full h-full top-0 p-8 flex flex-col justify-center items-center gap-3;
 
                 @screen sm {
                     @apply gap-5;
@@ -148,12 +144,18 @@ const clearModal = () => {
                 }
             }
 
-            &:hover .project-description {
-                @apply opacity-100;
-            }
+            &:hover {
+                box-shadow: 0 0 15px #00bfa6,
+                    0 0 15px #00bfa6,
+                    0 0 15px #00bfa6;
 
-            &:hover img {
-                @apply blur-[2px] scale-[1.03];
+                .project-description {
+                    @apply opacity-100;
+                }
+
+                img {
+                    @apply blur-[2px] scale-[1.03];
+                }
             }
         }
     }

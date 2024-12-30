@@ -10,9 +10,9 @@
                     @load="isIframeLoaded = true" allowfullscreen class="iframe-responsive">
                 </iframe>
                 <NuxtImg v-else :src="`/projetos/${modal.imgProjeto}`" :alt="modal.nomeProjeto" densities="x1"
-                    :width="modal.widthProjeto" class="w-full rounded-lg" @load="isIframeLoaded = true" />
+                    :width="modal.widthProjeto" @load="isIframeLoaded = true" class="w-full rounded-lg" />
 
-                <span v-if="!isIframeLoaded" class="loader-primary" />
+                <div v-if="!isIframeLoaded" class="skeleton-loader" />
             </div>
             <div class="info">
                 <div>
@@ -67,12 +67,11 @@
 </template>
 
 <script setup>
-
-const { modal, isIframeLoaded } = defineProps({
+const { modal } = defineProps({
     modal: Object,
-    isIframeLoaded: Boolean
 })
 
+const isIframeLoaded = ref(false);
 </script>
 
 <style scoped>
@@ -137,7 +136,9 @@ const { modal, isIframeLoaded } = defineProps({
                         }
 
                         &:hover {
-                            @apply border-white text-white bg-secondary;
+                            @apply text-white bg-secondary;
+                            box-shadow: 0 0 30px #00bfa6,
+                                0 0 40px #00bfa6;
 
                             span {
                                 @apply text-white;

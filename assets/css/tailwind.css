@@ -50,8 +50,27 @@ h2.section-title::after {
   animation: spin 1s linear infinite;
 }
 
-.loader-primary {
-  @apply flex justify-center items-center rounded-[50%] w-[48px] h-[48px] absolute inset-0 m-auto animate-spin;
-  border: 4px solid #00bfa6;
-  border-top: 4px solid transparent;
+.skeleton-loader {
+  @apply w-full rounded-lg aspect-video absolute inset-0 m-auto;
+
+  background-image: linear-gradient(
+    90deg,
+    #ddd 0%,
+    #ddd 40%,
+    #ccc 50%,
+    #ccc 55%,
+    #ddd 65%,
+    #ddd 100%
+  );
+  background-size: 400%;
+  animation: skeleton 1.5s infinite;
+}
+
+@keyframes skeleton {
+  from {
+    background-position: 100%;
+  }
+  to {
+    background-position: 0%;
+  }
 }

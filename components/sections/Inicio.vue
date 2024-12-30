@@ -18,7 +18,7 @@
                     Download CV
                 </a>
                 <div class="flex gap-4">
-                    <a href="https://github.com/mauricio071" target="_blank" rel="noreferrer" aria-label="Github">
+                    <a href="https://github.com/mauricio071" target="_blank" rel="noreferrer" aria-label="GitHub">
                         <Icon name="mdi:github"
                             class="text-[2.25rem] block text-secondary duration-300 hover:text-white" />
                     </a>
