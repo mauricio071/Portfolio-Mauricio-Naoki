@@ -125,7 +125,7 @@ const clearModal = () => {
             }
 
             .project-description {
-                @apply duration-300 rounded-lg bg-[#000000B3] opacity-0 !text-white absolute w-full h-full top-0 p-8 flex flex-col justify-center items-center gap-3;
+                @apply duration-300 bg-[#000000B3] opacity-0 !text-white absolute w-full h-full top-0 p-8 flex flex-col justify-center items-center gap-3;
 
                 @screen sm {
                     @apply gap-5;
@@ -146,6 +146,7 @@ const clearModal = () => {
 
             &:hover {
                 box-shadow: 0 0 15px #00bfa6,
+                    0 0 15px #00bfa6,
                     0 0 15px #00bfa6,
                     0 0 15px #00bfa6;
 
