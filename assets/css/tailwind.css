@@ -50,6 +50,16 @@ h2.section-title::after {
   animation: spin 1s linear infinite;
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .skeleton-loader {
   @apply w-full rounded-lg aspect-video absolute inset-0 m-auto;
 
