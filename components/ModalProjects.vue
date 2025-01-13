@@ -122,7 +122,7 @@ const isIframeLoaded = ref(false);
                 }
 
                 .detalhes-links {
-                    @apply flex flex-wrap gap-2.5 pt-4 lg:flex-row;
+                    @apply flex flex-wrap gap-3 pt-4 lg:flex-row;
 
                     @screen sm {
                         @apply gap-4;
