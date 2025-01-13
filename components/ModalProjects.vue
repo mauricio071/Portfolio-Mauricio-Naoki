@@ -122,13 +122,17 @@ const isIframeLoaded = ref(false);
                 }
 
                 .detalhes-links {
-                    @apply flex flex-wrap gap-4 pt-4 lg:flex-row;
+                    @apply flex flex-wrap gap-2.5 pt-4 lg:flex-row;
+
+                    @screen sm {
+                        @apply gap-4;
+                    }
 
                     a {
-                        @apply flex items-center gap-2 text-sm border-2 border-secondary rounded-xl px-2 py-1 text-secondary duration-200;
+                        @apply flex items-center gap-2 text-sm border-2 border-secondary rounded-xl px-2.5 py-2 text-secondary duration-200;
 
                         @screen md {
-                            @apply px-4 py-2 font-semibold;
+                            @apply px-4 font-semibold;
                         }
 
                         @screen lg {
