@@ -34,7 +34,7 @@
                     </a>
                 </div>
             </div>
-            <div v-motion-fade-visible-once :duration="1000" :delay="200" class="relative">
+            <div v-motion-fade-visible-once :duration="1200" :delay="200" class="relative">
                 <div class="hidden max-w-[30rem] lg:block xl:max-w-[34rem] 2xl:max-w-[39rem]">
                     <img src="/assets/img/programacao.webp" alt="desenvolvedor"
                         class="w-full duration-700 hover:-translate-y-3" />
