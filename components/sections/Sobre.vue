@@ -2,7 +2,7 @@
     <section id="sobre">
         <div class="wrapper">
             <div class="content flex flex-col gap-8 text-secondary lg:grid lg:grid-cols-2 lg:items-center">
-                <div v-motion-fade-visible-once :delay="0"
+                <div v-motion-fade-visible-once :delay="200"
                     class="relative mx-auto w-1/2 max-w-[15rem] lg:w-[65%] lg:max-w-[22rem]">
                     <div class="photo-profile">
                         <img src="/assets/img/foto-perfil.jpeg" alt="foto-perfil"
