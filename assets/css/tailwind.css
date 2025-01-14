@@ -4,7 +4,6 @@
 
 html {
   @apply scroll-smooth;
-  font-family: "Inter", sans-serif;
 }
 
 ::-webkit-scrollbar {

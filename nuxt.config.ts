@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     "vue3-carousel-nuxt",
     "@vueuse/motion/nuxt",
     "@nuxt/image",
-    "@nuxt/fonts",
+    "@nuxtjs/google-fonts",
   ],
   app: {
     head: {
@@ -51,6 +51,12 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "pt-BR",
       },
+    },
+  },
+  googleFonts: {
+    families: {
+      Inter: [400, 500, 600, 700],
+      download: true,
     },
   },
   icon: {
