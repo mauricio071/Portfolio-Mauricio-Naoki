@@ -10,9 +10,9 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/fonts": "0.10.3",
     "@nuxt/icon": "^1.5.1",
     "@nuxt/image": "^1.8.0",
-    "@nuxtjs/google-fonts": "3.2.0",
     "@vueuse/motion": "^2.2.3",
     "nodemailer": "^6.9.15",
     "nuxt": "^3.13.0",

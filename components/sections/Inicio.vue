@@ -2,7 +2,8 @@
     <section id="início" class="home">
         <div class="wrapper relative my-16 lg:flex lg:justify-between lg:items-center">
             <IconTecnologia class="header-vector" />
-            <div class="flex flex-col items-center gap-6 lg:items-start lg:gap-4 ">
+            <div v-motion-slide-visible-once-left :duration="1500"
+                class="flex flex-col items-center gap-6 lg:items-start lg:gap-4">
                 <p class="text-white font-semibold text-lg lg:text-2xl">👋🏻 Olá, o meu nome é</p>
                 <h1 class="text-secondary font-bold text-3xl leading-4 sm:text-4xl lg:text-5xl  2xl:text-[3.5rem]">
                     Maurício Naoki
@@ -33,7 +34,7 @@
                     </a>
                 </div>
             </div>
-            <div class="relative">
+            <div v-motion-fade-visible-once :duration="1500" class="relative">
                 <div class="hidden max-w-[30rem] lg:block xl:max-w-[34rem] 2xl:max-w-[39rem]">
                     <img src="/assets/img/programacao.webp" alt="desenvolvedor"
                         class="w-full duration-700 hover:-translate-y-3" />
