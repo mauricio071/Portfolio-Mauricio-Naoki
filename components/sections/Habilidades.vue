@@ -74,7 +74,7 @@ import { tecnologias } from '@/constants/tecnologias'
 
         &::after {
             @apply content-[''] absolute inset-[5px] rounded-[25px] bg-[white];
-            box-shadow: inset 0px 2px 11px 0px #0000008c;
+            box-shadow: inset 0px 2px 13px 0px #0000008c;
         }
 
         strong {
