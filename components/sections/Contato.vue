@@ -63,10 +63,10 @@
 </template>
 
 <script setup>
-const modal = ref(false)
+const modal = ref(false);
 
 const closeModal = () => {
-    modal.value = false
+    modal.value = false;
 }
 
 const form = ref({

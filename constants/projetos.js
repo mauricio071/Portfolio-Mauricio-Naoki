@@ -85,10 +85,10 @@ export const projetos = [
     tipo: "Website",
     imgNome: "products-store.webp",
     projetoVideo:
-      "https://www.youtube.com/embed/HMrbrlNoPTI?si=whWQUZY48IgDtnaa",
+      "https://www.youtube.com/embed/OPsTn2k5vYY?si=f7cKrtCp4QIEkkrh",
     width: "900",
     descricao:
-      "Esta aplicação de vendas foi construída utilizando o framework Nuxt.js, com integração a uma API fictícia para listar e exibir os produtos disponíveis. O Pinia foi implementado para gerenciar o estado do carrinho de compras, garantindo que os itens permaneçam salvos no navegador, mesmo após atualizar ou fechar a página, trazendo uma experiência semelhante ao AliExpress.",
+      "A aplicação de loja de produtos foi desenvolvida com Nuxt.js, baseada na experiência do AliExpress. Ela integra uma API fictícia para listar e exibir produtos, enquanto o Pinia gerencia o estado do carrinho e dos itens favoritados, garantindo que permaneçam salvos no navegador, mesmo após atualizações ou fechamento da página. Além disso, a aplicação conta com um backend utilizando Nitro para gerar QR Code para Pix.",
     tagsIcon: [
       IconSkillsLogoHtml,
       IconSkillsLogoCss,
@@ -97,7 +97,15 @@ export const projetos = [
       IconSkillsLogoNuxt,
       IconSkillsLogoTailwind,
     ],
-    tags: ["HTML", "CSS", "JavaScript", "Vue.js", "Nuxt.js", "Tailwind"],
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Vue.js",
+      "Nuxt.js",
+      "Nitro",
+      "Tailwind",
+    ],
     url: "https://mauricio-products-store.netlify.app",
     repositorio: "https://github.com/mauricio071/Products-Store",
   },
