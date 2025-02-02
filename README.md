@@ -52,10 +52,6 @@ Essa abordagem me permitiu desenvolver uma solução mais segura e customizada.
   <img src="./assets/readme-img/img-4.png" alt="Preview-Screens-4" width="500" >
 </p>
 
-<p align="center">
-  <img src="./assets/readme-img/img-5.png" alt="Preview-Screens-5" width="500" >
-</p>
-
 ## 🌐 Acesse o projeto online
 Você pode acessar a versão online do projeto [aqui](https://mauricionaokidev.netlify.app).
 
