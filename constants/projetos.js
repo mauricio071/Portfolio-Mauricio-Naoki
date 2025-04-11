@@ -18,6 +18,9 @@ import IconSkillsLogoCSharp from "@/components/icon/skills-logo/CSharp.vue";
 import IconSkillsLogoDotNet from "@/components/icon/skills-logo/DotNet.vue";
 import IconSkillsLogoSass from "@/components/icon/skills-logo/Sass.vue";
 import IconSkillsLogoStyledComponents from "@/components/icon/skills-logo/StyledComponents.vue";
+import IconSkillsLogoMaterialUi from "@/components/icon/skills-logo/MaterialUi.vue";
+import IconSkillsLogoCypress from "@/components/icon/skills-logo/Cypress.vue";
+import IconSkillsLogoFirebase from "@/components/icon/skills-logo/Firebase.vue";
 
 export const projetos = [
   {
@@ -110,6 +113,69 @@ export const projetos = [
     repositorio: "https://github.com/mauricio071/Products-Store",
   },
   {
+    nome: "ControlAÍ",
+    tipo: "Website e Sistema",
+    imgNome: "controlai.webp",
+    projetoVideo:
+      "https://www.youtube.com/embed/xs5c_POSKxg?si=GTey4efk1BefFDRC",
+    width: "900",
+    descricao:
+      "O ControlAÍ é um sistema para organização das finanças pessoais, desenvolvido em React com foco em praticidade e usabilidade. Ele permite acompanhar de forma simples como o dinheiro está sendo gasto, com visualizações claras por meio de gráficos intuitivos. Além disso, conta com um chatbot integrado com inteligência artificial (Gemini) para dar sugestões e ajudar no controle financeiro. Toda a aplicação foi testada com Cypress, garantindo que os principais fluxos estejam funcionando corretamente.",
+    tagsIcon: [
+      IconSkillsLogoHtml,
+      IconSkillsLogoCss,
+      IconSkillsLogoJavascript,
+      IconSkillsLogoReact,
+      IconSkillsLogoMaterialUi,
+      IconSkillsLogoCypress,
+      IconSkillsLogoFirebase,
+      IconSkillsLogoNode,
+    ],
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React.js",
+      "Material UI",
+      "Cypress",
+      "Firebase",
+      "Vite",
+      "Node.js",
+    ],
+    url: "https://control-ai-ma.vercel.app",
+    repositorio: "https://github.com/mauricio071/ControlAI",
+  },
+  {
+    nome: "CineLib",
+    tipo: "Website",
+    imgNome: "cinelib.webp",
+    projetoVideo:
+      "https://www.youtube.com/embed/PIm6l5R7FF4?si=DmC3VPX2rZzk2Itg",
+    width: "800",
+    descricao:
+      "O CineLib é uma aplicação que oferece uma plataforma completa para visualizar informações detalhadas sobre filmes, como sinopse, orçamento, elenco e outros detalhes. O projeto lista os filmes mais populares do momento e disponibiliza um sistema de busca por título ou categorias, permitindo acesso a um extenso catálogo de filmes. Os usuários também podem favoritar filmes, que são armazenados localmente, permitindo a criação de uma lista personalizada. Além disso, com o suporte da biblioteca i18n, o site pode ser traduzido para inglês e português, ampliando sua acessibilidade para diferentes públicos.",
+    tagsIcon: [
+      IconSkillsLogoHtml,
+      IconSkillsLogoCss,
+      IconSkillsLogoJavascript,
+      IconSkillsLogoReact,
+      IconSkillsLogoSass,
+      IconSkillsLogoTailwind,
+    ],
+    tags: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React.js",
+      "Vite",
+      "SASS",
+      "Tailwind",
+      "i18n",
+    ],
+    url: "https://cinelib-ma.netlify.app/",
+    repositorio: "https://github.com/mauricio071/CineLib",
+  },
+  {
     nome: "CleanTube",
     tipo: "Sistema",
     imgNome: "cleantube.webp",
@@ -144,37 +210,6 @@ export const projetos = [
     ],
     url: "https://cleantube.vercel.app",
     repositorio: "https://github.com/mauricio071/CleanTube",
-  },
-
-  {
-    nome: "CineLib",
-    tipo: "Website",
-    imgNome: "cinelib.webp",
-    projetoVideo:
-      "https://www.youtube.com/embed/PIm6l5R7FF4?si=DmC3VPX2rZzk2Itg",
-    width: "800",
-    descricao:
-      "O CineLib é uma aplicação que oferece uma plataforma completa para visualizar informações detalhadas sobre filmes, como sinopse, orçamento, elenco e outros detalhes. O projeto lista os filmes mais populares do momento e disponibiliza um sistema de busca por título ou categorias, permitindo acesso a um extenso catálogo de filmes. Os usuários também podem favoritar filmes, que são armazenados localmente, permitindo a criação de uma lista personalizada. Além disso, com o suporte da biblioteca i18n, o site pode ser traduzido para inglês e português, ampliando sua acessibilidade para diferentes públicos.",
-    tagsIcon: [
-      IconSkillsLogoHtml,
-      IconSkillsLogoCss,
-      IconSkillsLogoJavascript,
-      IconSkillsLogoReact,
-      IconSkillsLogoSass,
-      IconSkillsLogoTailwind,
-    ],
-    tags: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React.js",
-      "Vite",
-      "SASS",
-      "Tailwind",
-      "i18n",
-    ],
-    url: "https://cinelib-ma.netlify.app/",
-    repositorio: "https://github.com/mauricio071/CineLib",
   },
   {
     nome: "Project Costs",
