@@ -1,7 +1,7 @@
 import IconSkillsLogoHtml from "@/components/icon/skills-logo/Html.vue";
 import IconSkillsLogoCss from "@/components/icon/skills-logo/Css.vue";
 import IconSkillsLogoJavascript from "@/components/icon/skills-logo/Javascript.vue";
-import IconSkillsLogoTypeScript from "@/components/icon/skills-logo/TypeScript.vue";
+import IconSkillsLogoTypescript from "@/components/icon/skills-logo/TypeScript.vue";
 import IconSkillsLogoVue from "@/components/icon/skills-logo/Vue.vue";
 import IconSkillsLogoNuxt from "@/components/icon/skills-logo/Nuxt.vue";
 import IconSkillsLogoReact from "@/components/icon/skills-logo/React.vue";
@@ -19,7 +19,7 @@ export const tecnologias = [
   { logo: IconSkillsLogoHtml, nome: "HTML5", cor: "#e34f26" },
   { logo: IconSkillsLogoCss, nome: "CSS3", cor: "#264de4" },
   { logo: IconSkillsLogoJavascript, nome: "JavaScript", cor: "#f0db4f" },
-  { logo: IconSkillsLogoTypeScript, nome: "TypeScript", cor: "#3178c6" },
+  { logo: IconSkillsLogoTypescript, nome: "TypeScript", cor: "#3178c6" },
   { logo: IconSkillsLogoVue, nome: "Vue.js", cor: "#41b883" },
   { logo: IconSkillsLogoNuxt, nome: "Nuxt.js", cor: "#00dc82" },
   { logo: IconSkillsLogoVuetify, nome: "Vuetify", cor: "#2196f3" },

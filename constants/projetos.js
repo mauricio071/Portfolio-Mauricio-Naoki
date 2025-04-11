@@ -10,7 +10,7 @@ import IconSkillsLogoKotlin from "@/components/icon/skills-logo/Kotlin.vue";
 import IconSkillsLogoSql from "@/components/icon/skills-logo/Sql.vue";
 import IconSkillsLogoSqlite from "@/components/icon/skills-logo/Sqlite.vue";
 import IconSkillsLogoVuetify from "@/components/icon/skills-logo/Vuetify.vue";
-import IconSkillsLogoTypeScript from "@/components/icon/skills-logo/TypeScript.vue";
+import IconSkillsLogoTypescript from "@/components/icon/skills-logo/TypeScript.vue";
 import IconSkillsLogoReact from "@/components/icon/skills-logo/React.vue";
 import IconSkillsLogoNode from "@/components/icon/skills-logo/Node.vue";
 import IconSkillsLogoPostgreSQL from "@/components/icon/skills-logo/PostgreSQL.vue";
@@ -125,16 +125,17 @@ export const projetos = [
       IconSkillsLogoHtml,
       IconSkillsLogoCss,
       IconSkillsLogoJavascript,
+      IconSkillsLogoTypescript,
       IconSkillsLogoReact,
       IconSkillsLogoMaterialUi,
       IconSkillsLogoCypress,
       IconSkillsLogoFirebase,
-      IconSkillsLogoNode,
     ],
     tags: [
       "HTML",
       "CSS",
       "JavaScript",
+      "TypeScript",
       "React.js",
       "Material UI",
       "Cypress",
@@ -188,7 +189,7 @@ export const projetos = [
       IconSkillsLogoHtml,
       IconSkillsLogoCss,
       IconSkillsLogoJavascript,
-      IconSkillsLogoTypeScript,
+      IconSkillsLogoTypescript,
       IconSkillsLogoVue,
       IconSkillsLogoNuxt,
       IconSkillsLogoTailwind,
@@ -311,7 +312,7 @@ export const projetos = [
       IconSkillsLogoHtml,
       IconSkillsLogoCss,
       IconSkillsLogoJavascript,
-      IconSkillsLogoTypeScript,
+      IconSkillsLogoTypescript,
       IconSkillsLogoReact,
       IconSkillsLogoStyledComponents,
     ],
@@ -340,7 +341,7 @@ export const projetos = [
       IconSkillsLogoHtml,
       IconSkillsLogoCss,
       IconSkillsLogoJavascript,
-      IconSkillsLogoTypeScript,
+      IconSkillsLogoTypescript,
       IconSkillsLogoReact,
       IconSkillsLogoStyledComponents,
     ],
