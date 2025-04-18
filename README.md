@@ -21,9 +21,9 @@ Este projeto tem como objetivo de apresentar minhas habilidades, experiências p
 -   **Vue.js** - Framework JavaScript progressivo
 -   **Nuxt.js** - Framework baseado em Vue.js para SSR
 -   **Nitro** - Camada de servidor do Nuxt para backends e APIs
--   **JavaScript** - Linguagem de programação
--   **HTML** - Estrutura do conteúdo
--   **CSS** - Estilização da interface
+-   **JavaScript** - Linguagem de programação para desenvolvimento web
+-   **HTML** - Linguagem de marcação que estrutura o conteúdo na web
+-   **CSS** - Linguagem de estilos usada para definir o visual das interfaces web
 -   **Tailwind CSS** - Framework de estilos
 
 ## 🤔 Por que optei por usar um backend no meu projeto frontend?
