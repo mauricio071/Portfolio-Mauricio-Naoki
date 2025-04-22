@@ -36,7 +36,7 @@
             </div>
             <div v-motion-fade-visible-once :duration="1300" :delay="200" class="relative">
                 <div class="hidden max-w-[30rem] lg:block xl:max-w-[34rem] 2xl:max-w-[39rem]">
-                    <NuxtImg src="/programacao.webp" alt="desenvolvedor" loading="lazy" densities="x1" width="100%"
+                    <NuxtImg src="/programacao.webp" alt="desenvolvedor" densities="x1" width="100%"
                         class="w-full duration-700 hover:-translate-y-3" />
                 </div>
             </div>
