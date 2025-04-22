@@ -9,7 +9,7 @@
                 <div @click="openModal(projeto)" v-for="(projeto, i) in visibleProjects" :key="i"
                     v-motion-slide-visible-once-bottom :delay="i * 100" :duration="600" class="project-card">
                     <div class="project-img">
-                        <NuxtImg :src="`/projetos/${projeto.imgNome}`" :alt="projeto.nome" densities="x1"
+                        <NuxtImg :src="`/projetos/${projeto.imgNome}`" :alt="projeto.nome" loading="lazy" densities="x1"
                             :width="projeto.width" class="rounded-lg" />
                     </div>
                     <div class="project-description">

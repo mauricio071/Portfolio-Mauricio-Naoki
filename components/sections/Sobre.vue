@@ -5,8 +5,8 @@
                 <div v-motion-fade-visible-once :delay="200"
                     class="relative mx-auto w-1/2 max-w-[15rem] lg:w-[65%] lg:max-w-[22rem]">
                     <div class="photo-profile">
-                        <img src="/assets/img/foto-perfil.jpeg" alt="foto-perfil"
-                            class="rounded-[50%] w-full lg:rounded-md">
+                        <NuxtImg src="/foto-perfil.jpeg" alt="foto-perfil" loading="lazy" densities="x1"
+                            class="rounded-[50%] w-full lg:rounded-md" />
                     </div>
                 </div>
                 <div v-motion-slide-visible-once-bottom :duration="700" class="space-y-10">

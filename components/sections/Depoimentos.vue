@@ -9,11 +9,12 @@
                     <client-only>
                         <carousel :items-to-show="1" :breakpoints="breakpoints" wrapAround pauseAutoplayOnHover
                             :autoplay="7000">
-                            <slide v-for="(depoimento, i) in depoimentos" :key="i">
+                            <slide v-for="(depoimento, i) in depoimentos" :key="i" class="mb-10">
                                 <div class="depoimento-container">
                                     <div class="depoimento-pessoa">
                                         <NuxtImg :src="`/depoimentos/${depoimento.foto}.webp`" :alt="depoimento.nome"
-                                            densities="x1" sizes="250 lg:70" class="max-w-[120px] lg:w-[70px]" />
+                                            loading="lazy" densities="x1" sizes="250 lg:70"
+                                            class="max-w-[120px] lg:w-[70px]" />
                                         <div class="depoimento-info">
                                             <h2 class="text-lg font-bold">{{ depoimento.nome }}</h2>
                                             <h3 class="text-gray-700 font-bold text-sm">{{ depoimento.empresa }}</h3>
@@ -60,24 +61,24 @@ const breakpoints = {
 <style scoped>
 :deep(.carousel) {
     .carousel__pagination {
-        @apply flex items-center gap-4 mt-8;
+        @apply flex items-center gap-3.5;
 
         .carousel__pagination-button {
-            &::after {
-                @apply content-[''] w-3 h-3 rounded-[50%];
-            }
+            @apply w-3 h-3 rounded-[50%];
 
-            &:hover::after {
+            &:hover {
                 @apply bg-primary duration-300;
             }
         }
 
         .carousel__pagination-button--active {
-            @apply rounded-[50%];
-            border: 2px solid #00bfa6;
+            @apply rounded-[50%] bg-primary;
 
-            &::after {
-                @apply bg-primary;
+
+            &::before {
+                @apply content-[''] bg-transparent block w-6 h-6 rounded-[50%];
+                border: 2px solid #00bfa6;
+                transform: translate(-25%, -25%);
             }
         }
     }

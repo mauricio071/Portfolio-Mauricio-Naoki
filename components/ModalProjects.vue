@@ -9,8 +9,9 @@
                     title="YouTube video player" frameborder="0" allow="autoplay; encrypted-media"
                     @load="isIframeLoaded = true" allowfullscreen class="iframe-responsive">
                 </iframe>
-                <NuxtImg v-else :src="`/projetos/${modal.imgProjeto}`" :alt="modal.nomeProjeto" densities="x1"
-                    :width="modal.widthProjeto" @load="isIframeLoaded = true" class="w-full rounded-lg" />
+                <NuxtImg v-else :src="`/projetos/${modal.imgProjeto}`" :alt="modal.nomeProjeto" loading="lazy"
+                    densities="x1" :width="modal.widthProjeto" @load="isIframeLoaded = true"
+                    class="w-full rounded-lg" />
 
                 <div v-if="!isIframeLoaded" class="skeleton-loader" />
             </div>
