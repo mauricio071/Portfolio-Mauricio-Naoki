@@ -12,7 +12,6 @@
                 <NuxtImg v-else :src="`/projetos/${modal.imgProjeto}`" :alt="modal.nomeProjeto" loading="lazy"
                     densities="x1" :width="modal.widthProjeto" @load="isIframeLoaded = true"
                     class="w-full rounded-lg" />
-
                 <div v-if="!isIframeLoaded" class="skeleton-loader" />
             </div>
             <div class="info">

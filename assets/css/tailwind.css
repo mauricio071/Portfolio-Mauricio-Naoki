@@ -60,7 +60,7 @@ h2.section-title::after {
 }
 
 .skeleton-loader {
-  @apply w-full rounded-lg aspect-video absolute inset-0 m-auto;
+  @apply w-full rounded-lg aspect-video absolute inset-0 m-auto max-h-[17rem] lg:max-h-[unset];
 
   background-image: linear-gradient(
     90deg,
