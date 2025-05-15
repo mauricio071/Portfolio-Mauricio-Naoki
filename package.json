@@ -10,12 +10,14 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@iconify-json/material-symbols": "^1.2.20",
     "@nuxt/fonts": "0.10.3",
     "@nuxt/icon": "^1.5.1",
     "@nuxt/image": "^1.8.0",
     "@vueuse/motion": "^2.2.3",
     "nodemailer": "^6.9.15",
     "nuxt": "^3.16.0",
+    "vanilla-tilt": "^1.8.1",
     "vue": "latest",
     "vue3-carousel-nuxt": "^1.1.2"
   },

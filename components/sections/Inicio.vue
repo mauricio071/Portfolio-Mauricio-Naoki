@@ -16,7 +16,8 @@
                 </h2>
                 <a href="/cv_mauricio_naoki.pdf" target="_blank" rel="noreferrer" aria-label="Currículo"
                     class="resume-btn">
-                    Download CV
+                    <Icon name="material-symbols:download-rounded" class="text-[1.75rem] text-secondary duration-300" />
+                    Baixar currículo
                 </a>
                 <div class="flex gap-4">
                     <a href="https://github.com/mauricio071" target="_blank" rel="noreferrer" aria-label="GitHub">
@@ -34,10 +35,10 @@
                     </a>
                 </div>
             </div>
-            <div v-motion-fade-visible-once :duration="1300" :delay="200" class="relative">
+            <div v-motion-fade-visible-once :duration="1300" :delay="200" ref="tiltRef" class="relative">
                 <div class="hidden max-w-[30rem] lg:block xl:max-w-[34rem] 2xl:max-w-[39rem]">
                     <NuxtImg src="/programacao.webp" alt="desenvolvedor" densities="x1" width="100%"
-                        class="w-full duration-700 hover:-translate-y-3" />
+                        class="w-full duration-700" />
                 </div>
             </div>
         </div>
@@ -45,7 +46,15 @@
 </template>
 
 <script setup>
+import VanillaTilt from 'vanilla-tilt'
 
+const tiltRef = ref(null);
+
+onMounted(() => {
+    VanillaTilt.init(tiltRef.value, {
+        max: 5,
+    });
+})
 </script>
 
 <style scoped>
@@ -85,12 +94,16 @@
     }
 
     .resume-btn {
-        @apply bg-white px-4 py-[.675rem] rounded-md text-secondary font-semibold my-2 duration-300 z-[2] md:my-5 md:px-8 md:py-3;
+        @apply flex gap-2 items-center bg-white px-4 py-[.675rem] rounded-md text-secondary font-semibold my-2 shadow-sm duration-300 z-[2] md:my-5 md:py-3;
 
         &:hover {
             @apply bg-secondary text-white;
             box-shadow: 0 0 30px #00bfa6,
                 0 0 40px #00bfa6;
+
+            span {
+                @apply text-primary;
+            }
         }
     }
 

@@ -1,5 +1,5 @@
 <template>
-    <footer class="bg-primary text-white px-4 py-6">
+    <footer>
         <div
             class="container mx-auto flex flex-col items-center justify-center gap-2 lg:flex-row-reverse lg:justify-between">
             <div class="flex gap-3">
@@ -23,3 +23,14 @@
 <script setup>
 const anoAtual = new Date().getFullYear();
 </script>
+
+<style scoped>
+footer {
+    @apply text-white px-4 py-6;
+
+    background-image: -webkit-linear-gradient(left,
+            rgba(0, 185, 160),
+            rgba(10, 195, 172),
+            rgba(18, 207, 185));
+}
+</style>

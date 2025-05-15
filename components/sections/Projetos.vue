@@ -1,9 +1,14 @@
 <template>
     <section id="projetos" class="section-background">
         <SvgWaveTop />
-        <div class="wrapper">
+        <div class="wrapper py-3">
             <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
                 Projetos
+
+                <!-- <span class="section-title-background">
+                    <Icon name="material-symbols:monitor-outline-rounded" /> 
+                    Projetos
+                </span> -->
             </h2>
             <div class="projects">
                 <div @click="openModal(projeto)" v-for="(projeto, i) in visibleProjects" :key="i"
@@ -40,7 +45,7 @@
 </template>
 
 <script setup>
-import { projetos } from '@/constants/projetos'
+import { projetos } from '@/constants/projetos';
 import ModalProjects from '../ModalProjects.vue';
 
 const visibleProjects = shallowRef([]);
@@ -162,12 +167,16 @@ const clearModal = () => {
     }
 
     .btn-more-projects {
-        @apply relative bg-primary text-white text-xl px-6 py-2 rounded-3xl shadow-2xl font-semibold duration-300 z-[2] lg:px-12 lg:py-3;
+        @apply relative text-white text-xl px-6 py-2 rounded-3xl shadow-2xl font-semibold duration-300 z-[2] lg:px-12 lg:py-3;
+
+        background-image: -webkit-linear-gradient(top,
+                rgba(0, 191, 165, 0.3),
+                #00bfa6);
 
         &:hover {
             box-shadow: 0 0 10px #00bfa6,
-                0 0 10px #00bfa6,
-                0 0 40px #00bfa6
+                0 0 20px #00bfa6,
+                0 0 10px #00bfa6
         }
     }
 }

@@ -1,17 +1,25 @@
 <template>
     <section id="habilidades" class="section-background">
         <SvgWaveTop />
-        <div class="wrapper">
-            <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
+        <div class="wrapper py-3">
+            <h2 v-motion-slide-visible-once-bottom :duration="700"
+                class="section-title relative  flex gap-2 items-center">
                 Habilidades
+
+                <!-- <span class="section-title-background">
+                    <Icon name="mdi:code" />
+                    Habilidades
+                </span> -->
             </h2>
             <div
                 class="flex flex-wrap items-center justify-center gap-6 max-w-[60rem] mx-auto md:grid md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
                 <div v-for="(tecnologia, index) in tecnologias" :key="index" v-motion-slide-visible-once-bottom
                     :delay="index * 100" :duration="600" class="z-[2]">
                     <div class="icon-card" :style="{ '--card-color': tecnologia.cor }">
-                        <component :is="tecnologia.logo" class="max-w-[3rem] max-h-[3rem] z-[2]" />
-                        <strong class="z-[2]">{{ tecnologia.nome }}</strong>
+                        <div class="icon-border">
+                        </div>
+                        <component :is="tecnologia.logo" />
+                        <strong>{{ tecnologia.nome }}</strong>
                     </div>
                 </div>
             </div>
@@ -34,7 +42,15 @@
 </template>
 
 <script setup>
-import { tecnologias } from '@/constants/tecnologias'
+import { tecnologias } from '@/constants/tecnologias';
+import VanillaTilt from 'vanilla-tilt';
+
+onMounted(() => {
+    const elements = document.querySelectorAll(".icon-card");
+    VanillaTilt.init(elements, {
+        max: 36,
+    });
+})
 </script>
 
 <style scoped>
@@ -44,37 +60,48 @@ import { tecnologias } from '@/constants/tecnologias'
     background: radial-gradient(circle, rgba(0, 191, 165, 0.02) 0%, rgba(0, 191, 165, 0.22) 100%);
 
     .icon-card {
-        @apply bg-white relative flex flex-col justify-center items-center gap-4 text-center p-1 rounded-[25px] shadow-lg w-[10rem] h-36 mx-auto duration-300 overflow-hidden cursor-pointer;
+        @apply relative flex flex-col justify-center items-center gap-4 text-center bg-white p-1 rounded-[25px] shadow-lg w-[10rem] h-36 mx-auto duration-300 cursor-pointer;
+        transform-style: preserve-3d;
 
-        &:hover {
-            @apply scale-110;
-            box-shadow: 0 0 0px #00bfa6, 0 0 10px #00bfa6, 0 0 40px #00bfa6;
-        }
+        .icon-border {
+            @apply absolute overflow-hidden rounded-[25px] w-full h-full;
 
-        &::before {
-            @apply content-[''] absolute w-[150%] h-[150%];
-            background-image: repeating-conic-gradient(var(--card-color) 0%, var(--card-color) 30%, transparent 35%, transparent 40%, var(--card-color) 50%);
-            animation: rotate 6s linear infinite;
+            &::before {
+                @apply content-[''] absolute w-[150%] h-[150%] -left-[2.5rem] -top-[2.5rem];
+                background-image: repeating-conic-gradient(var(--card-color) 0%, var(--card-color) 30%, transparent 35%, transparent 40%, var(--card-color) 50%);
+                animation: rotate 6s linear infinite;
 
-            /* Opcao 2 */
-            /* @apply content-[''] absolute w-[5rem] h-[16rem] top-[-40%] rounded-[10px] rotate-[-48deg];
-                background-color: var(--card-color);
-                animation: rotate 8s linear infinite; */
-        }
-
-        @keyframes rotate {
-            0% {
-                transform: rotate(0deg);
+                /* Opcao 2 */
+                /* @apply content-[''] absolute w-[5rem] h-[16rem] top-[-40%] rounded-[10px] rotate-[-48deg];
+                    background-color: var(--card-color);
+                    animation: rotate 8s linear infinite; */
             }
 
-            100% {
-                transform: rotate(360deg);
+            @keyframes rotate {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(360deg);
+                }
             }
+
+            &::after {
+                @apply content-[''] absolute inset-[5px] rounded-[25px] bg-[white];
+                box-shadow: inset 0px 2px 12px 0px #0000008c;
+            }
+
         }
 
-        &::after {
-            @apply content-[''] absolute inset-[5px] rounded-[25px] bg-[white];
-            box-shadow: inset 0px 2px 12px 0px #0000008c;
+        svg,
+        strong {
+            @apply z-[2];
+            transform: translateZ(20px);
+        }
+
+        svg {
+            @apply max-w-[3rem] max-h-[3rem];
         }
 
         strong {

@@ -2,8 +2,14 @@
     <section id="experiencias">
         <div class="wrapper">
             <div>
-                <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
+                <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title flex gap-2 items-center">
+                    <!-- <Icon name="material-symbols:work-history-rounded" class="text-[3rem]" /> -->
                     Experiências
+
+                    <!-- <span class="section-title-background">
+                        <Icon name="material-symbols:work-history-rounded" class="text-[5rem]" />
+                        Experiências
+                    </span> -->
                 </h2>
                 <div class="timeline">
                     <div v-for="(empresa, i) in empresas" :key="i" class="content">
@@ -33,7 +39,7 @@
 </template>
 
 <script setup>
-import { empresas } from '@/constants/empresas'
+import { empresas } from '@/constants/empresas';
 </script>
 
 <style scoped>
@@ -41,7 +47,12 @@ import { empresas } from '@/constants/empresas'
     @apply relative;
 
     &::after {
-        @apply content-[''] absolute w-[4px] h-full bg-primary top-0 left-[12px] ml-[-3px] z-[1] lg:left-[8px] xl:left-[50%];
+        @apply content-[''] absolute w-[4px] h-full top-0 left-[12px] ml-[-3px] z-[1] lg:left-[8px] xl:left-[50%];
+
+        background-image: -webkit-linear-gradient(top,
+                #00bfa6,
+                rgba(0, 191, 165, 0.7) 80%,
+                transparent 100%);
     }
 
     .content {
@@ -56,7 +67,11 @@ import { empresas } from '@/constants/empresas'
         }
 
         .timeline-icon {
-            @apply absolute flex justify-center items-center w-12 h-12 right-[-31px] top-[32px] z-[10] text-white bg-primary rounded-[50%] text-2xl;
+            @apply absolute flex justify-center items-center w-12 h-12 right-[-31px] top-[32px] z-[10] text-white rounded-[50%] text-2xl;
+
+            background-image: -webkit-linear-gradient(top,
+                    rgb(116, 226, 212),
+                    #00bfa6);
 
             @screen lg {
                 @apply w-16 h-16 !left-[-26px];
