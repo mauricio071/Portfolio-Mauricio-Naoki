@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     "@vueuse/motion/nuxt",
     "@nuxt/image",
     "@nuxt/fonts",
+    "nuxt-particles",
   ],
   app: {
     head: {

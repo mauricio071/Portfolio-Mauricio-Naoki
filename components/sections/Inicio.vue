@@ -1,5 +1,5 @@
 <template>
-    <section id="início" class="home">
+    <section id="início" class="home relative z-[20]">
         <div class="wrapper relative my-16 lg:flex lg:justify-between lg:items-center">
             <IconTecnologia class="header-vector" />
             <div v-motion-fade-visible-once :duration="1000"
@@ -42,7 +42,10 @@
                 </div>
             </div>
         </div>
+
     </section>
+    <NuxtParticles id="tsparticles" :options="options" @load="onLoad" class="absolute top-0 w-full h-full">
+    </NuxtParticles>
 </template>
 
 <script setup>
@@ -54,7 +57,86 @@ onMounted(() => {
     VanillaTilt.init(tiltRef.value, {
         max: 5,
     });
-})
+});
+
+const options = {
+    autoPlay: true,
+    fullScreen: {
+        enable: false,
+        zIndex: -1
+    },
+    detectRetina: true,
+    fpsLimit: 120,
+    interactivity: {
+        detectsOn: "window",
+        events: {
+            onClick: { enable: true, mode: "repulse" },
+            onHover: {
+                enable: true,
+                mode: "bubble",
+                parallax: {
+                    enable: true,
+                    force: 60,
+                    smooth: 10
+                }
+            },
+            resize: { enable: true, delay: 0.5 }
+        },
+        modes: {
+            repulse: {
+                distance: 400,
+                duration: 0.4,
+                factor: 100,
+                speed: 1,
+                maxSpeed: 50,
+                easing: "ease-out-quad"
+            },
+            bubble: {
+                distance: 250,
+                duration: 2,
+                opacity: 0,
+                size: 0
+            },
+            push: { quantity: 4 },
+            remove: { quantity: 2 }
+        }
+    },
+    particles: {
+        number: {
+            value: 160,
+            density: { enable: true, width: 1920, height: 1080 }
+        },
+        color: { value: "#007B8F" },
+        links: {
+            enable: true,
+            distance: 150,
+            color: "#007B8F",
+            opacity: 0.4,
+            width: 1
+        },
+        opacity: {
+            value: { min: 0.1, max: 1 },
+            animation: { enable: true, speed: 1, startValue: "random" }
+        },
+        size: {
+            value: { min: 1, max: 3 }
+        },
+        move: {
+            enable: true,
+            speed: { min: 0.1, max: 1 },
+            outModes: { default: "out" }
+        },
+        shape: { type: "circle" }
+    },
+    pauseOnBlur: true,
+    pauseOnOutsideViewport: true,
+    zLayers: 100
+};
+
+const onLoad = (container) => {
+    container.pause()
+    setTimeout(() => container.play(), 2000)
+}
 </script>
 
 <style scoped>

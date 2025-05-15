@@ -20,6 +20,10 @@ html {
   );
 }
 
+section {
+  @apply relative z-[20];
+}
+
 section:not(.carousel) {
   @apply py-[4.75rem];
 }
