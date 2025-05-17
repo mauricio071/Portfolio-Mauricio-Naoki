@@ -1,9 +1,14 @@
 <template>
     <section id="início" class="home">
+        <div
+            class="absolute top-[-80px] left-[-80px] w-[250px] h-[250px] bg-[#00BFA6] opacity-20 rounded-full blur-xl z-[-1]">
+        </div>
         <div class="wrapper relative my-16 lg:flex lg:justify-between lg:items-center">
-            <IconTecnologia class="header-vector" />
+            <div class="svg-wrapper">
+                <IconTecnologia class="header-vector" />
+            </div>
             <div v-motion-fade-visible-once :duration="1000"
-                class="flex flex-col items-center gap-6 lg:items-start lg:gap-4">
+                class="main-content flex flex-col items-center gap-6 lg:items-start lg:gap-4">
                 <p class="text-white font-semibold text-lg lg:text-2xl">👋🏻 Olá, o meu nome é</p>
                 <h1 class="text-secondary font-bold text-3xl leading-4 sm:text-4xl lg:text-5xl  2xl:text-[3.5rem]">
                     Maurício Naoki
@@ -35,7 +40,7 @@
                     </a>
                 </div>
             </div>
-            <div v-motion-fade-visible-once :duration="1300" :delay="200" ref="tiltRef" class="relative">
+            <div v-motion-fade-visible-once :duration="1300" :delay="200" ref="tiltRef" class="img-content">
                 <div class="hidden max-w-[30rem] lg:block xl:max-w-[34rem] 2xl:max-w-[39rem]">
                     <NuxtImg src="/programacao.webp" alt="desenvolvedor" densities="x1" width="100%"
                         class="w-full duration-700" />
@@ -59,7 +64,7 @@ onMounted(() => {
 
 <style scoped>
 .home {
-    @apply min-h-[650px] flex justify-center items-center p-4 pb-0 overflow-hidden;
+    @apply min-h-[650px] flex justify-center items-center p-4 pb-0 overflow-hidden relative;
     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(0, 191, 165, 0.7) 100%);
 
     @screen lg {
@@ -93,16 +98,36 @@ onMounted(() => {
         }
     }
 
+    .main-content::before {
+        @apply content-[""] absolute top-8 w-full h-[80%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] opacity-20 z-[-1] blur-[75px];
+    }
+
+    .img-content {
+        @apply relative;
+
+        &::before {
+            @apply content-[""] absolute top-[15%] left-[15%] w-[70%] h-[70%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] opacity-20 z-[-1] blur-[75px];
+        }
+    }
+
     .resume-btn {
-        @apply flex gap-2 items-center bg-white px-4 py-[.675rem] rounded-md text-secondary font-semibold my-2 shadow-sm duration-300 z-[2] md:my-5 md:py-3;
+        @apply relative overflow-hidden flex gap-2 items-center bg-white px-4 py-[.675rem] rounded-md text-secondary font-semibold my-2 shadow-sm duration-300 z-[2] md:my-5 md:py-3;
+
+        &::before {
+            @apply content-[""] absolute w-0 h-full top-0 left-0 bg-[#00bfa6] z-[-1] duration-500;
+        }
 
         &:hover {
-            @apply bg-secondary text-white;
+            @apply text-white;
             box-shadow: 0 0 30px #00bfa6,
-                0 0 40px #00bfa6;
+                0 0 20px #00bfa6;
 
             span {
-                @apply text-primary;
+                @apply text-white;
+            }
+
+            &::before {
+                @apply w-full;
             }
         }
     }
@@ -118,6 +143,31 @@ onMounted(() => {
 
         100% {
             transform: rotate(-360deg)
+        }
+    }
+
+    .svg-wrapper {
+        @apply absolute max-w-[14rem] my-[3.5rem] top-[50%] right-[-15%] w-full h-full;
+
+        @screen md {
+            @apply right-0;
+        }
+
+        @screen lg {
+            @apply max-w-[21rem] top-[-20%] right-[-4%];
+        }
+
+        @screen xl {
+            @apply max-w-[23rem] top-[-18%] right-[-2%];
+        }
+
+        @screen 2xl {
+            @apply max-w-[30rem] top-[-23%];
+        }
+
+
+        &::before {
+            @apply content-[""] absolute top-[15%] left-[15%] w-[70%] h-[70%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] z-[-1] blur-[20px] lg:blur-[75px];
         }
     }
 }

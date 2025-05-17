@@ -112,7 +112,6 @@ const clearModal = () => {
 <style scoped>
 .section-background {
     @apply relative;
-    background: rgb(0, 191, 165);
     background: radial-gradient(circle, rgba(0, 191, 165, 0.02) 0%, rgba(0, 191, 165, 0.22) 100%);
 
     .projects {

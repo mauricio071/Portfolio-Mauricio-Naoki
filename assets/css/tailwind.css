@@ -58,6 +58,10 @@ h2.section-title::after {
   );
 }
 
+h2.section-title::before {
+  @apply content-[""] absolute w-[150px] h-[80%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] z-[-1] blur-[60px];
+}
+
 .loader {
   @apply flex justify-center items-center rounded-[50%] w-[24px] h-[24px];
   border: 3px solid rgba(255, 255, 255, 0.3);

@@ -2,7 +2,7 @@
     <section id="depoimentos">
         <div class="wrapper pb-0">
             <div class="px-4">
-                <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title !mb-14">
+                <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title lg:mb-14">
                     Depoimentos
 
                     <!-- <span class="section-title-background">
@@ -13,7 +13,7 @@
                 <div v-motion-fade-visible-once :duration="700" :delay="500" class="depoimentos">
                     <client-only>
                         <carousel :items-to-show="1" :breakpoints="breakpoints" wrapAround pauseAutoplayOnHover
-                            :autoplay="7000">
+                            :autoplay="0">
                             <slide v-for="(depoimento, i) in depoimentos" :key="i" class="mb-10">
                                 <div class="depoimento-container">
                                     <div class="depoimento-pessoa">

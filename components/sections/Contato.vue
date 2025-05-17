@@ -10,7 +10,7 @@
                 </span> -->
             </h2>
             <div v-motion-fade-visible-once :duration="1000" :delay="500" class="content">
-                <div class="xl:max-w-[34rem]">
+                <div class="left-content">
                     <h1 class="text-center font-extrabold mb-8 text-3xl xl:text-4xl xl:text-start">
                         Vamos conversar!
                     </h1>
@@ -48,7 +48,7 @@
                         <span v-if="loading" class="loader"></span>
                         <span v-else class="flex items-center gap-2">
                             Enviar
-                            <IconSend />
+                            <IconSend class="icon" />
                         </span>
                     </button>
                 </form>
@@ -120,6 +120,14 @@ const submitForm = async () => {
     .content {
         @apply max-w-2xl mx-auto flex flex-col xl:grid xl:grid-cols-2 xl:gap-12 xl:max-w-[unset];
 
+        .left-content {
+            @apply relative xl:max-w-[34rem];
+
+            &::before {
+                @apply content-[""] absolute -top-5 w-full h-[80%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] z-[-1] opacity-10 blur-[85px];
+            }
+        }
+
         .card-container {
             @apply flex flex-wrap gap-4 my-10 max-w-[17rem] mx-auto sm:flex-row sm:flex-nowrap sm:max-w-[unset] sm:px-12 xl:px-0;
 
@@ -155,11 +163,19 @@ const submitForm = async () => {
             }
 
             .submit-btn {
-                @apply bg-white text-secondary px-16 py-3 rounded-lg mx-auto block duration-300 font-semibold xl:mx-0;
+                @apply relative overflow-hidden bg-white text-secondary px-16 py-3 rounded-lg mx-auto block duration-300 font-semibold shadow-sm z-[1] xl:mx-0;
+
+                &::before {
+                    @apply content-[""] absolute w-0 h-full top-0 left-0 bg-primary z-[-1] duration-500;
+                }
 
                 &:hover {
-                    @apply text-primary;
-                    box-shadow: 0 0 10px #00bfa6, 0 0 100px #00bfa6, 0 0 40px #00bfa6;
+                    @apply text-white;
+                    box-shadow: 0 0 10px #00bfa6, 0 0 30px #00bfa6, 0 0 30px #00bfa6;
+
+                    &::before {
+                        @apply w-full;
+                    }
                 }
 
                 &:disabled {

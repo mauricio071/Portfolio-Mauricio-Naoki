@@ -129,7 +129,7 @@ const isIframeLoaded = ref(false);
                     }
 
                     a {
-                        @apply flex items-center gap-2 text-sm font-semibold border-2 border-secondary rounded-xl px-2.5 py-2 text-secondary duration-200;
+                        @apply relative flex items-center gap-2 text-sm font-semibold border-2 border-secondary rounded-lg px-2.5 py-2 text-secondary duration-300 z-[1];
 
                         @screen md {
                             @apply px-4;
@@ -139,13 +139,22 @@ const isIframeLoaded = ref(false);
                             @apply text-base;
                         }
 
+                        &::before {
+                            @apply content-[""] absolute w-0 h-full top-0 left-0 bg-secondary z-[-1] duration-500;
+                        }
+
                         &:hover {
-                            @apply text-white bg-secondary;
+                            @apply text-white;
+
                             box-shadow: 0 0 30px #00bfa6,
                                 0 0 40px #00bfa6;
 
                             span {
                                 @apply text-white;
+                            }
+
+                            &::before {
+                                @apply w-full;
                             }
                         }
                     }
