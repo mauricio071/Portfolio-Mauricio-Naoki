@@ -44,10 +44,6 @@ strong {
   @apply relative flex justify-center items-center gap-2 text-2xl font-extrabold text-[1.8rem] mb-[5.25rem] text-secondary z-[2] sm:text-4xl;
 }
 
-.section-title-background {
-  @apply text-gray-300 text-4xl md:text-[4rem] absolute bottom-[0.75rem] md:bottom-[1.5rem] z-[-1] text-opacity-30 flex gap-3 items-center;
-}
-
 h2.section-title::after {
   @apply content-[''] w-[110px] h-[5px] rounded-[5px] absolute bottom-[-1.35rem];
 
@@ -59,7 +55,7 @@ h2.section-title::after {
 }
 
 h2.section-title::before {
-  @apply content-[""] absolute w-[150px] h-[80%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] z-[-1] blur-[60px];
+  @apply content-[""] absolute w-[150px] h-[80%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] z-[-1] opacity-90 blur-[60px];
 }
 
 .loader {

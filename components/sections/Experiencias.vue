@@ -2,14 +2,8 @@
     <section id="experiencias">
         <div class="wrapper">
             <div>
-                <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title flex gap-2 items-center">
-                    <!-- <Icon name="material-symbols:work-history-rounded" class="text-[3rem]" /> -->
+                <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
                     Experiências
-
-                    <!-- <span class="section-title-background">
-                        <Icon name="material-symbols:work-history-rounded" class="text-[5rem]" />
-                        Experiências
-                    </span> -->
                 </h2>
                 <div class="timeline">
                     <div v-for="(empresa, i) in empresas" :key="i" class="content">

@@ -2,14 +2,8 @@
     <section id="habilidades" class="section-background">
         <SvgWaveTop />
         <div class="wrapper py-3">
-            <h2 v-motion-slide-visible-once-bottom :duration="700"
-                class="section-title relative  flex gap-2 items-center">
+            <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
                 Habilidades
-
-                <!-- <span class="section-title-background">
-                    <Icon name="mdi:code" />
-                    Habilidades
-                </span> -->
             </h2>
             <div
                 class="flex flex-wrap items-center justify-center gap-6 max-w-[60rem] mx-auto md:grid md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">

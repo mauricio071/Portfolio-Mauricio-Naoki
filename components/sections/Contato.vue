@@ -3,11 +3,6 @@
         <div class="wrapper">
             <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
                 Contato
-
-                <!-- <span class="section-title-background">
-                    <Icon name="material-symbols:alternate-email-rounded" /> 
-                    Contato
-                </span> -->
             </h2>
             <div v-motion-fade-visible-once :duration="1000" :delay="500" class="content">
                 <div class="left-content">

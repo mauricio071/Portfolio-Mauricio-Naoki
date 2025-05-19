@@ -15,11 +15,6 @@
                     <div>
                         <h2 class="section-title !mb-14 lg:!justify-start">
                             Sobre mim
-
-                            <!-- <span class="section-title-background">
-                                <Icon name="mdi:account-circle" /> 
-                                Sobre mim
-                            </span> -->
                         </h2>
                         <p class="px-2 mb-4 text-start lg:px-0 xl:text-lg">
                             Sou um desenvolvedor <strong>front-end</strong> focado em criar experiências digitais

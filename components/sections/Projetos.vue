@@ -4,11 +4,6 @@
         <div class="wrapper py-3">
             <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
                 Projetos
-
-                <!-- <span class="section-title-background">
-                    <Icon name="material-symbols:monitor-outline-rounded" /> 
-                    Projetos
-                </span> -->
             </h2>
             <div class="projects">
                 <div @click="openModal(projeto)" v-for="(projeto, i) in visibleProjects" :key="i"

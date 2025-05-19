@@ -4,11 +4,6 @@
             <div class="px-4">
                 <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title lg:mb-14">
                     Depoimentos
-
-                    <!-- <span class="section-title-background">
-                        <Icon name="mdi:comment-account" class="mt-3" /> 
-                        Depoimentos
-                    </span> -->
                 </h2>
                 <div v-motion-fade-visible-once :duration="700" :delay="500" class="depoimentos">
                     <client-only>
@@ -66,7 +61,7 @@ const breakpoints = {
 <style scoped>
 :deep(.carousel) {
     .carousel__pagination {
-        @apply flex items-center gap-3.5;
+        @apply flex items-center gap-3.5 bottom-[-1.25rem] lg:bottom-[0];
 
         .carousel__pagination-button {
             @apply w-3 h-3 rounded-[50%] text-[#6affeb];
