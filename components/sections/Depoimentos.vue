@@ -8,7 +8,7 @@
                 <div v-motion-fade-visible-once :duration="700" :delay="500" class="depoimentos">
                     <client-only>
                         <carousel :items-to-show="1" :breakpoints="breakpoints" wrapAround pauseAutoplayOnHover
-                            :autoplay="0">
+                            :autoplay="7500">
                             <slide v-for="(depoimento, i) in depoimentos" :key="i" class="mb-10">
                                 <div class="depoimento-container">
                                     <div class="depoimento-pessoa">
