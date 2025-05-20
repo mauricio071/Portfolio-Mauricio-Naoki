@@ -1,7 +1,8 @@
 <template>
     <section id="início" class="home">
-        <div
-            class="absolute top-[-80px] left-[-80px] w-[250px] h-[250px] bg-[#00BFA6] opacity-20 rounded-full blur-xl z-[-1]">
+        <div class="blur-container">
+        </div>
+        <div class="vector-background">
         </div>
         <div class="wrapper relative my-16 lg:flex lg:justify-between lg:items-center">
             <div class="svg-wrapper">
@@ -71,6 +72,19 @@ onMounted(() => {
         @apply min-h-screen pt-12;
     }
 
+    .blur-container {
+        @apply absolute top-[-300px] left-[-300px] w-[700px] h-[700px] bg-primary opacity-20 rounded-[50rem] blur-xl z-[-1];
+    }
+
+    .vector-background {
+        @apply hidden;
+
+        @screen lg {
+            @apply absolute top-[-3rem] right-0 w-[54%] rounded-l-full z-[-1] bg-[#00AB95] opacity-30 block;
+            min-height: calc(100vh + 3rem);
+        }
+    }
+
     .text-animation {
         @apply w-full whitespace-nowrap overflow-hidden border-r-2 border-secondary pr-1;
         animation: typing 5.57s steps(20) infinite,
@@ -106,7 +120,7 @@ onMounted(() => {
         @apply relative;
 
         &::before {
-            @apply content-[""] absolute top-[15%] left-[15%] w-[70%] h-[70%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] opacity-20 z-[-1] blur-[75px];
+            @apply content-[""] absolute top-[15%] left-[15%] w-[70%] h-[70%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] opacity-40 z-[-1] blur-[75px];
         }
     }
 
@@ -167,7 +181,7 @@ onMounted(() => {
 
 
         &::before {
-            @apply content-[""] absolute top-[15%] left-[15%] w-[70%] h-[70%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] z-[-1] blur-[20px] lg:blur-[75px];
+            @apply content-[""] absolute top-[15%] left-[15%] w-[70%] h-[70%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] z-[-1] opacity-40 blur-[20px] lg:blur-[75px];
         }
     }
 }
