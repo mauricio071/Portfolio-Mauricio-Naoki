@@ -134,7 +134,7 @@ onMounted(() => {
             @apply w-0 whitespace-nowrap overflow-hidden border-r-2 border-secondary;
             animation: typing 5.5s steps(21) infinite,
                 blinking .85s infinite alternate;
-            animation-delay: 3s, 0s;
+            animation-delay: 2s, 0s;
 
             @keyframes typing {
                 0% {
