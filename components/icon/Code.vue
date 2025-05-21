@@ -1,9 +1,22 @@
 <template>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="w-8 h-8 min-h-8 min-w-8">
-        <path d="M9.49997 12.4L5 17.7999" stroke="#333333" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" />
-        <path d="M9.49997 12.4L5 7" stroke="#333333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        <line x1="18" y1="18" x2="10" y2="18" stroke="#333333" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" />
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 min-h-8 min-w-8">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+            <path
+                d="M4.707 5.293a1 1 0 0 0-1.414 1.414L8.586 12l-5.293 5.293a1 1 0 1 0 1.414 1.414l6-6a1 1 0 0 0 0-1.414l-6-6ZM12 17a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2h-8Z"
+                fill="#333333"></path>
+        </g>
     </svg>
+
+    <!-- <svg fill="#333333" viewBox="0 0 256 256" id="Flat" xmlns="http://www.w3.org/2000/svg"
+        class="w-8 h-8 min-h-8 min-w-8">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+            <path
+                d="M119.97217,136.96875l-72,64a11.99975,11.99975,0,1,1-15.94434-17.9375L93.9375,128,32.02783,72.96875a11.99975,11.99975,0,1,1,15.94434-17.9375l72,64a11.99925,11.99925,0,0,1,0,17.9375ZM215.99414,180h-96a12,12,0,0,0,0,24h96a12,12,0,1,0,0-24Z">
+            </path>
+        </g>
+    </svg> -->
 </template>
