@@ -49,7 +49,7 @@ onMounted(() => {
 
 <style scoped>
 .section-background {
-    @apply relative;
+    @apply relative dark:bg-[#222] dark:bg-none !important;
     background: radial-gradient(circle, rgba(0, 191, 165, 0.02) 0%, rgba(0, 191, 165, 0.22) 100%);
 
     .icon-card {
@@ -81,7 +81,7 @@ onMounted(() => {
             }
 
             &::after {
-                @apply content-[''] absolute inset-[5px] rounded-[25px] bg-[white];
+                @apply content-[''] absolute inset-[5px] rounded-[25px] bg-white dark:bg-[#444];
                 box-shadow: inset 0px 2px 12px 0px #0000008c;
             }
 
@@ -116,7 +116,7 @@ onMounted(() => {
     }
 
     .shape-fill {
-        @apply fill-white;
+        @apply fill-white dark:fill-[#444];
     }
 }
 </style>

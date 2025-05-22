@@ -1,5 +1,5 @@
 <template>
-    <section id="sobre" class="dark:bg-[#333333]">
+    <section id="sobre" class="dark:bg-[#444]">
         <div class="wrapper">
             <div class="content flex flex-col gap-8 text-secondary lg:grid lg:grid-cols-2 lg:items-center">
                 <div v-motion-fade-visible-once :delay="200"

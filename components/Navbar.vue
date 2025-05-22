@@ -19,14 +19,18 @@
                         {{ item }}
                     </a>
                 </li>
-                <template v-if="colorMode.preference === 'light' || colorMode.preference === 'system'">
-                    <Icon @click="$colorMode.preference = 'dark'" name="material-symbols:sunny-outline-rounded"
-                        class="text-[1.75rem]" />
-                </template>
-                <template v-if="colorMode.preference === 'dark'">
-                    <Icon @click="$colorMode.preference = 'light'" name="material-symbols:moon-stars-outline-rounded"
-                        class="text-[1.75rem]" />
-                </template>
+                <div
+                    class="icon-wrapper hover:bg-[#ffffff4b] rounded-lg p-1 flex justify-center items-center duration-300">
+                    <template v-if="colorMode.preference === 'light' || colorMode.preference === 'system'">
+                        <Icon @click="$colorMode.preference = 'dark'" name="material-symbols:sunny-outline-rounded"
+                            class="text-[1.75rem] cursor-pointer" />
+                    </template>
+                    <template v-if="colorMode.preference === 'dark'">
+                        <Icon @click="$colorMode.preference = 'light'"
+                            name="material-symbols:moon-stars-outline-rounded" class="text-[1.75rem] cursor-pointer" />
+                    </template>
+
+                </div>
             </ul>
         </nav>
     </header>
@@ -85,6 +89,7 @@ onMounted(() => {
 <style scoped>
 .navbar-background {
     @apply shadow-xl;
+    @apply dark:bg-none dark:bg-[#333] !important;
 
     background-image: -webkit-linear-gradient(left,
             rgba(0, 185, 160, 0.975),

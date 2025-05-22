@@ -26,7 +26,7 @@ const anoAtual = new Date().getFullYear();
 
 <style scoped>
 footer {
-    @apply text-white px-4 py-6;
+    @apply text-white px-4 py-6 dark:bg-none dark:bg-[#222] !important;
 
     background-image: -webkit-linear-gradient(left,
             rgba(0, 185, 160),

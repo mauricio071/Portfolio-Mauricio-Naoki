@@ -110,7 +110,8 @@ const submitForm = async () => {
 <style scoped>
 #contato {
     @apply flex justify-center items-center;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(90, 187, 172, 0.473) 100%);
+    /* background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(90, 187, 172, 0.473) 100%); */
+    @apply bg-gradient-to-b from-[#ffffff] to-[#00bfa654] dark:from-[#444] dark:to-[#1a1a1a];
 
     .content {
         @apply max-w-2xl mx-auto flex flex-col xl:grid xl:grid-cols-2 xl:gap-12 xl:max-w-[unset];

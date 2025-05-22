@@ -4,8 +4,8 @@
         <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
         <g id="SVGRepo_iconCarrier">
             <path
-                d="M4.707 5.293a1 1 0 0 0-1.414 1.414L8.586 12l-5.293 5.293a1 1 0 1 0 1.414 1.414l6-6a1 1 0 0 0 0-1.414l-6-6ZM12 17a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2h-8Z"
-                fill="#333333"></path>
+                d="M4.707 5.293a1 1 0 0 0-1.414 1.414L8.586 12l-5.293 5.293a1 1 0 1 0 1.414 1.414l6-6a1 1 0 0 0 0-1.414l-6-6ZM12 17a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2h-8Z">
+            </path>
         </g>
     </svg>
 
@@ -20,3 +20,9 @@
         </g>
     </svg> -->
 </template>
+
+<style scoped>
+svg {
+    @apply fill-[#333] dark:fill-white;
+}
+</style>

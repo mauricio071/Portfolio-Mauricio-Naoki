@@ -38,7 +38,8 @@ const fecharModal = () => {
     @apply fixed inset-0 z-[999] flex items-center justify-center p-4;
 
     .modal-content {
-        @apply bg-[#f7f7f7] p-5 rounded-lg relative border-t-8 border-t-primary mx-auto;
+        @apply bg-[#f7f7f7] p-5 rounded-lg relative border-t-8 border-t-primary mx-auto dark:bg-[#444];
+        ;
 
         @screen sm {
             @apply max-w-[40rem] p-8;

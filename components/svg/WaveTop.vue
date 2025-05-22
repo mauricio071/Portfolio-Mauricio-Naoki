@@ -37,7 +37,7 @@
     }
 
     .shape-fill {
-        @apply fill-white dark:fill-[#121212];
+        @apply fill-white dark:fill-[#444];
     }
 }
 </style>

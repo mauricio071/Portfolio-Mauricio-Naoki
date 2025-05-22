@@ -1,5 +1,5 @@
 <template>
-    <section id="depoimentos">
+    <section id="depoimentos" class="dark:bg-[#444]">
         <div class="wrapper pb-0">
             <div class="px-4">
                 <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title lg:mb-14">

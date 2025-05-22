@@ -76,7 +76,7 @@ onMounted(() => {
 <style scoped>
 .home {
     @apply min-h-[650px] flex justify-center items-center p-4 pb-0 overflow-hidden relative;
-    @apply bg-gradient-to-t from-[#ffffff] to-[#00bfa5b3] dark:from-[#333333] dark:to-[#1a1a1a];
+    @apply bg-gradient-to-t from-[#ffffff] to-[#00bfa5b3] dark:from-[#444] dark:to-[#1a1a1a];
     /* background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(0, 191, 165, 0.7) 100%); */
 
     @screen lg {
@@ -91,13 +91,13 @@ onMounted(() => {
         @apply hidden;
 
         @screen lg {
-            @apply absolute top-[-3rem] right-0 w-[54%] rounded-l-full z-[-1] bg-[#00AB95] opacity-30 block;
+            @apply absolute top-[-3rem] right-0 w-[54%] rounded-l-full z-[-1] bg-[#00AB95] opacity-30 block dark:bg-[#333] dark:z-[1];
             min-height: calc(100vh + 3rem);
         }
     }
 
     .svg-wrapper {
-        @apply absolute max-w-[14rem] my-[3.5rem] top-[50%] right-[-15%] w-full h-full;
+        @apply absolute max-w-[14rem] my-[3.5rem] top-[50%] right-[-15%] w-full h-full dark:z-[2];
 
         @screen md {
             @apply right-0;
@@ -116,7 +116,7 @@ onMounted(() => {
         }
 
         &::before {
-            @apply content-[""] absolute top-[15%] left-[15%] w-[70%] h-[70%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] z-[-1] opacity-40 blur-[20px] lg:blur-[75px];
+            @apply content-[""] absolute top-[15%] left-[15%] w-[70%] h-[70%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] z-[-1] opacity-40 blur-[20px] lg:blur-[75px] dark:bg-none;
         }
 
         .header-vector {
@@ -198,10 +198,10 @@ onMounted(() => {
     }
 
     .img-content {
-        @apply relative;
+        @apply relative dark:z-[2];
 
         &::before {
-            @apply content-[""] absolute top-[15%] left-[15%] w-[70%] h-[70%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] opacity-40 z-[-1] blur-[75px] dark:bg-white dark:bg-none;
+            @apply content-[""] absolute top-[15%] left-[15%] w-[70%] h-[70%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] opacity-40 z-[-1] blur-[75px] dark:bg-none;
         }
     }
 

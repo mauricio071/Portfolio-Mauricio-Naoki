@@ -84,6 +84,8 @@ const isIframeLoaded = ref(false);
 }
 
 .card-modal {
+    @apply dark:bg-[#444];
+
     .modal-title {
         @apply text-lg font-bold text-center mb-2 sm:text-2xl;
     }

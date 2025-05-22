@@ -1,5 +1,5 @@
 <template>
-    <section id="experiencias">
+    <section id="experiencias" class="dark:bg-[#444]">
         <div class="wrapper">
             <div>
                 <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
@@ -73,7 +73,7 @@ import { empresas } from '@/constants/empresas';
         }
 
         .timeline-card {
-            @apply shadow-2xl px-5 py-7 rounded-lg border-b-[6px] border-b-primary bg-white relative md:py-8 2xl:px-7;
+            @apply shadow-2xl px-5 py-7 rounded-lg border-b-[6px] border-b-primary bg-white relative md:py-8 2xl:px-7 dark:bg-[#333];
         }
 
         .company-date {
@@ -100,12 +100,12 @@ import { empresas } from '@/constants/empresas';
 
         &:nth-of-type(even) .content-arrow,
         &:nth-of-type(odd) .content-arrow {
-            @apply border-r-[15px] border-r-white border-l-0 left-[-15px];
+            @apply border-r-[15px] border-r-white border-l-0 left-[-15px] dark:border-r-[#333];
         }
 
         &:nth-of-type(odd) .content-arrow {
             @screen xl {
-                @apply border-r-0 border-l-[15px] border-l-white right-[-15px] left-[unset];
+                @apply border-r-0 border-l-[15px] border-l-white right-[-15px] left-[unset] dark:border-l-[#333];
             }
         }
 
