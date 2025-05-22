@@ -161,7 +161,11 @@ const submitForm = async () => {
                 @apply relative overflow-hidden bg-white text-secondary px-16 py-3 rounded-lg mx-auto block duration-300 font-semibold shadow-sm z-[1] xl:mx-0;
 
                 &::before {
-                    @apply content-[""] absolute w-0 h-full top-0 left-0 bg-primary z-[-1] duration-500;
+                    @apply content-[""] absolute w-0 h-full top-0 left-0 z-[-1] duration-500;
+
+                    background-image: -webkit-linear-gradient(left,
+                            rgb(116, 226, 212),
+                            #00bfa6);
                 }
 
                 &:hover {

@@ -1,6 +1,6 @@
 <template>
-    <header ref="navbarRef" class="fixed top-0 w-full p-4 duration-300 lg:py-3 z-[100]"
-        :class="{ 'navbar-background': hasScrolled || isOpen, 'bg-transparent': !hasScrolled }">
+    <header ref="navbarRef" class="fixed top-0 w-full p-4 duration-300 lg:py-3 z-[100] "
+        :class="{ 'navbar-background': hasScrolled || isOpen, 'bg-transparent ': !hasScrolled }">
         <nav class="container mx-auto flex justify-between items-center flex-wrap text-white ">
             <h1 class="text-[1.175rem] sm:text-xl font-semibold text-white">
                 <a href="#" class="relative font-bold px-1">
@@ -19,12 +19,22 @@
                         {{ item }}
                     </a>
                 </li>
+                <template v-if="colorMode.preference === 'light' || colorMode.preference === 'system'">
+                    <Icon @click="$colorMode.preference = 'dark'" name="material-symbols:sunny-outline-rounded"
+                        class="text-[1.75rem]" />
+                </template>
+                <template v-if="colorMode.preference === 'dark'">
+                    <Icon @click="$colorMode.preference = 'light'" name="material-symbols:moon-stars-outline-rounded"
+                        class="text-[1.75rem]" />
+                </template>
             </ul>
         </nav>
     </header>
 </template>
 
 <script setup>
+const colorMode = useColorMode();
+
 const isOpen = ref(false);
 const hasScrolled = ref(false);
 
@@ -70,7 +80,6 @@ onMounted(() => {
     window.addEventListener('scroll', handleScroll);
     handleScroll();
 })
-
 </script>
 
 <style scoped>
