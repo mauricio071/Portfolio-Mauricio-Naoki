@@ -8,16 +8,6 @@
             <div class="svg-wrapper">
                 <IconTecnologia v-motion-fade-visible-once :duration="1300" :delay="850" class="header-vector" />
             </div>
-            <!-- <svg width="404" height="384" fill="none" viewBox="0 0 404 384"
-                class="absolute left-[-13%] top-[3.5rem] scale-[1.3] opacity-50 rounded-[50%]">
-                <defs>
-                    <pattern id="l7ojwr3ew1108h3j3km" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                        <rect x="0" y="0" width="4" height="4" class="text-primary text-opacity-25" fill="currentColor">
-                        </rect>
-                    </pattern>
-                </defs>
-                <rect width="404" height="384" fill="url(#l7ojwr3ew1108h3j3km)"></rect>
-            </svg> -->
             <div v-motion-fade-visible-once :duration="1000" class="main-content">
                 <p class="text-white font-semibold text-lg lg:text-2xl">👋🏻 Olá, o meu nome é</p>
                 <h1 class="text-secondary font-bold text-4xl lg:text-5xl 2xl:text-[3.5rem]">
