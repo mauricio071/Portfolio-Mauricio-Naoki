@@ -8,6 +8,16 @@
             <div class="svg-wrapper">
                 <IconTecnologia v-motion-fade-visible-once :duration="1300" :delay="850" class="header-vector" />
             </div>
+            <!-- <svg width="404" height="384" fill="none" viewBox="0 0 404 384"
+                class="absolute left-[-13%] top-[3.5rem] scale-[1.3] opacity-50 rounded-[50%]">
+                <defs>
+                    <pattern id="l7ojwr3ew1108h3j3km" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-primary text-opacity-25" fill="currentColor">
+                        </rect>
+                    </pattern>
+                </defs>
+                <rect width="404" height="384" fill="url(#l7ojwr3ew1108h3j3km)"></rect>
+            </svg> -->
             <div v-motion-fade-visible-once :duration="1000" class="main-content">
                 <p class="text-white font-semibold text-lg lg:text-2xl">👋🏻 Olá, o meu nome é</p>
                 <h1 class="text-secondary font-bold text-4xl lg:text-5xl 2xl:text-[3.5rem]">
@@ -130,6 +140,12 @@ onMounted(() => {
             @apply content-[""] absolute top-8 w-full h-[80%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] opacity-20 z-[-1] blur-[75px];
         }
 
+        /* &::after {
+            @apply content-[""] scale-[1.15] absolute left-[-21rem] top-[-5rem] opacity-20 z-[-1] rounded-[50%] w-[450px] h-[450px];
+            background-image: radial-gradient(#00bfa6 1.5px, transparent 3px);
+            background-size: 24px 24px;
+        } */
+
         .text-animation {
             @apply w-0 whitespace-nowrap overflow-hidden border-r-2 border-secondary;
             animation: typing 5.5s steps(21) infinite,
@@ -163,12 +179,12 @@ onMounted(() => {
             @apply relative overflow-hidden flex gap-2 items-center bg-white px-4 py-[.675rem] rounded-md text-secondary font-semibold my-2 shadow-sm duration-300 z-[2] md:my-5 md:py-3;
 
             &::before {
-                @apply content-[""] absolute w-0 h-full top-0 left-0 bg-[#00bfa6] z-[-1] duration-500;
+                @apply content-[""] absolute w-0 h-full top-0 left-0 bg-gradient-to-r from-[#00BFA6] to-[#63e6d2] z-[-1] duration-500;
             }
 
             &:hover {
                 @apply text-white;
-                box-shadow: 0 0 30px #00bfa6,
+                box-shadow: 0 0 20px #00bfa6,
                     0 0 20px #00bfa6;
 
                 span {
@@ -189,6 +205,5 @@ onMounted(() => {
             @apply content-[""] absolute top-[15%] left-[15%] w-[70%] h-[70%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] opacity-40 z-[-1] blur-[75px];
         }
     }
-
 }
 </style>

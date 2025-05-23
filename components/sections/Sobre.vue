@@ -106,45 +106,6 @@
         }
     }
 
-    /* Opcao 2 */
-    /* &:hover {
-        &::before {
-            @apply right-[-2rem] top-[-2rem];
-        }
-
-        &::after {
-            @apply left-[-3.5rem] bottom-[-3rem];
-        }
-
-        .photo {
-            transform: translateX(-4%) translateY(4%);
-        }
-
-        .photo-border {
-            transform: translateX(-4%) translateY(4%);
-
-        }
-    } */
-
-    /* Opcao 3 */
-    /* &:hover {
-        &::before {
-            @apply right-[-3.5rem] top-[-3.25rem];
-        }
-
-        &::after {
-            @apply left-[-5rem] bottom-[-4.5rem];
-        }
-
-        .photo {
-            transform: translateX(1%) translateY(-1%);
-        }
-
-        .photo-border {
-            transform: translateX(-8%) translateY(8%);
-        }
-    } */
-
     .photo {
         @apply rounded-[50%] w-full shadow-2xl duration-300 lg:rounded-md;
     }
@@ -168,9 +129,8 @@ h3::before {
     @apply p-2 bg-[#333] rounded-lg transition duration-300;
 
     &:hover {
-        box-shadow: 0 0 10px #00bfa6,
-            0 0 20px #00bfa6,
-            0 0 40px #00bfa6;
+        box-shadow: 0 0 20px #00bfa6,
+            0 0 20px #00bfa6;
     }
 }
 </style>

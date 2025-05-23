@@ -168,9 +168,8 @@ const clearModal = () => {
                 #00bfa6);
 
         &:hover {
-            box-shadow: 0 0 10px #00bfa6,
-                0 0 20px #00bfa6,
-                0 0 10px #00bfa6
+            box-shadow: 0 0 20px #00bfa6,
+                0 0 20px #00bfa6;
         }
     }
 }

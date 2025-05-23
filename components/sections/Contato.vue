@@ -158,15 +158,16 @@ const submitForm = async () => {
             }
 
             .submit-btn {
-                @apply relative overflow-hidden bg-white text-secondary px-16 py-3 rounded-lg mx-auto block duration-300 font-semibold shadow-sm z-[1] xl:mx-0;
+                @apply relative overflow-hidden flex justify-center bg-white text-secondary px-16 py-3 rounded-lg mx-auto duration-300 font-semibold shadow-sm z-[1] xl:mx-0;
 
                 &::before {
-                    @apply content-[""] absolute w-0 h-full top-0 left-0 bg-primary z-[-1] duration-500;
+                    @apply content-[""] absolute w-0 h-full top-0 left-0 bg-gradient-to-r from-[#00BFA6] to-[#63e6d2] z-[-1] duration-500;
                 }
 
                 &:hover {
                     @apply text-white;
-                    box-shadow: 0 0 10px #00bfa6, 0 0 30px #00bfa6, 0 0 30px #00bfa6;
+                    box-shadow: 0 0 20px #00bfa6,
+                        0 0 20px #00bfa6;
 
                     &::before {
                         @apply w-full;
@@ -174,7 +175,11 @@ const submitForm = async () => {
                 }
 
                 &:disabled {
-                    @apply bg-gray-300 cursor-not-allowed;
+                    @apply bg-gray-300 cursor-not-allowed w-[12.75rem];
+
+                    &::before {
+                        @apply w-0;
+                    }
                 }
             }
         }

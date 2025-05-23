@@ -146,8 +146,8 @@ const isIframeLoaded = ref(false);
                         &:hover {
                             @apply text-white;
 
-                            box-shadow: 0 0 30px #00bfa6,
-                                0 0 40px #00bfa6;
+                            box-shadow: 0 0 20px #00bfa6,
+                                0 0 20px #00bfa6;
 
                             span {
                                 @apply text-white;
