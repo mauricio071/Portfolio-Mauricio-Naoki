@@ -15,7 +15,7 @@
                 </a>
             </div>
             <p class="text-white">naokimau@gmail.com</p>
-            <span class="flex-grow">&copy; {{ anoAtual }} | Maurício Naoki Nakamura</span>
+            <span class="flex-grow text-center lg:text-start">&copy; {{ anoAtual }} | Maurício Naoki Nakamura</span>
         </div>
     </footer>
 </template>
