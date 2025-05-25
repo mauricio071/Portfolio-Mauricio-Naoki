@@ -16,7 +16,8 @@
                         <h2 class="project-name">{{ projeto.nome }}</h2>
                         <h3 class="project-type">{{ projeto.tipo }}</h3>
                         <div class="flex items-center gap-3">
-                            <component v-for="(logo, index) in projeto.tagsIcon" :is="logo" :key="index" class="logo" />
+                            <component v-for="(tecnologia, index) in projeto.tecnologias" :is="iconMap[tecnologia]"
+                                :key="index" class="logo" />
                         </div>
                     </div>
                 </div>
@@ -68,6 +69,8 @@ const modal = ref({
 })
 
 const openModal = (project) => {
+    console.log(project);
+
     if (project.nome === 'Em breve!') { return }
     clearModal();
     Object.assign(modal.value, {
@@ -78,10 +81,12 @@ const openModal = (project) => {
         videoProjeto: project.projetoVideo,
         widthProjeto: project.width,
         descricaoProjeto: project.descricao,
-        tagsProjeto: project.tags,
+        tecnologiasProjeto: project.tecnologias,
         urlProjeto: project.url,
         repositorioProjeto: project.repositorio
-    })
+    });
+
+    console.log(modal.value.tecnologiasProjeto);
 }
 
 const closeModal = () => {

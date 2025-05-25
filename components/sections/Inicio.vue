@@ -130,12 +130,6 @@ onMounted(() => {
             @apply content-[""] absolute top-8 w-full h-[80%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] opacity-20 z-[-1] blur-[75px];
         }
 
-        /* &::after {
-            @apply content-[""] scale-[1.15] absolute left-[-21rem] top-[-5rem] opacity-20 z-[-1] rounded-[50%] w-[450px] h-[450px];
-            background-image: radial-gradient(#00bfa6 1.5px, transparent 3px);
-            background-size: 24px 24px;
-        } */
-
         .text-animation {
             @apply w-0 whitespace-nowrap overflow-hidden border-r-2 border-secondary;
             animation: typing 5.5s steps(21) infinite,

@@ -12,7 +12,7 @@
                     <div class="icon-card" :style="{ '--card-color': tecnologia.cor }">
                         <div class="icon-border">
                         </div>
-                        <component :is="tecnologia.logo" />
+                        <component :is="iconMap[tecnologia.nome]" />
                         <strong>{{ tecnologia.nome }}</strong>
                     </div>
                 </div>

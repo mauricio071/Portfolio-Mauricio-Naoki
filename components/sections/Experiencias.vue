@@ -16,8 +16,8 @@
                             <p class="text-sm my-4 sm:text-lg">{{ empresa.descricao }}</p>
                             <h3 class="text-lg font-extrabold mb-3 text-[#0097a7] sm:text-xl">Tecnologias:</h3>
                             <div class="tecnologias flex items-center gap-2">
-                                <component v-for="(logo, index) in empresa.tecnologias" :is="logo" :key="index"
-                                    class="max-w-[2rem]" />
+                                <component v-for="(tecnologia, index) in empresa.tecnologias" :is="iconMap[tecnologia]"
+                                    :key="index" class="max-w-[2rem]" />
                             </div>
                             <span class="block font-bold text-[#b0b0b0] mt-4 xl:hidden">
                                 {{ empresa.data }}
@@ -34,6 +34,7 @@
 
 <script setup>
 import { empresas } from '@/constants/empresas';
+import { iconMap } from '~/composables/iconMap';
 </script>
 
 <style scoped>

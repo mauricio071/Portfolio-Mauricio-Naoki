@@ -24,7 +24,7 @@
                     <div class="detalhes">
                         <p>
                             <span class="font-bold">Tecnologias: </span>
-                            {{ modal.tagsProjeto.join(', ') }}
+                            {{ modal.tecnologiasProjeto.join(', ') }}
                         </p>
                         <div class="detalhes-links">
                             <template v-if="modal.urlProjeto && modal.urlProjeto.includes('instalador')">
