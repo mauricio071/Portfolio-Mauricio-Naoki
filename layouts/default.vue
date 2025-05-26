@@ -2,7 +2,7 @@
     <div>
         <Navbar />
         <slot />
-        <a href="#" :class="['topo-btn', visible ? 'show' : 'hide']">
+        <a href="#" :class="['toTop-btn', visible ? 'show' : 'hide']">
             <Icon name="material-symbols:keyboard-arrow-up-rounded" size="2.55rem" />
         </a>
         <Footer />
@@ -22,11 +22,11 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.topo-btn {
-    @apply fixed bottom-10 right-4 h-12 w-12 flex justify-center items-center text-white rounded-full shadow-lg duration-300 opacity-0 z-[20] bg-[#00a6b6] hover:bg-[#00829a];
+.toTop-btn {
+    @apply fixed right-4 bottom-10 h-12 w-12 flex justify-center items-center text-white rounded-full shadow-lg duration-300 opacity-0 z-[20] bg-[#00a6b6] hover:bg-[#00829a];
 
     @screen md {
-        @apply bottom-14 right-14 h-[3.25rem] w-[3.25rem];
+        @apply right-14 bottom-14 w-[3.25rem] h-[3.25rem];
     }
 }
 

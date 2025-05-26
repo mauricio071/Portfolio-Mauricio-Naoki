@@ -1,36 +1,58 @@
 <template>
     <footer>
-        <div
-            class="container mx-auto flex flex-col items-center justify-center gap-2 lg:flex-row-reverse lg:justify-between">
-            <div class="flex gap-3">
-                <a href="https://github.com/mauricio071" target="_blank" rel="noreferrer" aria-label="Github">
-                    <Icon name="mdi:github" class="text-[2rem] block" />
+        <div class="footer-container">
+            <div class="footer-icons">
+                <a href="https://github.com/mauricio071" target="_blank" rel="noreferrer" aria-label="GitHub">
+                    <Icon name="mdi:github" />
                 </a>
                 <a href="https://www.linkedin.com/in/mauricionaoki" target="_blank" rel="noreferrer"
                     aria-label="LinkedIn">
-                    <Icon name="mdi:linkedin" class="text-[2rem] block" />
+                    <Icon name="mdi:linkedin" />
                 </a>
                 <a href="https://wa.me/5511942816814" target="_blank" rel="noreferrer" aria-label="WhatsApp">
-                    <Icon name="mdi:whatsapp" class="text-[2rem] block" />
+                    <Icon name="mdi:whatsapp" />
                 </a>
             </div>
-            <p class="text-white">naokimau@gmail.com</p>
-            <span class="flex-grow text-center lg:text-start">&copy; {{ anoAtual }} | Maurício Naoki Nakamura</span>
+            <p>naokimau@gmail.com</p>
+            <span>&copy; {{ currentYear }} | Maurício Naoki Nakamura</span>
         </div>
     </footer>
 </template>
 
 <script setup>
-const anoAtual = new Date().getFullYear();
+const currentYear = new Date().getFullYear();
 </script>
 
 <style scoped>
 footer {
     @apply text-white px-4 py-6;
-
     background-image: -webkit-linear-gradient(left,
             rgba(0, 185, 160),
             rgba(10, 195, 172),
             rgba(18, 207, 185));
+
+    .footer-container {
+        @apply container mx-auto flex flex-col items-center justify-center gap-6;
+
+        @screen lg {
+            @apply flex-row-reverse justify-between;
+        }
+
+        .footer-icons {
+            @apply flex gap-3;
+
+            span {
+                @apply text-[2rem] block;
+            }
+        }
+
+        p {
+            @apply text-white;
+        }
+
+        >span {
+            @apply flex-grow text-center lg:text-start;
+        }
+    }
 }
 </style>

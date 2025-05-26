@@ -1,22 +1,20 @@
 <template>
     <section id="sobre">
         <div class="wrapper">
-            <div class="content flex flex-col gap-8 text-secondary lg:grid lg:grid-cols-2 lg:items-center">
-                <div v-motion-fade-visible-once :delay="200"
-                    class="relative mx-auto w-1/2 max-w-[15rem] lg:w-[65%] lg:max-w-[22rem]">
+            <div class="content">
+                <div v-motion-fade-visible-once :delay="200" class="photo-container">
                     <div class="photo-profile">
                         <NuxtImg src="/foto-perfil.jpeg" alt="foto-perfil" loading="lazy" densities="x1"
                             class="photo" />
-                        <div class="photo-border">
-                        </div>
+                        <div class="photo-border"></div>
                     </div>
                 </div>
-                <div v-motion-slide-visible-once-bottom :duration="700" class="space-y-10">
-                    <div>
+                <div v-motion-slide-visible-once-bottom :duration="700" class="text-about">
+                    <div class="about-me">
                         <h2 class="section-title !mb-14 lg:!justify-start">
                             Sobre mim
                         </h2>
-                        <p class="px-2 mb-4 text-start lg:px-0 xl:text-lg">
+                        <p class="mb-4">
                             Sou um desenvolvedor <strong>front-end</strong> focado em criar experiências digitais
                             envolventes e funcionais, com formação em <strong>Ciência da Computação</strong> pela
                             <strong>Universidade Cidade de São Paulo</strong>, concluída em dezembro de 2022.
@@ -24,7 +22,7 @@
                             sistemas e sites personalizados para diversos clientes. Cada novo projeto despertava
                             minha curiosidade e motivação, levando a constantes pesquisas e aprendizados.
                         </p>
-                        <p class="px-2 text-start lg:px-0 xl:text-lg">
+                        <p>
                             Tenho maior aptidão para a área de <strong>front-end</strong>, com principais habilidades em
                             <strong>Vue.js</strong>, <strong>Nuxt.js</strong>, <strong>React.js</strong>,
                             <strong>JavaScript</strong> e <strong>TypeScript</strong>. Estou sempre em busca de projetos
@@ -32,28 +30,23 @@
                             contribuir para inovações.
                         </p>
                     </div>
-                    <div v-motion-slide-visible-once-bottom :duration="700" :delay="300"
-                        class="onde-encontrar space-y-8">
-                        <h3
-                            class="flex flex-col-reverse items-center text-xl font-extrabold gap-[0.7rem] lg:items-start">
-                            Onde me encontrar
-                        </h3>
-                        <div class="flex gap-4 justify-center lg:justify-start">
+                    <div v-motion-slide-visible-once-bottom :duration="700" :delay="300" class="find-me">
+                        <h3>Onde me encontrar</h3>
+                        <div class="contact-icons">
                             <a href="https://github.com/mauricio071" target="_blank" rel="noreferrer"
-                                aria-label="Github" class="profile-about-icon">
-                                <Icon name="mdi:github" class="text-[2rem] block text-white duration-300" />
+                                aria-label="GitHub">
+                                <Icon name="mdi:github" />
                             </a>
                             <a href="https://www.linkedin.com/in/mauricionaoki" target="_blank" rel="noreferrer"
-                                aria-label="LinkedIn" class="profile-about-icon">
-                                <Icon name="mdi:linkedin" class="text-[2rem] block text-white duration-300" />
+                                aria-label="LinkedIn">
+                                <Icon name="mdi:linkedin" />
                             </a>
-                            <a href="https://wa.me/5511942816814" target="_blank" rel="noreferrer" aria-label="WhatsApp"
-                                class="profile-about-icon">
-                                <Icon name="mdi:whatsapp" class="text-[2rem] block text-white duration-300" />
+                            <a href="https://wa.me/5511942816814" target="_blank" rel="noreferrer"
+                                aria-label="WhatsApp">
+                                <Icon name="mdi:whatsapp" />
                             </a>
-                            <a href="mailto:naokimau@gmail.com" target="_blank" rel="noreferrer" aria-label="Gmail"
-                                class="profile-about-icon">
-                                <Icon name="mdi:gmail" class="text-[2rem] block text-white duration-300" />
+                            <a href="mailto:naokimau@gmail.com" target="_blank" rel="noreferrer" aria-label="Gmail">
+                                <Icon name="mdi:gmail" />
                             </a>
                         </div>
                     </div>
@@ -64,73 +57,109 @@
 </template>
 
 <style scoped>
-.photo-profile {
-    @apply bg-transparent w-full rounded-[50%] duration-300 lg:rounded-md relative;
-
-    &::before,
-    &::after {
-        @apply content-[''] hidden absolute w-[150px] h-[150px] border-[#00bfa6] duration-300 lg:block;
-    }
-
-    &::before {
-        @apply right-[-2.75rem] top-[-2.75rem] border-t-[7px] border-r-[7px];
-    }
-
-    &::after {
-        @apply left-[-4.25rem] bottom-[-3.75rem] border-b-[7px] border-l-[7px];
-    }
+.content {
+    @apply flex flex-col gap-8 text-secondary;
 
     @screen lg {
-        &:hover {
+        @apply grid grid-cols-2 items-center;
+    }
+
+    .photo-container {
+        @apply relative w-1/2 max-w-[15rem] mx-auto;
+
+        @screen lg {
+            @apply w-[65%] max-w-[22rem];
+        }
+
+        .photo-profile {
+            @apply relative bg-transparent w-full duration-300 rounded-[50%] lg:rounded-md;
 
             &::before,
             &::after {
-                @apply border-[#26cfb9];
+                @apply content-[""] absolute w-[150px] h-[150px] border-[#00bfa6] duration-300 hidden lg:block;
             }
 
             &::before {
-                @apply right-[-3rem] top-[-3rem];
+                @apply -top-[2.75rem] -right-[2.75rem] border-t-[7px] border-r-[7px];
             }
 
             &::after {
-                @apply left-[-4.75rem] bottom-[-4.25rem];
+                @apply -bottom-[3.75rem] -left-[4.25rem] border-b-[7px] border-l-[7px];
+            }
+
+            @screen lg {
+                &:hover {
+
+                    &::before,
+                    &::after {
+                        @apply border-[#26cfb9];
+                    }
+
+                    &::before {
+                        @apply -top-[3rem] -right-[3rem];
+                    }
+
+                    &::after {
+                        @apply -bottom-[4.25rem] -left-[4.75rem];
+                    }
+
+                    .photo,
+                    .photo-border {
+                        @apply -translate-x-[4%] translate-y-[4%];
+                    }
+                }
             }
 
             .photo {
-                transform: translateX(-4%) translateY(4%);
+                @apply w-full shadow-2xl duration-300 rounded-[50%] lg:rounded-md;
             }
 
             .photo-border {
-                transform: translateX(-4%) translateY(4%);
+                @apply bg-gray-100 absolute w-full h-full top-0 border-4 -z-[1] rounded-lg -translate-x-[7%] translate-y-[7%] duration-300 hidden lg:block;
             }
         }
     }
 
-    .photo {
-        @apply rounded-[50%] w-full shadow-2xl duration-300 lg:rounded-md;
-    }
+    .text-about {
+        @apply space-y-10;
 
-    .photo-border {
-        @apply hidden rounded-lg w-full h-full absolute top-0 z-[-1] bg-gray-100 border-4 duration-300 lg:block;
-        transform: translateX(-7%) translateY(7%);
-    }
-}
+        .about-me {
+            p {
+                @apply px-2 text-start lg:px-0 xl:text-lg;
+            }
+        }
 
+        .find-me {
+            @apply space-y-8;
 
-h3::before {
-    @apply content-[''] w-[110px] h-[5px] inline-flex items-center rounded-[5px];
+            h3 {
+                @apply flex flex-col-reverse gap-[0.7rem] text-xl font-extrabold items-center lg:items-start;
 
-    background-image: -webkit-linear-gradient(left,
-            #00bfa6,
-            rgba(0, 191, 165, 0.22));
-}
+                &::before {
+                    @apply content-[""] w-[110px] h-[5px] rounded-[5px];
+                    background-image: -webkit-linear-gradient(left,
+                            #00bfa6,
+                            rgba(0, 191, 165, 0.22));
+                }
+            }
 
-.profile-about-icon {
-    @apply p-2 bg-[#333] rounded-lg transition duration-300;
+            .contact-icons {
+                @apply flex gap-4 justify-center lg:justify-start;
 
-    &:hover {
-        box-shadow: 0 0 20px #00bfa6,
-            0 0 20px #00bfa6;
+                a {
+                    @apply bg-[#333] p-2 rounded-lg duration-300;
+
+                    &:hover {
+                        box-shadow: 0 0 20px #00bfa6,
+                            0 0 20px #00bfa6;
+                    }
+
+                    span {
+                        @apply block text-[2rem] text-white duration-300;
+                    }
+                }
+            }
+        }
     }
 }
 </style>

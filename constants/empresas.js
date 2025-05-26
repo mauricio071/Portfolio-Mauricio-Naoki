@@ -1,11 +1,11 @@
-export const empresas = [
+export const experiences = [
   {
-    nome: "Sixchains Digital House",
-    cargo: "Desenvolvedor Front-end",
-    descricao:
+    name: "Sixchains Digital House",
+    role: "Desenvolvedor Front-end",
+    description:
       "Na Sixchains, fui responsável pelo desenvolvimento Front-End, atuando no desenvolvimento e na manutenção de sites e sistemas, colaborando com a equipe de back-end para integrar as aplicações às APIs. Além disso, participei de diversos projetos do grupo Euro 17, incluindo sites e sistemas voltados para a venda de imóveis e plataformas de securitização.",
-    data: "Jul 2022 - Mai 2024",
-    tecnologias: [
+    date: "Jul 2022 - Mai 2024",
+    technologies: [
       "HTML",
       "CSS",
       "JavaScript",
@@ -17,12 +17,12 @@ export const empresas = [
     ],
   },
   {
-    nome: "Upwards",
-    cargo: "Desenvolvedor Full-stack",
-    descricao:
+    name: "Upwards",
+    role: "Desenvolvedor Full-stack",
+    description:
       "Na Upwards, atuei como desenvolvedor Full-Stack, focado no sistema interno da empresa. Utilizei Vue.js para o desenvolvimento do front-end e Laravel para o back-end. Além disso, implementei testes automatizados para garantir a qualidade e a estabilidade do sistema.",
-    data: "Nov 2021 - Jun 2022",
-    tecnologias: [
+    date: "Nov 2021 - Jun 2022",
+    technologies: [
       "HTML",
       "CSS",
       "JavaScript",
@@ -33,12 +33,12 @@ export const empresas = [
     ],
   },
   {
-    nome: "Garnon",
-    cargo: "Desenvolvedor Full-stack",
-    descricao:
+    name: "Garnon",
+    role: "Desenvolvedor Full-stack",
+    description:
       "Na Garnon, trabalhei na manutenção de um sistema da Angola, usando Vue.js para desenvolver a interface do usuário e Laravel para gerenciar a lógica de back-end.",
-    data: "Jun 2021 - Out 2021",
-    tecnologias: [
+    date: "Jun 2021 - Out 2021",
+    technologies: [
       "HTML",
       "CSS",
       "JavaScript",

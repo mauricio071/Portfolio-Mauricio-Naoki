@@ -1,19 +1,17 @@
 <template>
     <section id="habilidades" class="section-background">
-        <SvgWaveTop />
-        <div class="wrapper py-3">
+        <WaveSvgWaveTop />
+        <div class="wrapper">
             <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
                 Habilidades
             </h2>
-            <div
-                class="flex flex-wrap items-center justify-center gap-6 max-w-[60rem] mx-auto md:grid md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-                <div v-for="(tecnologia, index) in tecnologias" :key="index" v-motion-slide-visible-once-bottom
-                    :delay="index * 100" :duration="600" class="z-[2]">
-                    <div class="icon-card" :style="{ '--card-color': tecnologia.cor }">
-                        <div class="icon-border">
-                        </div>
-                        <component :is="iconMap[tecnologia.nome]" />
-                        <strong>{{ tecnologia.nome }}</strong>
+            <div class="skills">
+                <div v-for="(technology, i) in technologies" :key="i" v-motion-slide-visible-once-bottom
+                    :delay="i * 100" :duration="600">
+                    <div class="icon-card" :style="{ '--card-color': technology.color }">
+                        <div class="icon-border"></div>
+                        <component :is="iconMap[technology.name]" class="logo" />
+                        <strong>{{ technology.name }}</strong>
                     </div>
                 </div>
             </div>
@@ -36,15 +34,16 @@
 </template>
 
 <script setup>
-import { tecnologias } from '@/constants/tecnologias';
+import { technologies } from '@/constants/tecnologias';
 import VanillaTilt from 'vanilla-tilt';
 
 onMounted(() => {
     const elements = document.querySelectorAll(".icon-card");
+
     VanillaTilt.init(elements, {
         max: 36,
     });
-})
+});
 </script>
 
 <style scoped>
@@ -52,71 +51,85 @@ onMounted(() => {
     @apply relative;
     background: radial-gradient(circle, rgba(0, 191, 165, 0.02) 0%, rgba(0, 191, 165, 0.22) 100%);
 
-    .icon-card {
-        @apply relative flex flex-col justify-center items-center gap-4 text-center bg-white p-1 rounded-[25px] shadow-lg w-[10rem] h-36 mx-auto duration-300 cursor-pointer;
-        transform-style: preserve-3d;
+    .wrapper {
+        @apply py-3;
 
-        .icon-border {
-            @apply absolute overflow-hidden rounded-[25px] w-full h-full;
+        .skills {
+            @apply flex flex-wrap items-center justify-center gap-6 max-w-[60rem] mx-auto;
 
-            &::before {
-                @apply content-[''] absolute w-[150%] h-[150%] -left-[2.5rem] -top-[2.5rem];
-                background-image: repeating-conic-gradient(var(--card-color) 0%, var(--card-color) 30%, transparent 35%, transparent 40%, var(--card-color) 50%);
-                animation: rotate 6s linear infinite;
-
-                /* Opcao 2 */
-                /* @apply content-[''] absolute w-[5rem] h-[16rem] top-[-40%] rounded-[10px] rotate-[-48deg];
-                    background-color: var(--card-color);
-                    animation: rotate 8s linear infinite; */
+            @screen md {
+                @apply grid grid-cols-3;
             }
 
-            @keyframes rotate {
-                0% {
-                    transform: rotate(0deg);
+            @screen lg {
+                @apply grid-cols-4;
+            }
+
+            @screen xl {
+                @apply grid-cols-5;
+            }
+
+            .icon-card {
+                @apply relative bg-white flex flex-col justify-center items-center gap-4 w-[10rem] h-36 mx-auto text-center p-1 rounded-[25px] shadow-lg duration-300 cursor-pointer;
+                transform-style: preserve-3d;
+
+                .icon-border {
+                    @apply absolute w-full h-full rounded-[25px] overflow-hidden;
+
+                    &::before {
+                        @apply content-[""] absolute w-[150%] h-[150%] -top-[2.5rem] -left-[2.5rem];
+                        background-image: repeating-conic-gradient(var(--card-color) 0%, var(--card-color) 30%, transparent 35%, transparent 40%, var(--card-color) 50%);
+                        animation: rotate 6s linear infinite;
+                    }
+
+                    @keyframes rotate {
+                        0% {
+                            transform: rotate(0deg);
+                        }
+
+                        100% {
+                            transform: rotate(360deg);
+                        }
+                    }
+
+                    &::after {
+                        @apply content-[""] absolute bg-white inset-[5px] rounded-[25px];
+                        box-shadow: inset 0px 2px 12px 0px #0000008c;
+                    }
                 }
 
-                100% {
-                    transform: rotate(360deg);
+                .logo,
+                strong {
+                    @apply z-[2];
+                    transform: translateZ(20px);
+                }
+
+                .logo {
+                    @apply max-w-[3rem] max-h-[3rem];
+                }
+
+                strong {
+                    @apply leading-[1.4];
                 }
             }
-
-            &::after {
-                @apply content-[''] absolute inset-[5px] rounded-[25px] bg-[white];
-                box-shadow: inset 0px 2px 12px 0px #0000008c;
-            }
-
         }
+    }
 
-        svg,
-        strong {
-            @apply z-[2];
-            transform: translateZ(20px);
-        }
+    .wave-bottom {
+        @apply absolute w-full left-0 bottom-0 overflow-hidden leading-[0] z-[1] rotate-180;
 
         svg {
-            @apply max-w-[3rem] max-h-[3rem];
+            @apply relative block h-[80px];
+            width: calc(180% + 1.3px);
+
+            @screen sm {
+                width: calc(105% + 1.3px);
+            }
         }
 
-        strong {
-            @apply leading-[1.4];
+        .shape-fill {
+            @apply fill-white;
         }
-    }
-}
-
-.wave-bottom {
-    @apply absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-[1] rotate-180;
-
-    svg {
-        @apply relative block h-[80px];
-        width: calc(180% + 1.3px);
-
-        @screen sm {
-            width: calc(105% + 1.3px);
-        }
-    }
-
-    .shape-fill {
-        @apply fill-white;
     }
 }
 </style>

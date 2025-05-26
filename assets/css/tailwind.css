@@ -12,7 +12,6 @@ html {
 
 ::-webkit-scrollbar-thumb {
   @apply rounded-[.3rem];
-
   background-image: -webkit-linear-gradient(
     top,
     #00bfa6,
@@ -44,9 +43,12 @@ strong {
   @apply relative flex justify-center items-center gap-2 text-2xl font-extrabold text-[1.8rem] mb-[5.25rem] text-secondary z-[2] sm:text-4xl;
 }
 
-h2.section-title::after {
-  @apply content-[''] w-[110px] h-[5px] rounded-[5px] absolute bottom-[-1.35rem];
+h2.section-title::before {
+  @apply content-[""] absolute w-[150px] h-[80%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] z-[-1] opacity-90 blur-[60px];
+}
 
+h2.section-title::after {
+  @apply content-[""] w-[110px] h-[5px] rounded-[5px] absolute -bottom-[1.35rem];
   background-image: -webkit-linear-gradient(
     left,
     #00bfa6,
@@ -54,12 +56,19 @@ h2.section-title::after {
   );
 }
 
-h2.section-title::before {
-  @apply content-[""] absolute w-[150px] h-[80%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] z-[-1] opacity-90 blur-[60px];
+input,
+textarea {
+  @apply w-full rounded-lg py-4 px-3.5;
+}
+
+input:focus,
+textarea:focus {
+  @apply outline-none ring-2 ring-primary;
+  box-shadow: 0 0 10px #00bfa6;
 }
 
 .loader {
-  @apply flex justify-center items-center rounded-[50%] w-[24px] h-[24px];
+  @apply flex justify-center items-center w-[24px] h-[24px] rounded-[50%];
   border: 3px solid rgba(255, 255, 255, 0.3);
   border-top: 3px solid white;
   animation: spin 1s linear infinite;
@@ -76,8 +85,7 @@ h2.section-title::before {
 }
 
 .skeleton-loader {
-  @apply w-full rounded-lg aspect-video absolute inset-0 m-auto max-h-[17rem] lg:max-h-[unset];
-
+  @apply absolute w-full aspect-video m-auto inset-0 rounded-lg max-h-[17rem] lg:max-h-[unset];
   background-image: linear-gradient(
     90deg,
     #ddd 0%,
@@ -95,6 +103,7 @@ h2.section-title::before {
   from {
     background-position: 100%;
   }
+
   to {
     background-position: 0%;
   }

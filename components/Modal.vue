@@ -2,12 +2,12 @@
     <Teleport to="#teleports">
         <transition name="modal-outer">
             <div v-if="isVisible" class="modal">
-                <div class="fixed inset-0 bg-black opacity-80" @click="fecharModal"></div>
+                <div class="modal-outer-content" @click="$emit('close')"></div>
 
                 <transition name="modal-inner">
                     <div class="modal-content" role="dialog" aria-modal="true">
                         <slot></slot>
-                        <svg @click="fecharModal" class="close" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        <svg @click="$emit('close')" class="close" xmlns="http://www.w3.org/2000/svg" fill="none"
                             viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                         </svg>
@@ -26,16 +26,16 @@ const props = defineProps({
     }
 });
 
-const emit = defineEmits(['close']);
-
-const fecharModal = () => {
-    emit('close');
-};
+const $emit = defineEmits(['close']);
 </script>
 
 <style scoped>
 .modal {
-    @apply fixed inset-0 z-[999] flex items-center justify-center p-4;
+    @apply fixed flex items-center justify-center p-4 inset-0 z-[999];
+
+    .modal-outer-content {
+        @apply bg-black fixed inset-0 opacity-80;
+    }
 
     .modal-content {
         @apply bg-[#f7f7f7] p-5 rounded-lg relative border-t-8 border-t-primary mx-auto;

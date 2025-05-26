@@ -1,34 +1,34 @@
 <template>
     <section id="projetos" class="section-background">
-        <SvgWaveTop />
-        <div class="wrapper py-3">
+        <WaveSvgWaveTop />
+        <div class="wrapper">
             <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
                 Projetos
             </h2>
             <div class="projects">
-                <div @click="openModal(projeto)" v-for="(projeto, i) in visibleProjects" :key="i"
+                <div @click="openModal(project)" v-for="(project, i) in visibleProjects" :key="i"
                     v-motion-slide-visible-once-bottom :delay="i * 100" :duration="600" class="project-card">
                     <div class="project-img">
-                        <NuxtImg :src="`/projetos/${projeto.imgNome}`" :alt="projeto.nome" loading="lazy" densities="x1"
-                            :width="projeto.width" class="rounded-lg" />
+                        <NuxtImg :src="`/projetos/${project.imgName}`" :alt="project.name" loading="lazy" densities="x1"
+                            :width="project.width" />
                     </div>
                     <div class="project-description">
-                        <h2 class="project-name">{{ projeto.nome }}</h2>
-                        <h3 class="project-type">{{ projeto.tipo }}</h3>
-                        <div class="flex items-center gap-3">
-                            <component v-for="(tecnologia, index) in projeto.tecnologias" :is="iconMap[tecnologia]"
-                                :key="index" class="logo" />
+                        <h2>{{ project.name }}</h2>
+                        <h3>{{ project.type }}</h3>
+                        <div class="technologies">
+                            <component v-for="(technology, i) in project.technologies" :is="iconMap[technology]"
+                                :key="i" class="logo" />
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="flex justify-center mt-12">
-                <button v-motion-slide-visible-once-bottom :duration="500"
-                    v-if="visibleProjects.length < projetos.length" @click="loadProjects" class="btn-more-projects">
+            <div class="btn-more-container">
+                <button v-if="visibleProjects.length < projects.length" @click="loadProjects"
+                    v-motion-slide-visible-once-bottom :duration="500" class="btn-more-projects">
                     Mais projetos
                 </button>
-                <a v-else href="https://github.com/mauricio071?tab=repositories" v-motion-slide-visible-once-bottom
-                    :duration="500" target="_blank" rel="noreferrer" aria-label="GitHub" class="btn-more-projects">
+                <a v-else href="https://github.com/mauricio071?tab=repositories" target="_blank" rel="noreferrer"
+                    aria-label="GitHub" v-motion-slide-visible-once-bottom :duration="500" class="btn-more-projects">
                     Confira mais no GitHub
                 </a>
             </div>
@@ -36,77 +36,75 @@
         <Modal :isVisible="modal.isOpen" @close="closeModal">
             <ModalProjects :modal="modal" />
         </Modal>
-        <SvgWaveBottom />
+        <WaveSvgWaveBottom />
     </section>
 </template>
 
 <script setup>
-import { projetos } from '@/constants/projetos';
+import { projects } from '@/constants/projetos';
 import ModalProjects from '../ModalProjects.vue';
 
 const visibleProjects = shallowRef([]);
 const projectsLimit = ref(9);
 
 const loadProjects = () => {
-    projectsLimit.value += 3
-}
+    projectsLimit.value += 3;
+};
 
 watchEffect(() => {
-    visibleProjects.value = projetos.slice(0, projectsLimit.value)
-})
+    visibleProjects.value = projects.slice(0, projectsLimit.value);
+});
 
 const modal = ref({
     isOpen: false,
-    nomeProjeto: '',
-    tipoProjeto: '',
-    imgProjeto: '',
-    videoProjeto: '',
-    widthProjeto: '',
-    descricaoProjeto: '',
-    tagsProjeto: [],
-    urlProjeto: '',
-    repositorioProjeto: ''
-})
+    projectName: '',
+    projectType: '',
+    projectImage: '',
+    projectVideo: '',
+    projectWidth: '',
+    projectDescription: '',
+    projectTechnologies: [],
+    projectUrl: '',
+    projectRepository: ''
+});
 
 const openModal = (project) => {
-    console.log(project);
+    if (project.name === 'Em breve!') { return }
 
-    if (project.nome === 'Em breve!') { return }
     clearModal();
+
     Object.assign(modal.value, {
         isOpen: true,
-        nomeProjeto: project.nome,
-        tipoProjeto: project.tipo,
-        imgProjeto: project.imgNome,
-        videoProjeto: project.projetoVideo,
-        widthProjeto: project.width,
-        descricaoProjeto: project.descricao,
-        tecnologiasProjeto: project.tecnologias,
-        urlProjeto: project.url,
-        repositorioProjeto: project.repositorio
+        projectName: project.name,
+        projectType: project.type,
+        projectImage: project.imgName,
+        projectVideo: project.projectVideo,
+        projectWidth: project.width,
+        projectDescription: project.description,
+        projectTechnologies: project.technologies,
+        projectUrl: project.url,
+        projectRepository: project.repository
     });
-
-    console.log(modal.value.tecnologiasProjeto);
-}
+};
 
 const closeModal = () => {
-    modal.value.isOpen = false
-}
+    modal.value.isOpen = false;
+};
 
 const clearModal = () => {
     modal.value = {
         isOpen: false,
-        nomeProjeto: '',
-        tipoProjeto: '',
-        imgProjeto: '',
-        videoProjeto: '',
-        widthProjeto: '',
-        descricaoProjeto: '',
-        tagsProjeto: [],
-        urlProjeto: '',
-        repositorioProjeto: ''
+        projectName: '',
+        projectType: '',
+        projectImage: '',
+        projectVideo: '',
+        projectWidth: '',
+        projectDescription: '',
+        projectTechnologies: [],
+        projectUrl: '',
+        projectRepository: ''
     }
-}
+};
 </script>
 
 <style scoped>
@@ -114,67 +112,82 @@ const clearModal = () => {
     @apply relative;
     background: radial-gradient(circle, rgba(0, 191, 165, 0.02) 0%, rgba(0, 191, 165, 0.22) 100%);
 
-    .projects {
-        @apply grid items-center justify-center gap-6 md:grid-cols-2 xl:grid-cols-3;
+    .wrapper {
+        @apply py-3;
 
-        .project-card {
-            @apply relative rounded-lg cursor-pointer overflow-hidden shadow-2xl bg-white max-w-[22rem] sm:max-w-[unset] z-[2];
+        .projects {
+            @apply grid items-center justify-center gap-6 md:grid-cols-2 xl:grid-cols-3;
 
-            .project-img {
-                @apply w-full aspect-video xl:h-[13.25rem] 2xl:h-[15rem];
+            .project-card {
+                @apply relative bg-white rounded-lg shadow-2xl overflow-hidden cursor-pointer z-[2] max-w-[22rem] sm:max-w-[unset];
 
-                img {
-                    @apply w-full h-full duration-300;
+                .project-img {
+                    @apply w-full aspect-video xl:h-[13.25rem] 2xl:h-[15rem];
+
+                    img {
+                        @apply w-full h-full rounded-lg duration-300;
+                    }
                 }
-            }
-
-            .project-description {
-                @apply duration-300 bg-[#000000B3] opacity-0 !text-white absolute w-full h-full top-0 p-8 flex flex-col justify-center items-center gap-3;
-
-                @screen sm {
-                    @apply gap-5;
-                }
-
-                .project-name {
-                    @apply text-white font-bold text-center text-xl lg:text-2xl;
-                }
-
-                .project-type {
-                    @apply text-primary lg:text-xl;
-                }
-
-                .logo {
-                    @apply h-6 w-6 sm:h-8 sm:w-8;
-                }
-            }
-
-            &:hover {
-                box-shadow: 0 0 15px #00bfa6,
-                    0 0 15px #00bfa6,
-                    0 0 15px #00bfa6,
-                    0 0 15px #00bfa6;
 
                 .project-description {
-                    @apply opacity-100;
+                    @apply bg-[#000000B3] absolute w-full h-full top-0 flex flex-col justify-center items-center p-8 opacity-0 !text-white duration-300 gap-3 sm:gap-5;
+
+                    h2 {
+                        @apply text-white font-bold text-center text-xl lg:text-2xl;
+                    }
+
+                    h3 {
+                        @apply text-primary lg:text-xl;
+                    }
+
+                    .technologies {
+                        @apply flex items-center gap-3;
+
+                        .logo {
+                            @apply h-6 w-6;
+
+                            @screen sm {
+                                @apply h-8 w-8;
+                            }
+                        }
+                    }
                 }
 
-                img {
-                    @apply blur-[2px] scale-[1.03];
+                &:hover {
+                    box-shadow: 0 0 15px #00bfa6,
+                        0 0 15px #00bfa6,
+                        0 0 15px #00bfa6,
+                        0 0 15px #00bfa6;
+
+                    .project-description {
+                        @apply opacity-100;
+                    }
+
+                    img {
+                        @apply blur-[2px] scale-[1.03];
+                    }
                 }
             }
         }
     }
 
-    .btn-more-projects {
-        @apply relative text-white text-xl px-6 py-2 rounded-3xl shadow-2xl font-semibold duration-300 z-[2] lg:px-12 lg:py-3;
+    .btn-more-container {
+        @apply flex justify-center mt-12;
 
-        background-image: -webkit-linear-gradient(top,
-                rgba(0, 191, 165, 0.3),
-                #00bfa6);
+        .btn-more-projects {
+            @apply relative text-white text-xl px-6 py-2 rounded-3xl shadow-2xl font-semibold duration-300 z-[2];
+            background-image: -webkit-linear-gradient(top,
+                    rgba(0, 191, 165, 0.3),
+                    #00bfa6);
 
-        &:hover {
-            box-shadow: 0 0 20px #00bfa6,
-                0 0 20px #00bfa6;
+            &:hover {
+                box-shadow: 0 0 20px #00bfa6,
+                    0 0 20px #00bfa6;
+            }
+
+            @screen lg {
+                @apply px-12 py-3;
+            }
         }
     }
 }

@@ -1,50 +1,39 @@
 <template>
-    <section id="início" class="home">
-        <div class="blur-container">
-        </div>
-        <div class="vector-background">
-        </div>
-        <div class="wrapper relative my-16 lg:flex lg:justify-between lg:items-center max-sm:px-0">
+    <section id="início">
+        <div class="blur-container"></div>
+        <div class="vector-background"></div>
+        <div class="wrapper">
             <div class="svg-wrapper">
-                <IconTecnologia v-motion-fade-visible-once :duration="1300" :delay="850" class="header-vector" />
+                <IconTechnology v-motion-fade-visible-once :duration="1300" :delay="850" class="header-vector" />
             </div>
             <div v-motion-fade-visible-once :duration="1000" class="main-content">
-                <p class="text-white font-semibold text-lg lg:text-2xl">👋🏻 Olá, o meu nome é</p>
-                <h1 class="text-secondary font-bold text-4xl lg:text-5xl 2xl:text-[3.5rem]">
-                    Maurício Naoki
-                </h1>
-                <h2
-                    class="flex items-center w-full text-secondary text-xl font-bold max-lg:max-w-[18rem] lg:w-fit lg:text-2xl">
+                <p>👋🏻 Olá, o meu nome é</p>
+                <h1>Maurício Naoki</h1>
+                <h2>
                     <IconCode />
-                    <span class="text-animation">
-                        Desenvolvedor Front-end
-                    </span>
+                    <span class="text-animation">Desenvolvedor Front-end</span>
                 </h2>
                 <a href="/cv_mauricio_naoki.pdf" target="_blank" rel="noreferrer" aria-label="Currículo"
                     class="resume-btn">
-                    <Icon name="material-symbols:download-rounded" class="text-[1.75rem] text-secondary duration-300" />
+                    <Icon name="material-symbols:download-rounded" />
                     Baixar currículo
                 </a>
-                <div class="flex gap-4">
+                <div class="social-icons">
                     <a href="https://github.com/mauricio071" target="_blank" rel="noreferrer" aria-label="GitHub">
-                        <Icon name="mdi:github"
-                            class="text-[2.25rem] block text-secondary duration-300 hover:text-white" />
+                        <Icon name="mdi:github" class="hover:!text-white" />
                     </a>
                     <a href="https://www.linkedin.com/in/mauricionaoki" target="_blank" rel="noreferrer"
                         aria-label="LinkedIn">
-                        <Icon name="mdi:linkedin"
-                            class="text-[2.25rem] block text-secondary duration-300 hover:text-[#258dbf]" />
+                        <Icon name="mdi:linkedin" class="hover:!text-[#258dbf]" />
                     </a>
                     <a href="https://wa.me/5511942816814" target="_blank" rel="noreferrer" aria-label="WhatsApp">
-                        <Icon name="mdi:whatsapp"
-                            class="text-[2.25rem] block text-secondary duration-300 hover:text-[#25d366]" />
+                        <Icon name="mdi:whatsapp" class="hover:!text-[#25d366]" />
                     </a>
                 </div>
             </div>
-            <div v-motion-fade-visible-once :duration="1300" :delay="450" ref="tiltRef" class="img-content">
-                <div class="hidden max-w-[30rem] lg:block xl:max-w-[34rem] 2xl:max-w-[39rem]">
-                    <NuxtImg src="/programacao.webp" alt="desenvolvedor" densities="x1" width="100%"
-                        class="w-full duration-700" />
+            <div ref="tiltRef" v-motion-fade-visible-once :duration="1300" :delay="450" class="img-content">
+                <div class="img-container">
+                    <NuxtImg src="/programacao.webp" alt="desenvolvedor" densities="x1" width="100%" />
                 </div>
             </div>
         </div>
@@ -52,7 +41,7 @@
 </template>
 
 <script setup>
-import VanillaTilt from 'vanilla-tilt'
+import VanillaTilt from 'vanilla-tilt';
 
 const tiltRef = ref(null);
 
@@ -60,12 +49,12 @@ onMounted(() => {
     VanillaTilt.init(tiltRef.value, {
         max: 5,
     });
-})
+});
 </script>
 
 <style scoped>
-.home {
-    @apply min-h-[650px] flex justify-center items-center p-4 pb-0 overflow-hidden relative;
+section {
+    @apply min-h-[650px] relative flex justify-center items-center p-4 pb-0 overflow-hidden;
     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(0, 191, 165, 0.7) 100%);
 
     @screen lg {
@@ -73,120 +62,172 @@ onMounted(() => {
     }
 
     .blur-container {
-        @apply absolute top-[-300px] left-[-300px] w-[700px] h-[700px] bg-primary opacity-20 rounded-[50rem] blur-xl z-[-1];
+        @apply bg-primary absolute -top-[300px] -left-[300px] w-[700px] h-[700px] rounded-[50rem] blur-xl opacity-20 -z-[1];
     }
 
     .vector-background {
         @apply hidden;
 
         @screen lg {
-            @apply absolute top-[-3rem] right-0 w-[54%] rounded-l-full z-[-1] bg-[#00AB95] opacity-30 block;
+            @apply bg-[#00AB95] block absolute -top-[3rem] right-0 w-[54%] rounded-l-full -z-[1] opacity-30;
             min-height: calc(100vh + 3rem);
         }
     }
 
-    .svg-wrapper {
-        @apply absolute max-w-[14rem] my-[3.5rem] top-[50%] right-[-15%] w-full h-full;
-
-        @screen md {
-            @apply right-0;
-        }
+    .wrapper {
+        @apply relative my-16 max-sm:px-0;
 
         @screen lg {
-            @apply max-w-[21rem] top-[-20%] right-[-4%];
+            @apply flex justify-between items-center;
         }
 
-        @screen xl {
-            @apply max-w-[23rem] top-[-18%] right-[-2%];
-        }
+        .svg-wrapper {
+            @apply absolute max-w-[14rem] top-[50%] -right-[15%] w-full h-full my-[3.5rem];
 
-        @screen 2xl {
-            @apply max-w-[30rem] top-[-23%];
-        }
-
-        &::before {
-            @apply content-[""] absolute top-[15%] left-[15%] w-[70%] h-[70%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] z-[-1] opacity-40 blur-[20px] lg:blur-[75px];
-        }
-
-        .header-vector {
-            animation: circle 40s linear infinite;
-        }
-
-        @keyframes circle {
-            0% {
-                transform: rotate(0deg)
+            @screen md {
+                @apply right-0;
             }
 
-            100% {
-                transform: rotate(-360deg)
-            }
-        }
-    }
-
-    .main-content {
-        @apply flex flex-col items-center gap-6 lg:items-start lg:gap-4;
-
-        &::before {
-            @apply content-[""] absolute top-8 w-full h-[80%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] opacity-20 z-[-1] blur-[75px];
-        }
-
-        .text-animation {
-            @apply w-0 whitespace-nowrap overflow-hidden border-r-2 border-secondary;
-            animation: typing 5.5s steps(21) infinite,
-                blinking .85s infinite alternate;
-            animation-delay: 1.25s, 0s;
-
-            @keyframes typing {
-                0% {
-                    @apply w-0;
-                }
-
-                30%,
-                65% {
-                    @apply w-full pr-1;
-                }
-
-                87%,
-                100% {
-                    @apply w-0;
-                }
+            @screen lg {
+                @apply max-w-[21rem] -top-[20%] -right-[4%];
             }
 
-            @keyframes blinking {
-                50% {
-                    @apply border-transparent;
-                }
+            @screen xl {
+                @apply max-w-[23rem] -top-[18%] -right-[2%];
             }
-        }
 
-        .resume-btn {
-            @apply relative overflow-hidden flex gap-2 items-center bg-white px-4 py-[.675rem] rounded-md text-secondary font-semibold my-2 shadow-sm duration-300 z-[2] md:my-5 md:py-3;
+            @screen 2xl {
+                @apply max-w-[30rem] -top-[23%];
+            }
 
             &::before {
-                @apply content-[""] absolute w-0 h-full top-0 left-0 bg-gradient-to-r from-[#00BFA6] to-[#63e6d2] z-[-1] duration-500;
+                @apply content-[""] absolute top-[15%] left-[15%] w-[70%] h-[70%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] -z-[1] opacity-40 blur-[20px] lg:blur-[75px];
             }
 
-            &:hover {
-                @apply text-white;
-                box-shadow: 0 0 20px #00bfa6,
-                    0 0 20px #00bfa6;
+            .header-vector {
+                animation: circle 40s linear infinite;
+            }
 
-                span {
-                    @apply text-white;
+            @keyframes circle {
+                0% {
+                    transform: rotate(0deg);
                 }
 
+                100% {
+                    transform: rotate(-360deg);
+                }
+            }
+        }
+
+        .main-content {
+            @apply flex flex-col items-center gap-6;
+
+            &::before {
+                @apply content-[""] absolute top-8 w-full h-[80%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] opacity-20 -z-[1] blur-[75px];
+            }
+
+            @screen lg {
+                @apply items-start gap-4;
+            }
+
+            p {
+                @apply text-white font-semibold text-lg lg:text-2xl;
+            }
+
+            h1 {
+                @apply text-secondary font-bold text-4xl lg:text-5xl 2xl:text-[3.5rem];
+            }
+
+            h2 {
+                @apply w-full flex items-center text-secondary text-xl font-bold max-lg:max-w-[18rem];
+
+                @screen lg {
+                    @apply w-fit text-2xl;
+                }
+
+                .text-animation {
+                    @apply w-0 whitespace-nowrap overflow-hidden border-r-2 border-secondary;
+                    animation: typing 5.5s steps(21) infinite,
+                        blinking .85s infinite alternate;
+                    animation-delay: 1.25s, 0s;
+
+                    @keyframes typing {
+                        0% {
+                            @apply w-0;
+                        }
+
+                        30%,
+                        65% {
+                            @apply w-full pr-1;
+                        }
+
+                        87%,
+                        100% {
+                            @apply w-0;
+                        }
+                    }
+
+                    @keyframes blinking {
+                        50% {
+                            @apply border-transparent;
+                        }
+                    }
+                }
+            }
+
+            .resume-btn {
+                @apply bg-white relative flex items-center gap-2 px-4 py-[.675rem] my-2 rounded-md text-secondary font-semibold shadow-sm overflow-hidden duration-300 z-[2];
+
                 &::before {
+                    @apply content-[""] absolute w-0 h-full top-0 left-0 bg-gradient-to-r from-[#00BFA6] to-[#63e6d2] -z-[1] duration-500;
+                }
+
+                &:hover {
+                    @apply text-white;
+                    box-shadow: 0 0 20px #00bfa6,
+                        0 0 20px #00bfa6;
+
+                    &::before {
+                        @apply w-full;
+                    }
+
+                    span {
+                        @apply text-white;
+                    }
+                }
+
+                @screen md {
+                    @apply my-5 py-3;
+                }
+
+                span {
+                    @apply text-[1.75rem] text-secondary duration-300;
+                }
+            }
+
+            .social-icons {
+                @apply flex gap-4;
+
+                span {
+                    @apply block text-[2.25rem] text-secondary duration-300;
+                }
+            }
+        }
+
+        .img-content {
+            @apply relative;
+
+            &::before {
+                @apply content-[""] absolute top-[15%] left-[15%] w-[70%] h-[70%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] opacity-40 -z-[1] blur-[75px];
+            }
+
+            .img-container {
+                @apply max-w-[30rem] hidden lg:block xl:max-w-[34rem] 2xl:max-w-[39rem];
+
+                img {
                     @apply w-full;
                 }
             }
-        }
-    }
-
-    .img-content {
-        @apply relative;
-
-        &::before {
-            @apply content-[""] absolute top-[15%] left-[15%] w-[70%] h-[70%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] opacity-40 z-[-1] blur-[75px];
         }
     }
 }
