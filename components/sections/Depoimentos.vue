@@ -1,40 +1,40 @@
 <template>
     <section id="depoimentos">
         <div class="wrapper">
-            <!-- <div class="px-4"> -->
-            <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title lg:mb-14">
-                Depoimentos
-            </h2>
-            <div v-motion-fade-visible-once :duration="700" :delay="500" class="testimonials">
-                <client-only>
-                    <carousel :items-to-show="1" :breakpoints="breakpoints" wrapAround pauseAutoplayOnHover
-                        :autoplay="7500">
-                        <slide v-for="(testimonial, i) in testimonials" :key="i">
-                            <div class="testimonial-container">
-                                <div class="testimonial-person">
-                                    <NuxtImg :src="`/depoimentos/${testimonial.photo}.webp`" :alt="testimonial.name"
-                                        loading="lazy" densities="x1" sizes="250 lg:70" />
-                                    <div class="testimonial-info">
-                                        <h2>{{ testimonial.name }}</h2>
-                                        <h3>{{ testimonial.company }}</h3>
-                                        <p>{{ testimonial.role }}</p>
+            <div class="px-2">
+                <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title lg:mb-14">
+                    Depoimentos
+                </h2>
+                <div v-motion-fade-visible-once :duration="700" :delay="500" class="testimonials">
+                    <client-only>
+                        <carousel :items-to-show="1" :breakpoints="breakpoints" wrapAround pauseAutoplayOnHover
+                            :autoplay="7500">
+                            <slide v-for="(testimonial, i) in testimonials" :key="i">
+                                <div class="testimonial-container">
+                                    <div class="testimonial-person">
+                                        <NuxtImg :src="`/depoimentos/${testimonial.photo}.webp`" :alt="testimonial.name"
+                                            loading="lazy" densities="x1" sizes="250 lg:70" />
+                                        <div class="testimonial-info">
+                                            <h2>{{ testimonial.name }}</h2>
+                                            <h3>{{ testimonial.company }}</h3>
+                                            <p>{{ testimonial.role }}</p>
+                                        </div>
+                                    </div>
+                                    <IconQuote />
+                                    <p>{{ testimonial.description }}</p>
+                                    <div class="ratings">
+                                        <IconRating v-for="i in 5" :key="i" />
                                     </div>
                                 </div>
-                                <IconQuote />
-                                <p>{{ testimonial.description }}</p>
-                                <div class="ratings">
-                                    <IconRating v-for="i in 5" :key="i" />
-                                </div>
-                            </div>
-                        </slide>
+                            </slide>
 
-                        <template #addons>
-                            <pagination />
-                        </template>
-                    </carousel>
-                </client-only>
+                            <template #addons>
+                                <pagination />
+                            </template>
+                        </carousel>
+                    </client-only>
+                </div>
             </div>
-            <!-- </div> -->
         </div>
     </section>
 </template>
