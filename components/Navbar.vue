@@ -21,11 +21,12 @@
     </header>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const isOpen = ref(false);
 const hasScrolled = ref(false);
+const currentSection = ref("");
 
-const navbarRef = ref(null);
+const navbarRef = ref<HTMLElement | null>(null);
 
 const items = [
     'início',
@@ -41,16 +42,14 @@ const handleScroll = () => {
     hasScrolled.value = window.scrollY > 0;
 };
 
-const handleClickOutside = (event) => {
-    if (navbarRef.value && !navbarRef.value.contains(event.target)) {
+const handleClickOutside = (event: TouchEvent | MouseEvent) => {
+    if (navbarRef.value && !navbarRef.value.contains(event.target as Node)) {
         isOpen.value = false;
     };
 };
 
-const currentSection = ref('');
-
 onMounted(() => {
-    const sections = document.querySelectorAll('section[id]');
+    const sections = document.querySelectorAll("section[id]");
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -65,7 +64,7 @@ onMounted(() => {
     sections.forEach((section) => observer.observe(section));
 
     window.addEventListener("touchstart", handleClickOutside);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     handleScroll();
 });
 </script>

@@ -59,16 +59,23 @@
     </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
+import type { ContactBody, EmailResponse } from '@/interfaces/ContactType';
+
 const modal = ref(false);
 
-const form = ref({
+const form = ref<ContactBody>({
     name: "",
     email: "",
     message: "",
 });
 
-const result = ref({});
+const result = ref<EmailResponse>({
+    status: "",
+    message: "",
+    description: "",
+});
+
 const loading = ref(false);
 
 const submitForm = async () => {

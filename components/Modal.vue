@@ -18,8 +18,8 @@
     </Teleport>
 </template>
 
-<script setup>
-const props = defineProps({
+<script setup lang="ts">
+const { isVisible } = defineProps({
     isVisible: {
         type: Boolean,
         default: false

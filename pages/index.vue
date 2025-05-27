@@ -10,7 +10,7 @@
     </main>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import Inicio from '@/components/sections/Inicio.vue';
 import Sobre from '@/components/sections/Sobre.vue';
 import Habilidades from '@/components/sections/Habilidades.vue';

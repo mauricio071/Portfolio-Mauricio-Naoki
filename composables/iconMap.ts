@@ -1,3 +1,5 @@
+import type { Component } from "vue";
+
 import IconHtml from "@/components/icon/skills-logo/Html.vue";
 import IconCss from "@/components/icon/skills-logo/Css.vue";
 import IconJavascript from "@/components/icon/skills-logo/Javascript.vue";
@@ -26,7 +28,7 @@ import IconCSharp from "@/components/icon/skills-logo/CSharp.vue";
 import IconDotNet from "@/components/icon/skills-logo/DotNet.vue";
 import IconLaravel from "@/components/icon/skills-logo/Laravel.vue";
 
-export const iconMap = {
+export const iconMap: Record<string, Component> = {
   HTML: IconHtml,
   CSS: IconCss,
   JavaScript: IconJavascript,

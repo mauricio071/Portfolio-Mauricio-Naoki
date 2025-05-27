@@ -1,4 +1,6 @@
-export const projects = [
+import type { ProjectType } from "~/interfaces/ProjectsType";
+
+export const projects: ProjectType[] = [
   {
     name: "Sixchains Digital House",
     type: "Website",
@@ -276,7 +278,6 @@ export const projects = [
     projectVideo: "",
     width: "900",
     description: "",
-    tagsIcon: [],
     technologies: [],
     url: "",
     repository: "",

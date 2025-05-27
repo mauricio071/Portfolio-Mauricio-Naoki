@@ -33,18 +33,19 @@
                 </a>
             </div>
         </div>
-        <Modal :isVisible="modal.isOpen" @close="closeModal">
+        <Modal :isVisible="modal.isOpen" @close="modal.isOpen = false">
             <ModalProjects :modal="modal" />
         </Modal>
         <WaveSvgWaveBottom />
     </section>
 </template>
 
-<script setup>
-import { projects } from '@/constants/projetos';
+<script setup lang="ts">
+import { projects } from '@/constants/projects';
+import type { ProjectModalType, ProjectType } from '@/interfaces/ProjectsType';
 import ModalProjects from '../ModalProjects.vue';
 
-const visibleProjects = shallowRef([]);
+const visibleProjects = shallowRef<ProjectType[]>([]);
 const projectsLimit = ref(9);
 
 const loadProjects = () => {
@@ -55,7 +56,7 @@ watchEffect(() => {
     visibleProjects.value = projects.slice(0, projectsLimit.value);
 });
 
-const modal = ref({
+const modal = ref<ProjectModalType>({
     isOpen: false,
     projectName: '',
     projectType: '',
@@ -68,7 +69,7 @@ const modal = ref({
     projectRepository: ''
 });
 
-const openModal = (project) => {
+const openModal = (project: ProjectType) => {
     if (project.name === 'Em breve!') { return }
 
     clearModal();
@@ -85,10 +86,6 @@ const openModal = (project) => {
         projectUrl: project.url,
         projectRepository: project.repository
     });
-};
-
-const closeModal = () => {
-    modal.value.isOpen = false;
 };
 
 const clearModal = () => {

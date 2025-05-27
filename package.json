@@ -23,7 +23,10 @@
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.2.0",
-    "@nuxtjs/tailwindcss": "^6.12.2"
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "@types/node": "^22.15.21",
+    "@types/nodemailer": "^6.4.17",
+    "typescript": "^5.8.3"
   },
   "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }

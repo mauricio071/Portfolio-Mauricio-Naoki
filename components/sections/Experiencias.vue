@@ -28,7 +28,7 @@
     </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { experiences } from '@/constants/empresas';
 import { iconMap } from '@/composables/iconMap';
 </script>

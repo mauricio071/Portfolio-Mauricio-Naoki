@@ -1,7 +1,8 @@
 import nodemailer from "nodemailer";
+import type { ContactBody } from "@/interfaces/ContactType";
 
 export default defineEventHandler(async (event) => {
-  const body = await readBody(event);
+  const body = await readBody<ContactBody>(event);
 
   const transporter = nodemailer.createTransport({
     service: "gmail",

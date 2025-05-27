@@ -40,15 +40,17 @@
     </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import VanillaTilt from 'vanilla-tilt';
 
-const tiltRef = ref(null);
+const tiltRef = ref<HTMLElement | null>(null);
 
 onMounted(() => {
-    VanillaTilt.init(tiltRef.value, {
-        max: 5,
-    });
+    if (tiltRef.value) {
+        VanillaTilt.init(tiltRef.value, {
+            max: 5,
+        });
+    }
 });
 </script>
 

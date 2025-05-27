@@ -52,10 +52,10 @@
     </div>
 </template>
 
-<script setup>
-const { modal } = defineProps({
-    modal: Object,
-});
+<script setup lang="ts">
+import type { ProjectModalType } from '@/interfaces/ProjectsType';
+
+const { modal } = defineProps<{ modal: ProjectModalType }>();
 
 const isIframeLoaded = ref(false);
 </script>

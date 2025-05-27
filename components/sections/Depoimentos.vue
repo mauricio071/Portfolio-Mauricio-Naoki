@@ -39,13 +39,14 @@
     </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { testimonials } from '@/constants/depoimentos';
+import type { Breakpoints } from 'vue3-carousel';
 
-const breakpoints = {
+const breakpoints: Breakpoints = {
     1024: {
         itemsToShow: 2,
-        snapAlign: 'center-[odd|even]',
+        snapAlign: 'center-even',
     },
 };
 </script>

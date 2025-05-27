@@ -1,4 +1,9 @@
-export const technologies = [
+export interface Technology {
+  name: string;
+  color: string;
+}
+
+export const technologies: Technology[] = [
   { name: "HTML", color: "#e34f26" },
   { name: "CSS", color: "#264de4" },
   { name: "JavaScript", color: "#f0db4f" },

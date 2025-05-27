@@ -33,14 +33,14 @@
     </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { technologies } from '@/constants/tecnologias';
 import VanillaTilt from 'vanilla-tilt';
 
 onMounted(() => {
-    const elements = document.querySelectorAll(".icon-card");
+    const elements = document.querySelectorAll<HTMLElement>(".icon-card");
 
-    VanillaTilt.init(elements, {
+    VanillaTilt.init([...elements], {
         max: 36,
     });
 });

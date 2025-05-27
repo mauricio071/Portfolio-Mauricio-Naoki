@@ -9,7 +9,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const visible = ref(false);
 
 const handleScroll = () => {
