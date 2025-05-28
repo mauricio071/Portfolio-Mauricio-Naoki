@@ -143,11 +143,7 @@ onMounted(() => {
             }
 
             h2 {
-                @apply w-full flex items-center text-secondary text-xl font-bold max-lg:max-w-[18rem];
-
-                @screen lg {
-                    @apply w-fit text-2xl;
-                }
+                @apply w-full flex items-center text-secondary text-xl font-bold lg:text-2xl;
 
                 .text-animation {
                     @apply w-0 whitespace-nowrap overflow-hidden border-r-2 border-secondary;

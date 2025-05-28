@@ -130,7 +130,7 @@ const clearModal = () => {
                 }
 
                 .project-description {
-                    @apply bg-[#000000B3] absolute w-full h-full top-0 flex flex-col justify-center items-center p-8 opacity-0 !text-white duration-300 gap-3 sm:gap-5;
+                    @apply bg-[#000000B3] absolute w-full h-full top-0 flex flex-col justify-center items-center p-8 opacity-0 !text-white duration-300 gap-5;
 
                     h2 {
                         @apply text-white font-bold text-center text-xl lg:text-2xl;
@@ -144,7 +144,7 @@ const clearModal = () => {
                         @apply flex items-center gap-3;
 
                         .logo {
-                            @apply h-6 w-6;
+                            @apply h-7 w-7;
 
                             @screen sm {
                                 @apply h-8 w-8;

@@ -21,6 +21,10 @@ html {
 
 section:not(.carousel) {
   @apply py-[4.75rem];
+
+  &:last-of-type {
+    @apply max-xl:pb-14;
+  }
 }
 
 section:nth-child(2) {
