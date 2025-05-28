@@ -1,0 +1,158 @@
+{
+  "navbar": {
+    "home": "início",
+    "about": "sobre",
+    "skills": "habilidades",
+    "experience": "experiencias",
+    "projects": "projetos",
+    "testimonials": "depoimentos",
+    "contact": "contato"
+  },
+  "home": {
+    "presentation": "Olá, o meu nome é",
+    "role": "Desenvolvedor Front-end",
+    "resume": "Baixar currículo"
+  },
+  "about": {
+    "title": "Sobre mim",
+    "description1": "Sou um desenvolvedor front-end focado em criar experiências digitais envolventes e funcionais, com formação em Ciência da Computação pela Universidade Cidade de São Paulo, concluída em dezembro de 2022. Nos últimos dois anos, trabalhei em uma digital house, desenvolvendo sistemas e sites personalizados para diversos clientes. Cada novo projeto despertava minha curiosidade e motivação, levando a constantes pesquisas e aprendizados.",
+    "description2": "Tenho maior aptidão para a área de front-end, com principais habilidades em Vue.js, Nuxt.js, React.js, JavaScript e TypeScript. Estou sempre em busca de projetos desafiadores que me permitam crescer profissionalmente, explorar novas tecnologias e contribuir para inovações.",
+    "findMeTitle": "Onde me encontrar"
+  },
+  "skills": {
+    "title": "Habilidades"
+  },
+  "experience": {
+    "title": "Experiência",
+    "techsTitle": "Tecnologias",
+    "sixchains": {
+      "role": "Desenvolvedor Front-end",
+      "date": "Jul 2022 - Mai 2024",
+      "description": "Na Sixchains, fui responsável pelo desenvolvimento Front-End, atuando no desenvolvimento e na manutenção de sites e sistemas, colaborando com a equipe de back-end para integrar as aplicações às APIs. Além disso, participei de diversos projetos do grupo Euro 17, incluindo sites e sistemas voltados para a venda de imóveis e plataformas de securitização."
+    },
+    "upwards": {
+      "role": "Desenvolvedor Full-stack",
+      "date": "Nov 2021 - Jun 2022",
+      "description": "Na Upwards, atuei como desenvolvedor Full-Stack, focado no sistema interno da empresa. Utilizei Vue.js para o desenvolvimento do front-end e Laravel para o back-end. Além disso, implementei testes automatizados para garantir a qualidade e a estabilidade do sistema."
+    },
+    "garnon": {
+      "role": "Desenvolvedor Full-stack",
+      "date": "Jun 2021 - Out 2021",
+      "description": "Na Garnon, trabalhei na manutenção de um sistema da Angola, usando Vue.js para desenvolver a interface do usuário e Laravel para gerenciar a lógica de back-end."
+    }
+  },
+  "projects": {
+    "title": "Projetos",
+    "moreProjects": "Mais projetos",
+    "moreGitHub": "Confira mais no GitHub",
+    "soon": "Em breve!",
+    "aboutProject": "Sobre o projeto",
+    "projectDetail": "Detalhes do projeto",
+    "technologies": "Tecnologias",
+    "installer": "Instalador",
+    "projectOnline": "Projeto Online",
+    "repository": "Repositório",
+    "sixchains": {
+      "type": "Website",
+      "description": "O site foi desenvolvido para a Sixchains Digital House, onde fui responsável pelo desenvolvimento front-end. O foco principal foi garantir uma implementação eficiente e funcional, além de aplicar técnicas de SEO para melhorar o desempenho nas buscas do Google. O site inclui descrições dos principais serviços oferecidos pela empresa e uma seção destacando projetos realizados, reforçando a confiabilidade e qualidade. O design foi baseado em pesquisas feitas pela equipe, garantindo uma experiência intuitiva e compatível com diferentes dispositivos."
+    },
+    "mos": {
+      "type": "Website e Sistema",
+      "description": "Este site e sistema foram desenvolvidos para a MOS Consultoria, integrando funcionalidades essenciais, como uma agenda para gerenciamento de compromissos e uma plataforma de comentários entre sindicatos. Além disso, foram implementadas notificações em tempo real via WebSocket, garantindo que os usuários recebam atualizações imediatas."
+    },
+    "productsStore": {
+      "type": "Website",
+      "description": "A aplicação foi desenvolvida com Nuxt.js, inspirada na experiência do AliExpress. Ela integra uma API fictícia para listar e exibir produtos, com o estado do carrinho gerenciado pelo Pinia e salvo no navegador. O backend foi construído com Nitro e é responsável por gerar QR Codes para pagamentos via Pix. Além disso, o Firebase foi utilizado para autenticação de usuários, controle de sessões e também para armazenar dados, como o histórico de pedidos e os itens favoritados pelos usuários."
+    },
+    "controlAi": {
+      "type": "Website e Sistema",
+      "description": "O ControlAÍ é um sistema para organização das finanças pessoais, desenvolvido em React com foco em praticidade e usabilidade. Ele permite acompanhar de forma simples como o dinheiro está sendo gasto, com visualizações claras por meio de gráficos intuitivos. Além disso, conta com um chatbot integrado com inteligência artificial (Gemini) para dar sugestões e ajudar no controle financeiro. Toda a aplicação foi testada com Cypress, garantindo que os principais fluxos estejam funcionando corretamente."
+    },
+    "cineLib": {
+      "type": "Website",
+      "description": "O CineLib é uma aplicação que oferece uma plataforma completa para visualizar informações detalhadas sobre filmes, como sinopse, orçamento, elenco e outros detalhes. O projeto lista os filmes mais populares do momento e disponibiliza um sistema de busca por título ou categorias, permitindo acesso a um extenso catálogo de filmes. Os usuários também podem favoritar filmes, que são armazenados localmente, permitindo a criação de uma lista personalizada. Além disso, com o suporte da biblioteca i18n, o site pode ser traduzido para inglês e português, ampliando sua acessibilidade para diferentes públicos."
+    },
+    "cleanTube": {
+      "type": "Sistema",
+      "description": "CleanTube é uma aplicação para gerenciar vídeos do YouTube, com autenticação via Google OAuth configurada pelo Google Cloud, garantindo que apenas usuários autorizados possam adicionar, editar ou excluir vídeos. O middleware do Nuxt.js protege as páginas contra acessos não autorizados. Os layouts foram criados com Nuxt UI para agilizar o desenvolvimento, e o backend utiliza Nitro, integrado ao Nuxt 3, para rotas e funções server-side. O banco de dados é gerenciado com PostgreSQL, e os vídeos favoritos são armazenados localmente no navegador. A aplicação exibe vídeos sem anúncios e oferece suporte a i18n, permitindo que o idioma dos títulos das seções seja alterado conforme a preferência do usuário."
+    },
+    "projectCosts": {
+      "type": "Sistema",
+      "description": "O Project Costs é um sistema desenvolvido com React.js para ajudar na gestão de orçamentos de projetos. O usuário pode criar projetos e adicionar múltiplos serviços, cada um com detalhes sobre custos específicos. Se o custo total dos serviços ultrapassar o orçamento estabelecido, o sistema alerta o usuário. Além disso, é possível editar e excluir tanto os projetos quanto os serviços conforme necessário."
+    },
+    "tarefasPinia": {
+      "type": "Website",
+      "description": "Este projeto, desenvolvido com Vue 3, é uma aplicação de lista de tarefas que facilita a organização dos afazeres diários. Os usuários podem classificar cada tarefa como 'a fazer', 'em progresso' ou 'completada'. O estado da aplicação é gerenciado pelo Pinia, garantindo que as informações persistam no navegador, mesmo após a atualização da página ou fechamento."
+    },
+    "sistemaAcademia": {
+      "type": "Sistema",
+      "description": "Esta aplicação em C# e .NET Framework, utilizando SQLite, gerencia dados de uma academia de forma eficiente. Com ela, é possível cadastrar, editar e excluir alunos, além de imprimir carteirinhas. Também oferece gestão de usuários com controle de acesso e permissões para administradores. A aplicação permite visualizar horários de atividades e gerar versões em PDF, consultar e gerenciar informações dos professores, além de administrar as turmas, adicionando ou removendo membros e verificando vagas disponíveis."
+    },
+    "makeYourBurger": {
+      "type": "Sistema",
+      "description": "Esta aplicação, desenvolvida com Vue.js no front-end e Node.js no back-end, permite que os usuários montem hambúrgueres personalizados e gerenciem seus pedidos. Utilizando a biblioteca Vuex para gerenciamento de estado, os usuários podem editar o status e excluir os pedidos."
+    },
+    "manhattanCoffee": {
+      "type": "Site",
+      "description": "Landing page desenvolvida para a Manhattan Coffee House, projetada para refletir a essência de uma cafeteria premium. Com um design sofisticado e textos inspiradores, convida os visitantes a explorarem o universo exclusivo da marca."
+    },
+    "itSolutions": {
+      "type": "Site",
+      "description": "Landing page desenvolvida para a IT Solutions, focada em destacar serviços e soluções tecnológicas que ajudam empresas e profissionais a otimizar processos, alcançar novos patamares de desempenho e se manterem competitivos no mercado."
+    },
+    "appChamada": {
+      "type": "Aplicativo",
+      "description": "Esta é uma aplicação mobile desenvolvida para controle de presença em aulas. Após o login com RA e senha, o aplicativo exibe informações do aluno, como nome, RA e localização atual. A partir desses dados, a aplicação verifica se há uma aula no horário e local corretos e, caso estiver, permite o registro da presença."
+    },
+    "jogoForca": {
+      "type": "Website",
+      "description": "Neste projeto, foi desenvolvido um jogo da forca usando o Vue.js, com uma interface moderna e responsiva para poder jogar diretamente no navegador."
+    },
+    "editorTexto": {
+      "type": "Sistema",
+      "description": "Esta aplicação, desenvolvida em C# e .NET Framework, permite criar, editar, salvar e imprimir documentos de texto de maneira prática. Com uma interface simples e intuitiva, é fácil criar novos arquivos, fazer edições rápidas e salvar no formato desejado, além de imprimir diretamente da aplicação."
+    },
+    "leitor": {
+      "type": "Sistema",
+      "description": "Esta aplicação, desenvolvida em Java, oferece funcionalidades para o gerenciamento de usuários, como adição, edição, exclusão e listagem. As informações são armazenadas em um banco de dados SQL para a persistência dos dados."
+    },
+    "breve": {
+      "type": "",
+      "description": ""
+    }
+  },
+  "testimonials": {
+    "title": "Depoimentos",
+    "fernando": {
+      "role": "Gerente de projetos",
+      "description": "É com grande satisfação que recomendo Maurício como desenvolvedor front-end. Como gerente do Maurício na Sixchains Digital House, tive o privilégio de supervisionar seu trabalho e ver seu crescimento profissional em primeira mão. Além de suas habilidades técnicas, Maurício é uma pessoa colaborativa e comunicativa, contribuindo com ideias e soluções de forma construtiva."
+    },
+    "samuel": {
+      "role": "Estrategista de mídias sociais",
+      "description": "Atuamos em diversos projetos, Maurício é um profissional dedicado e apaixonado pelo seu trabalho. Sua atenção aos detalhes e sua busca pela excelência são evidentes em tudo o que faz. Ele não apenas entrega projetos de alta qualidade, mas também se esforça para garantir que cada site desenvolvido tenha um desempenho otimizado, proporcionando uma experiência excepcional ao usuário."
+    },
+    "johnny": {
+      "role": "Supervisor de marketing",
+      "description": "Recomendo Maurício com entusiasmo pelo seu excepcional desempenho no setor de marketing durante nosso trabalho conjunto. Posso afirmar sem dúvidas que ele é um dos profissionais mais detalhistas com quem já trabalhei, sempre comprometido com cada aspecto dos projetos, buscando incessantemente a entrega de produtos refinados e de alta qualidade."
+    },
+    "amanda": {
+      "role": "Designer",
+      "description": "Maurício é um excelente profissional com um futuro enorme para explorar! Extremamente dedicado ao trabalho e ao seu crescimento pessoal e técnico, sempre disposto a aprender, ensinar e ajudar todos que precisam de ajuda em assuntos em que domina. Foi um grande prazer trabalhar ao lado e acompanhar seu crescimento ao longo desses dois anos na Sixchains em vários projetos."
+    }
+  },
+  "contact": {
+    "title": "Contato",
+    "letsTalk": "Vamos conversar!",
+    "text": "Tem uma ideia ou precisa de ajuda com seu projeto? Estou sempre aberto a novas oportunidades e colaborações. Preencha o formulário ou clique nos links abaixo e vamos conversar!",
+    "namePlaceholder": "Nome",
+    "messagePlaceholder": "Mensagem",
+    "send": "Enviar",
+    "successMessage": "Email enviado com sucesso!",
+    "successDescription1": "Sua mensagem foi enviada e em breve estarei respondendo.",
+    "successDescription2": "Obrigado pelo contato!",
+    "errorMessage": "Erro ao enviar a mensagem!",
+    "errorDescription1": "Houve um problema ao tentar enviar a mensagem.",
+    "errorDescription2": "Tente novamente mais tarde!",
+    "backButton": "Voltar"
+  }
+}

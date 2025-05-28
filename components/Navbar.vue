@@ -11,10 +11,14 @@
             <Icon @click="isOpen = !isOpen" name="material-symbols:menu-rounded" />
             <ul :class="{ 'hidden': !isOpen, 'flex': isOpen }">
                 <li v-for="(item, i) in items" :key="i">
-                    <a @click="isOpen = false" :href="`#${item}`" v-motion-fade-visible :delay="i * 100"
-                        :class="{ 'active': currentSection === item }">
-                        {{ item }}
+                    <a @click="isOpen = false" :href="`#${item.key}`" v-motion-fade-visible :delay="i * 100"
+                        :class="{ 'active': currentSection === item.key }">
+                        {{ item.value }}
                     </a>
+                </li>
+                <li @click="toggleLocale" v-motion-fade-visible :delay="700" class="language-flag">
+                    <IconBrasilFlag v-if="locale === 'pt-BR'" />
+                    <IconUsFlag v-if="locale === 'en-US'" />
                 </li>
             </ul>
         </nav>
@@ -22,21 +26,22 @@
 </template>
 
 <script setup lang="ts">
+const { t, locale, setLocale } = useI18n();
+
 const isOpen = ref(false);
 const hasScrolled = ref(false);
 const currentSection = ref("");
 
 const navbarRef = ref<HTMLElement | null>(null);
 
-const items = [
-    'início',
-    'sobre',
-    'habilidades',
-    'experiencias',
-    'projetos',
-    'depoimentos',
-    'contato'
-];
+const navKeys = ['home', 'about', 'skills', 'experience', 'projects', 'testimonials', 'contact'];
+
+const items = computed((() => navKeys.map(key => (
+    {
+        key,
+        value: t(`navbar.${key}`)
+    }
+))));
 
 const handleScroll = () => {
     hasScrolled.value = window.scrollY > 0;
@@ -46,6 +51,11 @@ const handleClickOutside = (event: TouchEvent | MouseEvent) => {
     if (navbarRef.value && !navbarRef.value.contains(event.target as Node)) {
         isOpen.value = false;
     };
+};
+
+function toggleLocale() {
+    const language = locale.value === 'pt-BR' ? 'en-US' : 'pt-BR';
+    setLocale(language);
 };
 
 onMounted(() => {
@@ -71,7 +81,7 @@ onMounted(() => {
 
 <style scoped>
 header {
-    @apply fixed top-0 w-full p-4 duration-300 z-[100] lg:py-3;
+    @apply fixed top-0 w-full p-4 duration-300 z-[100] lg:py-2.5;
 
     &.navbar-background {
         @apply shadow-xl;
@@ -107,17 +117,23 @@ header {
                 @apply gap-5;
             }
 
-            li a {
-                @apply relative font-bold capitalize px-1;
+            li {
+                a {
+                    @apply relative font-bold capitalize px-1;
 
-                &::after {
-                    @apply content-[""] absolute h-[3px] w-0 left-0 -bottom-[7px] rounded-2xl duration-300;
-                    background-image: linear-gradient(to right, white, rgba(255, 255, 255, 0.3));
+                    &::after {
+                        @apply content-[""] absolute h-[3px] w-0 left-0 -bottom-[7px] rounded-2xl duration-300;
+                        background-image: linear-gradient(to right, white, rgba(255, 255, 255, 0.3));
+                    }
+
+                    &:hover::after,
+                    &.active::after {
+                        @apply w-full;
+                    }
                 }
 
-                &:hover::after,
-                &.active::after {
-                    @apply w-full;
+                &.language-flag svg {
+                    @apply w-full max-w-7 duration-300 cursor-pointer hover:brightness-75;
                 }
             }
         }

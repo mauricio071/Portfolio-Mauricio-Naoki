@@ -1,5 +1,5 @@
 <template>
-    <section id="sobre">
+    <section id="about">
         <div class="wrapper">
             <div class="content">
                 <div v-motion-fade-visible-once :delay="200" class="photo-container">
@@ -12,33 +12,24 @@
                 <div v-motion-slide-visible-once-bottom :duration="700" class="text-about">
                     <div class="about-me">
                         <h2 class="section-title !mb-14 lg:!justify-start">
-                            Sobre mim
+                            {{ $t("about.title") }}
                         </h2>
                         <p class="mb-4">
-                            Sou um desenvolvedor <strong>front-end</strong> focado em criar experiências digitais
-                            envolventes e funcionais, com formação em <strong>Ciência da Computação</strong> pela
-                            <strong>Universidade Cidade de São Paulo</strong>, concluída em dezembro de 2022.
-                            Nos últimos dois anos, trabalhei em uma <strong>digital house</strong>, desenvolvendo
-                            sistemas e sites personalizados para diversos clientes. Cada novo projeto despertava
-                            minha curiosidade e motivação, levando a constantes pesquisas e aprendizados.
+                            {{ $t("about.description1") }}
                         </p>
                         <p>
-                            Tenho maior aptidão para a área de <strong>front-end</strong>, com principais habilidades em
-                            <strong>Vue.js</strong>, <strong>Nuxt.js</strong>, <strong>React.js</strong>,
-                            <strong>JavaScript</strong> e <strong>TypeScript</strong>. Estou sempre em busca de projetos
-                            desafiadores que me permitam crescer profissionalmente, explorar novas tecnologias e
-                            contribuir para inovações.
+                            {{ $t("about.description2") }}
                         </p>
                     </div>
                     <div v-motion-slide-visible-once-bottom :duration="700" :delay="300" class="find-me">
-                        <h3>Onde me encontrar</h3>
+                        <h3>{{ $t("about.findMeTitle") }}</h3>
                         <div class="contact-icons">
                             <a href="https://github.com/mauricio071" target="_blank" rel="noreferrer"
                                 aria-label="GitHub">
                                 <Icon name="mdi:github" />
                             </a>
-                            <a href="https://www.linkedin.com/in/mauricionaoki" target="_blank" rel="noreferrer"
-                                aria-label="LinkedIn">
+                            <a :href="`https://www.linkedin.com/in/mauricionaoki${locale === 'en-US' ? '/?locale=en_US' : ''}`"
+                                target="_blank" rel="noreferrer" aria-label="LinkedIn">
                                 <Icon name="mdi:linkedin" />
                             </a>
                             <a href="https://wa.me/5511942816814" target="_blank" rel="noreferrer"
@@ -55,6 +46,10 @@
         </div>
     </section>
 </template>
+
+<script setup lang="ts">
+const { locale } = useI18n();
+</script>
 
 <style scoped>
 .content {

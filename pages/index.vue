@@ -1,21 +1,21 @@
 <template>
     <main>
-        <Inicio />
-        <Sobre />
-        <Habilidades />
-        <Experiencias />
-        <Projetos />
-        <Depoimentos />
-        <Contato />
+        <Home />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Testimonials />
+        <Contact />
     </main>
 </template>
 
 <script setup lang="ts">
-import Inicio from '@/components/sections/Inicio.vue';
-import Sobre from '@/components/sections/Sobre.vue';
-import Habilidades from '@/components/sections/Habilidades.vue';
-import Experiencias from '@/components/sections/Experiencias.vue';
-import Projetos from '@/components/sections/Projetos.vue';
-import Depoimentos from '@/components/sections/Depoimentos.vue';
-import Contato from '@/components/sections/Contato.vue';
+import Home from '@/components/sections/Home.vue';
+import About from '@/components/sections/About.vue';
+import Skills from '@/components/sections/Skills.vue';
+import Experience from '@/components/sections/Experience.vue';
+import Projects from '@/components/sections/Projects.vue';
+import Testimonials from '@/components/sections/Testimonials.vue';
+import Contact from '@/components/sections/Contact.vue';
 </script>

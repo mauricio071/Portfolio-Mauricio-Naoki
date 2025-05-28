@@ -1,27 +1,28 @@
 <template>
-    <section id="experiencias">
+    <section id="experience">
         <div class="wrapper">
             <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
-                Experiências
+                {{ $t(`experience.title`) }}
             </h2>
             <div class="timeline">
-                <div v-for="(experience, i) in experiences" :key="i" class="content">
+                <div v-for="(company, i) in experience" :key="i" class="content">
                     <div v-motion-pop-visible-once class="timeline-icon">
                         <Icon name="mdi:briefcase" />
                     </div>
                     <div v-motion-pop-visible-once :duration="700" class="timeline-card">
-                        <h1>{{ experience.name }}</h1>
-                        <h2>{{ experience.role }}</h2>
-                        <p>{{ experience.description }}</p>
-                        <h3>Tecnologias:</h3>
+                        <h1>{{ company.name }}</h1>
+                        <h2>{{ $t(`experience.${company.id}.role`) }}</h2>
+                        <p>{{ $t(`experience.${company.id}.description`) }}</p>
+                        <h3>{{ $t(`experience.techsTitle`) }}:</h3>
                         <div class="technologies">
-                            <component v-for="(technology, i) in experience.technologies" :is="iconMap[technology]"
+                            <component v-for="(technology, i) in company.technologies" :is="iconMap[technology]"
                                 :key="i" class="logo" />
                         </div>
-                        <span class="date">{{ experience.date }}</span>
+                        <span class="date">{{ $t(`experience.${company.id}.date`) }}</span>
                         <span class="content-arrow"></span>
                     </div>
-                    <span v-motion-pop-visible-once class="company-date">{{ experience.date }}</span>
+                    <span v-motion-pop-visible-once class="company-date">{{ $t(`experience.${company.id}.date`)
+                    }}</span>
                 </div>
             </div>
         </div>
@@ -29,7 +30,7 @@
 </template>
 
 <script setup lang="ts">
-import { experiences } from '@/constants/empresas';
+import { experience } from '@/constants/experience';
 import { iconMap } from '@/composables/iconMap';
 </script>
 
@@ -38,7 +39,7 @@ import { iconMap } from '@/composables/iconMap';
     @apply relative;
 
     &::after {
-        @apply content-[""] absolute w-[4px] h-full top-0 left-[12px] -ml-[3px] z-[1] lg:left-[8px] xl:left-[50%];
+        @apply content-[""] absolute w-[4px] h-full top-0 left-[12px] -ml-[3px] z-[1] sm:left-0 md:left-[10px] lg:left-[36px] xl:left-[50%];
         background-image: -webkit-linear-gradient(top,
                 #00bfa6,
                 rgba(0, 191, 165, 0.7) 80%,
@@ -51,27 +52,55 @@ import { iconMap } from '@/composables/iconMap';
         &:nth-of-type(odd) {
             @apply left-0 pl-[55px] pr-0;
 
-            @screen xl {
-                @apply pl-0 pr-[55px];
+            @screen md {
+                @apply pl-[75px];
             }
 
-            @screen 2xl {
-                @apply pr-[73px];
+            @screen lg {
+                @apply pl-[95px] pr-[25px];
+            }
+
+            @screen xl {
+                @apply pl-0 pr-[75px];
             }
         }
 
         &:nth-of-type(even) {
-            @apply left-0 pr-0 pl-[55px] xl:left-[50%] 2xl:pl-[73px];
+            @apply left-0 pl-[55px] pr-0;
+
+            @screen md {
+                @apply pl-[75px];
+            }
+
+            @screen lg {
+                @apply pl-[95px] pr-[25px];
+            }
+
+            @screen xl {
+                @apply pl-[75px] pr-0 left-1/2;
+            }
         }
 
         .timeline-icon {
-            @apply absolute flex justify-center items-center w-12 h-12 top-[32px] right-[-31px] text-white text-2xl rounded-[50%] z-[10];
+            @apply absolute flex justify-center items-center w-12 h-12 top-[32px] -right-[31px] text-white text-2xl rounded-[50%] z-[10];
             background-image: -webkit-linear-gradient(top,
                     rgb(116, 226, 212),
                     #00bfa6);
 
+            @screen sm {
+                @apply w-14 h-14 !-left-[29px];
+            }
+
+            @screen md {
+                @apply w-16 h-16 !-left-[23px]
+            }
+
             @screen lg {
-                @apply w-16 h-16 !left-[-26px];
+                @apply !left-[3px];
+            }
+
+            @screen xl {
+                @apply !-left-[26px];
             }
         }
 

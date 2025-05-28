@@ -1,9 +1,9 @@
 <template>
-    <section id="projetos" class="section-background">
+    <section id="projects" class="section-background">
         <WaveSvgWaveTop />
         <div class="wrapper">
             <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
-                Projetos
+                {{ $t("projects.title") }}
             </h2>
             <div class="projects">
                 <div @click="openModal(project)" v-for="(project, i) in visibleProjects" :key="i"
@@ -13,8 +13,8 @@
                             :width="project.width" />
                     </div>
                     <div class="project-description">
-                        <h2>{{ project.name }}</h2>
-                        <h3>{{ project.type }}</h3>
+                        <h2>{{ project.name !== "Em breve!" ? project.name : $t("projects.soon") }}</h2>
+                        <h3>{{ $t(`projects.${project.id}.type`) }}</h3>
                         <div class="technologies">
                             <component v-for="(technology, i) in project.technologies" :is="iconMap[technology]"
                                 :key="i" class="logo" />
@@ -25,11 +25,11 @@
             <div class="btn-more-container">
                 <button v-if="visibleProjects.length < projects.length" @click="loadProjects"
                     v-motion-slide-visible-once-bottom :duration="500" class="btn-more-projects">
-                    Mais projetos
+                    {{ $t("projects.moreProjects") }}
                 </button>
                 <a v-else href="https://github.com/mauricio071?tab=repositories" target="_blank" rel="noreferrer"
                     aria-label="GitHub" v-motion-slide-visible-once-bottom :duration="500" class="btn-more-projects">
-                    Confira mais no GitHub
+                    {{ $t("projects.moreGitHub") }}
                 </a>
             </div>
         </div>
@@ -58,15 +58,16 @@ watchEffect(() => {
 
 const modal = ref<ProjectModalType>({
     isOpen: false,
-    projectName: '',
-    projectType: '',
-    projectImage: '',
-    projectVideo: '',
-    projectWidth: '',
-    projectDescription: '',
+    projectId: "",
+    projectName: "",
+    projectType: "",
+    projectImage: "",
+    projectVideo: "",
+    projectWidth: "",
+    projectDescription: "",
     projectTechnologies: [],
-    projectUrl: '',
-    projectRepository: ''
+    projectUrl: "",
+    projectRepository: ""
 });
 
 const openModal = (project: ProjectType) => {
@@ -76,6 +77,7 @@ const openModal = (project: ProjectType) => {
 
     Object.assign(modal.value, {
         isOpen: true,
+        projectId: project.id,
         projectName: project.name,
         projectType: project.type,
         projectImage: project.imgName,
@@ -91,15 +93,16 @@ const openModal = (project: ProjectType) => {
 const clearModal = () => {
     modal.value = {
         isOpen: false,
-        projectName: '',
-        projectType: '',
-        projectImage: '',
-        projectVideo: '',
-        projectWidth: '',
-        projectDescription: '',
+        projectId: "",
+        projectName: "",
+        projectType: "",
+        projectImage: "",
+        projectVideo: "",
+        projectWidth: "",
+        projectDescription: "",
         projectTechnologies: [],
-        projectUrl: '',
-        projectRepository: ''
+        projectUrl: "",
+        projectRepository: ""
     }
 };
 </script>
@@ -113,7 +116,7 @@ const clearModal = () => {
         @apply py-3;
 
         .projects {
-            @apply grid items-center justify-center gap-6 md:grid-cols-2 xl:grid-cols-3;
+            @apply grid items-center justify-center gap-8 md:grid-cols-2 xl:grid-cols-3;
 
             .project-card {
                 @apply relative bg-white rounded-lg shadow-2xl overflow-hidden cursor-pointer z-[2] max-w-[22rem] sm:max-w-[unset];

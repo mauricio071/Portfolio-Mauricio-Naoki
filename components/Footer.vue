@@ -5,8 +5,8 @@
                 <a href="https://github.com/mauricio071" target="_blank" rel="noreferrer" aria-label="GitHub">
                     <Icon name="mdi:github" />
                 </a>
-                <a href="https://www.linkedin.com/in/mauricionaoki" target="_blank" rel="noreferrer"
-                    aria-label="LinkedIn">
+                <a :href="`https://www.linkedin.com/in/mauricionaoki${locale === 'en-US' ? '/?locale=en_US' : ''}`"
+                    target="_blank" rel="noreferrer" aria-label="LinkedIn">
                     <Icon name="mdi:linkedin" />
                 </a>
                 <a href="https://wa.me/5511942816814" target="_blank" rel="noreferrer" aria-label="WhatsApp">
@@ -21,6 +21,7 @@
 
 <script setup lang="ts">
 const currentYear = new Date().getFullYear();
+const { locale } = useI18n();
 </script>
 
 <style scoped>

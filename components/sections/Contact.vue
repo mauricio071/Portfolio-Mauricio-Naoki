@@ -1,16 +1,13 @@
 <template>
-    <section id="contato">
+    <section id="contact">
         <div class="wrapper">
             <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
-                Contato
+                {{ $t("contact.title") }}
             </h2>
             <div v-motion-fade-visible-once :duration="1000" :delay="500" class="content">
                 <div class="contact-text">
-                    <h1>Vamos conversar!</h1>
-                    <p>
-                        Tem uma ideia ou precisa de ajuda com seu projeto? Estou sempre aberto a novas oportunidades e
-                        colaborações. Preencha o formulário ou clique nos links abaixo e vamos conversar!
-                    </p>
+                    <h1>{{ $t("contact.letsTalk") }}</h1>
+                    <p>{{ $t("contact.text") }} </p>
                     <div class="card-container">
                         <a href="https://wa.me/5511942816814" target="_blank" rel="noreferrer" aria-label="WhatsApp"
                             class="contact-card">
@@ -33,14 +30,15 @@
                 </div>
 
                 <form @submit.prevent="submitForm">
-                    <input v-model="form.name" type="text" name="name" placeholder="Nome" required />
-                    <input v-model="form.email" type="email" name="email" placeholder="E-mail" required />
-                    <textarea v-model="form.message" name="message" placeholder="Mensagem" rows="7" cols="50"
+                    <input v-model="form.name" type="text" name="name" :placeholder="$t('contact.namePlaceholder')"
                         required />
+                    <input v-model="form.email" type="email" name="email" placeholder="E-mail" required />
+                    <textarea v-model="form.message" name="message" :placeholder="$t('contact.messagePlaceholder')"
+                        rows="7" cols="50" required />
                     <button type="submit" :disabled="loading">
                         <span v-if="loading" class="loader"></span>
                         <span v-else class="btn-content">
-                            Enviar
+                            {{ $t("contact.send") }}
                             <IconSend />
                         </span>
                     </button>
@@ -48,12 +46,15 @@
             </div>
         </div>
         <Modal :isVisible="modal" @close="modal = false">
-            <div class="modal-content">
+            <div class="modal-result-content">
                 <Icon :name="result.status === 'success' ? 'mdi:check-circle-outline' : 'mdi:alert-circle-outline'"
-                    :class="result.status === 'success' ? 'text-[#155724]' : 'text-[#721c24]'" />
+                    :class="result.status === 'success' ? 'text-green-600' : 'text-red-600'" />
                 <h3>{{ result.message }}</h3>
-                <p>{{ result.description }}</p>
-                <button @click="modal = false">Voltar</button>
+                <div>
+                    <p>{{ result.description1 }}</p>
+                    <p>{{ result.description2 }}</p>
+                </div>
+                <button @click="modal = false">{{ $t("contact.backButton") }}</button>
             </div>
         </Modal>
     </section>
@@ -61,6 +62,8 @@
 
 <script setup lang="ts">
 import type { ContactBody, EmailResponse } from '@/interfaces/ContactType';
+
+const { t } = useI18n();
 
 const modal = ref(false);
 
@@ -73,7 +76,8 @@ const form = ref<ContactBody>({
 const result = ref<EmailResponse>({
     status: "",
     message: "",
-    description: "",
+    description1: "",
+    description2: "",
 });
 
 const loading = ref(false);
@@ -88,17 +92,24 @@ const submitForm = async () => {
             body: form.value
         });
 
-        result.value = response;
         modal.value = true;
 
         if (response.status === 'success') {
             result.value.status = "success";
+            result.value.message = t("contact.successMessage");
+            result.value.description1 = t("contact.successDescription1");
+            result.value.description2 = t("contact.successDescription2");
         } else {
             result.value.status = "error";
+            result.value.message = t("contact.errorMessage");
+            result.value.description1 = t("contact.errorDescription1");
+            result.value.description2 = t("contact.errorDescription2");
         }
     } catch (error) {
         result.value.status = "error";
-        result.value.message = "Algo deu errado!";
+        result.value.message = t("contact.errorMessage");
+        result.value.description1 = t("contact.errorDescription1");
+        result.value.description2 = t("contact.errorDescription2");
         modal.value = true;
     } finally {
         loading.value = false;
@@ -111,7 +122,7 @@ const submitForm = async () => {
 </script>
 
 <style scoped>
-#contato {
+#contact {
     @apply flex justify-center items-center;
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(90, 187, 172, 0.473) 100%);
 
@@ -216,8 +227,8 @@ const submitForm = async () => {
     }
 }
 
-.modal-content {
-    @apply flex flex-col gap-8 items-center justify-between lg:-mb-4;
+.modal-result-content {
+    @apply flex flex-col gap-8 items-center justify-between w-full md:min-w-[30rem] lg:-mb-4;
 
     span {
         @apply text-[8rem];

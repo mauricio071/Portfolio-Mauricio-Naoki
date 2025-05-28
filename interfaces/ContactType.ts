@@ -7,5 +7,6 @@ export interface ContactBody {
 export interface EmailResponse {
   status: string;
   message: string;
-  description: string;
+  description1: string;
+  description2: string;
 }

@@ -1,9 +1,9 @@
 <template>
-    <section id="habilidades" class="section-background">
+    <section id="skills" class="section-background">
         <WaveSvgWaveTop />
         <div class="wrapper">
             <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title">
-                Habilidades
+                {{ $t("skills.title") }}
             </h2>
             <div class="skills">
                 <div v-for="(technology, i) in technologies" :key="i" v-motion-slide-visible-once-bottom
@@ -34,7 +34,7 @@
 </template>
 
 <script setup lang="ts">
-import { technologies } from '@/constants/tecnologias';
+import { technologies } from '@/constants/technologies';
 import VanillaTilt from 'vanilla-tilt';
 
 onMounted(() => {
@@ -55,7 +55,7 @@ onMounted(() => {
         @apply py-3;
 
         .skills {
-            @apply flex flex-wrap items-center justify-center gap-6 max-w-[60rem] mx-auto;
+            @apply flex flex-wrap items-center justify-center gap-8 max-w-[60rem] mx-auto;
 
             @screen md {
                 @apply grid grid-cols-3;

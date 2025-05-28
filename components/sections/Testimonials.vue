@@ -1,9 +1,9 @@
 <template>
-    <section id="depoimentos">
+    <section id="testimonials">
         <div class="wrapper">
             <div class="px-2">
                 <h2 v-motion-slide-visible-once-bottom :duration="700" class="section-title lg:mb-14">
-                    Depoimentos
+                    {{ $t("testimonials.title") }}
                 </h2>
                 <div v-motion-fade-visible-once :duration="700" :delay="500" class="testimonials">
                     <client-only>
@@ -12,16 +12,16 @@
                             <slide v-for="(testimonial, i) in testimonials" :key="i">
                                 <div class="testimonial-container">
                                     <div class="testimonial-person">
-                                        <NuxtImg :src="`/depoimentos/${testimonial.photo}.webp`" :alt="testimonial.name"
+                                        <NuxtImg :src="`/depoimentos/${testimonial.id}.webp`" :alt="testimonial.name"
                                             loading="lazy" densities="x1" sizes="250 lg:70" />
                                         <div class="testimonial-info">
                                             <h2>{{ testimonial.name }}</h2>
                                             <h3>{{ testimonial.company }}</h3>
-                                            <p>{{ testimonial.role }}</p>
+                                            <p>{{ $t(`testimonials.${testimonial.id}.role`) }}</p>
                                         </div>
                                     </div>
                                     <IconQuote />
-                                    <p>{{ testimonial.description }}</p>
+                                    <p>{{ $t(`testimonials.${testimonial.id}.description`) }}</p>
                                     <div class="ratings">
                                         <IconRating v-for="i in 5" :key="i" />
                                     </div>
@@ -40,7 +40,7 @@
 </template>
 
 <script setup lang="ts">
-import { testimonials } from '@/constants/depoimentos';
+import { testimonials } from '@/constants/testimonials';
 import type { Breakpoints } from 'vue3-carousel';
 
 const breakpoints: Breakpoints = {
@@ -136,7 +136,7 @@ const breakpoints: Breakpoints = {
     }
 
     .carousel__pagination {
-        @apply flex items-center gap-3.5 -bottom-[1.25rem] lg:bottom-[0];
+        @apply flex items-center gap-6 -bottom-[0.85rem] lg:bottom-[0.35rem];
 
         .carousel__pagination-button {
             @apply w-3 h-3 rounded-[50%] duration-300;

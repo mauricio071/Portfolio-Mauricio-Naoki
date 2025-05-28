@@ -1,5 +1,5 @@
 <template>
-    <section id="início">
+    <section id="home">
         <div class="blur-container"></div>
         <div class="vector-background"></div>
         <div class="wrapper">
@@ -7,23 +7,23 @@
                 <IconTechnology v-motion-fade-visible-once :duration="1300" :delay="850" class="header-vector" />
             </div>
             <div v-motion-fade-visible-once :duration="1000" class="main-content">
-                <p>👋🏻 Olá, o meu nome é</p>
+                <p>👋🏻 {{ $t("home.presentation") }}</p>
                 <h1>Maurício Naoki</h1>
                 <h2>
                     <IconCode />
-                    <span class="text-animation">Desenvolvedor Front-end</span>
+                    <span class="text-animation">{{ $t("home.role") }}</span>
                 </h2>
-                <a href="/cv_mauricio_naoki.pdf" target="_blank" rel="noreferrer" aria-label="Currículo"
-                    class="resume-btn">
+                <a :href="locale === 'pt-BR' ? '/cv_mauricio_naoki.pdf' : '/mauricio_naoki_resume.pdf'" target="_blank"
+                    rel="noreferrer" aria-label="Currículo" class="resume-btn">
                     <Icon name="material-symbols:download-rounded" />
-                    Baixar currículo
+                    {{ $t("home.resume") }}
                 </a>
                 <div class="social-icons">
                     <a href="https://github.com/mauricio071" target="_blank" rel="noreferrer" aria-label="GitHub">
                         <Icon name="mdi:github" class="hover:!text-white" />
                     </a>
-                    <a href="https://www.linkedin.com/in/mauricionaoki" target="_blank" rel="noreferrer"
-                        aria-label="LinkedIn">
+                    <a :href="`https://www.linkedin.com/in/mauricionaoki${locale === 'en-US' ? '/?locale=en_US' : ''}`"
+                        target="_blank" rel="noreferrer" aria-label="LinkedIn">
                         <Icon name="mdi:linkedin" class="hover:!text-[#258dbf]" />
                     </a>
                     <a href="https://wa.me/5511942816814" target="_blank" rel="noreferrer" aria-label="WhatsApp">
@@ -45,6 +45,8 @@ import VanillaTilt from 'vanilla-tilt';
 
 const tiltRef = ref<HTMLElement | null>(null);
 
+const { locale } = useI18n();
+
 onMounted(() => {
     if (tiltRef.value) {
         VanillaTilt.init(tiltRef.value, {
@@ -55,7 +57,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
-section {
+#home {
     @apply min-h-[650px] relative flex justify-center items-center p-4 pb-0 overflow-hidden;
     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(0, 191, 165, 0.7) 100%);
 
@@ -86,20 +88,20 @@ section {
         .svg-wrapper {
             @apply absolute max-w-[14rem] top-[50%] -right-[15%] w-full h-full my-[3.5rem];
 
-            @screen md {
-                @apply right-0;
+            @screen sm {
+                @apply max-w-[18rem] -right-[6%];
             }
 
             @screen lg {
-                @apply max-w-[21rem] -top-[20%] -right-[4%];
+                @apply max-w-[23rem] -top-[27%];
             }
 
             @screen xl {
-                @apply max-w-[23rem] -top-[18%] -right-[2%];
+                @apply max-w-[27rem] -right-[2%];
             }
 
             @screen 2xl {
-                @apply max-w-[30rem] -top-[23%];
+                @apply max-w-[30rem] -top-[23.5%];
             }
 
             &::before {
@@ -137,7 +139,7 @@ section {
             }
 
             h1 {
-                @apply text-secondary font-bold text-4xl lg:text-5xl 2xl:text-[3.5rem];
+                @apply text-secondary font-bold text-4xl lg:text-5xl xl:text-[3.5rem];
             }
 
             h2 {

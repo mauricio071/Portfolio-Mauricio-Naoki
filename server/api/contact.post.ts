@@ -28,18 +28,8 @@ export default defineEventHandler(async (event) => {
   try {
     await transporter.sendMail(mailOptions);
 
-    return {
-      status: "success",
-      message: "Email enviado com sucesso!",
-      description:
-        "Sua mensagem foi enviada e em breve estarei respondendo. Obrigado pelo contato!",
-    };
+    return { status: "success" };
   } catch (error) {
-    return {
-      status: "error",
-      message: "Erro ao enviar a mensagem!",
-      description:
-        "Houve um problema ao tentar enviar a mensagem. Tente novamente mais tarde!",
-    };
+    return { status: "error" };
   }
 });

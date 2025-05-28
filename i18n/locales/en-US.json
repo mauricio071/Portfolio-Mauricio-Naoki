@@ -1,0 +1,158 @@
+{
+  "navbar": {
+    "home": "home",
+    "about": "about",
+    "skills": "skills",
+    "experience": "experience",
+    "projects": "projects",
+    "testimonials": "testimonials",
+    "contact": "contact"
+  },
+  "home": {
+    "presentation": "Hi, my name is",
+    "role": "Front-end Developer",
+    "resume": "Download resume"
+  },
+  "about": {
+    "title": "About me",
+    "description1": "I'm a front-end developer focused on creating engaging and functional digital experiences. I graduated in Computer Science from Universidade Cidade de São Paulo in December 2022. Over the past two years, I've worked at a digital house, building custom systems and websites for various clients. Each new project sparked my curiosity and motivation, leading to constant research and learning.",
+    "description2": "I'm most skilled in front-end development, with core strengths in Vue.js, Nuxt.js, React.js, JavaScript, and TypeScript. I'm always looking for challenging projects that allow me to grow professionally, explore new technologies, and contribute to innovation.",
+    "findMeTitle": "Where to find me"
+  },
+  "skills": {
+    "title": "Skills"
+  },
+  "experience": {
+    "title": "Experience",
+    "techsTitle": "Technologies",
+    "sixchains": {
+      "role": "Front-end Developer",
+      "date": "Jul 2022 – May 2024",
+      "description": "At Sixchains, I was responsible for front-end development, working on the creation and maintenance of websites and systems. I collaborated closely with the back-end team to integrate applications with APIs. I also participated in several projects for the Euro 17 group, including platforms for real estate sales and securitization."
+    },
+    "upwards": {
+      "role": "Full-stack Developer",
+      "date": "Nov 2021 – Jun 2022",
+      "description": "At Upwards, I worked as a full-stack developer focused on the company's internal system. I used Vue.js for the front-end and Laravel for the back-end. I also implemented automated tests to ensure system quality and stability."
+    },
+    "garnon": {
+      "role": "Full-stack Developer",
+      "date": "Jun 2021 – Oct 2021",
+      "description": "At Garnon, I was involved in maintaining a system used in Angola, using Vue.js for the user interface and Laravel to manage the back-end logic."
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "moreProjects": "More projects",
+    "moreGitHub": "See more on GitHub",
+    "soon": "Coming soon!",
+    "aboutProject": "About the project",
+    "projectDetail": "Project details",
+    "technologies": "Technologies",
+    "installer": "Installer",
+    "projectOnline": "Live project",
+    "repository": "Repository",
+    "sixchains": {
+      "type": "Website",
+      "description": "The website was developed for Sixchains Digital House, where I was responsible for the front-end development. The main focus was to ensure efficient and functional implementation, as well as applying SEO techniques to improve Google search performance. The site includes descriptions of the company's main services and a section showcasing completed projects, reinforcing trust and quality. The design was based on research conducted by the team, ensuring an intuitive experience compatible with different devices."
+    },
+    "mos": {
+      "type": "Website and System",
+      "description": "This website and system were developed for MOS Consultoria, integrating essential features such as a calendar for appointment management and a comment platform between unions. Additionally, real-time notifications via WebSocket were implemented to ensure users receive immediate updates."
+    },
+    "productsStore": {
+      "type": "Website",
+      "description": "This application was built with Nuxt.js, inspired by the AliExpress experience. It integrates a mock API to list and display products, with the cart state managed by Pinia and stored in the browser. The backend was built with Nitro and generates Pix QR codes for payments. Firebase was also used for user authentication, session control, and data storage such as order history and favorited items."
+    },
+    "controlAi": {
+      "type": "Website and System",
+      "description": "ControlAÍ is a system for managing personal finances, developed in React with a focus on simplicity and usability. It allows users to easily track their spending with clear visualizations through intuitive charts. It also features an AI-powered chatbot (Gemini) that gives suggestions and helps with financial control. The entire application was tested with Cypress to ensure that key flows work correctly."
+    },
+    "cineLib": {
+      "type": "Website",
+      "description": "CineLib is an application that provides a complete platform for viewing detailed movie information, such as synopsis, budget, cast, and more. The project lists the most popular movies and includes a search system by title or categories, giving access to a large movie catalog. Users can also favorite movies, which are stored locally, allowing them to build a personalized list. Additionally, with i18n support, the site can be translated into English and Portuguese, expanding its accessibility to different audiences."
+    },
+    "cleanTube": {
+      "type": "System",
+      "description": "CleanTube is an application to manage YouTube videos, with authentication via Google OAuth set up through Google Cloud, ensuring only authorized users can add, edit, or delete videos. Nuxt.js middleware protects pages against unauthorized access. Layouts were created with Nuxt UI to speed up development, and the backend uses Nitro (integrated with Nuxt 3) for routes and server-side functions. The database is managed with PostgreSQL, and favorite videos are stored locally in the browser. The app displays ad-free videos and supports i18n, allowing section titles to be translated based on user preference."
+    },
+    "projectCosts": {
+      "type": "System",
+      "description": "Project Costs is a system built with React.js to help manage project budgets. Users can create projects and add multiple services, each with specific cost details. If the total cost of services exceeds the set budget, the system alerts the user. It is also possible to edit and delete both projects and services as needed."
+    },
+    "tarefasPinia": {
+      "type": "Website",
+      "description": "This project, developed with Vue 3, is a task list application that helps organize daily to-dos. Users can categorize tasks as 'to do', 'in progress', or 'completed'. The app state is managed by Pinia, ensuring data persistence in the browser even after page reloads or closing."
+    },
+    "sistemaAcademia": {
+      "type": "System",
+      "description": "This application, built in C# and .NET Framework using SQLite, efficiently manages gym data. It allows registering, editing, and deleting students, and printing ID cards. It also includes user management with access control and permissions for administrators. The app enables viewing activity schedules, generating PDF versions, managing teacher information, and handling class rosters by adding/removing members and checking for available spots."
+    },
+    "makeYourBurger": {
+      "type": "System",
+      "description": "This application, developed with Vue.js on the frontend and Node.js on the backend, allows users to build custom burgers and manage their orders. Using the Vuex library for state management, users can update order statuses and delete orders."
+    },
+    "manhattanCoffee": {
+      "type": "Landing Page",
+      "description": "Landing page developed for Manhattan Coffee House, designed to reflect the essence of a premium coffee shop. With a sophisticated design and inspiring text, it invites visitors to explore the brand’s exclusive universe."
+    },
+    "itSolutions": {
+      "type": "Landing Page",
+      "description": "Landing page developed for IT Solutions, focused on showcasing services and technological solutions that help companies and professionals optimize processes, reach new levels of performance, and remain competitive in the market."
+    },
+    "appChamada": {
+      "type": "Mobile App",
+      "description": "This mobile application was developed for attendance control in classes. After logging in with student ID and password, the app displays student information such as name, ID, and current location. Based on this data, the app checks whether a class is scheduled at the correct time and place, and if so, allows attendance to be registered."
+    },
+    "jogoForca": {
+      "type": "Website",
+      "description": "In this project, a hangman game was developed using Vue.js, with a modern and responsive interface to play directly in the browser."
+    },
+    "editorTexto": {
+      "type": "System",
+      "description": "This application, developed in C# and .NET Framework, allows users to create, edit, save, and print text documents easily. With a simple and intuitive interface, it’s easy to create new files, make quick edits, save in the desired format, and print directly from the app."
+    },
+    "leitor": {
+      "type": "System",
+      "description": "This application, developed in Java, provides user management features such as adding, editing, deleting, and listing users. Information is stored in an SQL database to ensure data persistence."
+    },
+    "breve": {
+      "type": "",
+      "description": ""
+    }
+  },
+  "testimonials": {
+    "title": "Testimonials",
+    "fernando": {
+      "role": "Project Manager",
+      "description": "It is with great pleasure that I recommend Maurício as a front-end developer. As Maurício’s manager at Sixchains Digital House, I had the privilege of overseeing his work and witnessing his professional growth firsthand. In addition to his technical skills, Maurício is collaborative and communicative, consistently contributing ideas and solutions in a constructive way."
+    },
+    "samuel": {
+      "role": "Social Media Strategist",
+      "description": "We worked together on several projects, and Maurício is a dedicated professional who is passionate about his work. His attention to detail and pursuit of excellence are evident in everything he does. He not only delivers high-quality projects but also strives to ensure every site he builds is optimized for performance, providing an exceptional user experience."
+    },
+    "johnny": {
+      "role": "Marketing Supervisor",
+      "description": "I enthusiastically recommend Maurício for his outstanding performance in the marketing sector during our time working together. I can confidently say he is one of the most detail-oriented professionals I’ve ever worked with, always committed to every aspect of a project and constantly aiming to deliver refined, high-quality results."
+    },
+    "amanda": {
+      "role": "Designer",
+      "description": "Maurício is an excellent professional with a bright future ahead! He is extremely dedicated to his work and to his personal and technical growth. Always eager to learn, teach, and help others in areas where he excels. It was a great pleasure to work alongside him and witness his growth over the past two years at Sixchains across multiple projects."
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "letsTalk": "Let’s talk!",
+    "text": "Have an idea or need help with your project? I'm always open to new opportunities and collaborations. Fill out the form or click the links below — let’s get in touch!",
+    "namePlaceholder": "Name",
+    "messagePlaceholder": "Message",
+    "send": "Send",
+    "successMessage": "Email sent successfully!",
+    "successDescription1": "Your message has been sent and I’ll get back to you soon.",
+    "successDescription2": "Thank you for reaching out!",
+    "errorMessage": "Error sending message!",
+    "errorDescription1": "There was a problem trying to send your message.",
+    "errorDescription2": "Please try again later!",
+    "backButton": "Go back"
+  }
+}

@@ -1,7 +1,7 @@
 <template>
     <div class="card-modal">
         <h2 class="project-title">{{ modal.projectName }}</h2>
-        <h3 class="project-type">{{ modal.projectType }}</h3>
+        <h3 class="project-type">{{ $t(`projects.${modal.projectId}.type`) }}</h3>
         <div class="modal-content-description">
             <div class="modal-img">
                 <iframe v-if="modal.projectVideo"
@@ -15,34 +15,35 @@
             </div>
             <div class="info">
                 <div>
-                    <h3>Sobre o projeto:</h3>
-                    <p class="project-description">{{ modal.projectDescription }}</p>
+                    <h3>{{ $t("projects.aboutProject") }}:</h3>
+                    <p class="project-description">{{ $t(`projects.${modal.projectId}.description`) }}</p>
                 </div>
                 <div>
-                    <h3>Detalhes do projeto:</h3>
+                    <h3>{{ $t("projects.projectDetail") }}:</h3>
                     <div class="details">
                         <p>
-                            <span>Tecnologias: </span>
+                            <span>{{ $t("projects.technologies") }}: </span>
                             {{ modal.projectTechnologies.join(', ') }}
                         </p>
                         <div class="details-links">
                             <template v-if="modal.projectUrl && modal.projectUrl.includes('instalador')">
-                                <a :href="modal.projectUrl" target="_blank" rel="noreferrer" aria-label="Instalador">
+                                <a :href="modal.projectUrl" target="_blank" rel="noreferrer"
+                                    :aria-label="$t('projects.installer')">
                                     <IconInstaller class="live-example" />
-                                    Instalador
+                                    {{ $t("projects.installer") }}
                                 </a>
                             </template>
                             <template v-else>
                                 <a v-if="modal.projectUrl" :href="modal.projectUrl" target="_blank" rel="noreferrer"
-                                    aria-label="Projeto Online">
+                                    :aria-label="$t('projects.projectOnline')">
                                     <IconOnline class="live-example" />
-                                    Projeto Online
+                                    {{ $t("projects.projectOnline") }}
                                 </a>
                             </template>
                             <a v-if="modal.projectRepository" :href="modal.projectRepository" target="_blank"
-                                rel="noreferrer" aria-label="Repositório">
+                                rel="noreferrer" :aria-label="$t('projects.repository')">
                                 <IconRepository class="repository" />
-                                Repositório
+                                {{ $t("projects.repository") }}
                             </a>
                         </div>
                     </div>
