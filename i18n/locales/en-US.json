@@ -93,11 +93,11 @@
       "description": "This application, developed with Vue.js on the frontend and Node.js on the backend, allows users to build custom burgers and manage their orders. Using the Vuex library for state management, users can update order statuses and delete orders."
     },
     "manhattanCoffee": {
-      "type": "Landing Page",
+      "type": "Website",
       "description": "Landing page developed for Manhattan Coffee House, designed to reflect the essence of a premium coffee shop. With a sophisticated design and inspiring text, it invites visitors to explore the brand’s exclusive universe."
     },
     "itSolutions": {
-      "type": "Landing Page",
+      "type": "Website",
       "description": "Landing page developed for IT Solutions, focused on showcasing services and technological solutions that help companies and professionals optimize processes, reach new levels of performance, and remain competitive in the market."
     },
     "appChamada": {

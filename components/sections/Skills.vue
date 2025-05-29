@@ -70,7 +70,7 @@ onMounted(() => {
             }
 
             .icon-card {
-                @apply relative bg-white flex flex-col justify-center items-center gap-4 w-[10rem] h-36 mx-auto text-center p-1 rounded-[25px] shadow-lg duration-300 cursor-pointer;
+                @apply relative bg-white flex flex-col justify-center items-center gap-4 w-40 h-36 mx-auto text-center p-1 rounded-[25px] shadow-lg duration-300 cursor-pointer;
                 transform-style: preserve-3d;
 
                 .icon-border {

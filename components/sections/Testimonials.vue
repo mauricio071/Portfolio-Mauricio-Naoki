@@ -6,33 +6,37 @@
                     {{ $t("testimonials.title") }}
                 </h2>
                 <div v-motion-fade-visible-once :duration="700" :delay="500" class="testimonials">
-                    <client-only>
-                        <carousel :items-to-show="1" :breakpoints="breakpoints" wrapAround pauseAutoplayOnHover
-                            :autoplay="7500">
-                            <slide v-for="(testimonial, i) in testimonials" :key="i">
-                                <div class="testimonial-container">
-                                    <div class="testimonial-person">
-                                        <NuxtImg :src="`/depoimentos/${testimonial.id}.webp`" :alt="testimonial.name"
-                                            loading="lazy" densities="x1" sizes="250 lg:70" />
-                                        <div class="testimonial-info">
-                                            <h2>{{ testimonial.name }}</h2>
-                                            <h3>{{ testimonial.company }}</h3>
-                                            <p>{{ $t(`testimonials.${testimonial.id}.role`) }}</p>
+                    <div class="fade-mask">
+                        <client-only>
+                            <carousel :items-to-show="1" :breakpoints="breakpoints" wrapAround pauseAutoplayOnHover
+                                :autoplay="7500">
+                                <slide v-for="(testimonial, i) in testimonials" :key="i">
+                                    <div class="testimonial-container">
+                                        <div class="testimonial-person">
+                                            <NuxtImg :src="`/depoimentos/${testimonial.id}.webp`"
+                                                :alt="testimonial.name" loading="lazy" densities="x1"
+                                                sizes="250 lg:70" />
+                                            <div class="testimonial-info">
+                                                <h2>{{ testimonial.name }}</h2>
+                                                <h3>{{ testimonial.company }}</h3>
+                                                <p>{{ $t(`testimonials.${testimonial.id}.role`) }}</p>
+                                            </div>
+                                        </div>
+                                        <IconQuote />
+                                        <p>{{ $t(`testimonials.${testimonial.id}.description`) }}</p>
+                                        <div class="ratings">
+                                            <IconRating v-for="i in 5" :key="i" />
                                         </div>
                                     </div>
-                                    <IconQuote />
-                                    <p>{{ $t(`testimonials.${testimonial.id}.description`) }}</p>
-                                    <div class="ratings">
-                                        <IconRating v-for="i in 5" :key="i" />
-                                    </div>
-                                </div>
-                            </slide>
+                                </slide>
 
-                            <template #addons>
-                                <pagination />
-                            </template>
-                        </carousel>
-                    </client-only>
+                                <template #addons>
+                                    <pagination />
+                                    <!-- <navigation /> -->
+                                </template>
+                            </carousel>
+                        </client-only>
+                    </div>
                 </div>
             </div>
         </div>
@@ -46,12 +50,27 @@ import type { Breakpoints } from 'vue3-carousel';
 const breakpoints: Breakpoints = {
     1024: {
         itemsToShow: 2,
-        snapAlign: 'center-even',
     },
 };
 </script>
 
 <style scoped>
+.fade-mask {
+
+    &::before,
+    &::after {
+        @apply content-[""] absolute top-0 bottom-0 w-1/4 z-[5] pointer-events-none hidden lg:block;
+    }
+
+    &::before {
+        @apply left-0 bg-gradient-to-r from-white to-transparent;
+    }
+
+    &::after {
+        @apply right-0 bg-gradient-to-l from-white to-transparent;
+    }
+}
+
 :deep(.carousel) {
     .carousel__slide {
         @apply mb-10;
@@ -154,6 +173,23 @@ const breakpoints: Breakpoints = {
                 transform: translate(-25%, -25%);
             }
         }
+    }
+
+    .carousel__prev,
+    .carousel__next {
+        @apply text-gray-500 z-[10] duration-300;
+
+        &:hover {
+            @apply text-primary;
+        }
+    }
+
+    .carousel__prev {
+        @apply -left-[2rem];
+    }
+
+    .carousel__next {
+        @apply -right-[2rem];
     }
 }
 </style>

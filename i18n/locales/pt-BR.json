@@ -93,11 +93,11 @@
       "description": "Esta aplicação, desenvolvida com Vue.js no front-end e Node.js no back-end, permite que os usuários montem hambúrgueres personalizados e gerenciem seus pedidos. Utilizando a biblioteca Vuex para gerenciamento de estado, os usuários podem editar o status e excluir os pedidos."
     },
     "manhattanCoffee": {
-      "type": "Site",
+      "type": "Website",
       "description": "Landing page desenvolvida para a Manhattan Coffee House, projetada para refletir a essência de uma cafeteria premium. Com um design sofisticado e textos inspiradores, convida os visitantes a explorarem o universo exclusivo da marca."
     },
     "itSolutions": {
-      "type": "Site",
+      "type": "Website",
       "description": "Landing page desenvolvida para a IT Solutions, focada em destacar serviços e soluções tecnológicas que ajudam empresas e profissionais a otimizar processos, alcançar novos patamares de desempenho e se manterem competitivos no mercado."
     },
     "appChamada": {

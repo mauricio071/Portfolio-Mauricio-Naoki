@@ -137,7 +137,7 @@ const clearModal = () => {
                     }
 
                     h3 {
-                        @apply text-primary lg:text-xl;
+                        @apply text-primary text-lg lg:text-xl;
                     }
 
                     .technologies {
@@ -175,7 +175,7 @@ const clearModal = () => {
         @apply flex justify-center mt-12;
 
         .btn-more-projects {
-            @apply relative text-white text-xl px-6 py-2 rounded-3xl shadow-2xl font-semibold duration-300 z-[2];
+            @apply relative text-white text-xl px-8 py-3 rounded-3xl shadow-2xl font-semibold duration-300 z-[2];
             background-image: -webkit-linear-gradient(top,
                     rgba(0, 191, 165, 0.3),
                     #00bfa6);
@@ -186,7 +186,7 @@ const clearModal = () => {
             }
 
             @screen lg {
-                @apply px-12 py-3;
+                @apply px-12;
             }
         }
     }
