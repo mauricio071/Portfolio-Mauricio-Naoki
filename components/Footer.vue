@@ -26,7 +26,7 @@ const { locale } = useI18n();
 
 <style scoped>
 footer {
-    @apply text-white px-4 py-6;
+    @apply text-white px-4 py-5;
     background-image: -webkit-linear-gradient(left,
             rgba(0, 185, 160),
             rgba(10, 195, 172),

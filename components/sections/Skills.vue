@@ -6,8 +6,8 @@
                 {{ $t("skills.title") }}
             </h2>
             <div class="skills">
-                <div v-for="(technology, i) in technologies" :key="i" v-motion-slide-visible-once-bottom
-                    :delay="i * 100" :duration="600">
+                <div v-for="(technology, i) in technologies" :key="i" v-motion-slide-visible-once-bottom :delay="i * 90"
+                    :duration="600">
                     <div class="icon-card" :style="{ '--card-color': technology.color }">
                         <div class="icon-border"></div>
                         <component :is="iconMap[technology.name]" class="logo" />

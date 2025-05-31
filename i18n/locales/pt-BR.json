@@ -15,8 +15,11 @@
   },
   "about": {
     "title": "Sobre mim",
-    "description1": "Sou um desenvolvedor front-end focado em criar experiências digitais envolventes e funcionais, com formação em Ciência da Computação pela Universidade Cidade de São Paulo, concluída em dezembro de 2022. Nos últimos dois anos, trabalhei em uma digital house, desenvolvendo sistemas e sites personalizados para diversos clientes. Cada novo projeto despertava minha curiosidade e motivação, levando a constantes pesquisas e aprendizados.",
-    "description2": "Tenho maior aptidão para a área de front-end, com principais habilidades em Vue.js, Nuxt.js, React.js, JavaScript e TypeScript. Estou sempre em busca de projetos desafiadores que me permitam crescer profissionalmente, explorar novas tecnologias e contribuir para inovações.",
+    "strongDescription1": "Sou desenvolvedor Front-end com mais de 2 anos de experiência",
+    "description1": "em Vue.js, Nuxt.js, React.js, JavaScript, TypeScript e outras tecnologias web. Já participei de projetos que contribuíram para o aumento da produtividade de empresas e desenvolvi soluções sob medida para clientes dos setores imobiliário e de securitizadoras, sempre com foco em interfaces funcionais e integração eficiente de APIs.",
+    "description2_part1": "Comecei como desenvolvedor Full-stack em 2021 e, com o tempo, fui me especializando no Front-end. Desde então, atuei em diversas etapas do desenvolvimento, do planejamento à entrega, sempre priorizando a usabilidade e a experiência do usuário.",
+    "strongDescription2": "Sou formado em Ciência da Computação",
+    "description2_part2": "pela Universidade Cidade de São Paulo e estou constantemente em busca de novos desafios e aprendizados.",
     "findMeTitle": "Onde me encontrar"
   },
   "skills": {

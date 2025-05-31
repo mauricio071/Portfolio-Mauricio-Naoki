@@ -15,10 +15,13 @@
                             {{ $t("about.title") }}
                         </h2>
                         <p class="mb-4">
+                            <strong>{{ $t("about.strongDescription1") }}</strong>
                             {{ $t("about.description1") }}
                         </p>
                         <p>
-                            {{ $t("about.description2") }}
+                            {{ $t("about.description2_part1") }}
+                            <strong>{{ $t("about.strongDescription2") }}</strong>
+                            {{ $t("about.description2_part2") }}
                         </p>
                     </div>
                     <div v-motion-slide-visible-once-bottom :duration="700" :delay="300" class="find-me">

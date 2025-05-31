@@ -15,8 +15,11 @@
   },
   "about": {
     "title": "About me",
-    "description1": "I'm a front-end developer focused on creating engaging and functional digital experiences. I graduated in Computer Science from Universidade Cidade de São Paulo in December 2022. Over the past two years, I've worked at a digital house, building custom systems and websites for various clients. Each new project sparked my curiosity and motivation, leading to constant research and learning.",
-    "description2": "I'm most skilled in front-end development, with core strengths in Vue.js, Nuxt.js, React.js, JavaScript, and TypeScript. I'm always looking for challenging projects that allow me to grow professionally, explore new technologies, and contribute to innovation.",
+    "strongDescription1": "I'm a Front-end developer with over 2 years of experience",
+    "description1": "in Vue.js, Nuxt.js, React.js, JavaScript, TypeScript, and other web technologies. I've worked on projects that helped companies increase productivity and developed custom solutions for clients in the real estate and securitization sectors, always focusing on functional interfaces and efficient API integration.",
+    "description2_part1": "I started as a Full-stack developer in 2021 and, over time, specialized in Front-end development. Since then, I've been involved in various stages of development, from planning to delivery, always prioritizing usability and user experience.",
+    "strongDescription2": "I hold a degree in Computer Science",
+    "description2_part2": "from Universidade Cidade de São Paulo and I'm constantly looking for new challenges and learning opportunities.",
     "findMeTitle": "Where to find me"
   },
   "skills": {

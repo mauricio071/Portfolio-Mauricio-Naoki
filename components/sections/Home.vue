@@ -3,6 +3,7 @@
         <div class="blur-container"></div>
         <div class="vector-background"></div>
         <div class="wrapper">
+
             <div class="svg-wrapper">
                 <IconTechnology v-motion-fade-visible-once :duration="1300" :delay="850" class="header-vector" />
             </div>
@@ -13,11 +14,18 @@
                     <IconCode />
                     <span class="text-animation">{{ $t("home.role") }}</span>
                 </h2>
-                <a :href="locale === 'pt-BR' ? '/cv_mauricio_naoki.pdf' : '/mauricio_naoki_resume.pdf'" target="_blank"
-                    rel="noreferrer" aria-label="Currículo" class="resume-btn">
-                    <Icon name="material-symbols:download-rounded" />
+                <div class="button-border">
+                    <a :href="locale === 'pt-BR' ? '/cv_mauricio_naoki.pdf' : '/mauricio_naoki_resume.pdf'"
+                        target="_blank" rel="noreferrer" aria-label="Currículo" class="resume-btn">
+                        <Icon name="material-symbols:download-rounded" size="1.75rem" />
+                        {{ $t("home.resume") }}
+                    </a>
+                </div>
+                <!-- <a :href="locale === 'pt-BR' ? '/cv_mauricio_naoki.pdf' : '/mauricio_naoki_resume.pdf'" target="_blank"
+                    rel="noreferrer" aria-label="Currículo" class="resume-btn2">
+                    <Icon name="material-symbols:download-rounded" size="1.75rem" />
                     {{ $t("home.resume") }}
-                </a>
+                </a> -->
                 <div class="social-icons">
                     <a href="https://github.com/mauricio071" target="_blank" rel="noreferrer" aria-label="GitHub">
                         <Icon name="mdi:github" class="hover:!text-white" />
@@ -131,7 +139,7 @@ onMounted(() => {
             }
 
             @screen lg {
-                @apply items-start gap-4;
+                @apply items-start;
             }
 
             p {
@@ -143,19 +151,36 @@ onMounted(() => {
             }
 
             h2 {
-                @apply w-full flex items-center text-secondary text-xl font-bold max-lg:max-w-[18rem];
-
-                @screen lg {
-                    @apply w-fit text-2xl;
-                }
+                @apply flex items-center text-secondary text-xl font-bold max-lg:max-w-[18rem] lg:text-2xl;
 
                 .text-animation {
-                    @apply w-0 whitespace-nowrap overflow-hidden border-r-2 border-secondary;
-                    animation: typing 5.5s steps(21) infinite,
+                    @apply whitespace-nowrap overflow-hidden border-r-2 border-secondary pr-1;
+                    animation: typingMobile 5.5s steps(20) infinite,
                         blinking .85s infinite alternate;
                     animation-delay: 1.25s, 0s;
 
-                    @keyframes typing {
+                    @screen lg {
+                        animation: typingDesktop 5.5s steps(20) infinite,
+                            blinking .85s infinite alternate;
+                        animation-delay: 1.25s, 0s;
+                    }
+
+                    @keyframes typingMobile {
+                        0% {
+                            @apply w-0;
+                        }
+
+                        30%,
+                        65% {
+                            @apply w-full;
+                        }
+
+                        100% {
+                            @apply w-0;
+                        }
+                    }
+
+                    @keyframes typingDesktop {
                         0% {
                             @apply w-0;
                         }
@@ -167,7 +192,7 @@ onMounted(() => {
 
                         87%,
                         100% {
-                            @apply w-0;
+                            @apply w-0 pr-0;
                         }
                     }
 
@@ -179,8 +204,37 @@ onMounted(() => {
                 }
             }
 
-            .resume-btn {
-                @apply bg-white relative flex items-center gap-2 px-4 py-[.675rem] my-2 rounded-md text-secondary font-semibold shadow-sm overflow-hidden duration-300 z-[2];
+            .button-border {
+                @apply bg-white p-1 my-2 rounded-lg shadow-sm duration-300 cursor-pointer;
+
+                &:hover {
+                    box-shadow: 0 0 20px #00bfa6,
+                        0 0 20px #00bfa6;
+
+                    .resume-btn {
+                        @apply text-white;
+
+                        &::before {
+                            @apply w-full;
+                        }
+                    }
+                }
+
+                .resume-btn {
+                    @apply bg-white relative flex items-center gap-2 px-3.5 py-2 rounded-md text-secondary font-semibold overflow-hidden duration-300 z-[2];
+
+                    &::before {
+                        @apply content-[""] absolute w-0 h-full top-0 left-0 bg-gradient-to-r from-[#00BFA6] to-[#63e6d2] -z-[1] duration-500;
+                    }
+
+                    @screen md {
+                        @apply py-2.5;
+                    }
+                }
+            }
+
+            .resume-btn2 {
+                @apply bg-white relative flex items-center gap-2 border-[3px] border-white px-3.5 py-2 my-2 rounded-md text-secondary font-semibold shadow-sm overflow-hidden duration-300 z-[2];
 
                 &::before {
                     @apply content-[""] absolute w-0 h-full top-0 left-0 bg-gradient-to-r from-[#00BFA6] to-[#63e6d2] -z-[1] duration-500;
@@ -194,18 +248,10 @@ onMounted(() => {
                     &::before {
                         @apply w-full;
                     }
-
-                    span {
-                        @apply text-white;
-                    }
                 }
 
                 @screen md {
-                    @apply my-5 py-3;
-                }
-
-                span {
-                    @apply text-[1.75rem] text-secondary duration-300;
+                    @apply py-2.5;
                 }
             }
 

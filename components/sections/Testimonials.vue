@@ -31,8 +31,17 @@
                                 </slide>
 
                                 <template #addons>
+                                    <navigation>
+                                        <template #prev>
+                                            <Icon name="material-symbols:keyboard-arrow-up-rounded" size="3.5rem"
+                                                class="rotate-[270deg]" />
+                                        </template>
+                                        <template #next>
+                                            <Icon name="material-symbols:keyboard-arrow-up-rounded" size="3.5rem"
+                                                class="rotate-90" />
+                                        </template>
+                                    </navigation>
                                     <pagination />
-                                    <!-- <navigation /> -->
                                 </template>
                             </carousel>
                         </client-only>
@@ -48,7 +57,7 @@ import { testimonials } from '@/constants/testimonials';
 import type { Breakpoints } from 'vue3-carousel';
 
 const breakpoints: Breakpoints = {
-    1024: {
+    1280: {
         itemsToShow: 2,
     },
 };
@@ -59,7 +68,7 @@ const breakpoints: Breakpoints = {
 
     &::before,
     &::after {
-        @apply content-[""] absolute top-0 bottom-0 w-1/4 z-[5] pointer-events-none hidden lg:block;
+        @apply content-[""] absolute top-0 bottom-0 w-1/4 z-[5] pointer-events-none hidden xl:block;
     }
 
     &::before {
@@ -72,15 +81,21 @@ const breakpoints: Breakpoints = {
 }
 
 :deep(.carousel) {
+    @apply mx-auto max-w-[40rem] lg:max-w-[45rem] xl:max-w-[unset];
+
     .carousel__slide {
         @apply mb-10;
 
         .testimonial-container {
             @apply flex flex-col items-center space-y-4 p-4 relative pb-4;
 
-            @screen lg {
-                @apply min-h-[22.75rem] max-w-[27rem] items-start my-8 p-8;
+            @screen md {
+                @apply max-w-[35rem] items-start my-8 p-8;
                 box-shadow: 0 3px 11px rgba(0, 0, 0, 0.2);
+            }
+
+            @screen lg {
+                @apply min-h-[22.75rem] max-w-[40rem];
             }
 
             @screen xl {
@@ -107,16 +122,16 @@ const breakpoints: Breakpoints = {
             .testimonial-person {
                 @apply flex flex-col items-center gap-4;
 
-                @screen lg {
+                @screen md {
                     @apply flex-row pl-1;
                 }
 
                 img {
-                    @apply max-w-[120px] rounded-[50%] lg:w-[70px];
+                    @apply max-w-[120px] rounded-[50%] md:w-[70px];
                 }
 
                 .testimonial-info {
-                    @apply flex flex-col gap-0.5 justify-center items-center lg:items-start;
+                    @apply flex flex-col gap-0.5 justify-center items-center md:items-start;
 
                     h2 {
                         @apply text-lg font-bold;
@@ -139,13 +154,17 @@ const breakpoints: Breakpoints = {
             >p {
                 @apply text-sm;
 
+                @screen md {
+                    @apply text-base;
+                }
+
                 @screen lg {
-                    @apply flex-grow text-start text-base pl-[0.45rem];
+                    @apply flex-grow text-start pl-[0.45rem];
                 }
             }
 
             .ratings {
-                @apply flex gap-1 lg:pl-1;
+                @apply flex gap-1 md:pl-1;
 
                 svg {
                     @apply w-[24px] h-[24px];
@@ -155,7 +174,7 @@ const breakpoints: Breakpoints = {
     }
 
     .carousel__pagination {
-        @apply flex items-center gap-6 -bottom-[0.85rem] lg:bottom-[0.35rem];
+        @apply flex items-center gap-6 -bottom-[0.85rem] md:bottom-[0.35rem];
 
         .carousel__pagination-button {
             @apply w-3 h-3 rounded-[50%] duration-300;
@@ -177,15 +196,19 @@ const breakpoints: Breakpoints = {
 
     .carousel__prev,
     .carousel__next {
-        @apply text-gray-500 z-[10] duration-300;
+        @apply top-[45%] text-[#090f207f] z-[10] duration-300 hidden pointer-events-none;
 
         &:hover {
             @apply text-primary;
         }
+
+        @screen md {
+            @apply block pointer-events-auto;
+        }
     }
 
     .carousel__prev {
-        @apply -left-[2rem];
+        @apply -left-[4rem];
     }
 
     .carousel__next {

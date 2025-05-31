@@ -146,9 +146,9 @@ export const projects: ProjectType[] = [
   {
     id: "makeYourBurger",
     name: "Make Your Burger",
-    imgName: "make-your-burguer.webp",
+    imgName: "make-your-burger.webp",
     projectVideo:
-      "https://www.youtube.com/embed/_hOEV3CYhdA?si=cM3Q5Rvm-ncFeGHx",
+      "https://www.youtube.com/embed/mZXnsn0k59A?si=n_W2JVULpK5RTQ1R",
     width: "900",
     technologies: [
       "HTML",
@@ -158,8 +158,8 @@ export const projects: ProjectType[] = [
       "Tailwind",
       "Node.js",
     ],
-    url: "https://make-your-burguer.netlify.app",
-    repository: "https://github.com/mauricio071/Make-Your-Burguer",
+    url: "https://make-your-burger-ma.netlify.app/",
+    repository: "https://github.com/mauricio071/Make-Your-Burger",
   },
   {
     id: "manhattanCoffee",

@@ -7,7 +7,7 @@
             </h2>
             <div class="projects">
                 <div @click="openModal(project)" v-for="(project, i) in visibleProjects" :key="i"
-                    v-motion-slide-visible-once-bottom :delay="i * 100" :duration="600" class="project-card">
+                    v-motion-slide-visible-once-bottom :delay="delayVisible(i)" :duration="750" class="project-card">
                     <div class="project-img">
                         <NuxtImg :src="`/projetos/${project.imgName}`" :alt="project.name" loading="lazy" densities="x1"
                             :width="project.width" />
@@ -24,11 +24,11 @@
             </div>
             <div class="btn-more-container">
                 <button v-if="visibleProjects.length < projects.length" @click="loadProjects"
-                    v-motion-slide-visible-once-bottom :duration="500" class="btn-more-projects">
+                    v-motion-slide-visible-once-bottom :duration="400" class="btn-more-projects">
                     {{ $t("projects.moreProjects") }}
                 </button>
                 <a v-else href="https://github.com/mauricio071?tab=repositories" target="_blank" rel="noreferrer"
-                    aria-label="GitHub" v-motion-slide-visible-once-bottom :duration="500" class="btn-more-projects">
+                    aria-label="GitHub" v-motion-slide-visible-once-bottom :duration="400" class="btn-more-projects">
                     {{ $t("projects.moreGitHub") }}
                 </a>
             </div>
@@ -105,6 +105,14 @@ const clearModal = () => {
         projectRepository: ""
     }
 };
+
+const delayVisible = (i: number) => {
+    if (i < 9) {
+        return i * 100;
+    } else {
+        return ((i % 3) + 1) * 125;
+    }
+}
 </script>
 
 <style scoped>
