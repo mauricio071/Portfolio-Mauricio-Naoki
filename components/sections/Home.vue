@@ -149,9 +149,10 @@ onMounted(() => {
                 @apply flex items-center text-secondary text-xl font-bold max-md:max-w-[18rem] md:text-2xl;
 
                 .text-animation {
-                    @apply whitespace-nowrap overflow-hidden border-r-2 border-secondary;
+                    @apply whitespace-nowrap overflow-hidden border-r-2 border-secondary pr-1;
                     animation: typingMobile 5.5s steps(20) infinite,
                         blinking .85s infinite alternate;
+                    animation-delay: 0.5s, 0s;
 
                     @screen lg {
                         @apply w-0;

@@ -42,7 +42,7 @@
                             <IconSend />
                         </span>
                     </button> -->
-                    <div class="button-border">
+                    <div class="button-border" :class="{ '!bg-gray-300': loading }">
                         <button type="submit" :disabled="loading" class="button-content">
                             <span v-if="loading" class="loader"></span>
                             <template v-else>
@@ -206,7 +206,7 @@ const submitForm = async () => {
                     @apply w-[12rem] mx-auto xl:mx-0;
                 }
 
-                .button-form {
+                /* .button-form {
                     @apply relative overflow-hidden flex justify-center bg-white border-[3px] border-white text-secondary px-[3.5rem] py-2 rounded-lg mx-auto duration-300 font-semibold shadow-sm z-[1] xl:mx-0;
 
                     &::before {
@@ -238,7 +238,7 @@ const submitForm = async () => {
                     .btn-content {
                         @apply flex items-center gap-2;
                     }
-                }
+                } */
             }
         }
     }
