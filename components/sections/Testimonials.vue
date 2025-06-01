@@ -59,6 +59,11 @@ import type { Breakpoints } from 'vue3-carousel';
 const breakpoints: Breakpoints = {
     1280: {
         itemsToShow: 2,
+        gap: 90
+    },
+    1536: {
+        itemsToShow: 2,
+        gap: 60
     },
 };
 </script>

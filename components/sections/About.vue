@@ -67,7 +67,11 @@ const { locale } = useI18n();
         @apply relative w-1/2 max-w-[15rem] mx-auto;
 
         @screen lg {
-            @apply w-[65%] max-w-[22rem];
+            @apply w-[65%] max-w-[20rem];
+        }
+
+        @screen 2xl {
+            @apply max-w-[22rem];
         }
 
         .photo-profile {

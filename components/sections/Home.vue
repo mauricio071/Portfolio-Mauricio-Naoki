@@ -95,11 +95,11 @@ onMounted(() => {
             }
 
             @screen lg {
-                @apply max-w-[23rem] -top-[27%];
+                @apply max-w-[21rem] -top-[25%];
             }
 
             @screen xl {
-                @apply max-w-[27rem] -right-[2%];
+                @apply max-w-[25rem] -right-[2%];
             }
 
             @screen 2xl {
@@ -216,7 +216,7 @@ onMounted(() => {
             }
 
             .img-container {
-                @apply max-w-[30rem] hidden lg:block xl:max-w-[34rem] 2xl:max-w-[39rem];
+                @apply max-w-[30rem] hidden lg:block xl:max-w-[33rem] 2xl:max-w-[39rem];
 
                 img {
                     @apply w-full;
