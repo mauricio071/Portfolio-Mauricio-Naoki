@@ -155,7 +155,7 @@ onMounted(() => {
                     animation-delay: 0.15s, 0s;
 
                     @screen lg {
-                        @apply w-0;
+                        @apply w-0 pr-0;
                         animation: typingDesktop 5.5s steps(20) infinite,
                             blinking .85s infinite alternate;
                         animation-delay: 1.25s, 0s;
