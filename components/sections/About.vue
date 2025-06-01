@@ -9,16 +9,17 @@
                         <div class="photo-border"></div>
                     </div>
                 </div>
-                <div v-motion-slide-visible-once-bottom :duration="700" class="text-about">
+                <div class="text-about">
                     <div class="about-me">
-                        <h2 class="section-title !mb-14 lg:!justify-start">
+                        <h2 v-motion-slide-visible-once-bottom :duration="700"
+                            class="section-title !mb-14 lg:!justify-start">
                             {{ $t("about.title") }}
                         </h2>
-                        <p class="mb-4">
+                        <p v-motion-slide-visible-once-bottom :duration="700" :delay="100" class="mb-4">
                             <strong>{{ $t("about.strongDescription1") }}</strong>
                             {{ $t("about.description1") }}
                         </p>
-                        <p>
+                        <p v-motion-slide-visible-once-bottom :duration="700" :delay="200">
                             {{ $t("about.description2_part1") }}
                             <strong>{{ $t("about.strongDescription2") }}</strong>
                             {{ $t("about.description2_part2") }}
