@@ -21,11 +21,6 @@
                         {{ $t("home.resume") }}
                     </a>
                 </div>
-                <!-- <a :href="locale === 'pt-BR' ? '/cv_mauricio_naoki.pdf' : '/mauricio_naoki_resume.pdf'" target="_blank"
-                    rel="noreferrer" aria-label="Currículo" class="resume-btn2">
-                    <Icon name="material-symbols:download-rounded" size="1.75rem" />
-                    {{ $t("home.resume") }}
-                </a> -->
                 <div class="social-icons">
                     <a href="https://github.com/mauricio071" target="_blank" rel="noreferrer" aria-label="GitHub">
                         <Icon name="mdi:github" class="hover:!text-white" />
@@ -143,23 +138,24 @@ onMounted(() => {
             }
 
             p {
-                @apply text-white font-semibold text-lg lg:text-2xl;
+                @apply text-white font-semibold text-lg md:text-2xl;
             }
 
             h1 {
-                @apply text-secondary font-bold text-4xl lg:text-5xl xl:text-[3.5rem];
+                @apply text-secondary font-bold text-4xl md:text-5xl xl:text-[3.5rem];
             }
 
             h2 {
-                @apply flex items-center text-secondary text-xl font-bold max-lg:max-w-[18rem] lg:text-2xl;
+                @apply flex items-center text-secondary text-xl font-bold max-md:max-w-[18rem] md:text-2xl;
 
                 .text-animation {
-                    @apply whitespace-nowrap overflow-hidden border-r-2 border-secondary pr-1;
+                    @apply w-0 whitespace-nowrap overflow-hidden border-r-2 border-secondary pr-1;
                     animation: typingMobile 5.5s steps(20) infinite,
                         blinking .85s infinite alternate;
                     animation-delay: 1.25s, 0s;
 
                     @screen lg {
+                        @apply pr-0;
                         animation: typingDesktop 5.5s steps(20) infinite,
                             blinking .85s infinite alternate;
                         animation-delay: 1.25s, 0s;
@@ -221,37 +217,15 @@ onMounted(() => {
                 }
 
                 .resume-btn {
-                    @apply bg-white relative flex items-center gap-2 px-3.5 py-2 rounded-md text-secondary font-semibold overflow-hidden duration-300 z-[2];
+                    @apply bg-white relative flex items-center gap-2 px-3 py-[.435rem] rounded-md text-secondary font-semibold overflow-hidden duration-300 z-[2];
 
                     &::before {
                         @apply content-[""] absolute w-0 h-full top-0 left-0 bg-gradient-to-r from-[#00BFA6] to-[#63e6d2] -z-[1] duration-500;
                     }
 
                     @screen md {
-                        @apply py-2.5;
+                        @apply py-[.565rem];
                     }
-                }
-            }
-
-            .resume-btn2 {
-                @apply bg-white relative flex items-center gap-2 border-[3px] border-white px-3.5 py-2 my-2 rounded-md text-secondary font-semibold shadow-sm overflow-hidden duration-300 z-[2];
-
-                &::before {
-                    @apply content-[""] absolute w-0 h-full top-0 left-0 bg-gradient-to-r from-[#00BFA6] to-[#63e6d2] -z-[1] duration-500;
-                }
-
-                &:hover {
-                    @apply text-white;
-                    box-shadow: 0 0 20px #00bfa6,
-                        0 0 20px #00bfa6;
-
-                    &::before {
-                        @apply w-full;
-                    }
-                }
-
-                @screen md {
-                    @apply py-2.5;
                 }
             }
 

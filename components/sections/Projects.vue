@@ -110,7 +110,7 @@ const delayVisible = (i: number) => {
     if (i < 9) {
         return i * 100;
     } else {
-        return ((i % 3) + 1) * 125;
+        return ((i % 3) + 1) * 115;
     }
 }
 </script>

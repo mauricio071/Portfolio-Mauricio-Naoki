@@ -56,6 +56,7 @@ const handleClickOutside = (event: TouchEvent | MouseEvent) => {
 function toggleLocale() {
     const language = locale.value === 'pt-BR' ? 'en-US' : 'pt-BR';
     setLocale(language);
+    isOpen.value = false;
 };
 
 onMounted(() => {
