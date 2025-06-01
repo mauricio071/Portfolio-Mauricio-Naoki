@@ -152,7 +152,7 @@ onMounted(() => {
                     @apply whitespace-nowrap overflow-hidden border-r-2 border-secondary pr-1;
                     animation: typingMobile 5.5s steps(20) infinite,
                         blinking .85s infinite alternate;
-                    animation-delay: 0.25s, 0s;
+                    animation-delay: 0.15s, 0s;
 
                     @screen lg {
                         @apply w-0;
