@@ -35,22 +35,22 @@
                     <input v-model="form.email" type="email" name="email" placeholder="E-mail" required />
                     <textarea v-model="form.message" name="message" :placeholder="$t('contact.messagePlaceholder')"
                         rows="7" cols="50" required />
-                    <button type="submit" :disabled="loading" class="button-form">
+                    <!-- <button type="submit" :disabled="loading" class="button-form">
                         <span v-if="loading" class="loader"></span>
                         <span v-else class="btn-content">
                             {{ $t("contact.send") }}
                             <IconSend />
                         </span>
-                    </button>
-                    <!-- <div class="button-border">
-                        <button type="submit" :disabled="loading" class="resume-btn2">
+                    </button> -->
+                    <div class="button-border">
+                        <button type="submit" :disabled="loading" class="button-content">
                             <span v-if="loading" class="loader"></span>
                             <template v-else>
                                 {{ $t("contact.send") }}
                                 <IconSend />
                             </template>
-</button>
-</div> -->
+                        </button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -203,32 +203,7 @@ const submitForm = async () => {
                 @apply space-y-6 my-4 xl:my-0;
 
                 .button-border {
-                    @apply bg-white p-1 my-2 rounded-lg shadow-sm duration-300 cursor-pointer w-[12rem] mx-auto xl:mx-0;
-
-                    &:hover {
-                        box-shadow: 0 0 20px #00bfa6,
-                            0 0 20px #00bfa6;
-
-                        .resume-btn2 {
-                            @apply text-white;
-
-                            &::before {
-                                @apply w-full;
-                            }
-                        }
-                    }
-
-                    .resume-btn2 {
-                        @apply bg-white relative w-full flex items-center justify-center gap-2 px-3.5 py-2 rounded-md text-secondary font-semibold overflow-hidden duration-300 z-[2];
-
-                        &::before {
-                            @apply content-[""] absolute w-0 h-full top-0 left-0 bg-gradient-to-r from-[#00BFA6] to-[#63e6d2] -z-[1] duration-500;
-                        }
-
-                        @screen md {
-                            @apply py-2.5;
-                        }
-                    }
+                    @apply w-[12rem] mx-auto xl:mx-0;
                 }
 
                 .button-form {
@@ -249,7 +224,7 @@ const submitForm = async () => {
                     }
 
                     &:disabled {
-                        @apply bg-gray-300 border-gray-300 cursor-not-allowed w-[12.5rem];
+                        @apply bg-gray-300 border-gray-300 cursor-not-allowed w-[12rem];
 
                         &::before {
                             @apply w-0;

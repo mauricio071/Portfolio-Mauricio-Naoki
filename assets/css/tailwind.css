@@ -112,3 +112,35 @@ textarea:focus {
     background-position: 0%;
   }
 }
+
+.button-border {
+  @apply bg-white p-1 my-2 rounded-lg shadow-sm duration-300 cursor-pointer;
+
+  &:hover {
+    box-shadow: 0 0 20px #00bfa6, 0 0 20px #00bfa6;
+
+    .button-content {
+      @apply text-white;
+
+      &::before {
+        @apply w-full;
+      }
+    }
+  }
+
+  .button-content {
+    @apply bg-white relative w-full flex items-center justify-center gap-2 px-3 rounded-md text-secondary font-semibold overflow-hidden duration-300 z-[2] py-[.435rem] lg:py-[.565rem];
+
+    &::before {
+      @apply content-[""] absolute w-0 h-full top-0 left-0 bg-gradient-to-r from-[#00BFA6] to-[#63e6d2] -z-[1] duration-500;
+    }
+
+    &:disabled {
+      @apply bg-gray-300 border-gray-300 cursor-not-allowed;
+
+      &::before {
+        @apply w-0;
+      }
+    }
+  }
+}
