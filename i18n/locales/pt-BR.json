@@ -1,4 +1,5 @@
 {
+  "toTop": "Para topo da página",
   "navbar": {
     "home": "Início",
     "about": "Sobre",
@@ -11,7 +12,8 @@
   "home": {
     "presentation": "Olá, o meu nome é",
     "role": "Desenvolvedor Front-end",
-    "resume": "Baixar currículo"
+    "resume": "Baixar currículo",
+    "resumeAriaLabel": "Currículo"
   },
   "about": {
     "title": "Sobre mim",

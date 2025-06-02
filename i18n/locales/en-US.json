@@ -1,4 +1,5 @@
 {
+  "toTop": "Scroll to top",
   "navbar": {
     "home": "Home",
     "about": "About",
@@ -11,7 +12,8 @@
   "home": {
     "presentation": "Hi, my name is",
     "role": "Front-end Developer",
-    "resume": "Download resume"
+    "resume": "Download resume",
+    "resumeAriaLabel": "Resume"
   },
   "about": {
     "title": "About me",

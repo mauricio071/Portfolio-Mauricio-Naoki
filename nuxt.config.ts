@@ -18,7 +18,7 @@ export default defineNuxtConfig({
         { charset: "UTF-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1.0" },
         {
-          name: "descriptBrion",
+          name: "description",
           content:
             "Maurício Naoki é um desenvolvedor front-end especializado em criar experiências digitais funcionais e envolventes. Com experiências em Vue.js, Nuxt.js, Javascript, e outras tecnologias modernas, contribuiu para projetos em empresas como Sixchains Digital House e o grupo Euro 17.",
         },

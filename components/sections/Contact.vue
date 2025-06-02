@@ -6,7 +6,7 @@
             </h2>
             <div v-motion-fade-visible-once :duration="1000" :delay="500" class="content">
                 <div class="contact-text">
-                    <h1>{{ $t("contact.letsTalk") }}</h1>
+                    <div class="subTitle">{{ $t("contact.letsTalk") }}</div>
                     <p>{{ $t("contact.text") }} </p>
                     <div class="card-container">
                         <a href="https://wa.me/5511942816814" target="_blank" rel="noreferrer" aria-label="WhatsApp"
@@ -150,7 +150,7 @@ const submitForm = async () => {
                     @apply content-[""] absolute -top-5 w-full h-[80%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] -z-[1] opacity-10 blur-[85px];
                 }
 
-                h1 {
+                .subTitle {
                     @apply text-center font-extrabold mb-8 text-3xl;
 
                     @screen xl {

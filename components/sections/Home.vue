@@ -15,7 +15,8 @@
                 </h2>
                 <div class="button-border">
                     <a :href="locale === 'pt-BR' ? '/cv_mauricio_naoki.pdf' : '/mauricio_naoki_resume.pdf'"
-                        target="_blank" rel="noreferrer" aria-label="Currículo" class="button-content">
+                        target="_blank" rel="noreferrer" :aria-label="$t('home.resumeAriaLabel')"
+                        class="button-content">
                         <Icon name="material-symbols:download-rounded" size="1.75rem" />
                         {{ $t("home.resume") }}
                     </a>
