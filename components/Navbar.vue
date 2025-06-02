@@ -87,9 +87,9 @@ header {
     &.navbar-background {
         @apply shadow-xl;
         background-image: -webkit-linear-gradient(left,
-                rgba(0, 185, 160, 0.975),
-                rgba(10, 195, 172, 0.975),
-                rgba(18, 207, 185, 0.975));
+                rgba(0, 185, 160, 0.985),
+                rgba(10, 195, 172, 0.985),
+                rgba(18, 207, 185, 0.985));
     }
 
     nav {
