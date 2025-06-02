@@ -16,11 +16,14 @@
 
 Este projeto tem como objetivo de apresentar minhas habilidades, experiências profissionais e os principais projetos que desenvolvi. Além de mostrar as tecnologias que domino, ele oferece exemplos práticos do desenvolvimento web e outras tecnologias. É um espaço para conhecer mais sobre mim e meu cuidado com a usabilidade e boas práticas de design e código.
 
+A aplicação possui versões em português e inglês, disponibilizadas por meio da biblioteca i18n.
+
 ## 🛠 Tecnologias utilizadas
 
 -   **Vue.js** - Framework JavaScript progressivo
 -   **Nuxt.js** - Framework baseado em Vue.js para SSR
 -   **Nitro** - Camada de servidor do Nuxt para backends e APIs
+-   **TypeScript** - Extensão do JavaScript que adiciona tipos estáticos para maior segurança
 -   **JavaScript** - Linguagem de programação para desenvolvimento web
 -   **HTML** - Linguagem de marcação que estrutura o conteúdo na web
 -   **CSS** - Linguagem de estilos usada para definir o visual das interfaces web
