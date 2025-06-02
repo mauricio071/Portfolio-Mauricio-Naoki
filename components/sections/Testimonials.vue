@@ -9,13 +9,12 @@
                     <div class="fade-mask">
                         <client-only>
                             <carousel :items-to-show="1" :breakpoints="breakpoints" wrapAround pauseAutoplayOnHover
-                                :autoplay="7500">
+                                :autoplay="0">
                                 <slide v-for="(testimonial, i) in testimonials" :key="i">
                                     <div class="testimonial-container">
                                         <div class="testimonial-person">
                                             <NuxtImg :src="`/depoimentos/${testimonial.id}.webp`"
-                                                :alt="testimonial.name" loading="lazy" densities="x1"
-                                                sizes="250 lg:70" />
+                                                :alt="testimonial.name" loading="lazy" sizes="125px lg:70px" />
                                             <div class="testimonial-info">
                                                 <h2>{{ testimonial.name }}</h2>
                                                 <h3>{{ testimonial.company }}</h3>

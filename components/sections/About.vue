@@ -4,8 +4,8 @@
             <div class="content">
                 <div v-motion-fade-visible-once :delay="200" class="photo-container">
                     <div class="photo-profile">
-                        <NuxtImg src="/foto-perfil.jpeg" alt="foto-perfil" loading="lazy" densities="x1"
-                            class="photo" />
+                        <NuxtImg src="/foto-perfil.jpeg" alt="foto-perfil" width="200" height="200"
+                            sizes="100px lg:400px" class="photo" />
                         <div class="photo-border"></div>
                     </div>
                 </div>

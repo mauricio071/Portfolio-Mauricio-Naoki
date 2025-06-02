@@ -39,7 +39,7 @@ import { iconMap } from '@/composables/iconMap';
     @apply relative;
 
     &::after {
-        @apply content-[""] absolute w-[4px] h-full top-0 left-[12px] -ml-[3px] z-[1] sm:left-0 md:left-[30px] lg:left-[36px] xl:left-[50%];
+        @apply content-[""] absolute w-[5px] h-full top-0 left-[12px] -ml-[3px] z-[1] sm:left-0 md:left-[30px] lg:left-[36px] xl:left-[50%];
         background-image: -webkit-linear-gradient(top,
                 #00bfa6,
                 rgba(0, 191, 165, 0.7) 80%,
