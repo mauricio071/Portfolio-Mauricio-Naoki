@@ -20,7 +20,7 @@ export default defineNuxtConfig({
         {
           name: "description",
           content:
-            "Maurício Naoki é um desenvolvedor front-end especializado em criar experiências digitais funcionais e envolventes. Com experiências em Vue.js, Nuxt.js, Javascript, e outras tecnologias modernas, contribuiu para projetos em empresas como Sixchains Digital House e o grupo Euro 17.",
+            "Desenvolvedor Front-end com mais de 2 anos de experiência em Vue, React e integração com APIs REST. Graduado em Ciência da Computação pela Universidade Cidade de São Paulo, com sólida formação técnica e prática em desenvolvimento web.",
         },
         { name: "robots", content: "index, follow" },
         { name: "author", content: "Maurício Naoki" },
@@ -28,7 +28,7 @@ export default defineNuxtConfig({
         {
           property: "og:description",
           content:
-            "Maurício Naoki é um desenvolvedor front-end especializado em criar experiências digitais funcionais e envolventes. Com experiências em Vue.js, Nuxt.js, Javascript, e outras tecnologias modernas, contribuiu para projetos em empresas como Sixchains Digital House e o grupo Euro 17.",
+            "Desenvolvedor Front-end com mais de 2 anos de experiência em Vue, React e integração com APIs REST. Graduado em Ciência da Computação pela Universidade Cidade de São Paulo, com sólida formação técnica e prática em desenvolvimento web.",
         },
         // { property: 'og:image', content: '' },
         {
@@ -41,7 +41,7 @@ export default defineNuxtConfig({
         {
           name: "twitter:description",
           content:
-            "Maurício Naoki é um desenvolvedor front-end especializado em criar experiências digitais funcionais e envolventes. Com experiências em Vue.js, Nuxt.js, Javascript, e outras tecnologias modernas, contribuiu para projetos em empresas como Sixchains Digital House e o grupo Euro 17.",
+            "Desenvolvedor Front-end com mais de 2 anos de experiência em Vue, React e integração com APIs REST. Graduado em Ciência da Computação pela Universidade Cidade de São Paulo, com sólida formação técnica e prática em desenvolvimento web.",
         },
         // { name: 'twitter:image', content: '' },
         { name: "language", content: "pt-BR" },
