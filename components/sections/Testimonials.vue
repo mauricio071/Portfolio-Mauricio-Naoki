@@ -59,7 +59,7 @@ import type { Breakpoints } from 'vue3-carousel';
 const breakpoints: Breakpoints = {
     1280: {
         itemsToShow: 2,
-        gap: 90
+        gap: 80
     },
     1536: {
         itemsToShow: 2,
@@ -104,11 +104,7 @@ const breakpoints: Breakpoints = {
             }
 
             @screen xl {
-                @apply min-h-[20rem] max-w-[33rem] p-7;
-            }
-
-            @screen 2xl {
-                @apply max-w-[35rem] p-6;
+                @apply min-h-[20rem] max-w-[35rem] p-7;
             }
 
             &::before,
