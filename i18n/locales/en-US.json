@@ -1,12 +1,12 @@
 {
   "navbar": {
-    "home": "home",
-    "about": "about",
-    "skills": "skills",
-    "experience": "experience",
-    "projects": "projects",
-    "testimonials": "testimonials",
-    "contact": "contact"
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "experience": "Experience",
+    "projects": "Projects",
+    "testimonials": "Testimonials",
+    "contact": "Contact"
   },
   "home": {
     "presentation": "Hi, my name is",

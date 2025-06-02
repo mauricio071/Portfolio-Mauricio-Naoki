@@ -120,7 +120,7 @@ header {
 
             li {
                 a {
-                    @apply relative font-bold capitalize px-1;
+                    @apply relative font-bold px-1;
 
                     &::after {
                         @apply content-[""] absolute h-[3px] w-0 left-0 -bottom-[7px] rounded-2xl duration-300;
