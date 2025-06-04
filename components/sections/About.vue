@@ -2,7 +2,7 @@
     <section id="about">
         <div class="wrapper">
             <div class="content">
-                <div v-motion-fade-visible-once :delay="200" class="photo-container">
+                <div v-motion-fade-visible-once :delay="200" :duration="1000" class="photo-container">
                     <div class="photo-profile">
                         <NuxtImg src="/foto-perfil.jpeg" alt="foto-perfil" width="285" height="285"
                             sizes="150px lg:400px" class="photo" />

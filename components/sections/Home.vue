@@ -36,8 +36,7 @@
             </div>
             <div ref="tiltRef" v-motion-fade-visible-once :duration="1300" :delay="450" class="img-content">
                 <div class="img-container">
-                    <NuxtImg src="/programacao.webp" alt="desenvolvedor" preload fetchpriority="high" densities="x1"
-                        width="39rem" />
+                    <NuxtImg src="/programacao.webp" alt="desenvolvedor" loading="lazy" densities="x1" width="39rem" />
                 </div>
             </div>
         </div>
@@ -62,7 +61,7 @@ onMounted(() => {
 
 <style scoped>
 #home {
-    @apply min-h-[650px] relative flex justify-center items-center p-4 pb-0 overflow-hidden;
+    @apply min-h-[750px] relative flex justify-center items-center p-4 pb-0 overflow-hidden;
     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(0, 191, 165, 0.7) 100%);
 
     @screen lg {

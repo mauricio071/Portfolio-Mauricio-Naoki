@@ -2,14 +2,15 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
+  pages: false,
   modules: [
     "@nuxtjs/tailwindcss",
-    "@nuxt/icon",
-    "vue3-carousel-nuxt",
-    "@vueuse/motion/nuxt",
-    "@nuxt/image",
-    "@nuxt/fonts",
+    "@nuxtjs/google-fonts",
     "@nuxtjs/i18n",
+    "@nuxt/icon",
+    "@nuxt/image",
+    "@vueuse/motion/nuxt",
+    "vue3-carousel-nuxt",
   ],
   app: {
     head: {
@@ -53,6 +54,12 @@ export default defineNuxtConfig({
         lang: "pt-BR",
       },
     },
+  },
+  googleFonts: {
+    families: {
+      Inter: [300, 400, 500, 600, 700, 800],
+    },
+    display: "swap",
   },
   icon: {
     serverBundle: {

@@ -9,9 +9,6 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ["Inter", "sans-serif"],
-      },
       colors: {
         primary: "#00bfa6",
         secondary: "#333333",
