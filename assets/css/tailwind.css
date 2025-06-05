@@ -28,8 +28,8 @@ section:not(.carousel) {
   }
 }
 
-section:nth-child(2) {
-  @apply pt-0 lg:pt-[5.5rem];
+section:not(.carousel):nth-of-type(2) {
+  @apply max-lg:pt-5;
 }
 
 h1,
