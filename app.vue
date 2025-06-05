@@ -2,16 +2,16 @@
   <div>
     <Navbar />
     <SectionsHome />
-    <SectionsAbout />
-    <SectionsSkills />
-    <SectionsExperience />
-    <SectionsProjects />
-    <SectionsTestimonials />
-    <SectionsContact />
+    <LazySectionsAbout />
+    <LazySectionsSkills />
+    <LazySectionsExperience />
+    <LazySectionsProjects />
+    <LazySectionsTestimonials />
+    <LazySectionsContact />
     <a href="#" :class="['toTop-btn', visible ? 'show' : 'hide']" aria-label="Para topo da página">
       <Icon name="material-symbols:keyboard-arrow-up-rounded" size="2.55rem" />
     </a>
-    <Footer />
+    <LazyFooter />
   </div>
 </template>
 
