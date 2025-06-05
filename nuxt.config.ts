@@ -80,5 +80,8 @@ export default defineNuxtConfig({
       cookieKey: "i18n_redirected",
       fallbackLocale: "en-US",
     },
+    bundle: {
+      optimizeTranslationDirective: false,
+    },
   },
 });
