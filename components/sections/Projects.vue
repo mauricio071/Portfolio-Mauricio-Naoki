@@ -43,7 +43,6 @@
 <script setup lang="ts">
 import { projects } from '@/constants/projects';
 import type { ProjectModalType, ProjectType } from '@/interfaces/ProjectsType';
-import ModalProjects from '../ModalProjects.vue';
 
 const visibleProjects = shallowRef<ProjectType[]>([]);
 const projectsLimit = ref(9);
