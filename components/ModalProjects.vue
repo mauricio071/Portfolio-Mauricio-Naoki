@@ -110,7 +110,7 @@ const isIframeLoaded = ref(false);
             }
 
             .project-description {
-                @apply overflow-auto max-h-[10rem] lg:max-h-[12rem];
+                @apply overflow-auto max-h-[10rem] xl:max-h-[12rem];
             }
 
             .details {

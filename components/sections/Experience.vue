@@ -53,7 +53,7 @@ import { iconMap } from '@/composables/iconMap';
             @apply left-0 pl-[55px] pr-0;
 
             @screen md {
-                @apply pl-[95px] pr-[25px];
+                @apply pl-[95px];
             }
 
             @screen xl {
@@ -65,7 +65,7 @@ import { iconMap } from '@/composables/iconMap';
             @apply left-0 pl-[55px] pr-0;
 
             @screen md {
-                @apply pl-[95px] pr-[25px];
+                @apply pl-[95px];
             }
 
             @screen xl {
@@ -97,7 +97,7 @@ import { iconMap } from '@/composables/iconMap';
         }
 
         .timeline-card {
-            @apply relative bg-white border-b-[6px] border-b-primary rounded-lg shadow-2xl py-7 px-5 md:py-8 2xl:px-7;
+            @apply relative bg-white border-b-[6px] border-b-primary rounded-lg shadow-2xl py-7 px-4 xl:px-7;
 
             h1 {
                 @apply font-extrabold mb-2 text-xl sm:text-2xl;

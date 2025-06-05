@@ -138,15 +138,15 @@ onMounted(() => {
             }
 
             p {
-                @apply text-white font-semibold text-lg md:text-2xl;
+                @apply text-white font-semibold text-lg sm:text-2xl;
             }
 
             h1 {
-                @apply text-secondary font-bold text-4xl md:text-5xl xl:text-[3.5rem];
+                @apply text-secondary font-bold text-4xl sm:text-5xl xl:text-[3.5rem];
             }
 
             h2 {
-                @apply flex items-center text-secondary text-xl font-bold max-md:max-w-[18rem] md:text-2xl;
+                @apply flex items-center text-secondary text-xl font-bold max-sm:max-w-[18rem] sm:text-2xl;
 
                 .text-animation {
                     @apply whitespace-nowrap overflow-hidden border-r-2 border-secondary pr-1;

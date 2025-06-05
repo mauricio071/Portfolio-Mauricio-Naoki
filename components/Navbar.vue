@@ -96,11 +96,7 @@ header {
         @apply container mx-auto flex justify-between items-center flex-wrap text-white;
 
         h1 {
-            @apply font-semibold text-white text-[1.175rem] sm:text-xl;
-
-            a {
-                @apply relative font-bold px-1;
-            }
+            @apply font-bold text-white text-lg xl:text-xl;
         }
 
         >span {
@@ -120,7 +116,7 @@ header {
 
             li {
                 a {
-                    @apply relative font-bold px-1;
+                    @apply relative font-bold px-1 lg:font-semibold;
 
                     &::after {
                         @apply content-[""] absolute h-[3px] w-0 left-0 -bottom-[7px] rounded-2xl duration-300;
