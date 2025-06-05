@@ -1,11 +1,11 @@
 <template>
     <main>
         <SectionsHome />
-        <LazySectionsAbout />
-        <LazySectionsSkills />
-        <LazySectionsExperience />
-        <LazySectionsProjects />
-        <LazySectionsTestimonials />
-        <LazySectionsContact />
+        <SectionsAbout />
+        <SectionsSkills />
+        <SectionsExperience />
+        <SectionsProjects />
+        <SectionsTestimonials />
+        <SectionsContact />
     </main>
 </template>
