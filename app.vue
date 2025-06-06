@@ -1,13 +1,15 @@
 <template>
   <div>
     <Navbar />
-    <SectionsHome />
-    <SectionsAbout />
-    <SectionsSkills />
-    <SectionsExperience />
-    <SectionsProjects />
-    <SectionsTestimonials />
-    <SectionsContact />
+    <main>
+      <SectionsHome />
+      <SectionsAbout />
+      <SectionsSkills />
+      <SectionsExperience />
+      <SectionsProjects />
+      <SectionsTestimonials />
+      <SectionsContact />
+    </main>
     <a href="#" :class="['toTop-btn', visible ? 'show' : 'hide']" aria-label="Para topo da página">
       <Icon name="material-symbols:keyboard-arrow-up-rounded" size="2.55rem" />
     </a>

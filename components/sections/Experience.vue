@@ -10,7 +10,7 @@
                         <Icon name="mdi:briefcase" />
                     </div>
                     <div v-motion-pop-visible-once :duration="700" class="timeline-card">
-                        <h1>{{ company.name }}</h1>
+                        <div class="company-name">{{ company.name }}</div>
                         <h2>{{ $t(`experience.${company.id}.role`) }}</h2>
                         <p>{{ $t(`experience.${company.id}.description`) }}</p>
                         <h3>{{ $t(`experience.techsTitle`) }}:</h3>
@@ -22,7 +22,7 @@
                         <span class="content-arrow"></span>
                     </div>
                     <span v-motion-pop-visible-once class="company-date">{{ $t(`experience.${company.id}.date`)
-                        }}</span>
+                    }}</span>
                 </div>
             </div>
         </div>
@@ -97,9 +97,9 @@ import { iconMap } from '@/composables/iconMap';
         }
 
         .timeline-card {
-            @apply relative bg-white border-b-[6px] border-b-primary rounded-lg shadow-2xl py-7 px-4 xl:px-7;
+            @apply relative bg-white border-b-[6px] border-b-primary rounded-lg shadow-2xl py-5 px-4 xl:p-7;
 
-            h1 {
+            .company-name {
                 @apply font-extrabold mb-2 text-xl sm:text-2xl;
             }
 
@@ -116,10 +116,14 @@ import { iconMap } from '@/composables/iconMap';
             }
 
             .technologies {
-                @apply flex items-center gap-2;
+                @apply flex items-center gap-2.5;
 
                 .logo {
-                    @apply max-w-[2rem];
+                    @apply h-7 w-7;
+
+                    @screen sm {
+                        @apply h-9 w-9 gap-3;
+                    }
                 }
             }
 

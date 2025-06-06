@@ -28,6 +28,8 @@
 <script setup lang="ts">
 const { t, locale, setLocale } = useI18n();
 
+const $router = useRouter();
+
 const isOpen = ref(false);
 const hasScrolled = ref(false);
 const currentSection = ref("");
@@ -66,6 +68,11 @@ onMounted(() => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 currentSection.value = entry.target.id;
+                // if (entry.target.id !== "home") {
+                //     $router.replace(`/#${entry.target.id}`);
+                // } else {
+                //     $router.replace("/");
+                // }
             }
         })
     }, {
@@ -82,7 +89,7 @@ onMounted(() => {
 
 <style scoped>
 header {
-    @apply fixed top-0 w-full p-4 duration-300 z-[100] lg:py-2.5;
+    @apply fixed top-0 w-full p-4 duration-300 z-[100] lg:py-2;
 
     &.navbar-background {
         @apply shadow-xl;
