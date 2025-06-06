@@ -22,7 +22,7 @@
                         <span class="content-arrow"></span>
                     </div>
                     <span v-motion-pop-visible-once class="company-date">{{ $t(`experience.${company.id}.date`)
-                    }}</span>
+                        }}</span>
                 </div>
             </div>
         </div>
@@ -100,7 +100,7 @@ import { iconMap } from '@/composables/iconMap';
             @apply relative bg-white border-b-[6px] border-b-primary rounded-lg shadow-2xl py-5 px-4 xl:p-7;
 
             .company-name {
-                @apply font-extrabold mb-2 text-xl sm:text-2xl;
+                @apply font-extrabold text-secondary mb-2 text-xl sm:text-2xl;
             }
 
             h2 {
@@ -116,13 +116,17 @@ import { iconMap } from '@/composables/iconMap';
             }
 
             .technologies {
-                @apply flex items-center gap-2.5;
+                @apply flex items-center gap-2;
 
                 .logo {
                     @apply h-7 w-7;
 
                     @screen sm {
-                        @apply h-9 w-9 gap-3;
+                        @apply h-8 w-8 gap-3;
+                    }
+
+                    @screen 2xl {
+                        @apply h-9 w-9;
                     }
                 }
             }

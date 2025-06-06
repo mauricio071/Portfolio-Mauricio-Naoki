@@ -9,7 +9,7 @@
                     <div class="fade-mask">
                         <client-only>
                             <carousel :items-to-show="1" :breakpoints="breakpoints" wrapAround pauseAutoplayOnHover
-                                :autoplay="0">
+                                :autoplay="7000">
                                 <slide v-for="(testimonial, i) in testimonials" :key="i">
                                     <div class="testimonial-container">
                                         <div class="testimonial-person">
