@@ -49,7 +49,7 @@ strong {
 }
 
 h2.section-title::before {
-  @apply content-[""] absolute w-[150px] h-[80%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] z-[-1] opacity-90 blur-[60px];
+  @apply content-[""] absolute w-[150px] h-[80%] bg-primary -z-[1] blur-[60px];
 }
 
 h2.section-title::after {
