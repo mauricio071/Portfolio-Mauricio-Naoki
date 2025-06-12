@@ -4,9 +4,9 @@
         <div class="vector-background"></div>
         <div class="wrapper">
             <div class="svg-wrapper">
-                <IconTechnology class="header-vector" />
+                <IconTechnology v-motion-fade-visible-once :duration="1300" :delay="725" class="header-vector" />
             </div>
-            <div class="main-content">
+            <div v-motion-fade-visible-once :duration="1000" class="main-content">
                 <p>👋🏻 {{ $t("home.presentation") }}</p>
                 <h1>Maurício Naoki</h1>
                 <h2>
@@ -34,7 +34,7 @@
                     </a>
                 </div>
             </div>
-            <div ref="tiltRef" class="img-content">
+            <div ref="tiltRef" v-motion-fade-visible-once :duration="1300" :delay="450" class="img-content">
                 <div class="img-container">
                     <NuxtImg src="/programacao.webp" alt="desenvolvedor" loading="lazy" densities="x1" width="39rem" />
                 </div>
