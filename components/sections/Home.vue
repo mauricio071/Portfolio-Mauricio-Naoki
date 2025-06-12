@@ -4,9 +4,9 @@
         <div class="vector-background"></div>
         <div class="wrapper">
             <div class="svg-wrapper">
-                <IconTechnology class="header-vector" />
+                <IconTechnology v-motion-fade-visible-once :duration="1300" :delay="725" class="header-vector" />
             </div>
-            <div v-motion-fade-visible-once :duration="1000" class="main-content">
+            <div class="main-content">
                 <p>👋🏻 {{ $t("home.presentation") }}</p>
                 <h1>Maurício Naoki</h1>
                 <h2>
