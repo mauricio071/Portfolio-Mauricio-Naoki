@@ -36,7 +36,7 @@
             </div>
             <div ref="tiltRef" v-motion-fade-visible-once :duration="1300" :delay="450" class="img-content">
                 <div class="img-container">
-                    <NuxtImg src="/programacao.webp" alt="desenvolvedor" loading="lazy" densities="x1" width="39rem" />
+                    <NuxtImg src="/programacao.webp" alt="desenvolvedor" loading="lazy" width="1px lg:625px" />
                 </div>
             </div>
         </div>

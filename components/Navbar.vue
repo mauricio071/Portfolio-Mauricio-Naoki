@@ -17,8 +17,7 @@
                     </a>
                 </li>
                 <li @click="toggleLocale" v-motion-fade-visible :delay="700" class="language-flag">
-                    <IconBrasilFlag v-if="locale === 'pt-BR'" />
-                    <IconUsFlag v-if="locale === 'en-US'" />
+                    <NuxtImg :src="`/flags/${locale}.png`" :alt="locale" loading="lazy" width="28px" />
                 </li>
             </ul>
         </nav>
@@ -28,7 +27,7 @@
 <script setup lang="ts">
 const { t, locale, setLocale } = useI18n();
 
-const $router = useRouter();
+// const $router = useRouter();
 
 const isOpen = ref(false);
 const hasScrolled = ref(false);
@@ -136,8 +135,8 @@ header {
                     }
                 }
 
-                &.language-flag svg {
-                    @apply w-full max-w-7 duration-300 cursor-pointer hover:brightness-75;
+                &.language-flag img {
+                    @apply duration-300 cursor-pointer hover:brightness-75;
                 }
             }
         }

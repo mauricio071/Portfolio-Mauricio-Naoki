@@ -22,7 +22,7 @@
                         <span class="content-arrow"></span>
                     </div>
                     <span v-motion-pop-visible-once class="company-date">{{ $t(`experience.${company.id}.date`)
-                        }}</span>
+                    }}</span>
                 </div>
             </div>
         </div>
@@ -31,7 +31,6 @@
 
 <script setup lang="ts">
 import { experience } from '@/constants/experience';
-import { iconMap } from '@/composables/iconMap';
 </script>
 
 <style scoped>
