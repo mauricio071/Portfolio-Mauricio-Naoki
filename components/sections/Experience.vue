@@ -10,7 +10,7 @@
                         <Icon name="mdi:briefcase" />
                     </div>
                     <div v-motion-pop-visible-once :duration="700" class="timeline-card">
-                        <h1>{{ company.name }}</h1>
+                        <div class="company-name">{{ company.name }}</div>
                         <h2>{{ $t(`experience.${company.id}.role`) }}</h2>
                         <p>{{ $t(`experience.${company.id}.description`) }}</p>
                         <h3>{{ $t(`experience.techsTitle`) }}:</h3>
@@ -22,7 +22,7 @@
                         <span class="content-arrow"></span>
                     </div>
                     <span v-motion-pop-visible-once class="company-date">{{ $t(`experience.${company.id}.date`)
-                        }}</span>
+                    }}</span>
                 </div>
             </div>
         </div>
@@ -31,7 +31,6 @@
 
 <script setup lang="ts">
 import { experience } from '@/constants/experience';
-import { iconMap } from '@/composables/iconMap';
 </script>
 
 <style scoped>
@@ -53,7 +52,7 @@ import { iconMap } from '@/composables/iconMap';
             @apply left-0 pl-[55px] pr-0;
 
             @screen md {
-                @apply pl-[95px] pr-[25px];
+                @apply pl-[95px];
             }
 
             @screen xl {
@@ -65,7 +64,7 @@ import { iconMap } from '@/composables/iconMap';
             @apply left-0 pl-[55px] pr-0;
 
             @screen md {
-                @apply pl-[95px] pr-[25px];
+                @apply pl-[95px];
             }
 
             @screen xl {
@@ -97,10 +96,10 @@ import { iconMap } from '@/composables/iconMap';
         }
 
         .timeline-card {
-            @apply relative bg-white border-b-[6px] border-b-primary rounded-lg shadow-2xl py-7 px-5 md:py-8 2xl:px-7;
+            @apply relative bg-white border-b-[6px] border-b-primary rounded-lg shadow-2xl py-5 px-4 xl:p-7;
 
-            h1 {
-                @apply font-extrabold mb-2 text-xl sm:text-2xl;
+            .company-name {
+                @apply font-extrabold text-secondary mb-2 text-xl sm:text-2xl;
             }
 
             h2 {
@@ -119,7 +118,15 @@ import { iconMap } from '@/composables/iconMap';
                 @apply flex items-center gap-2;
 
                 .logo {
-                    @apply max-w-[2rem];
+                    @apply h-7 w-7;
+
+                    @screen sm {
+                        @apply h-8 w-8 gap-3;
+                    }
+
+                    @screen 2xl {
+                        @apply h-9 w-9;
+                    }
                 }
             }
 

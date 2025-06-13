@@ -9,7 +9,7 @@
                     <div class="fade-mask">
                         <client-only>
                             <carousel :items-to-show="1" :breakpoints="breakpoints" wrapAround pauseAutoplayOnHover
-                                :autoplay="0">
+                                :autoplay="7000">
                                 <slide v-for="(testimonial, i) in testimonials" :key="i">
                                     <div class="testimonial-container">
                                         <div class="testimonial-person">
@@ -91,10 +91,10 @@ const breakpoints: Breakpoints = {
         @apply mb-10;
 
         .testimonial-container {
-            @apply flex flex-col items-center space-y-4 p-4 relative pb-4;
+            @apply flex flex-col items-center space-y-4 p-4 relative;
 
             @screen md {
-                @apply max-w-[35rem] items-start my-8 p-8;
+                @apply max-w-[35rem] items-start my-8 p-6;
                 box-shadow: 0 3px 11px rgba(0, 0, 0, 0.2);
             }
 
@@ -103,7 +103,7 @@ const breakpoints: Breakpoints = {
             }
 
             @screen xl {
-                @apply min-h-[20rem] max-w-[35rem] p-7;
+                @apply min-h-[20rem] max-w-[35rem];
             }
 
             &::before,
