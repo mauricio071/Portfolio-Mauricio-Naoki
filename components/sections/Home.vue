@@ -1,11 +1,6 @@
 <template>
     <section id="home">
-        <div class="blur-container"></div>
-        <div class="vector-background"></div>
         <div class="wrapper">
-            <div class="svg-wrapper">
-                <IconTechnology class="header-vector" />
-            </div>
             <div class="main-content">
                 <p>👋🏻 {{ $t("home.presentation") }}</p>
                 <h1>Maurício Naoki</h1>
@@ -34,12 +29,15 @@
                     </a>
                 </div>
             </div>
+            <div class="svg-wrapper">
+                <IconTechnology class="header-vector" />
+            </div>
             <div ref="tiltRef" v-motion-fade-visible-once :duration="1300" :delay="450" class="img-content">
-                <div class="img-container">
-                    <NuxtImg src="/programacao.webp" alt="desenvolvedor" loading="lazy" width="1px lg:625px" />
-                </div>
+                <NuxtImg src="/programacao.webp" alt="desenvolvedor" loading="lazy" densities="x1" />
             </div>
         </div>
+        <div class="blur-container"></div>
+        <div class="vector-background"></div>
     </section>
 </template>
 
@@ -216,12 +214,8 @@ onMounted(() => {
                 @apply content-[""] absolute top-[15%] left-[15%] w-[70%] h-[70%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] opacity-40 -z-[1] blur-[75px];
             }
 
-            .img-container {
-                @apply max-w-[30rem] hidden lg:block xl:max-w-[33rem] 2xl:max-w-[39rem];
-
-                img {
-                    @apply w-full;
-                }
+            img {
+                @apply max-w-[30rem] xl:max-w-[33rem] 2xl:max-w-[39rem] hidden lg:block;
             }
         }
     }
