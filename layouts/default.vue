@@ -5,7 +5,7 @@
         <a href="#" :class="['toTop-btn', visible ? 'show' : 'hide']" :aria-label="$t('toTop')">
             <Icon name="material-symbols:keyboard-arrow-up-rounded" size="2.55rem" />
         </a>
-        <LazyFooter />
+        <Footer />
     </div>
 </template>
 
