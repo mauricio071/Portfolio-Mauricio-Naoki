@@ -17,7 +17,7 @@
                     </a>
                 </li>
                 <li @click="toggleLocale" v-motion-fade-visible :delay="700" class="language-flag">
-                    <NuxtImg :src="`/flags/${locale}.png`" :alt="locale" loading="lazy" width="28px" />
+                    <NuxtImg :src="`/flags/${locale}.png`" :alt="locale" loading="lazy" width="100px" />
                 </li>
             </ul>
         </nav>
@@ -136,7 +136,7 @@ header {
                 }
 
                 &.language-flag img {
-                    @apply duration-300 cursor-pointer hover:brightness-75;
+                    @apply max-w-[28px] duration-300 cursor-pointer hover:brightness-75;
                 }
             }
         }
