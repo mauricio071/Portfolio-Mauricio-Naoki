@@ -1,11 +1,6 @@
 <template>
     <section id="home">
-        <div class="blur-container"></div>
-        <div class="vector-background"></div>
         <div class="wrapper">
-            <div class="svg-wrapper">
-                <IconTechnology v-motion-fade-visible-once :duration="1300" :delay="725" class="header-vector" />
-            </div>
             <div v-motion-fade-visible-once :duration="1000" class="main-content">
                 <p>👋🏻 {{ $t("home.presentation") }}</p>
                 <h1>Maurício Naoki</h1>
@@ -34,12 +29,17 @@
                     </a>
                 </div>
             </div>
+            <div class="svg-wrapper">
+                <IconTechnology v-motion-fade-visible-once :duration="1300" :delay="725" class="header-vector" />
+            </div>
             <div ref="tiltRef" v-motion-fade-visible-once :duration="1300" :delay="450" class="img-content">
                 <div class="img-container">
-                    <NuxtImg src="/programacao.webp" alt="desenvolvedor" loading="lazy" width="1px lg:625px" />
+                    <NuxtImg src="/programacao.webp" alt="desenvolvedor" loading="lazy" densities="x1" />
                 </div>
             </div>
         </div>
+        <div class="blur-container"></div>
+        <div class="vector-background"></div>
     </section>
 </template>
 

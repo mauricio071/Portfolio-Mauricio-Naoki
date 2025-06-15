@@ -47,7 +47,7 @@ footer {
             rgba(18, 207, 185));
 
     .footer-container {
-        @apply container mx-auto relative flex flex-col items-center justify-center gap-5 z-[5];
+        @apply container mx-auto flex flex-col items-center justify-center gap-5 z-[5];
 
         @screen lg {
             @apply flex-row-reverse justify-between;
