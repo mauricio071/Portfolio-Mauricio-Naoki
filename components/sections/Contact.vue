@@ -54,7 +54,7 @@
                 </form>
             </div>
         </div>
-        <Modal :isVisible="modal" @close="modal = false">
+        <LazyModal :isVisible="modal" @close="modal = false">
             <div class="modal-result-content">
                 <Icon :name="result.status === 'success' ? 'mdi:check-circle-outline' : 'mdi:alert-circle-outline'"
                     :class="result.status === 'success' ? 'text-green-600' : 'text-red-600'" />
@@ -65,7 +65,7 @@
                 </div>
                 <button @click="modal = false">{{ $t("contact.backButton") }}</button>
             </div>
-        </Modal>
+        </LazyModal>
     </section>
 </template>
 
