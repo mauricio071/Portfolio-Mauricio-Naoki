@@ -36,7 +36,7 @@
             </div>
             <div ref="tiltRef" class="img-content">
                 <div class="img-container">
-                    <NuxtImg src="/programacao.webp" alt="desenvolvedor" loading="lazy" width="1px lg:625px" />
+                    <NuxtImg src="/programacao.webp" alt="desenvolvedor" loading="lazy" densities="x1" />
                 </div>
             </div>
         </div>
