@@ -17,8 +17,7 @@
                     </a>
                 </li>
                 <li @click="toggleLocale" v-motion-fade-visible :delay="700" class="language-flag">
-                    <IconBrasilFlag v-if="locale === 'pt-BR'" />
-                    <IconUsFlag v-if="locale === 'en-US'" />
+                    <NuxtImg :src="`/flags/${locale}.png`" :alt="locale" loading="lazy" width="28px" />
                 </li>
             </ul>
         </nav>
@@ -27,6 +26,8 @@
 
 <script setup lang="ts">
 const { t, locale, setLocale } = useI18n();
+
+// const $router = useRouter();
 
 const isOpen = ref(false);
 const hasScrolled = ref(false);
@@ -66,6 +67,11 @@ onMounted(() => {
         entries.forEach((entry) => {
             if (entry.isIntersecting) {
                 currentSection.value = entry.target.id;
+                // if (entry.target.id !== "home") {
+                //     $router.replace(`/#${entry.target.id}`);
+                // } else {
+                //     $router.replace("/");
+                // }
             }
         })
     }, {
@@ -82,7 +88,7 @@ onMounted(() => {
 
 <style scoped>
 header {
-    @apply fixed top-0 w-full p-4 duration-300 z-[100] lg:py-2.5;
+    @apply fixed top-0 w-full p-4 duration-300 z-[100] lg:py-2;
 
     &.navbar-background {
         @apply shadow-xl;
@@ -96,11 +102,7 @@ header {
         @apply container mx-auto flex justify-between items-center flex-wrap text-white;
 
         h1 {
-            @apply font-semibold text-white text-[1.175rem] sm:text-xl;
-
-            a {
-                @apply relative font-bold px-1;
-            }
+            @apply font-bold text-white text-lg xl:text-xl;
         }
 
         >span {
@@ -120,7 +122,7 @@ header {
 
             li {
                 a {
-                    @apply relative font-bold px-1;
+                    @apply relative font-bold px-1 lg:font-semibold;
 
                     &::after {
                         @apply content-[""] absolute h-[3px] w-0 left-0 -bottom-[7px] rounded-2xl duration-300;
@@ -133,8 +135,8 @@ header {
                     }
                 }
 
-                &.language-flag svg {
-                    @apply w-full max-w-7 duration-300 cursor-pointer hover:brightness-75;
+                &.language-flag img {
+                    @apply duration-300 cursor-pointer hover:brightness-75;
                 }
             }
         }

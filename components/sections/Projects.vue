@@ -140,11 +140,11 @@ const delayVisible = (i: number) => {
                     @apply bg-[#000000B3] absolute w-full h-full top-0 flex flex-col justify-center items-center p-8 opacity-0 !text-white duration-300 gap-5;
 
                     h2 {
-                        @apply text-white font-bold text-center text-xl lg:text-2xl;
+                        @apply text-white font-bold text-center text-xl 2xl:text-2xl;
                     }
 
                     h3 {
-                        @apply text-primary text-lg lg:text-xl;
+                        @apply text-primary text-lg 2xl:text-xl;
                     }
 
                     .technologies {
@@ -153,7 +153,7 @@ const delayVisible = (i: number) => {
                         .logo {
                             @apply h-7 w-7;
 
-                            @screen sm {
+                            @screen 2xl {
                                 @apply h-8 w-8;
                             }
                         }

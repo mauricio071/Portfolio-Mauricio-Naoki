@@ -1,4 +1,6 @@
-export const experience = [
+import type { Experience } from "~/interfaces/ExperienceType";
+
+export const experience: Experience[] = [
   {
     id: "sixchains",
     name: "Sixchains Digital House",
