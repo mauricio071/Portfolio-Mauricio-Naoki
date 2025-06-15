@@ -33,9 +33,9 @@
                 </a>
             </div>
         </div>
-        <LazyModal :isVisible="modal.isOpen" @close="modal.isOpen = false">
-            <LazyModalProjects :modal="modal" />
-        </LazyModal>
+        <Modal :isVisible="modal.isOpen" @close="modal.isOpen = false">
+            <ModalProjects :modal="modal" />
+        </Modal>
         <WaveSvgWaveBottom />
     </section>
 </template>
