@@ -1,7 +1,7 @@
 <template>
     <section id="home">
         <div class="wrapper">
-            <div v-motion-fade-visible-once :duration="1000" class="main-content">
+            <div class="main-content">
                 <p>👋🏻 {{ $t("home.presentation") }}</p>
                 <h1>Maurício Naoki</h1>
                 <h2>
@@ -30,9 +30,9 @@
                 </div>
             </div>
             <div class="svg-wrapper">
-                <IconTechnology v-motion-fade-visible-once :duration="1300" :delay="725" class="header-vector" />
+                <IconTechnology class="header-vector" />
             </div>
-            <div ref="tiltRef" v-motion-fade-visible-once :duration="1300" :delay="450" class="img-content">
+            <div ref="tiltRef" class="img-content">
                 <NuxtImg src="/programacao.webp" alt="desenvolvedor" loading="lazy" densities="x1" />
             </div>
         </div>

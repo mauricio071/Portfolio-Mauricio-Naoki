@@ -34,7 +34,7 @@
             </div>
         </div>
         <LazyModal :isVisible="modal.isOpen" @close="modal.isOpen = false">
-            <ModalProjects :modal="modal" />
+            <LazyModalProjects :modal="modal" />
         </LazyModal>
         <WaveSvgWaveBottom />
     </section>
