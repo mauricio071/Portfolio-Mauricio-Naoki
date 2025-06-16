@@ -1,7 +1,7 @@
 <template>
     <section id="home">
         <div class="wrapper">
-            <div v-motion-fade-visible-once :duration="1000" class="main-content">
+            <div class="main-content">
                 <p>👋🏻 {{ $t("home.presentation") }}</p>
                 <h1>Maurício Naoki</h1>
                 <h2>
@@ -30,9 +30,9 @@
                 </div>
             </div>
             <div class="svg-wrapper">
-                <IconTechnology v-motion-fade-visible-once :duration="1300" :delay="725" class="header-vector" />
+                <IconTechnology class="header-vector" />
             </div>
-            <div ref="tiltRef" v-motion-fade-visible-once :duration="1300" :delay="450" class="img-content">
+            <div ref="tiltRef" class="img-content">
                 <NuxtImg src="/programacao.webp" alt="desenvolvedor" loading="lazy" densities="x1" />
             </div>
         </div>
@@ -88,8 +88,8 @@ onMounted(() => {
 
         .svg-wrapper {
             @apply absolute max-w-[14rem] top-[50%] -right-[15%] w-full h-full my-[3.5rem];
-            animation-duration: 1.3s;
-            animation-delay: 0.725s;
+            animation-duration: 1.4s;
+            animation-delay: 0.8s;
 
             @screen sm {
                 @apply max-w-[18rem] -right-[6%];
@@ -108,7 +108,7 @@ onMounted(() => {
             }
 
             &::before {
-                @apply content-[""] absolute top-[15%] left-[15%] w-[70%] h-[70%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] -z-[1] opacity-40 blur-[20px] lg:blur-[75px];
+                @apply content-[""] absolute top-[15%] left-[15%] w-[70%] h-[70%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] -z-[1] opacity-20 blur-[20px] lg:blur-[75px];
             }
 
             .header-vector {
@@ -127,15 +127,11 @@ onMounted(() => {
         }
 
         .main-content {
-            @apply flex flex-col items-center gap-6;
+            @apply relative flex flex-col items-center gap-6 lg:items-start;
             animation-delay: 0.4s;
 
             &::before {
                 @apply content-[""] absolute top-8 w-full h-[80%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] opacity-20 -z-[1] blur-[75px];
-            }
-
-            @screen lg {
-                @apply items-start;
             }
 
             p {
@@ -212,8 +208,8 @@ onMounted(() => {
 
         .img-content {
             @apply relative;
-            animation-duration: 1.3s;
-            animation-delay: 0.6s;
+            animation-duration: 1.4s;
+            animation-delay: 0.7s;
 
             &::before {
                 @apply content-[""] absolute top-[15%] left-[15%] w-[70%] h-[70%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] opacity-40 -z-[1] blur-[75px];
