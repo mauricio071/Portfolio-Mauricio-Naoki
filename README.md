@@ -55,6 +55,17 @@ Essa abordagem me permitiu desenvolver uma solução mais segura e customizada.
   <img src="./assets/readme-img/img-4.png" alt="Preview-Screens-4" width="500" >
 </p>
 
+## ⚡ Desempenho e otimizações
+
+A performance da aplicação foi uma prioridade durante o desenvolvimento. Por isso, o site passou por diversas otimizações, incluindo uso eficiente do Nuxt, lazy loading de imagens e minimização de recursos.
+
+Confira abaixo os resultados obtidos com o [Google PageSpeed Insights](https://pagespeed.web.dev/analysis/https-mauricionaokidev-netlify-app/en25244dk4):
+
+<p align="center"> 
+  <img src="./assets/readme-img/pagespeed-mobile.png" alt="PageSpeed Mobile" width="48%" > 
+  <img src="./assets/readme-img/pagespeed-desktop.png" alt="PageSpeed Desktop" width="48%" > 
+</p>
+
 ## 🌐 Acesse o projeto online
 Você pode acessar a versão online do projeto [aqui](https://mauricionaokidev.netlify.app).
 
