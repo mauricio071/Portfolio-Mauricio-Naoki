@@ -1,7 +1,7 @@
 <template>
     <section id="home">
         <div class="wrapper">
-            <div class="main-content">
+            <div class="main-content fade-visible-once">
                 <p>👋🏻 {{ $t("home.presentation") }}</p>
                 <h1>Maurício Naoki</h1>
                 <h2>
@@ -29,10 +29,10 @@
                     </a>
                 </div>
             </div>
-            <div class="svg-wrapper">
+            <div class="svg-wrapper fade-visible-once">
                 <IconTechnology class="header-vector" />
             </div>
-            <div ref="tiltRef" class="img-content">
+            <div ref="tiltRef" class="img-content fade-visible-once">
                 <NuxtImg src="/programacao.webp" alt="desenvolvedor" loading="lazy" densities="x1" />
             </div>
         </div>
@@ -88,6 +88,8 @@ onMounted(() => {
 
         .svg-wrapper {
             @apply absolute max-w-[14rem] top-[50%] -right-[15%] w-full h-full my-[3.5rem];
+            animation-duration: 1.3s;
+            animation-delay: 0.725s;
 
             @screen sm {
                 @apply max-w-[18rem] -right-[6%];
@@ -126,6 +128,7 @@ onMounted(() => {
 
         .main-content {
             @apply flex flex-col items-center gap-6;
+            animation-delay: 0.4s;
 
             &::before {
                 @apply content-[""] absolute top-8 w-full h-[80%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] opacity-20 -z-[1] blur-[75px];
@@ -209,6 +212,8 @@ onMounted(() => {
 
         .img-content {
             @apply relative;
+            animation-duration: 1.3s;
+            animation-delay: 0.6s;
 
             &::before {
                 @apply content-[""] absolute top-[15%] left-[15%] w-[70%] h-[70%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] opacity-40 -z-[1] blur-[75px];
