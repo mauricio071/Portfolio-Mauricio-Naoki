@@ -29,8 +29,8 @@
                     </a>
                 </div>
             </div>
-            <div v-motion-fade-visible-once :duration="1300" :delay="725" class="svg-wrapper">
-                <IconTechnology class="header-vector" />
+            <div class="svg-wrapper">
+                <IconTechnology class="header-vector" v-motion-fade-visible-once :duration="1300" :delay="725" />
             </div>
             <div ref="tiltRef" v-motion-fade-visible-once :duration="1300" :delay="450" class="img-content">
                 <NuxtImg src="/programacao.webp" alt="desenvolvedor" loading="lazy" densities="x1" />
@@ -66,19 +66,6 @@ onMounted(() => {
         @apply min-h-screen pt-12;
     }
 
-    .blur-container {
-        @apply bg-primary absolute -top-[300px] -left-[300px] w-[700px] h-[700px] rounded-[50rem] blur-xl opacity-20 -z-[1];
-    }
-
-    .vector-background {
-        @apply hidden;
-
-        @screen lg {
-            @apply bg-[#00AB95] block absolute -top-[3rem] right-0 w-[54%] rounded-l-full -z-[1] opacity-30;
-            min-height: calc(100vh + 3rem);
-        }
-    }
-
     .wrapper {
         @apply relative my-16 max-sm:px-0;
 
@@ -86,46 +73,8 @@ onMounted(() => {
             @apply flex justify-between items-center;
         }
 
-        .svg-wrapper {
-            @apply absolute max-w-[14rem] top-[50%] -right-[15%] w-full h-full my-[3.5rem];
-
-            @screen sm {
-                @apply max-w-[18rem] -right-[6%];
-            }
-
-            @screen lg {
-                @apply max-w-[21rem] -top-[25%];
-            }
-
-            @screen xl {
-                @apply max-w-[25rem] -right-[2%];
-            }
-
-            @screen 2xl {
-                @apply max-w-[30rem] -top-[23.5%];
-            }
-
-            &::before {
-                @apply content-[""] absolute top-[15%] left-[15%] w-[70%] h-[70%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] -z-[1] opacity-20 blur-[20px] lg:blur-[75px];
-            }
-
-            .header-vector {
-                animation: circle 40s linear infinite;
-            }
-
-            @keyframes circle {
-                0% {
-                    transform: rotate(0deg);
-                }
-
-                100% {
-                    transform: rotate(-360deg);
-                }
-            }
-        }
-
         .main-content {
-            @apply relative flex flex-col items-center gap-6 lg:items-start;
+            @apply relative flex flex-col items-center gap-6 z-[1] lg:items-start;
 
             &::before {
                 @apply content-[""] absolute top-8 w-full h-[80%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] opacity-20 -z-[1] blur-[75px];
@@ -203,6 +152,44 @@ onMounted(() => {
             }
         }
 
+        .svg-wrapper {
+            @apply absolute max-w-[14rem] top-[50%] -right-[15%] w-full h-full my-[3.5rem];
+
+            @screen sm {
+                @apply max-w-[18rem] -right-[6%];
+            }
+
+            @screen lg {
+                @apply max-w-[21rem] -top-[25%];
+            }
+
+            @screen xl {
+                @apply max-w-[25rem] -right-[2%];
+            }
+
+            @screen 2xl {
+                @apply max-w-[30rem] -top-[23.5%];
+            }
+
+            &::before {
+                @apply content-[""] absolute top-[15%] left-[15%] w-[70%] h-[70%] bg-gradient-to-br from-[#00BFA6] to-[#63e6d2] -z-[1] opacity-20 blur-[20px] lg:blur-[75px];
+            }
+
+            .header-vector {
+                animation: circle 40s linear infinite;
+            }
+
+            @keyframes circle {
+                0% {
+                    transform: rotate(0deg);
+                }
+
+                100% {
+                    transform: rotate(-360deg);
+                }
+            }
+        }
+
         .img-content {
             @apply relative;
 
@@ -213,6 +200,19 @@ onMounted(() => {
             img {
                 @apply w-full max-w-[30rem] hidden lg:block xl:max-w-[33rem] 2xl:max-w-[39rem];
             }
+        }
+    }
+
+    .blur-container {
+        @apply bg-primary absolute -top-[300px] -left-[300px] w-[700px] h-[700px] rounded-[50rem] blur-xl opacity-20 -z-[1];
+    }
+
+    .vector-background {
+        @apply hidden;
+
+        @screen lg {
+            @apply bg-[#00AB95] block absolute -top-[3rem] right-0 w-[54%] rounded-l-full -z-[1] opacity-30;
+            min-height: calc(100vh + 3rem);
         }
     }
 }
