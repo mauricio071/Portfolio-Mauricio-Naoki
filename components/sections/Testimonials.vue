@@ -21,7 +21,7 @@
                                                 <p>{{ $t(`testimonials.${testimonial.id}.role`) }}</p>
                                             </div>
                                         </div>
-                                        <IconQuote />
+                                        <NuxtImg :src="IconQuote" alt="Quote" loading="lazy" width="70px" />
                                         <p>{{ $t(`testimonials.${testimonial.id}.description`) }}</p>
                                         <div class="ratings">
                                             <IconRating v-for="i in 5" :key="i" />
@@ -52,6 +52,7 @@
 </template>
 
 <script setup lang="ts">
+import IconQuote from "@/assets/Quote.svg";
 import { testimonials } from '@/constants/testimonials';
 import type { Breakpoints } from 'vue3-carousel';
 
@@ -147,7 +148,7 @@ const breakpoints: Breakpoints = {
                 }
             }
 
-            >svg {
+            >img {
                 @apply absolute right-[2rem] !mt-0 hidden sm:block;
             }
 
