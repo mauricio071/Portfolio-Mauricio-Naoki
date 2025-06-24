@@ -16,8 +16,8 @@
                         <h2>{{ project.name !== "Em breve!" ? project.name : $t("projects.soon") }}</h2>
                         <h3>{{ $t(`projects.${project.id}.type`) }}</h3>
                         <div class="technologies">
-                            <component v-for="(technology, i) in project.technologies" :is="iconMap[technology]"
-                                :key="i" class="logo" />
+                            <img v-for="(technology, i) in project.technologies" :key="i" :src="iconMap[technology]"
+                                :alt="technology" loading="lazy" class="logo" />
                         </div>
                     </div>
                 </div>
@@ -170,7 +170,7 @@ const delayVisible = (i: number) => {
                         @apply opacity-100;
                     }
 
-                    img {
+                    img:not(.logo) {
                         @apply blur-[2px] scale-[1.03];
                     }
                 }

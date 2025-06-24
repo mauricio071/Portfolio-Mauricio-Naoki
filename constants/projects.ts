@@ -103,7 +103,6 @@ export const projects: ProjectType[] = [
       "TypeScript",
       "Vue.js",
       "Nuxt.js",
-      "Nuxt UI",
       "Tailwind",
       "PostgreSQL",
     ],

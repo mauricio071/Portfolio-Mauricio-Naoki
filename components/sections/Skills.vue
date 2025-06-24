@@ -10,7 +10,7 @@
                     :duration="600">
                     <div class="icon-card" :style="{ '--card-color': technology.color }">
                         <div class="icon-border"></div>
-                        <component :is="iconMap[technology.name]" class="logo" />
+                        <img :src="iconMap[technology.name]" :alt="technology.name" loading="lazy" class="logo" />
                         <strong>{{ technology.name }}</strong>
                     </div>
                 </div>

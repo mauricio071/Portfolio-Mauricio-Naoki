@@ -15,14 +15,14 @@
                         <p>{{ $t(`experience.${company.id}.description`) }}</p>
                         <h3>{{ $t(`experience.techsTitle`) }}:</h3>
                         <div class="technologies">
-                            <component v-for="(technology, i) in company.technologies" :is="iconMap[technology]"
-                                :key="i" class="logo" />
+                            <img v-for="(technology, i) in company.technologies" :key="i" :src="iconMap[technology]"
+                                :alt="technology" loading="lazy" class="logo" />
                         </div>
                         <span class="date">{{ $t(`experience.${company.id}.date`) }}</span>
                         <span class="content-arrow"></span>
                     </div>
                     <span v-motion-pop-visible-once class="company-date">{{ $t(`experience.${company.id}.date`)
-                    }}</span>
+                        }}</span>
                 </div>
             </div>
         </div>

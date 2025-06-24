@@ -52,7 +52,7 @@
 </template>
 
 <script setup lang="ts">
-import IconQuote from "@/assets/Quote.svg";
+import IconQuote from "@/assets/svg/Quote.svg";
 import { testimonials } from '@/constants/testimonials';
 import type { Breakpoints } from 'vue3-carousel';
 
