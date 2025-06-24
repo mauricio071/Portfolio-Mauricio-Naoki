@@ -9,8 +9,8 @@
                 <div @click="openModal(project)" v-for="(project, i) in visibleProjects" :key="i"
                     v-motion-slide-visible-once-bottom :delay="delayVisible(i)" :duration="750" class="project-card">
                     <div class="project-img">
-                        <NuxtImg :src="`/projetos/${project.imgName}`" :alt="project.name" loading="lazy" densities="x1"
-                            :width="project.width" />
+                        <NuxtImg :src="`/projetos/${project.imgName}`" :alt="project.name"
+                            :loading="i < 9 ? 'lazy' : 'eager'" densities="x1" :width="project.width" />
                     </div>
                     <div class="project-description">
                         <h2>{{ project.name !== "Em breve!" ? project.name : $t("projects.soon") }}</h2>
