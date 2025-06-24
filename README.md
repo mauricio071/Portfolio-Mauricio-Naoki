@@ -57,7 +57,7 @@ Essa abordagem me permitiu desenvolver uma solução mais segura e customizada.
 
 ## ⚡ Desempenho e otimizações
 
-A performance da aplicação foi uma prioridade durante o desenvolvimento. Por isso, o site passou por diversas otimizações, incluindo uso eficiente do Nuxt, lazy loading de imagens e minimização de recursos.
+A performance da aplicação foi uma prioridade durante o desenvolvimento. Por isso, o site passou por diversas otimizações, como uso eficiente do Nuxt, lazy loading de imagens, minimização de recursos, além de estrutura semântica e abordagem mobile-first para garantir acessibilidade e carregamento rápido.
 
 Confira abaixo os resultados obtidos com o [Google PageSpeed Insights](https://pagespeed.web.dev/analysis/https-mauricionaokidev-netlify-app/en25244dk4):
 
