@@ -231,7 +231,7 @@ onMounted(() => {
     }
 
     .wave-bottom {
-        @apply absolute w-full left-0 -bottom-8 overflow-hidden leading-[0] z-[1] rotate-180 opacity-80 xl:-bottom-4;
+        @apply absolute w-full left-0 -bottom-8 overflow-hidden leading-[0] z-[1] rotate-180 opacity-80;
 
         svg {
             @apply relative block h-[130px];
