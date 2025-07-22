@@ -162,7 +162,7 @@ const submitForm = async () => {
                     @apply max-w-lg mx-auto text-center px-2 mb-4;
 
                     @screen xl {
-                        @apply max-w-[unset] text-start text-lg;
+                        @apply max-w-[unset] text-start text-lg px-0;
                     }
                 }
 
