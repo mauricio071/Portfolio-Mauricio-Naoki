@@ -20,20 +20,20 @@ A aplicação possui versões em português e inglês, disponibilizadas por meio
 
 ## 🛠 Tecnologias utilizadas
 
--   **Vue.js** - Framework JavaScript progressivo
--   **Nuxt.js** - Framework baseado em Vue.js para SSR
--   **Nitro** - Camada de servidor do Nuxt para backends e APIs
--   **TypeScript** - Extensão do JavaScript que adiciona tipos estáticos para maior segurança
--   **JavaScript** - Linguagem de programação para desenvolvimento web
--   **HTML** - Linguagem de marcação que estrutura o conteúdo na web
--   **CSS** - Linguagem de estilos usada para definir o visual das interfaces web
--   **Tailwind CSS** - Framework de estilos
+- **Vue.js** - Framework JavaScript progressivo
+- **Nuxt.js** - Framework baseado em Vue.js para SSR
+- **Nitro** - Camada de servidor do Nuxt para backends e APIs
+- **TypeScript** - Extensão do JavaScript que adiciona tipos estáticos para maior segurança
+- **JavaScript** - Linguagem de programação para desenvolvimento web
+- **HTML** - Linguagem de marcação que estrutura o conteúdo na web
+- **CSS** - Linguagem de estilos usada para definir o visual das interfaces web
+- **Tailwind CSS** - Framework de estilos
 
 ## 🤔 Por que optei por usar um backend no meu projeto frontend?
 
-Durante o desenvolvimento do formulário de contato, notei que, ao utilizar uma solução somente em frontend (como o Web3Forms), a chave de API ficava exposta, gerando riscos de segurança. 
+Durante o desenvolvimento do formulário de contato, notei que, ao utilizar uma solução somente em frontend (como o Web3Forms), a chave de API ficava exposta, gerando riscos de segurança.
 
-Para resolver esse problema, optei por utilizar o Nitro, um framework que já vem integrado ao Nuxt 3. Com ele, pude processar as informações no backend, garantindo maior privacidade e controle sobre os dados, sem depender de terceiros. 
+Para resolver esse problema, optei por utilizar o Nitro, um framework que já vem integrado ao Nuxt 3. Com ele, pude processar as informações no backend, garantindo maior privacidade e controle sobre os dados, sem depender de terceiros.
 
 Essa abordagem me permitiu desenvolver uma solução mais segura e customizada.
 
@@ -59,7 +59,7 @@ Essa abordagem me permitiu desenvolver uma solução mais segura e customizada.
 
 A performance da aplicação foi uma prioridade durante o desenvolvimento. Por isso, o site passou por diversas otimizações, como uso eficiente do Nuxt, lazy loading de imagens, minimização de recursos, além de estrutura semântica e abordagem mobile-first para garantir acessibilidade e carregamento rápido.
 
-Confira abaixo os resultados obtidos com o [Google PageSpeed Insights](https://pagespeed.web.dev/analysis/https-mauricionaokidev-netlify-app/en25244dk4):
+Confira abaixo os resultados obtidos com o Google PageSpeed Insights:
 
 <p align="center"> 
   <img src="./assets/readme-img/pagespeed-mobile.png" alt="PageSpeed Mobile" width="48%" > 
@@ -67,6 +67,7 @@ Confira abaixo os resultados obtidos com o [Google PageSpeed Insights](https://p
 </p>
 
 ## 🌐 Acesse o projeto online
+
 Você pode acessar a versão online do projeto [aqui](https://mauricionaokidev.netlify.app).
 
 ## 🖥️ Como configurar o projeto
@@ -90,6 +91,7 @@ $ cd Portfolio-Mauricio-Naoki
 ```bash
 $ npm install
 ```
+
 ou
 
 ```bash
@@ -107,12 +109,14 @@ EMAIL_KEY=SENHA-EMAIL
 
 ### 5. Inicialize o projeto:
 
-```bash 
+```bash
 $ npm run dev
 ```
+
 ou, se estiver usando yarn:
 
-```bash 
+```bash
 $ yarn dev
 ```
+
 Agora você pode acessar o projeto no navegador em http://localhost:3000 (ou na porta indicada pelo terminal).
