@@ -17,7 +17,7 @@
   },
   "about": {
     "title": "Sobre mim",
-    "strongDescription1": "Sou desenvolvedor Front-end com mais de 2 anos de experiência",
+    "strongDescription1": "Sou desenvolvedor Front-end com mais de 3 anos de experiência",
     "description1": "em Vue.js, Nuxt.js, React.js, JavaScript, TypeScript e outras tecnologias web. Já participei de projetos que contribuíram para o aumento da produtividade de empresas e desenvolvi soluções sob medida para clientes dos setores imobiliário e de securitizadoras, sempre com foco em interfaces funcionais e integração eficiente de APIs.",
     "description2_part1": "Comecei como desenvolvedor Full-stack em 2021 e, com o tempo, fui me especializando no Front-end. Desde então, atuei em diversas etapas do desenvolvimento, do planejamento à entrega, sempre priorizando a usabilidade e a experiência do usuário.",
     "strongDescription2": "Sou formado em Ciência da Computação",
@@ -30,10 +30,15 @@
   "experience": {
     "title": "Experiência",
     "techsTitle": "Tecnologias",
+    "inmeta": {
+      "role": "Desenvolvedor Front-end",
+      "date": "Ago 2025 - Presente",
+      "description": "Na InMeta, atuo como desenvolvedor Front-End em uma plataforma de gestão para a construção civil, trabalhando no aprimoramento contínuo do sistema conforme as demandas dos clientes e no desenvolvimento de novos módulos para evolução constante da plataforma."
+    },
     "sixchains": {
       "role": "Desenvolvedor Front-end",
       "date": "Jul 2022 - Mai 2024",
-      "description": "Na Sixchains, fui responsável pelo desenvolvimento Front-End, atuando no desenvolvimento e na manutenção de sites e sistemas, colaborando com a equipe de back-end para integrar as aplicações às APIs. Além disso, participei de diversos projetos do grupo Euro 17, incluindo sites e sistemas voltados para a venda de imóveis e plataformas de securitização."
+      "description": "Na Sixchains, uma software house, fui responsável pelo desenvolvimento Front-End, atuando no desenvolvimento e na manutenção de sites e sistemas, colaborando com a equipe de back-end para integrar as aplicações às APIs. Além disso, participei de diversos projetos do grupo Euro 17, incluindo sites e sistemas voltados para a venda de imóveis e plataformas de securitização."
     },
     "upwards": {
       "role": "Desenvolvedor Full-stack",

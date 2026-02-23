@@ -75,7 +75,7 @@ onMounted(() => {
             }
         })
     }, {
-        rootMargin: '-30% 0px -70% 0px',
+        rootMargin: '-40% 0px -60% 0px',
     });
 
     sections.forEach((section) => observer.observe(section));

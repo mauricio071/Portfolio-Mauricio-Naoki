@@ -1,6 +1,18 @@
 import type { Experience } from "~/interfaces/ExperienceType";
 
 export const experience: Experience[] = [
+   {
+    id: "inmeta",
+    name: "InMeta",
+    technologies: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Vue.js",
+      "Quasar",
+      "Git",
+    ],
+  },
   {
     id: "sixchains",
     name: "Sixchains Digital House",

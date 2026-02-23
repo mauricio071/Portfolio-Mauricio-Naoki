@@ -17,7 +17,7 @@
   },
   "about": {
     "title": "About me",
-    "strongDescription1": "I'm a Front-end developer with over 2 years of experience",
+    "strongDescription1": "I'm a Front-end developer with over 3 years of experience",
     "description1": "in Vue.js, Nuxt.js, React.js, JavaScript, TypeScript, and other web technologies. I've worked on projects that helped companies increase productivity and developed custom solutions for clients in the real estate and securitization sectors, always focusing on functional interfaces and efficient API integration.",
     "description2_part1": "I started as a Full-stack developer in 2021 and, over time, specialized in Front-end development. Since then, I've been involved in various stages of development, from planning to delivery, always prioritizing usability and user experience.",
     "strongDescription2": "I hold a degree in Computer Science",
@@ -30,10 +30,15 @@
   "experience": {
     "title": "Experience",
     "techsTitle": "Technologies",
+    "inmeta": {
+      "role": "Front-end Developer",
+      "date": "Aug 2025 – Present",
+      "description": "At InMeta, I work as a Front-End Developer on a construction management platform, focusing on continuously improving the system based on client needs and developing new modules to ensure the platform’s ongoing evolution."
+    },
     "sixchains": {
       "role": "Front-end Developer",
       "date": "Jul 2022 – May 2024",
-      "description": "At Sixchains, I was responsible for front-end development, working on the creation and maintenance of websites and systems. I collaborated closely with the back-end team to integrate applications with APIs. I also participated in several projects for the Euro 17 group, including platforms for real estate sales and securitization."
+      "description": "At Sixchains, a software house, I was responsible for Front-End development, working on building and maintaining websites and systems while collaborating with the back-end team to integrate applications with APIs. I also contributed to several projects for the Euro 17 group, including real estate sales platforms and securitization systems."
     },
     "upwards": {
       "role": "Full-stack Developer",

@@ -25,6 +25,7 @@ import IconPostgreSQL from "@/assets/svg/skills-logo/PostgreSQL.svg";
 import IconCSharp from "@/assets/svg/skills-logo/CSharp.svg";
 import IconDotNet from "@/assets/svg/skills-logo/DotNet.svg";
 import IconLaravel from "@/assets/svg/skills-logo/Laravel.svg";
+import IconQuasar from "@/assets/svg/skills-logo/Quasar.svg";
 
 export const iconMap: Record<string, string> = {
   HTML: IconHtml,
@@ -54,4 +55,5 @@ export const iconMap: Record<string, string> = {
   "C#": IconCSharp,
   ".NET Framework": IconDotNet,
   Laravel: IconLaravel,
+  Quasar: IconQuasar,
 };

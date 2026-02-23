@@ -21,8 +21,9 @@
                         <span class="date">{{ $t(`experience.${company.id}.date`) }}</span>
                         <span class="content-arrow"></span>
                     </div>
-                    <span v-motion-pop-visible-once class="company-date">{{ $t(`experience.${company.id}.date`)
-                        }}</span>
+                    <span v-motion-pop-visible-once class="company-date">
+                        {{ $t(`experience.${company.id}.date`)}}
+                    </span>
                 </div>
             </div>
         </div>
@@ -136,7 +137,7 @@ import { experience } from '@/constants/experience';
         }
 
         .company-date {
-            @apply absolute text-lg font-bold text-[#b0b0b0] hidden xl:block;
+            @apply absolute w-[40%] text-lg font-bold text-[#b0b0b0] hidden xl:block;
         }
 
         &:nth-of-type(odd) .timeline-icon,
@@ -169,11 +170,11 @@ import { experience } from '@/constants/experience';
         }
 
         &:nth-of-type(odd) .company-date {
-            @apply top-[4rem] -right-[14.5rem];
+            @apply top-[4rem] left-full ml-[3.25rem];
         }
 
         &:nth-of-type(even) .company-date {
-            @apply top-[4rem] -left-[14.75rem];
+            @apply top-[4rem] -left-[14.5rem];
         }
     }
 }
