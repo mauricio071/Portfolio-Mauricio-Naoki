@@ -116,7 +116,7 @@ import { experience } from '@/constants/experience';
             }
 
             .technologies {
-                @apply flex items-center gap-2;
+                @apply flex items-center flex-wrap gap-2;
 
                 .logo {
                     @apply h-7 w-7;
