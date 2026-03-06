@@ -21,7 +21,7 @@ export default defineNuxtConfig({
         {
           name: "description",
           content:
-            "Desenvolvedor Front-end com mais de 2 anos de experiência em Vue, React e integração com APIs REST. Graduado em Ciência da Computação pela Universidade Cidade de São Paulo, com sólida formação técnica e prática em desenvolvimento web.",
+            "Maurício Naoki Nakamura é Desenvolvedor Front-end com mais de 3 anos de experiência em Vue.js, Nuxt.js, React, JavaScript e TypeScript. Especialista em interfaces modernas, integração de APIs e experiência do usuário.",
         },
         { name: "robots", content: "index, follow" },
         { name: "author", content: "Maurício Naoki" },
@@ -29,7 +29,7 @@ export default defineNuxtConfig({
         {
           property: "og:description",
           content:
-            "Desenvolvedor Front-end com mais de 2 anos de experiência em Vue, React e integração com APIs REST. Graduado em Ciência da Computação pela Universidade Cidade de São Paulo, com sólida formação técnica e prática em desenvolvimento web.",
+            "Maurício Naoki Nakamura é Desenvolvedor Front-end com mais de 3 anos de experiência em Vue.js, Nuxt.js, React, JavaScript e TypeScript. Especialista em interfaces modernas, integração de APIs e experiência do usuário.",
         },
         // { property: 'og:image', content: '' },
         {
@@ -42,7 +42,7 @@ export default defineNuxtConfig({
         {
           name: "twitter:description",
           content:
-            "Desenvolvedor Front-end com mais de 2 anos de experiência em Vue, React e integração com APIs REST. Graduado em Ciência da Computação pela Universidade Cidade de São Paulo, com sólida formação técnica e prática em desenvolvimento web.",
+            "Maurício Naoki Nakamura é Desenvolvedor Front-end com mais de 3 anos de experiência em Vue.js, Nuxt.js, React, JavaScript e TypeScript. Especialista em interfaces modernas, integração de APIs e experiência do usuário.",
         },
         // { name: 'twitter:image', content: '' },
         { name: "language", content: "pt-BR" },
