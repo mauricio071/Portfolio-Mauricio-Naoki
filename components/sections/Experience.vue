@@ -74,7 +74,7 @@ import { experience } from '@/constants/experience';
         }
 
         .timeline-icon {
-            @apply absolute flex justify-center items-center w-12 h-12 top-[32px] -right-[31px] text-white text-2xl rounded-[50%] z-[10];
+            @apply absolute flex justify-center items-center w-12 h-12 top-[50px] -left-[13px] -right-[31px] text-white text-2xl rounded-[50%] z-[10];
             background-image: -webkit-linear-gradient(top,
                     rgb(116, 226, 212),
                     #00bfa6);
@@ -84,7 +84,7 @@ import { experience } from '@/constants/experience';
             }
 
             @screen md {
-                @apply w-16 h-16 !-left-[3px]
+                @apply w-16 h-16 !-left-[3px] top-[43px];
             }
 
             @screen lg {
@@ -137,30 +137,19 @@ import { experience } from '@/constants/experience';
         }
 
         .company-date {
-            @apply absolute w-[40%] text-lg font-bold text-[#b0b0b0] hidden xl:block;
+            @apply absolute w-[40%] top-[4rem] text-lg font-bold text-[#b0b0b0] hidden xl:block;
         }
 
-        &:nth-of-type(odd) .timeline-icon,
-        &:nth-of-type(even) .timeline-icon {
-            @apply top-[55px] -left-[13px];
+        .content-arrow {
+            @apply h-0 w-0 absolute top-[28px] -left-[15px] z-[1] border-y-[15px] border-y-transparent border-r-[15px] border-r-white border-l-0;
         }
 
         &:nth-of-type(odd) .timeline-icon {
-            @apply lg:top-[45px] xl:left-[unset] !important;
+            @apply xl:left-[unset] !important;
         }
 
         &:nth-of-type(even) .timeline-icon {
-            @apply lg:top-[45px] xl:-left-[33px] !important;
-        }
-
-        &:nth-of-type(odd) .content-arrow,
-        &:nth-of-type(even) .content-arrow {
-            @apply h-0 w-0 absolute top-[28px] z-[1] border-y-[15px] border-y-transparent;
-        }
-
-        &:nth-of-type(even) .content-arrow,
-        &:nth-of-type(odd) .content-arrow {
-            @apply border-r-[15px] border-r-white border-l-0 -left-[15px];
+            @apply xl:-left-[33px] !important;
         }
 
         &:nth-of-type(odd) .content-arrow {
@@ -170,11 +159,11 @@ import { experience } from '@/constants/experience';
         }
 
         &:nth-of-type(odd) .company-date {
-            @apply top-[4rem] left-full ml-[3.25rem];
+            @apply left-full ml-[3.25rem];
         }
 
         &:nth-of-type(even) .company-date {
-            @apply top-[4rem] -left-[14.5rem];
+            @apply -left-[14.5rem];
         }
     }
 }
